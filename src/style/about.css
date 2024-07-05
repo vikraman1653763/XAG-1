@@ -1,0 +1,1156 @@
+
+
+
+
+
+.banner {
+    width: 100%;
+    margin-top: 64px;
+    position: relative;
+    display: inline-block;
+    background: radial-gradient(309.94% 158.19% at 50% 50%, #080A0B 0%, #414D27 100%);
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+}
+
+.image-text h3 {
+    color: white;
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 72px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.image-text h3 span {
+    color: #9BF00B;
+}
+
+.image-text p {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+/*About*/
+.About {
+    width: 100%;
+    background: radial-gradient(309.94% 158.19% at 50% 50%, #080A0B 0%, #414D27 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.About .about-container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 48px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.About .contents {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.About .contents h2 {
+    margin: 0;
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    /* 78.1px */
+    letter-spacing: -2.13px;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.About .contents .title {
+    display: flex;
+}
+
+.logo {
+    margin-left: 0.5rem;
+    width: 10em;
+    height: 80px;
+}
+
+.About .contents p {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8em;
+    /* 34.5px */
+    letter-spacing: -0.69px;
+}
+
+.About .myvideo {
+    width: 50%;
+    position: relative;
+
+}
+
+.myvideo video {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.About .myvideo .btn {
+    border-radius: 24px;
+    padding: 12px;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.About .play-button {
+    display: flex;
+    background-color: #111111;
+    width: fit-content;
+    padding: 8px 16px 8px 8px;
+    border-radius: 50px;
+    gap: 10px;
+    border: 1px solid #9BF00B;
+    position: absolute;
+    bottom: 4%;
+    left: 2%;
+}
+
+.About .play-button .icon-bg {
+    position: relative;
+    background-color: #9BF00B;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+.play-button .icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9BF00B;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+.play-button .icon-bg img {
+    width: 20px;
+    height: 20px;
+  }
+
+.About .play-button .duration p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.About .play-button .duration time {
+    font-size: 14px;
+    color: #ABABAB;
+}
+
+
+.trigger {
+    text-align: center;
+    padding: 7px 13px;
+    background: #3e3e3e;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(12, 12, 12, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(7.2px);
+    width: 50%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: end;
+    padding: 12px;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    color: white;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.modal-content video {
+    width: 100%;
+    height: 88%;
+    border-radius: 8px;
+}
+
+.modal-content video source {
+    object-fit: cover;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    .About .container {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .About .container .contents {
+        width: 100%;
+    }
+
+    .About .container .contents p {
+        width: 100%;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+
+    .About .contents .title {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .About .contents h2 {
+        padding-top: 7px;
+        font-size: 2rem;
+    }
+
+    .About .contents img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .About .myvideo {
+        width: 90%;
+    }
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .icon-background {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 0px;
+    }
+}
+
+/* about end */
+/*Vision*/
+
+.vision {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 96px 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #9BF00B;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header {
+    display: flex;
+    gap: 6rem;
+    height: auto;
+    width: 100%;
+    margin-bottom: 36px;
+}
+.header .title{
+    width: 30%;
+}
+
+.vision .title h2 {
+
+    height: auto;
+    color: #FFF;
+    text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
+
+    font-size: 8rem;
+    margin-top: 2.5rem;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -2.257px;
+    text-transform: uppercase;
+}
+
+.vision .text-effect {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.vision .text-effect h2 {
+    background-image: url('/assets/vission1.gif');
+    background-size: cover;
+    color: transparent;
+    background-clip: border-box;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 14rem;
+    font-weight: 900;
+    /* padding: 5px; */
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.vision .content {
+    display: flex;
+}
+
+.vision .content .aboutcard {
+    padding: 0px 2rem;
+}
+
+.vision .content .aboutcard h2 {
+    color: #262626;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27.372px;
+    margin-bottom: 10px;
+    /* 57.96% */
+}
+
+.vision .content .aboutcard h3 {
+    margin: 0px;
+    font-size: 2rem;
+}
+
+.vision .content .card p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
+
+/* On screens that are 1024px or less, set the background color to blue */
+@media screen and (max-width: 1024px) {
+
+    .vision .content-center {
+        width: 98%;
+    }
+
+    .vision .header {
+        display: block;
+        width: fit-content;
+        margin-bottom: 0;
+    }
+
+    .vision .title h2 {
+        display: block;
+        font-size: 5rem;
+    }
+
+    .vision .text-effect {
+        padding: 0;
+    }
+
+    .vision .text-effect h2 {
+        font-size: 12.3rem;
+    }
+
+    .vision .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .vision .content .card {
+        width: 50%;
+        margin: 2em 0;
+    }
+
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .vision .header {
+        width: 100%;
+        display: block;
+
+    }
+
+    .vision .title {
+        width: fit-content;
+    }
+
+    .vision .title h2 {
+        letter-spacing: 3px;
+        display: inline-block;
+        font-size: 2.5rem;
+        margin: 0 auto;
+    }
+
+    .vision .text-effect {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .vision .text-effect h2 {
+        font-size: 7rem;
+        width: fit-content;
+    }
+
+    .vision .content {
+        flex-direction: column;
+    }
+
+    .vision .content .card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .vision .content .card h3 {
+        font-size: 1rem;
+    }
+
+    .vision .content .card p {
+        font-size: 1rem;
+    }
+
+    .top-content .arrow {
+        width: 2rem;
+        height: 1.5rem;
+    }
+
+    .arrow img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .top-content .content {
+        font-size: 1rem;
+    }
+}
+
+/* vision end */
+
+.mission {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 48px;
+    gap: 10px;
+    background: radial-gradient(334.09% 146.3% at 13.96% 112.39%, rgba(57, 83, 41, 0.44) 0%, rgba(11, 14, 10, 0.00) 44.4%, rgba(57, 83, 41, 0.44) 100%), #000;
+}
+
+
+.mission .head .heading {
+    color: #FFF;
+    text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -2.257px;
+    text-transform: uppercase;
+}
+
+.mission .misson-texteffect h2 {
+    background-image: url('/assets/mission1.gif');
+    background-size: cover;
+    background-position: -390px -90px;
+    color: transparent;
+    background-clip: border-box;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 16rem;
+    font-weight: 900;
+    margin-top: -50px;
+}
+
+.mission .content {
+    display: flex;
+}
+
+.mission .content .card {
+    padding: 0px 2rem;
+}
+
+.mission .content .card h2 {
+    color: #9BF00B;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27.372px;
+    margin-bottom: 10px;
+    /* 57.96% */
+}
+
+.mission .content .card h3 {
+    margin: 0px;
+    font-size: 2rem;
+    color: #9BF00B;
+}
+
+.mission .content .card p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+   */
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1024px) {
+    .mission .misson-texteffect h2 {
+        font-size: 12rem;
+    }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+    .mission {
+        padding: 3rem;
+    }
+
+    .mission .top-content {
+        margin: 1em 0;
+        padding: 1rem 0;
+    }
+
+    .mission .top {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .mission .top .head .h1 {
+        font-size: 7rem;
+    }
+
+    .mission .top .head .h1 br {
+        display: none;
+    }
+
+    .mission-texteffect {
+        width: 100%;
+    }
+
+    .mission .misson-texteffect h2 {
+        font-size: 9rem;
+        line-height: 13rem;
+    }
+
+    .mission .bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0px
+    }
+
+    .mission .bottom .card {
+        padding: 10px 25px;
+        margin: 10px 0;
+        width: 50%;
+    }
+
+    .mission .bottom .card h2 {
+        font-size: 30px;
+    }
+
+    .mission .bottom .card h3 {
+        font-size: 17px;
+    }
+
+    .mission .bottom .card p {
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: olive;
+        width: 100%;
+    }
+
+    .mission {
+        padding: 20px;
+    }
+
+    .mission .top-content .content p {
+        font-size: 1.1rem;
+    }
+
+    .top-content .arrow {
+        height: fit-content;
+    }
+
+    .mission .bottom {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .mission .misson-texteffect h2 {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .mission .bottom .card {
+        padding: 10px 0px;
+        margin: 0px;
+        width: auto;
+    }
+
+    .mission .bottom .card h2 {
+        font-size: 30px;
+    }
+
+    .mission .bottom .card h3 {
+        font-size: 17px;
+    }
+
+    .mission .bottom .card p {
+        margin: .8em 0;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+}
+
+/* mission end */
+
+/* SECTION-6 */
+
+
+#sec-6 {
+
+    background: radial-gradient(362.06% 154.47% at 5.03% 115.89%, rgba(57, 83, 41, 0.44) 0%, rgba(11, 14, 10, 0.00) 44.4%, rgba(57, 83, 41, 0.44) 100%);
+}
+
+.background-div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    padding: 48px;
+    background-color: #223344;
+
+    background: url('/assets/icon.webp'), url('/assets/GRAPHIC.webp');
+    background-position: 5% 5%, right center;
+    background-repeat: no-repeat, no-repeat;
+
+}
+
+.main-textimonial {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec-6 h3 {
+    font-size: 64px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#sec-6 h3 span {
+    color: #9BF00B;
+}
+
+.textimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.textimonial-container {
+    overflow: hidden;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textimonial-container p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.64);
+    font-weight: 600;
+    text-align: center;
+}
+
+.textimonial-container h2 {
+    margin-top: 24px;
+    font-size: 32px;
+    color: #9BF00B;
+    text-align: end;
+}
+
+.comments {
+    display: none;
+
+}
+
+.comments::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+}
+
+.profiles {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+}
+
+.profile {
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+    margin: 0 4px;
+    transition: all 0.2s ease;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+
+}
+
+.current {
+    /* width: 4em;
+    height: 4em; */
+    transform: scale(1.4);
+    transition: transform .8s;
+}
+
+.current img {
+
+
+    opacity: 1;
+    filter: blur(0px);
+
+}
+
+.effect {
+    -webkit-animation-name: effect;
+    -webkit-animation-duration: 1s;
+    animation-name: effect;
+    animation-duration: 1s;
+}
+
+@keyframes effect {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
+.news {
+    padding: 60px 94px;
+    align-items: center;
+    gap: 90px;
+    background: radial-gradient(362.06% 154.47% at 5.03% 115.89%,
+            rgba(57, 83, 41, 0.44) 0%,
+            rgba(11, 14, 10, 0) 44.4%,
+            rgba(57, 83, 41, 0.44) 100%),
+        #000;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 28.736px;
+    color: #fff;
+    padding: 16px 23px 16px 16px;
+    border-radius: 37.615px;
+    border: 2.821px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(128deg,
+            rgba(24, 24, 24, 0.1) -22.07%,
+            rgba(71, 71, 71, 0.4) -9.67%,
+            rgba(24, 24, 24, 0.1) 96.88%);
+}
+
+.cards h2 {
+
+    font-size: 24.631px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 34.483px */
+}
+
+.cards p {
+
+    font-size: 16.421px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24.631px */
+}
+
+.cards .cat-bt {
+    width: 73.35px;
+    border-radius: 12.225px;
+    border: none;
+    background: #f4f4f4;
+    padding: 3px 7x;
+    color: #2d2a2a;
+
+    font-size: 13.165px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 19.748px */
+}
+
+.cards button {
+    background: none;
+    border: none;
+    color: #c2c2c2;
+    /* Text/Regular/Normal */
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    row-gap: 10px;
+    column-gap: 20px;
+    grid-template-areas:
+        "item1 item4"
+        "item2 item5"
+        "item2 item6"
+        "item3 item7";
+}
+
+.item1 {
+    grid-area: item1;
+    display: flex;
+    width: 609px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.item1 h2 {
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    /* 78.1px */
+    letter-spacing: -2.13px;
+    text-transform: uppercase;
+}
+
+.item1 h2 span {
+    color: #9bf00b;
+}
+
+.item1 p {
+    color: #9bf00b;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 27px */
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item2 .main-cards {
+    display: flex;
+    padding: 13px 23px 13px 23px;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.item2 .main-cards img {
+    width: 100%;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+
+/* NEWS & EVENTS */
+#sec-news {
+    padding: 48px;
+}
+
+.blog-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    gap: 24px;
+}
+
+.blog-container .left-sec {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.blog-container .head h3 {
+    font-size: 72px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    line-height: 110%;
+}
+
+.blog-container .head h3 span {
+    color: #9BF00B;
+}
+
+.blog-container .head p {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-top: 24px;
+}
+
+.blog-container .recent-blog {
+    border: 1px solid rgba(255, 255, 255, 0.571);
+    border-radius: 28px;
+    padding: 16px;
+}
+
+.blog-container .recent-blog .img-container {
+    width: 100%;
+}
+
+.blog-container .recent-blog .img-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-container .category {
+    color: #000000f5;
+    background-color: white;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin: 12px 0px;
+}
+
+.blog-container .info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.blog-container .info .duration {
+    color: white;
+}
+
+.blog-container h4 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.blog-container .blog-desc {
+    color: #FAFAFA;
+    margin-bottom: 24px;
+}
+
+.blog-container a {
+    text-decoration: none;
+    color: #C2C2C2;
+}
+
+
+.blog {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.571);
+    border-radius: 28px;
+    padding: 16px;
+}
+
+.blog .img-container {
+    width: 30%;
+    /* height: 12.5vw; */
+}
+
+.blog .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog .content {
+    width: 70%;
+}
+
+
+
+.blog-container .right-sec {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+.blog-container .right-sec .blog {
+    height: 25%;
+}
+
+
+#sec-news button {
+    background-color: #9BF00B;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 12px;
+    display: block;
+    margin: 36px auto;
+}
+
+
+
+
+/*Rocket Button*/
+.rocketbtn{
+    z-index: 10;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.648);
+    border: none;
+    padding: 12px 24px;
+}
+

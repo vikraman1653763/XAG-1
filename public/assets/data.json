@@ -1,0 +1,28 @@
+{
+  "menu": [
+    {
+      "title": "Agricultural Drone",
+      "submenu": [
+        {"name": "AGR 10", "link": "#"},
+        {"name": "AGR 16", "link": "src/product/agr10.jsx"}
+      ]
+    },
+    {
+      "title": "Flight Controller",
+      "submenu": [
+        {"name": "agrotor tek India", "link": "#"}
+      ]
+    },
+    {
+      "title": "Batteries",
+      "submenu": [
+        {"name": "LIPO", "link": "#"},
+        {"name": "LION", "link": "#"},
+        {"name": "Solid State", "link": "#"}
+
+
+      ]
+    }
+  ]
+}
+

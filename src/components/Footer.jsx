@@ -1,0 +1,80 @@
+import React from 'react';
+import '/src/style/footer.css';
+import facebook from '/assets/facebook.svg';
+import youtube from '/assets/youtube.svg';
+import twitter from '/assets/twitter.svg';
+import instagram from '/assets/instagram.svg';
+import linkedin from '/assets/linkedin.svg';
+const Footer = () => {
+    return (
+        <footer>
+            <div className="footer-container">
+                <div className="footer_1">
+                    <div className="part-1">
+                        <div className="img-bg">
+                            <img src="/assets/logo.webp" alt="Xagrotor Tek" />
+                        </div>
+                        <p>Xagrotor Tek Private Limited</p>
+                    </div>
+                    <div className="part-2">
+                        <div className="part-22">
+                            <h3>Quick Links</h3>
+                            <ul className="list_links">
+                                <li><a href="/about">About</a></li>
+                                <li><a href="#">Product</a></li>
+                                <li><a href="/#">Training</a></li>
+                                <li><a href="/#">Blogs and Events</a></li>
+                                <li><a href="/#">Career</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div className="part-23">
+                            <h3>Customer Support</h3>
+                            <ul>
+                                <li><a href="/#">Shipping</a></li>
+                                <li><a href="/#">Returns</a></li>
+                                <li><a href="/#">Track Order</a></li>
+                                <li><a href="/#">Privacy Policy</a></li>
+                                <li><a href="/#">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="part-4">
+                        <h3>Map Location</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243.9389095833567!2d79.79109027684463!3d11.972940293165456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720086552638!5m2!1sen!2sin"
+                            width="100%"
+                            height="200"
+                            style={{ border: 0, aspectRatio: '16/9' }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Google Maps Location"
+                        ></iframe>
+                    </div>
+                </div>
+                <hr className="custom_hr" />
+                <div className="footer_2">
+                    <div className="left_content">
+                        <p>&copy; 2023. All rights reserved.</p>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/cookie-settings">Cookie settings</a>
+                        <a href="/site-map">Site Map</a>
+                    </div>
+                    <div className="right_content">
+
+                    <img src={facebook}/>
+                    <img src={instagram}/>
+                    <img src={linkedin}/>
+                    <img className='tw' src={twitter}/>
+                    <img className='yt' src={youtube}/>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

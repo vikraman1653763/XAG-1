@@ -1,0 +1,232 @@
+{
+    "batteries": [
+        {
+            "title": "Product1",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 1.",
+            "price": "10.00",
+            "image": "/Imagesequence/1.webp",
+            "specs": [
+                {"name": "Capacity", "details": "5000mAh"},
+                {"name": "Voltage", "details": "22.2V"},
+                {"name": "Charge Rate", "details": "2C"},
+                {"name": "Weight", "details": "1.2kg"},
+                {"name": "Dimensions", "details": "150x50x30mm"},
+                {"name": "Discharge Rate", "details": "45C"},
+                {"name": "Connector", "details": "XT60"}
+            ],
+            "type":"Solid State",
+            "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"]
+        },
+        {
+            "title": "Product 2",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 2.",
+            "price": "20.00",
+            "image": "/assets/Battery.jpeg",
+            "specs": [
+                {"name": "Capacity", "details": "5000mAh"},
+                {"name": "Voltage", "details": "22.2V"},
+                {"name": "Charge Rate", "details": "2C"},
+                {"name": "Weight", "details": "1.2kg"},
+                {"name": "Dimensions", "details": "150x50x30mm"},
+                {"name": "Discharge Rate", "details": "45C"},
+                {"name": "Connector", "details": "XT60"}
+            ]
+        },
+        {
+            "title": "Product 3",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/20.webp",
+             "specs": [
+                {"name": "Capacity", "details": "5000mAh"},
+                {"name": "Voltage", "details": "22.2V"},
+                {"name": "Charge Rate", "details": "2C"},
+                {"name": "Weight", "details": "1.2kg"},
+                {"name": "Dimensions", "details": "150x50x30mm"},
+                {"name": "Discharge Rate", "details": "45C"},
+                {"name": "Connector", "details": "XT60"}
+            ]
+        },
+        {
+            "title": "Product 4",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/30.webp",
+             "specs": [
+                {"name": "Capacity", "details": "7000mAh"},
+                {"name": "Voltage", "details": "22.2V"},
+                {"name": "Charge Rate", "details": "2C"},
+                {"name": "Weight", "details": "1.4kg"},
+                {"name": "Dimensions", "details": "170x60x40mm"},
+                {"name": "Discharge Rate", "details": "55C"},
+                {"name": "Connector", "details": "EC5"}
+            ]
+        },
+        {
+            "title": "Product 5",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/product2.webp"
+        },
+        {
+            "title": "Product 6",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/50.webp",
+             "specs": [
+                { "name": "Voltage", "details": "25.2V" },
+                { "name": "Capacity", "details": "10000mAh" }
+            ]
+
+        },
+        {
+            "title": "Product 7",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/Battery02.jpeg",
+             "specs": [
+                { "name": "Voltage", "details": "25.2V" },
+                { "name": "Capacity", "details": "10000mAh" }
+            ]
+        },
+
+        {
+            "title": "Product 1",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 1.",
+            "price": "10.00",
+            "image": "/Imagesequence/1.webp",
+ "specs": [
+                { "name": "Voltage", "details": "25.2V" },
+                { "name": "Capacity", "details": "10000mAh" }
+            ]
+        },
+        {
+            "title": "Product 2",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 2.",
+            "price": "20.00",
+            "image": "/assets/Battery.jpeg"
+        },
+        {
+            "title": "Product 3",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/20.webp"
+        },
+        {
+            "title": "Product 4",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/30.webp"
+        },
+        {
+            "title": "Product 5",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/product2.webp"
+        },
+        {
+            "title": "Product 6",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/50.webp"
+        },
+        {
+            "title": "Product 7",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/Battery02.jpeg"
+        },
+        {
+            "title": "Product 1",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 1.",
+            "price": "10.00",
+            "image": "/Imagesequence/1.webp",
+ "specs": [
+                { "name": "Voltage", "details": "25.2V" },
+                { "name": "Capacity", "details": "10000mAh" }
+            ]
+        },
+        {
+            "title": "Product 2",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 2.",
+            "price": "20.00",
+            "image": "/assets/Battery.jpeg"
+        },
+        {
+            "title": "Product 3",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/20.webp"
+        },
+        {
+            "title": "Product 4",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/30.webp"
+        },
+        {
+            "title": "Product 5",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/product2.webp"
+        },
+        {
+            "title": "Product 6",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/50.webp"
+        },
+        {
+            "title": "Product 7",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/Battery02.jpeg"
+        },
+        {
+            "title": "Product 1",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 1.",
+            "price": "10.00",
+            "image": "/Imagesequence/1.webp",
+ "specs": [
+                { "name": "Voltage", "details": "25.2V" },
+                { "name": "Capacity", "details": "10000mAh" }
+            ]
+        },
+        {
+            "title": "Product 2",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 2.",
+            "price": "20.00",
+            "image": "/assets/Battery.jpeg"
+        },
+        {
+            "title": "Product 3",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/20.webp"
+        },
+        {
+            "title": "Product 4",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/30.webp"
+        },
+        {
+            "title": "Product 5",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/product2.webp"
+        },
+        {
+            "title": "Product 6",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/Imagesequence/50.webp"
+        },
+        {
+            "title": "Product 7",
+            "description": "Description agri drone battery for agr 10 and agr16 16 for battery 3.",
+            "price": "30.00",
+             "image": "/assets/Battery02.jpeg"
+        }
+    ]
+}
