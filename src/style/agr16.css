@@ -77,7 +77,7 @@ main {
     height: auto;
     border-radius: 20px;
     position: relative;
-    animation: scaleUp 5s  alternate ease-in-out;
+    animation: scaleUp 5s  alternate ease-in-out ;
 
 }
 
@@ -85,9 +85,12 @@ main {
   0% {
       transform: scale(1);
   }
-  100% {
+  50% {
       transform: scale(1.1);
   }
+  100% {
+    transform: scale(1);
+}
 }
 
 video::-internal-media-controls {
@@ -236,12 +239,16 @@ span {
     background-size: cover;
     border-radius: 10px;
     /* reduce gif size */
-    background-image: url('/assets/sensor.gif');
+    background-image: url('/assets/wingsspin.gif');
     background-clip: border-box;
     -moz-background-clip: text;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center center;
   }
   
   .advantage-points {
@@ -261,7 +268,7 @@ span {
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 20px;
     text-align: center;
-    color: #000000; 
+    color: #ffffff; 
   }
 
   
@@ -343,8 +350,9 @@ span {
     width: 20rem;
     z-index: 10;
     background-size: cover;
-    background-position: center;
+    background-position: right center ;
     background-repeat: no-repeat;
+    background-clip: border-box;
   }
   
   .top-left {
@@ -352,7 +360,8 @@ span {
     justify-self: end;
     align-self: end;
     border-top-left-radius: 100%;
-    background-image: url('/Imagesequence/1.webp');
+    background-image: url('/assets/nazzle.webp');
+    
  
 
   }
@@ -496,7 +505,7 @@ span {
   border-bottom: 2px solid #9BF00B;
 }
 
-.content {
+.tabb-content {
   text-align: center;
   padding: 20px;
 

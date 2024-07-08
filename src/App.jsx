@@ -37,7 +37,7 @@ const App = () => {
       </Routes>
       <Footer />
       <button className="rocketbtn">
-        <a href="#"><img src="/assets/rocket.webp" alt="backtotop" width="24px" height="auto" /></a>
+        <a href="#"><img src="/assets/rocket.svg" alt="backtotop" width="24px" height="auto" /></a>
       </button>
     </Router>
     

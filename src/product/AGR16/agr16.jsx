@@ -31,13 +31,11 @@ const AGR16 = () => {
         <Specifications />
         <CubeSection/>
         <DroneTypes />
-        <Advantages />
       <DroneTabs />
+        <Advantages />
  
       </main>
-      <button className="rocketbtn">
-        <a href="#"><img src="src/assets/rocket.webp" alt="backtotop" width="24px" height="auto" /></a>
-      </button>
+ 
     </div>
   );
 };

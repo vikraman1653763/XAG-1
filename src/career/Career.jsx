@@ -5,6 +5,8 @@ import FilterSection from './FilterSection.jsx';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import bag from "/assets/bag.svg";
+
+
 const jobListings = [
     {
         title: 'Software Engineer',
@@ -104,10 +106,11 @@ const Career = () => {
             selectedExperience.length === 0 || selectedExperience.includes(job.experience);
         return typeMatch && locationMatch && experienceMatch;
     });
+
     useEffect(() => {
         AOS.init({ duration: 1250 });
-        
-}, []);
+    }, []);
+
     return (
         <>
             <CareerBanner />
@@ -121,26 +124,30 @@ const Career = () => {
                     handleExperienceChange={handleExperienceChange}
                 />
                 <div className="job-listings" data-aos="fade-up">
-                    {filteredJobs.map((job, index) => (
-                        <div className="job-card" key={index} >
-                            <h3><img src={bag}/>{job.title}</h3>
-                            <p>{job.description}</p>
-                            <p><strong>Location:</strong> {job.location}</p>
-                            <p><strong>Type:</strong> {job.type}</p>
-                            <p><strong>Experience:</strong> {job.experience}</p>
-                            <strong>Requirements:</strong>
-                            <ul>
-                                {job.requirements.map((req, reqIndex) => (
-                                    <li key={reqIndex}>{req}</li>
-                                ))}
-                            </ul>
-                            <div className='applydiv'> 
-
-                            <button type='button'
-                            className="apply-button">Apply Now</button>
+                    {filteredJobs.length > 0 ? (
+                        filteredJobs.map((job, index) => (
+                            <div className="job-card" key={index} >
+                                <h3><img src={bag}/>{job.title}</h3>
+                                <p>{job.description}</p>
+                                <p><strong>Location:</strong> {job.location}</p>
+                                <p><strong>Type:</strong> {job.type}</p>
+                                <p><strong>Experience:</strong> {job.experience}</p>
+                                <strong>Requirements:</strong>
+                                <ul>
+                                    {job.requirements.map((req, reqIndex) => (
+                                        <li key={reqIndex}>{req}</li>
+                                    ))}
+                                </ul>
+                                <div className='applydiv'> 
+                                    <button type='button' className="apply-button">Apply Now</button>
+                                </div>
                             </div>
+                        ))
+                    ) : (
+                        <div className="no-jobs">
+                            <h3>There are currently no openings available. Please check back later.</h3>
                         </div>
-                    ))}
+                    )}
                 </div>
             </section>
         </>

@@ -257,3 +257,8 @@ padding: 2px;
     border: 1px solid #daff38;
     border-radius: 5px;
 }
+
+.no-jobs h3{
+  text-align: center;
+  color: white;
+}

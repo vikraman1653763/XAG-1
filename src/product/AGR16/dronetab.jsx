@@ -45,7 +45,7 @@ const DroneTabs = () => {
           </button>
         ))}
       </div>
-      <div className="content">
+      <div className="tabb-content">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}

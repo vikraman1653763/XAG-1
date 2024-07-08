@@ -141,16 +141,19 @@ ul li {
     border-radius: 20%;
 }
 
+
+
+/* FOOTER ends */
+
+
 /*Rocket Button*/
 .rocketbtn{
     z-index: 10;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    border-radius: 30px;
-    background: rgba(25, 25, 25, 0.648);
+    
+    background: rgba(25, 25, 25, 0);
     border: none;
-    padding: 12px 24px;
+    transform: scale(1.7);
 }
-
-/* FOOTER ends */

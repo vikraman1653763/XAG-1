@@ -1,14 +1,21 @@
-import React from 'react';
-
+import React ,{useEffect}from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Enquiry = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      mirror: true,
+    });
+  }, []);
   return (
-    <section id="enquiry">
+    <section id="enquiry" >
       <div className="enquiries-heading">
         <h3 className="enquiry-header">FOR <br /><span>enquiries</span></h3>
         <h6>In terms of Sales, Help & service, New Ideas & collaboration and for more
           requirements contact us</h6>
       </div>
-      <div className="enquiry-card">
+      <div className="enquiry-card" data-aos="fade-up">
         <div className="adv-card-bg">
           <span className="green-border1"></span>
           <span className="green-border2"></span>

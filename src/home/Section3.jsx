@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+
+
+
+   
 const Section3 = () => {
     useEffect(() => {
         const handleScopeProductClick = (e) => {
@@ -30,11 +36,18 @@ const Section3 = () => {
         };
     }, []);
 
+    useEffect(() => {
+        AOS.init({
+          duration: 2000,
+          mirror: true,
+        });
+      }, []);
+
     return (
-        <section id="sec-3">
+        <section id="sec-3" data-aos="fade-down">
             <h3>our scope <span>products</span></h3>
             <div className="gallery-wrap">
-                <div id="scopeProduct1" className="item item-1 itemclick">
+                <div id="scopeProduct1" className="item item-1 itemclick" >
                     <div className="item-content">
                         <h2>AGRI DRONE</h2>
                         <h4>AGR 16</h4>

@@ -1,35 +1,53 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import React, { useEffect, useRef } from 'react';
+import SplitTextJS from 'split-text-js';
+import gsap from 'gsap';
 
 const Section2 = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 2500,
-            easing: 'cubic-bezier(0.09, 1.88, 0, -2)',
-           
-        });
-    }, []);
+  const containerRef = useRef(null); 
 
-    return (
-       <>
-            <div className="description" data-aos="fade-up">
-                <h2 >Features</h2>
-                <ul>
-                    <li data-aos="fade-left">Cloud Data Log</li>
-                    <li data-aos="fade-right">Server Support</li>
-                    <li data-aos="fade-left">Live Monitoring</li>
-                    <li data-aos="fade-right">APK Customization</li>
-                    <li data-aos="fade-left">Regional Language</li>
-                    <li data-aos="fade-right">High precision GPS</li>
-                    <li data-aos="fade-left">Customizable flight paths</li>
-                    <li data-aos="fade-right">Enhanced safety protocols</li>
-                    <li data-aos="fade-left">Real-time video recording</li>
-                    <li data-aos="fade-right">Point-to-point tree spraying</li>
-                </ul>
-            </div>
-       </>
-    );
+  useEffect(() => {
+    if (containerRef.current) {
+      const titles = gsap.utils.toArray(containerRef.current.querySelectorAll('p'));
+      const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+      titles.forEach(title => {
+        const splitTitle = new SplitTextJS(title, { type: 'chars, words, lines' });
+        tl
+          .from(splitTitle.chars, {
+            opacity: 0,
+            y: 80,
+            rotateX: -90,
+            stagger: 0.001
+          }, '<')
+          .to(splitTitle.chars, {
+            opacity: 0,
+            y: -80,
+            rotateX: 90,
+            stagger: 0.001
+          }, '<1');
+      });
+    }
+  }, []);  // Dependency array is empty to run only once on mount
+
+  return (
+    <>
+    <div ref={containerRef} className='des-container'> 
+        <h2 className='des-head'>Feature</h2>
+      <div className='des-text-wrapper'>
+        <p>Cloud Data Log</p>
+        <p>Server Support</p>
+        <p>Live Monitoring</p>
+        <p>APK Customization</p>
+        <p>Regional Language</p>
+        <p>High precision GPS</p>
+        <p>Customizable flight paths</p>
+        <p>Enhanced safety protocols</p>
+        <p>Real-time video recording</p>
+        <p>Point-to-point tree spraying</p>
+      </div>
+    </div>
+    </>
+  );
 };
 
 export default Section2;

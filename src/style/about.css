@@ -351,8 +351,10 @@
 }
 
 .vision .text-effect h2 {
-    background-image: url('/assets/vission1.gif');
+    background-image: url('/assets/wingspin.gif');
     background-size: cover;
+    background-position: 20%;
+    background-color: #000;
     color: transparent;
     background-clip: border-box;
     -moz-background-clip: text;
@@ -1142,15 +1144,4 @@
 
 
 
-/*Rocket Button*/
-.rocketbtn{
-    z-index: 10;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 30px;
-    background: rgba(25, 25, 25, 0.648);
-    border: none;
-    padding: 12px 24px;
-}
 

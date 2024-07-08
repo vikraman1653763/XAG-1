@@ -3,7 +3,7 @@ import React from 'react';
 const Section7 = () => {
     return (
         <section id="sec-7">
-            <h3>CERTIFICATE OF <span> REGISTRATION</span></h3>
+            <h3>CERTIFI<span>CATE</span></h3>
             <div className="showcase-container">
                 <div className="showcase-set">
                     <div className="image">

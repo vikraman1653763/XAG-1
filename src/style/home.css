@@ -556,7 +556,7 @@ canvas {
     box-shadow: 0.8px 0.8px 0.8px 0.8px rgba(142, 220, 7, 0.999);
 }
 
-.adv-card-bg {
+.adv-card-bg-home {
     width: 412px;
     padding: 2px;
     position: relative;
@@ -564,6 +564,8 @@ canvas {
     margin: 24px;
     overflow: hidden;
     background-color: #e0dada2d;
+    transition-timing-function:cubic-bezier(.175,.885,.32,1.275);
+    transition-duration: 1s;
 }
 
 
@@ -593,7 +595,7 @@ canvas {
     border-radius: 24px 0 0 0;
 }
 
-.adv-card-bg:hover .green-border1 {
+.adv-card-bg-home:hover .green-border1 {
     width: 100%;
     transform: translateX(88%);
     border-radius: 0 24px 0 0;
@@ -605,19 +607,19 @@ canvas {
     border-radius: 0 0 24px 0;
 }
 
-.adv-card-bg:hover .green-border2 {
+.adv-card-bg-home:hover .green-border2 {
     width: 100%;
     transform: translateX(-88%);
     border-radius: 0 0 0 24px;
 }
 
-.adv-card-bg .black_background {
+.adv-card-bg-home .black_background {
     z-index: -1;
     position: absolute;
     border-radius: 36px;
     width: 99%;
     height: 99%;
-    background-color: black;
+    background-color: rgb(41, 40, 40);
 }
 
 .adv-card-bg .glass_effect {
@@ -1129,23 +1131,6 @@ canvas {
 #sec-8 .content_sec .right img {
     width: 100%;
 }
-
-
-
-
-
-/*Rocket Button*/
-.rocketbtn{
-    z-index: 10;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 30px;
-    background: rgba(25, 25, 25, 0.648);
-    border: none;
-    padding: 12px 24px;
-}
-
 
 
 

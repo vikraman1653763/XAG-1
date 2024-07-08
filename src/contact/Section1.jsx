@@ -1,6 +1,10 @@
 import React from 'react';
 
+
+
 const Section1 = () => {
+
+   
   return (
     <section className="banner">
       <img src="/assets/banner.webp" alt="banner" />

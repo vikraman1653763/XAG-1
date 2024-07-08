@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const Blog = () => {
     return (
         <>
-            <div className="blog-container">
+            <div className="og-blog-container">
                 {blogData.map((blog, index) => (
                     
-                         <Link to={`/blog/${blog.title}`}>
-                    <div className="blog-card" key={index}>
+                         <Link to={`/blog/${blog.title}`} key={index}>
+                    <div className="blog-card">
                         <div className="blog-img">
                             <img src={blog.image} alt={blog.title}/>
                         </div>
