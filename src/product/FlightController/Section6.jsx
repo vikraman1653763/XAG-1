@@ -1,121 +1,54 @@
-import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { SiAmazon, SiGithub, SiGoogle, SiMeta, SiTwitch } from "react-icons/si";
-import { twMerge } from "tailwind-merge";
+import React, { useEffect, useRef } from 'react';
+import SplitTextJS from 'split-text-js';
+import gsap from 'gsap';
 
-export const Section6 = () => {
-  return (
-    <section className="flex h-72 flex-col items-center justify-center gap-12 bg-neutral-950 px-4 py-24 md:flex-row">
-      <LogoRolodex
-        items={[
-          <LogoItem key={1} className="bg-orange-300 text-neutral-900">
-            <SiAmazon />
-          </LogoItem>,
-          <LogoItem key={2} className="bg-green-300 text-neutral-900">
-            <SiGoogle />
-          </LogoItem>,
-          <LogoItem key={3} className="bg-blue-300 text-neutral-900">
-            <SiMeta />
-          </LogoItem>,
-          <LogoItem key={4} className="bg-white text-black">
-            <SiGithub />
-          </LogoItem>,
-          <LogoItem key={5} className="bg-purple-300 text-neutral-900">
-            <SiTwitch />
-          </LogoItem>,
-        ]}
-      />
-    </section>
-  );
-};
-
-const DELAY_IN_MS = 2500;
-const TRANSITION_DURATION_IN_SECS = 1.5;
-
-const LogoRolodex = ({ items }) => {
-  const intervalRef = useRef(null);
-  const [index, setIndex] = useState(0);
+const Section6 = () => {
+  const containerRef = useRef(null); 
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setIndex((pv) => pv + 1);
-    }, DELAY_IN_MS);
+    if (containerRef.current) {
+      const titles = gsap.utils.toArray(containerRef.current.querySelectorAll('p'));
+      const tl = gsap.timeline({ repeat: -1 });
 
-    return () => {
-      clearInterval(intervalRef.current || undefined);
-    };
-  }, []);
+      titles.forEach(title => {
+        const splitTitle = new SplitTextJS(title, { type: 'chars, words, lines' });
+        tl
+          .from(splitTitle.chars, {
+            opacity: 0,
+            x: 100,
+            rotateY: -90,
+            stagger: 0.002
+          }, '<')
+          .to(splitTitle.chars, {
+            opacity: 0,
+            x: -100,
+            rotateY: 90,  
+            stagger: 0.002
+          }, '+=3');
+      });
+    }
+  }, []);  
 
   return (
-    <div
-      style={{
-        transform: "rotateY(-20deg)",
-        transformStyle: "preserve-3d",
-      }}
-      className="relative z-0 h-44 w-60 shrink-0 rounded-xl border border-neutral-700 bg-neutral-800"
-    >
-      <AnimatePresence mode="sync">
-        <motion.div
-          style={{
-            y: "-50%",
-            x: "-50%",
-            clipPath: "polygon(0 0, 100% 0, 100% 50%, 0 50%)",
-            zIndex: -index,
-            backfaceVisibility: "hidden",
-          }}
-          key={index}
-          transition={{
-            duration: TRANSITION_DURATION_IN_SECS,
-            ease: "easeInOut",
-          }}
-          initial={{ rotateX: "0deg" }}
-          animate={{ rotateX: "0deg" }}
-          exit={{ rotateX: "-180deg" }}
-          className="absolute left-1/2 top-1/2"
-        >
-          {items[index % items.length]}
-        </motion.div>
-        <motion.div
-          style={{
-            y: "-50%",
-            x: "-50%",
-            clipPath: "polygon(0 50%, 100% 50%, 100% 100%, 0 100%)",
-            zIndex: index,
-            backfaceVisibility: "hidden",
-          }}
-          key={(index + 1) * 2}
-          initial={{ rotateX: "180deg" }}
-          animate={{ rotateX: "0deg" }}
-          exit={{ rotateX: "0deg" }}
-          transition={{
-            duration: TRANSITION_DURATION_IN_SECS,
-            ease: "easeInOut",
-          }}
-          className="absolute left-1/2 top-1/2"
-        >
-          {items[index % items.length]}
-        </motion.div>
-      </AnimatePresence>
+    <div className='fc-adv'>
+      
+    <div className="fc-adv-card">
+      <div className='fc-adv-img-container'>
+        <img className='fc-adv-img fc1' src="/fc/fmu.png" alt="Flight Controller Image 1" />
+        <img className='fc-adv-img fc2' src="/fc/gnss.png" alt="Flight Controller Image 1" />
+        <img className='fc-adv-img fc3' src="/fc/pmu.png" alt="Flight Controller Image 1" />
+      </div>
 
-      <hr
-        style={{
-          transform: "translateZ(1px)",
-        }}
-        className="absolute left-0 right-0 top-1/2 z-[999999999] -translate-y-1/2 border-t-2 border-neutral-800"
-      />
+
+      <div ref={containerRef}  className="fc-adv-textBox">
+        <h2 className="fc-adv-text fc-adv-head">Key Capabilities of Our Flight Controller</h2>
+        <p>The flight controller can handle up to 100kg.</p>
+        <p>Can support more than 8 regional languages.</p>
+        <p>log data are stored in the cloud.</p>
+      </div>
+    </div>
     </div>
   );
 };
 
-const LogoItem = ({ children, className }) => {
-  return (
-    <div
-      className={twMerge(
-        "grid h-36 w-52 place-content-center rounded-lg bg-neutral-700 text-6xl text-neutral-50",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
+export default Section6;

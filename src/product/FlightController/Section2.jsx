@@ -24,10 +24,10 @@ const Section2 = () => {
             y: -80,
             rotateX: 90,
             stagger: 0.001
-          }, '<1');
+          }, '<2');
       });
     }
-  }, []);  // Dependency array is empty to run only once on mount
+  }, []);  
 
   return (
     <>
