@@ -12,6 +12,7 @@ import DroneTypes from './DroneTypes';
 import Advantages from './Advantages';
 import DroneTabs from './dronetab';
 import CubeSection from './CubeSection';
+import Fc from './fCSection.jsx';
 
 
 const AGR16 = () => {
@@ -29,11 +30,11 @@ const AGR16 = () => {
         <GifContainer />
         <Description />
         <Specifications />
+        <Fc/>
         <CubeSection/>
         <DroneTypes />
       <DroneTabs />
         <Advantages />
- 
       </main>
  
     </div>

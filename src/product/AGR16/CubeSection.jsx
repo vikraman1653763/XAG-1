@@ -16,25 +16,25 @@ const CubeSection = () => {
     <section className="cube-section">
       <div className={`cube-item top-left ${items[activeIndex] === 'top-left' ? 'active' : ''}`}>
         <div className='big-blocky'>
-          <div className="blocky">Lorem ipsum dolor sit.</div>
+          <div className="blocky">FPV Camera</div>
         </div>
       </div>
 
       <div className={`cube-item top-right ${items[activeIndex] === 'top-right' ? 'active' : ''}`}>
         <div className='big-blocky'>
-          <div className="blocky">Lorem ipsum dolor sit.</div>
+          <div className="blocky">Obstacle Sensor</div>
         </div>
       </div>
 
       <div className={`cube-item bottom-left ${items[activeIndex] === 'bottom-left' ? 'active' : ''}`}>
         <div className='big-blocky'>
-          <div className="blocky">Lorem ipsum dolor sit.</div>
+          <div className="blocky">Motor 36inch Propeller</div>
         </div>
       </div>
 
       <div className={`cube-item bottom-right ${items[activeIndex] === 'bottom-right' ? 'active' : ''}`}>
         <div className='big-blocky'>
-          <div className="blocky">Lorem ipsum dolor sit.</div>
+          <div className="blocky">Brush Pump</div>
         </div>
       </div>
     </section>

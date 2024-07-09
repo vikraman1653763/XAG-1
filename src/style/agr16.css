@@ -360,7 +360,7 @@ span {
     justify-self: end;
     align-self: end;
     border-top-left-radius: 100%;
-    background-image: url('/assets/nazzle.webp');
+    background-image: url('/fc/camera.png');
     
  
 
@@ -376,7 +376,7 @@ span {
     justify-self: start;
     align-self: end;
     border-top-right-radius: 100%;
-    background-image: url('/Imagesequence/21.webp');
+    background-image: url('/fc/sensor.png');
   }
   
   .top-right.active .big-blocky, .top-right:hover .big-blocky {
@@ -389,7 +389,7 @@ span {
     justify-self: end;
     align-self: start;
     border-bottom-left-radius: 100%;
-    background-image: url('/Imagesequence/9.webp');
+    background-image: url('/fc/wingmotor.png');
   }
   
   .bottom-left.active .big-blocky, .bottom-left:hover .big-blocky {
@@ -402,7 +402,7 @@ span {
     justify-self: start;
     align-self: start;
     border-bottom-right-radius: 100%;
-    background-image: url('/Imagesequence/4.webp');
+    background-image: url('/fc/pump.png');
   }
   
   .bottom-right.active .big-blocky, .bottom-right:hover .big-blocky {
@@ -449,7 +449,7 @@ span {
   
   .big-blocky {
     z-index: 9;
-    width: 300px;
+    width: 20rem;
     height: 70px;
     display: flex;
     align-items: center;
@@ -527,4 +527,51 @@ span {
     line-height: 50px;
     font-weight: 400;
     font-size: 30px;
+}
+
+
+/* fc section  */
+
+.fc-sec-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/fc/fcbg.png");
+  margin-bottom: 1rem;
+position: relative;
+}
+
+
+
+
+.fc-sec-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px;
+  height: 100%;
+  position: absolute;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.fc-sec-card-content h3 {
+  margin: 0;
+  font-size: 4em;
+  color: #9BF00B;
+  font-weight: 800;
+}
+
+.fc-sec-card-content p {
+  font-size: 1.5em;
+  width: 80%;
+  margin: 10px 0 0;
+  color: #ffffff;
+  font-weight: 600;
+
 }
