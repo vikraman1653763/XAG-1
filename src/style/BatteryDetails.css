@@ -37,10 +37,9 @@
 
 
 .indi-battery-info{
-    border:  2p solid rebeccapurple;
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
 }
 
 .indi-battery-info h2  {
@@ -168,3 +167,103 @@
     border-radius: 10px;
 }
 
+/* Media Queries for Mobile */
+@media screen and (max-width: 767px) {
+  
+    .indi-battery-info{
+        margin: 1em;
+    }
+    /* Battery Details Page */
+    .indi-battery-details {
+        padding: 1rem;
+    }
+    .indi-battery-info h2  {
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    .indi-battery-info h3{
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+    .indi-battery-info p  {
+        font-size: .8rem;
+    }
+   
+    .indi-battery-price {
+        font-size: 1em;
+        color: #ffffff;
+    }
+    .rupee{
+        font-weight: 500;
+        font-size: 1em;
+        color: #9BF00B;
+    }
+    .indi-battery-info p,
+    .indi-battery-specs {
+        color:#ffffff;
+        margin-top: 20px;
+    }
+    
+    .indi-battery-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indi-battery-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .indi-battery-info {
+        text-align: center;
+    }
+
+    .safety-measure{
+        padding: 0;
+        flex-wrap: wrap;   
+        justify-content: space-evenly;
+    }
+
+    .safety-measure img{
+        margin: 10px;
+        
+    }
+
+    .connector-image {
+        justify-content: space-evenly; 
+        flex-wrap: wrap;   
+}
+    .connector-image img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .indi-battery-specs table {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .indi-battery-caution h2,
+    .indi-battery-benefits h2,.indi-battery-specs h2 {
+        font-size: 1.6rem;
+    }
+    .indi-battery-caution p,
+    .indi-battery-benefits p {
+        font-size: 1rem;
+    }
+
+
+    .indi-battery-caution ul,
+    .indi-battery-benefits ul {
+        padding-left: .1rem;
+        padding-right: .1rem;
+        width: 100%;
+
+    }
+    .indi-battery-caution ul li,
+    .indi-battery-benefits ul li{
+        font-size: .8rem;
+        width: 100%;
+
+    }
+}

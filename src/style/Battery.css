@@ -98,9 +98,87 @@
     }
 }
 
+/* Media Queries */
+
+/* For screens 1200px or less */
+@media (max-width: 1200px) {
+    .battery-card {
+        width: calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+/* For screens 768px or less */
 @media (max-width: 768px) {
     .battery-card {
         width: 100%;
     }
+
+    .battery-title {
+        font-size: 1.5em;
+    }
+
+    .battery-description {
+        font-size: 1rem;
+    }
+
+    .battery-price {
+        font-size: 1em;
+    }
+
+    .add-to-cart {
+        font-size: 1.2em;
+    }
+
+    .battery-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
+/* For screens 480px or less */
+@media (max-width: 480px) {
+    #battery-container {
+        padding: 1rem;
+    }
+    
+    .battery-card {
+        width: auto;
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+.battery-image{
+    text-align: center;
+}
+.battery-image img{
+    border-radius: 2rem;
+    width: 15rem;
+    height: 15rem;
+}
+    .battery-info {
+        padding: 1rem;
+    }
+
+    .battery-title {
+        font-size: 1.2em;
+    }
+
+    .battery-description {
+        font-size: 0.9rem;
+    }
+
+    .battery-price {
+        font-size: 0.9em;
+    }
+
+    .add-to-cart {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .battery-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

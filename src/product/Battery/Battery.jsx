@@ -17,7 +17,8 @@ const Battery = () => {
             duration: 1000,
             easing: 'steps(1111)',
             distance: '50px',
-            origin:"bottom"
+            origin:"bottom",
+            disable: 'mobile'
         });
 
         sr.reveal('.battery-card', { interval: 100 });
