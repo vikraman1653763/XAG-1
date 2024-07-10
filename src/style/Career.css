@@ -262,3 +262,79 @@ padding: 2px;
   text-align: center;
   color: white;
 }
+
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 767px) {
+  .career-section {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .filter-section {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+      top: 0;
+      position: relative;
+  }
+
+  .job-listings {
+      width: 100%;
+  }
+
+  .job-card {
+      padding: 10px;
+  }
+
+  .job-card h3 {
+      font-size: 1.5rem;
+  }
+
+  .apply-button {
+      width: 50%;
+      position: relative;
+      margin: 0;
+  }
+
+  .applydiv {
+      height: auto;
+      margin-top: 10px;
+      text-align: center;
+  }
+
+
+   /* checkbox */
+.checkbox-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .6rem;
+  height: 2.4rem;
+}
+ .checkbox-wrapper * {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+ 
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-wrapper label {
+  --size: 1rem;
+  
+}
+
+.checkbox-wrapper span{
+  font-weight: 400;
+}
+
+.filter-opt{
+  width: 18rem;
+}
+
+
+}

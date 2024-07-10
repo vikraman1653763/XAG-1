@@ -1,6 +1,3 @@
-
-
-
 /* BANNER */
 .banner {
     width: 100%;
@@ -32,17 +29,17 @@
     font-weight: 800;
     margin-bottom: 24px;
 }
-.image-text h3 span{
+.image-text h3 span {
     color: #9BF00B;
 }
 
-.image-text p{
+.image-text p {
     font-size: 18px;
     font-weight: 600;
     color: white;
 }
-/* SECTION-4 STARTS*/
 
+/* SECTION-4 STARTS*/
 #enquiry {
     display: flex;
     flex-direction: column;
@@ -51,7 +48,6 @@
     height: 100%;
     padding: 40px;
 }
-
 
 .enquiries-heading h3 {
     font-size: 78px;
@@ -64,7 +60,6 @@
 
 .enquiries-heading h3 span {
     color: #9BF00B;
-
 }
 
 .enquiries-heading h6 {
@@ -75,18 +70,11 @@
     font-weight: 600;
 }
 
-
-
-
 .enquiry-card {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
 }
-
-
-
 
 .adv-card-bg {
     width: 412px;
@@ -97,7 +85,6 @@
     overflow: hidden;
     background-color: #e0dada2d;
 }
-
 
 .green-border1 {
     z-index: -1;
@@ -123,14 +110,11 @@
     transition: all 0.5s;
 }
 
-
-
 .adv-card-bg:hover .green-border1 {
     width: 100%;
     transform: translateX(88%);
     border-radius: 0 24px 0 0;
 }
-
 
 .adv-card-bg:hover .green-border2 {
     width: 100%;
@@ -236,11 +220,10 @@
     background: linear-gradient(180deg, rgba(247, 245, 245, 0.792) 0%, rgba(197, 199, 194, 0.781) 20.31%, rgba(197, 203, 188, 0.655) 23.53%, rgba(155, 226, 155, 0.753) 35.42%, rgba(158, 182, 158, 0.611) 40.62%, rgba(155, 215, 155, 0.414) 49.51%);
 }
 
-/* SETION-4 ENDS */
+/* SECTION-4 ENDS */
 .contact_form {
     width: 100%;
     height: 100%;
-    /* background: radial-gradient(256.59% 126.89% at 50% 50%, #080A0B 0%, #414D27 100%); */
     padding: 48px;
 }
 
@@ -376,14 +359,13 @@
 .location-right {
     display: flex;
     flex-flow: column nowrap;
-    
 }
 
-.contact_form-right .email-right, .moblie-right{
+.contact_form-right .email-right, .moblie-right {
     width: 15%;
 }
 
-.contact_form-right .location-right{
+.contact_form-right .location-right {
     width: 35%;
 }
 
@@ -424,4 +406,138 @@
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 767px) {
+    .banner img {
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .image-text {
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .image-text h3 {
+        font-size: 32px; /* Adjust font-size for mobile */
+        line-height: 36px; /* Adjust line-height for mobile */
+    }
+
+    .image-text p {
+        font-size: 14px; /* Adjust font-size for mobile */
+    }
+
+    #enquiry {
+        padding: 20px; /* Adjust padding for mobile */
+        gap: 20px; /* Adjust gap for mobile */
+    }
+
+    .enquiries-heading h3 {
+        font-size: 36px; /* Adjust font-size for mobile */
+        line-height: 40px; /* Adjust line-height for mobile */
+    }
+
+    .enquiries-heading h6 {
+        font-size: 14px; /* Adjust font-size for mobile */
+    }
+
+    .adv-card {
+        height: auto;
+        border-radius: 24px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.278);
+        display: flex;
+        flex-flow: column wrap;
+        gap: 5px;
+    }
+    
+    .adv-card-bg {
+        width: 90%; /* Adjust width for mobile */
+        margin: 12px auto; /* Center and adjust margin for mobile */
+    }
+
+    .adv-card .content-div p {
+        color: #E3DFDF;
+        font-family: "Segoe UI";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: start;
+    }
+    
+    .adv-card .content-div h4 {
+        color: #A1ED20;
+        font-family: "Segoe UI";
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: -0.72px;
+    }
+    
+    .adv-card-content .image_background {
+        width: 88px;
+        height: 88px;
+        border-radius: 20px;
+        position: relative;
+        opacity: 1;
+        background: #131313;
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    .contact_form {
+        padding: 24px; /* Adjust padding for mobile */
+    }
+
+    .contact_form .contact_form-heading h3 {
+        font-size: 36px; /* Adjust font-size for mobile */
+    }
+
+    .contact_form .contact_form-heading h6 {
+        font-size: 14px; /* Adjust font-size for mobile */
+    }
+
+    .contact_form-left {
+        width: 100%; /* Adjust width for mobile */
+        padding: 0px 12px; /* Adjust padding for mobile */
+    }
+
+    .email-phone-div {
+        flex-direction: column; /* Stack inputs vertically on mobile */
+        gap: 12px; /* Adjust gap for mobile */
+    }
+
+    .contact_form-right {
+        flex-direction: column; /* Stack contact methods vertically on mobile */
+        gap: 20px; /* Adjust gap for mobile */
+    }
+
+    .contact_form-right .email-right,
+    .contact_form-right .moblie-right,
+    .contact_form-right .location-right {
+        width: 100%; /* Adjust width for mobile */
+    }
+
+    .contact_form-right .contact_form-right_img-div {
+        width: 40px; /* Adjust size for mobile */
+        height: 40px; /* Adjust size for mobile */
+    }
+
+    .contact_form-right h4 {
+        font-size: 18px; /* Adjust font-size for mobile */
+    }
+
+    .contact_form-right p {
+        font-size: 14px; /* Adjust font-size for mobile */
+    }
+
+    .contact_form-right a {
+        font-size: 14px; /* Adjust font-size for mobile */
+    }
 }

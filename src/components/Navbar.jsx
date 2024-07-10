@@ -1,8 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/navbar.css';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     const closeOtherSubmenus = (menuContainer, currentSubmenu) => {
         const submenus = menuContainer.querySelectorAll('.submenu');
@@ -46,12 +51,12 @@ const Navbar = () => {
     return (
         <nav>
             <Link to="/"><img src="/assets/logo.webp" alt="logo" width="80px" height="40px" /></Link>
-            <div className="hamburger">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
+            <div className="hamburger" onClick={toggleMenu}>
+                <div className={`line1 ${isOpen ? 'open' : ''}`}></div>
+                <div className={`line2 ${isOpen ? 'open' : ''}`}></div>
+                <div className={`line3 ${isOpen ? 'open' : ''}`}></div>
             </div>
-            <ul className="nav-links">
+            <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
                 <li><Link to="/about">ABOUT</Link></li>
                 <li className="products" id="products">
                     <a href="#">PRODUCT</a>
@@ -70,8 +75,7 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li>
-                        <Link to="/Batteries">Batteries</Link>
-                            
+                            <Link to="/Batteries">Batteries</Link>
                         </li>
                     </ul>
                 </li>

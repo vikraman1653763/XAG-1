@@ -1,0 +1,209 @@
+/* Mobile view for About page */
+
+/* Banner */
+@media screen and (max-width: 767px) {
+  .banner {
+    margin-top: 5em; /* Adjusted for mobile navigation bar */
+  }
+
+  .banner img {
+    height: auto;
+  }
+
+  .image-text {
+    width: 90%;
+  }
+
+  .image-text h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .image-text p {
+    font-size: 14px;
+  }
+}
+
+/* About Section */
+@media screen and (max-width: 767px) {
+  .About {
+    height: auto;
+    padding: 24px;
+  }
+
+  .About .about-container {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .About .contents {
+    width: 100%;
+  }
+
+  .About .contents h2 {
+    font-size: 36px;
+  }
+
+  .About .contents p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .About .myvideo {
+    width: 100%;
+  }
+
+  .About .play-button {
+    bottom: 10%;
+    left: 10%;
+    padding: 8px 16px 8px 8px;
+  }
+
+  .About .play-button .icon-bg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .About .play-button .icon-bg img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .About .play-button .duration p,
+  .About .play-button .duration time {
+    font-size: 12px;
+  }
+}
+
+/* Vision Section */
+@media screen and (max-width: 767px) {
+  .vision {
+    padding: 48px 24px;
+  }
+
+  .vision .header {
+    gap: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .vision .title h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .vision .text-effect h2 {
+    font-size: 5rem;
+  }
+
+  .vision .content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .vision .content .aboutcard {
+    padding: 0;
+  }
+
+  .vision .content .aboutcard h2 {
+    font-size: 1.5rem;
+  }
+
+  .vision .content .aboutcard h3 {
+    font-size: 1.5rem;
+  }
+
+  .vision .content .aboutcard p {
+    font-size: 1rem;
+  }
+}
+
+/* Mission Section */
+@media screen and (max-width: 767px) {
+  .mission {
+    padding: 24px;
+  }
+
+  .mission .head {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mission .head .heading {
+    font-size: 3rem;
+  }
+
+  .mission .misson-texteffect h2 {
+    font-size: 4rem;
+    margin-top: -20px;
+  }
+
+  .mission .content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mission .content .card {
+    padding: 0;
+  }
+
+  .mission .content .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission .content .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .mission .content .card p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* News Section */
+@media screen and (max-width: 767px) {
+  #sec-news {
+    padding: 24px;
+  }
+
+  .blog-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .blog-container .left-sec,
+  .blog-container .right-sec {
+    width: 100%;
+  }
+
+  .blog-container .head h3 {
+    font-size: 36px;
+  }
+
+  .blog-container .head p {
+    font-size: 14px;
+  }
+
+  .blog-container .recent-blog,
+  .blog-container .blog {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .blog-container .recent-blog h4,
+  .blog-container .blog h4 {
+    font-size: .8rem;
+  }
+
+  .blog-container .recent-blog .blog-desc,
+  .blog-container .blog .blog-desc {
+    font-size: 14px;
+  }
+
+  #sec-news button {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+}

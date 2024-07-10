@@ -28,7 +28,7 @@ const CubeSection = () => {
 
       <div className={`cube-item bottom-left ${items[activeIndex] === 'bottom-left' ? 'active' : ''}`}>
         <div className='big-blocky'>
-          <div className="blocky">Motor 36inch Propeller</div>
+          <div className="blocky">Motor & 36inch Propeller</div>
         </div>
       </div>
 

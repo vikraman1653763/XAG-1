@@ -1,5 +1,6 @@
 import React from 'react';
 import './style/home.css';
+import './style/home-mob.css';
 import Section1 from './home/Section1';
 import Section2 from './home/Section2';
 import Section3 from './home/Section3';

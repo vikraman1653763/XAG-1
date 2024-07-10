@@ -897,7 +897,7 @@ canvas {
 }
 
 .textimonial-container p {
-    font-size: 20px;
+    font-size: 22px;
     color: rgba(255, 255, 255, 0.64);
     font-weight: 600;
     text-align: center;
@@ -905,7 +905,7 @@ canvas {
 
 .textimonial-container h2 {
     margin-top: 24px;
-    font-size: 32px;
+    font-size: 2rem;
     color: #9BF00B;
     text-align: end;
 }
@@ -929,6 +929,7 @@ canvas {
     align-items: center;
     gap: 20px;
     height: auto;
+    
 }
 
 .profile {
@@ -947,15 +948,13 @@ canvas {
 }
 
 .current {
-    /* width: 4em;
-    height: 4em; */
+    width: 4em;
+    height: 4em;
     transform: scale(1.4);
     transition: transform .8s;
 }
 
 .current img {
-
-
     opacity: 1;
     filter: blur(0px);
 
@@ -966,6 +965,7 @@ canvas {
     -webkit-animation-duration: 1s;
     animation-name: effect;
     animation-duration: 1s;
+
 }
 
 @keyframes effect {
@@ -993,17 +993,17 @@ canvas {
     #sec-7 h3 {
         color: white;
         text-align: center;
-        font-size: 78px;
+        font-size: 5rem;
     }
     
     #sec-7 h3 span {
-        font-size: 78px;
+        font-size: inherit;
         color: #9BF00B;
     }
     
     .showcase-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 50px;
         align-items: center;
         max-width: 100vw;
@@ -1011,16 +1011,16 @@ canvas {
     }
     
     .showcase-set {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:space-evenly;
         gap: 1rem;
         border-radius: 15px;
         padding: 1rem;
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-        overflow-x: auto;
+        width: 100%;
+
     }
     
     

@@ -1,11 +1,13 @@
 import React from 'react';
 import './style/about.css';
+import './style/about-mob.css';
+
 import Section1 from './about/Section1';
 import SectionAbout from './about/SectionAbout';
 import SectionVision from './about/SectionVision';
 import SectionMission from './about/SectionMission';
-import SectionTestimonials from './about/SectionTestimonials';
 import SectionNews from './about/SectionNews';
+import Section6 from './home/Section6';
 
 function About() {
   return (
@@ -14,7 +16,7 @@ function About() {
       <SectionAbout />
       <SectionVision />
       <SectionMission />
-      <SectionTestimonials />
+      <Section6/>
       <SectionNews />
       
     </div>
