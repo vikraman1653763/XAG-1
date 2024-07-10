@@ -1,6 +1,5 @@
 import React from 'react';
 import './style/about.css';
-import './style/about-mob.css';
 
 import Section1 from './about/Section1';
 import SectionAbout from './about/SectionAbout';

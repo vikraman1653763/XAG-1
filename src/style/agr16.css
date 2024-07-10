@@ -575,3 +575,156 @@ position: relative;
   font-weight: 600;
 
 }
+@media (max-width: 768px) {
+  .agr16-header {
+      top: 60px;
+      max-height: 70px;
+  }
+
+  .agr16-desc {
+      height: auto;
+      padding: 20px;
+      align-items: center;
+  }
+
+  .agr16-Title {
+      font-size: 30px;
+      line-height: 40px;
+  }
+
+  .Model, .spec-agr16-card h4, .agr16-type, .agr16-desc h2 {
+      font-size: 1.2rem;
+      line-height: 32px;
+  }
+
+  .agr16-desc p, .agr16-card-content p {
+      font-size: 16px;
+      line-height: 1.5em;
+      text-align: justify;
+      padding: 0%;
+  }
+
+  main {
+      padding: 20px;
+  }
+
+  .gif-container {
+      min-height: 100%;
+  }
+
+  .gif-container img {
+      width: 100%;
+      height: auto;
+  }
+
+  .spec-agr16-card {
+      padding: 10px;
+      height: auto;
+  }
+
+  .spec-details {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .spec-item {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .spec-img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .agr16-card-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .agr16-card {
+      width: 100%;
+      transform: translateY(0);
+      margin-bottom: 20px;
+  }
+
+  .agr16-card:hover {
+      transform: translateY(0);
+  }
+
+  .type-name {
+      font-size: 24px;
+  }
+
+  .advantages {
+      padding: 20px;
+      min-height: auto;
+  }
+
+  .advantage-points {
+      width: 100%;
+  }
+
+  .advantage-point {
+      padding: 10px;
+  }
+
+  .advantage-point h5 {
+      font-size: 1rem;
+  }
+
+  .advantage-point p {
+      font-size: .8rem;
+      font-weight: normal;
+  }
+
+  .cube-section {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      height: auto;
+      padding: 20px;
+  }
+
+  .cube-item {
+      width: 100%;
+      height: auto;
+  }
+
+  .cube-item.active, .cube-item:hover {
+      width: 100%;
+      height: auto;
+      background-size: contain;
+  }
+
+  .tabs-container {
+      padding: 0px;
+  }
+
+  .tabs button {
+      font-size: .8rem;
+      padding: .5em;
+      font-weight: 400;
+  }
+
+ 
+    
+    .tab-content p, .tab-content h2 {
+      font-size: 1rem;
+      line-height: 130%;
+  }
+
+  .fc-sec-card {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+  }
+
+  .fc-sec-card-content h3 {
+      font-size: 24px;
+  }
+
+  .fc-sec-card-content p {
+      font-size: 14px;
+  }
+}
