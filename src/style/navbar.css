@@ -18,6 +18,11 @@ body {
     overflow-y: scroll;
 }
 
+p{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 /* NAVIGATION starts */
 nav {
     background-color: black;
@@ -174,6 +179,10 @@ nav button {
     color: #000000;
 }
 @media (max-width: 767px) {
+
+    body{
+        background-color: #0C0C0C;
+    }
     .hamburger {
         display: block;
     }

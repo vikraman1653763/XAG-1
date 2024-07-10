@@ -657,7 +657,7 @@ canvas {
     align-items: flex-start;
 }
 
-.adv-card .content-div p {
+.adv-card {
     color: #E3DFDF;
     font-family: "Segoe UI";
     font-size: 18px;
@@ -666,7 +666,7 @@ canvas {
     line-height: 150%;
 }
 
-.adv-card .content-div h4 {
+.adv-card  {
     color: #A1ED20;
     font-family: "Segoe UI";
     font-size: 24px;
