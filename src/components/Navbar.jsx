@@ -50,7 +50,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to="/"><img src="/assets/logo.webp" alt="logo" width="80px" height="40px" /></Link>
+            <Link to="/"><img className='logooimg' src="/assets/logo.webp" alt="logo"  /></Link>
             <div className="hamburger" onClick={toggleMenu}>
                 <div className={`line1 ${isOpen ? 'open' : ''}`}></div>
                 <div className={`line2 ${isOpen ? 'open' : ''}`}></div>

@@ -13,7 +13,7 @@
 }
 .controller p{
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
 }
 .flight-controller-container {
@@ -873,6 +873,9 @@ left: 60%;
     .controller-spec-card p {
         font-size: .7rem;
         font-weight: normal;
+    }
+    .fc-adv{
+      overflow-x: hidden;
     }
 
     .fc-adv-card {

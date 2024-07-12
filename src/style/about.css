@@ -721,16 +721,6 @@
     align-items: center;
 }
 
-#sec-6 h3 {
-    font-size: 64px;
-    color: white;
-    text-transform: uppercase;
-}
-
-#sec-6 h3 span {
-    color: #9BF00B;
-}
-
 
 .news {
     padding: 60px 94px;
@@ -1222,21 +1212,22 @@
     .blog-container .head p {
       font-size: 14px;
     }
-  
+    
     .blog-container .recent-blog,
     .blog-container .blog {
-      padding: 12px;
-      border-radius: 20px;
+        padding: 12px;
+        border-radius: 20px;
     }
-  
+    
     .blog-container .recent-blog h4,
     .blog-container .blog h4 {
-      font-size: .8rem;
+        font-size: .8rem;
     }
-  
+    
     .blog-container .recent-blog .blog-desc,
     .blog-container .blog .blog-desc {
-      font-size: 14px;
+        font-weight: normal;
+      font-size: .7rem;
     }
   
     #sec-news button {

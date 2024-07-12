@@ -21,10 +21,10 @@ const Footer = () => {
                             <h3>Quick Links</h3>
                             <ul className="list_links">
                                 <li><a href="/about">About</a></li>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="/#">Training</a></li>
-                                <li><a href="/#">Blogs and Events</a></li>
-                                <li><a href="/#">Career</a></li>
+                                <li><a href="/product">Product</a></li>
+                                <li><a href="/training">Training</a></li>
+                                <li><a href="/blogs">Blogs and Events</a></li>
+                                <li><a href="/career">Career</a></li>
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>

@@ -445,6 +445,7 @@ span {
     line-height: 150%;
     text-transform: uppercase;
     font-weight: 600;
+    text-align: center;
   }
   
   .big-blocky {
@@ -551,7 +552,7 @@ position: relative;
 .fc-sec-card-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   padding: 15px;
   height: 100%;
@@ -568,8 +569,8 @@ position: relative;
 }
 
 .fc-sec-card-content p {
-  font-size: 1.5em;
-  width: 80%;
+  font-size: 3em;
+  width: 70vw;
   margin: 10px 0 0;
   color: #ffffff;
   font-weight: 600;
@@ -682,21 +683,44 @@ position: relative;
   .cube-section {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
-      height: auto;
       padding: 20px;
+      
+  
   }
 
   .cube-item {
-      width: 100%;
-      height: auto;
+      width: 6rem;
+      height: 6rem;
   }
 
-  .cube-item.active, .cube-item:hover {
-      width: 100%;
-      height: auto;
-      background-size: contain;
+  .cube-item.active, .cube-item:hover,.cube-item.active {
+      width: 10rem;
+      height: 10rem;
+      background-size: cover;
   }
 
+  .top-left.active .big-blocky, .top-left:hover .big-blocky,
+  .top-right.active .big-blocky, .top-right:hover .big-blocky
+   {
+    transform: translate(0px, 300px);
+    width: 10rem;
+    font-weight: normal;
+    font-size: 2rem;
+    opacity: 1;
+  }
+
+  .bottom-left.active .big-blocky, .bottom-left:hover .big-blocky,
+  .bottom-right.active .big-blocky, .bottom-right:hover .big-blocky 
+   {
+    transform: translate(0px, 250px);
+    width: 10rem;
+    font-weight: normal;
+    font-size: 2rem;
+    opacity: 1;
+  }
+  .blocky {
+    font-size: 1rem;
+  }
   .tabs-container {
       padding: 0px;
   }
@@ -716,15 +740,17 @@ position: relative;
 
   .fc-sec-card {
       width: 100%;
-      height: auto;
+      height: 24vh;
       margin-bottom: 20px;
+      background-size: contain;
   }
 
   .fc-sec-card-content h3 {
-      font-size: 24px;
+      font-size: 1rem;
   }
 
   .fc-sec-card-content p {
-      font-size: 14px;
+      font-size: .8rem;
+      font-weight: normal;
   }
 }

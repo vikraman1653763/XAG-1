@@ -657,7 +657,7 @@ canvas {
     align-items: flex-start;
 }
 
-.adv-card {
+.adv-card .content-div p {
     color: #E3DFDF;
     font-family: "Segoe UI";
     font-size: 18px;
@@ -666,7 +666,7 @@ canvas {
     line-height: 150%;
 }
 
-.adv-card  {
+.adv-card .content-div h4 {
     color: #A1ED20;
     font-family: "Segoe UI";
     font-size: 24px;
@@ -1135,6 +1135,7 @@ canvas {
 
 
 
+
 @media only screen and (max-width: 767px) {
     /* Mobile Version Styles */
     
@@ -1461,7 +1462,6 @@ canvas {
     }
     }
     
-
 
 
 
