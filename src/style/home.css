@@ -1205,7 +1205,8 @@ canvas {
         padding: 20px;
         height: auto;
         background-size: contain;
-    
+        overflow-x: hidden;
+
     }
     
     .text-container {
@@ -1318,6 +1319,7 @@ canvas {
     #sec-4 .sec-left .content1, #sec-4 .sec-right .content2 {
         align-items: center;
         gap: 10px;
+        overflow: hidden;
     }
     
     #sec-4 .left_hr, #sec-4 .right_hr, #sec-4 .middle_hr {
