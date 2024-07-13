@@ -381,6 +381,8 @@ canvas {
     line-height: 150%;
     /* 28.578px */
     letter-spacing: -0.572px;
+      transition: all .5s;
+
 }
 
 .item a {
@@ -1264,33 +1266,38 @@ canvas {
         min-height: 100px;
         padding: 20px;
         width: 100%;
+        transform: all 2s ease-in-out;
+        
     }
+   
     
     .item h2 {
-        font-size: 20px;
+        font-size: 1rem;
+        font-weight: 500;
     }
     
     .item h4 {
-        font-size: 16px;
+        font-size: .8em;
+        padding: .3rem;
     }
     
     .item p {
-        font-size: 14px;
+        font-size: .8rem;
         width: 100%;
+        font-weight:100;
+        color: #ffffff;
     }
     
     .item a {
-        width: 100px;
-        padding: 10px;
-        font-size: 14px;
+        padding: .2rem;
+        font-size: .8rem;
+        width: 50%;
     }
     .item-vertical-text {
         transform: rotate(0deg);
         transform-origin: 30px 45px;
         transition: all 1s ease;
-    
-        
-    
+
     }
     
     
