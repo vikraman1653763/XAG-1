@@ -4,17 +4,17 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 
-import Home from '/src/home.jsx';
-import Contact from '/src/contact.jsx';
-import About from '/src/about.jsx';
+import Home from '/src/components/home.jsx';
+import Contact from '/src/components/contact.jsx';
+import About from '/src/components/about.jsx';
 import AGR16 from './product/AGR16/agr16.jsx';
 import FlightController from './product/FlightController/FlightController.jsx';
 import Battery from './product/Battery/Battery.jsx';
 import BatteryDetails from './product/Battery/BatteryDetails';
-import Training from '/src/Training.jsx';
-import Blog from '/src/Blogs.jsx';
+import Training from '/src/components/Training.jsx';
+import Blog from '/src/components/Blogs.jsx';
 import BlogDetails from './blog/BlogDetails';
-import Career from './career/Career.jsx';
+import Career from './components/Career.jsx';
 
 
 const App = () => {

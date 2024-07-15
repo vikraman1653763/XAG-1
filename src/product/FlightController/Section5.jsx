@@ -34,7 +34,7 @@ const Section5 = () => {
     
     <div className='controller-spec-card'  data-aos="fade-up">
         <h3>Power supply</h3>
-        <p>16V~100V (4S~24S)</p>
+        <p>20V~100V (4S~20S)</p>
     </div> 
 
     <div className='controller-spec-card'  data-aos="fade-up">

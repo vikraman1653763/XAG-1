@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import './style/Training.css';
-import FlipCard from './training/flipcard';
+import '../style/Training.css';
+import FlipCard from '../training/flipcard.jsx';
 import clock from "/assets/time.svg";
 import topic from "/assets/topi.svg";
 import weight from "/assets/weight.svg";
-import { increaseNumberAnimation } from './components/increment.js';
+import { increaseNumberAnimation } from './increment.js';
 import { useInView } from 'react-intersection-observer';
 
 const Training = () => {

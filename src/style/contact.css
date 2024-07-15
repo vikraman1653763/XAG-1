@@ -58,83 +58,51 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    position: relative;
+    align-items: center;
 }
 
-.adv-card-bg {
-    width: 412px;
+.enquiry-adv-card-bg {
+    width: 300px;
     padding: 2px;
     position: relative;
     border-radius: 36px;
     margin: 24px;
     overflow: hidden;
-    background-color: #e0dada2d;
+    border: 1px solid rgba(255, 255, 255, 0.521);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 3rem;
+    margin: 0 -45px;
+    backdrop-filter: blur(.4rem);
+    height: 400px;
+}
+.enquiry-adv-card-bg:last-child .enquiry-adv-card-content  {
+   
+    flex-direction: row-reverse
+}
+.enquiry-adv-card-bg:last-child {
+    transform: rotate(30deg);
+
+}
+.enquiry-adv-card-bg:first-child {
+    transform: rotate(-30deg);
+}
+.enquiry-adv-card-bg:nth-child(2) {
+    transform: rotate(0deg);
+    z-index: 1;
 }
 
-.green-border1 {
-    z-index: -1;
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #9BF00B;
-    filter: blur(20px);
-    transition: all 0.5s;
-}
+.enquiry-card:hover .enquiry-adv-card-bg {
+    transform: rotate(0deg);
+    margin: 0 10px;
+  }
+  
 
-.green-border2 {
-    z-index: -1;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #9BF00B;
-    filter: blur(20px);
-    transition: all 0.5s;
-}
-
-.adv-card-bg:hover .green-border1 {
-    width: 100%;
-    transform: translateX(88%);
-    border-radius: 0 24px 0 0;
-}
-
-.adv-card-bg:hover .green-border2 {
-    width: 100%;
-    transform: translateX(-88%);
-    border-radius: 0 0 0 24px;
-}
-
-.adv-card-bg .black_background {
-    z-index: -1;
-    position: absolute;
-    border-radius: 34px;
-    width: 99%;
-    height: 98.7%;
-    background-color: black;
-}
-
-.adv-card-bg .glass_effect {
-    z-index: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 250px;
-    height: 200px;
-    border-radius: 24px;
-    background: rgba(227, 223, 223, 0.085);
-    filter: blur(50px);
-    transition: all 0.7s ease;
-}
-
-.adv-card-bg:hover .glass_effect {
-    width: 200px;
-    height: 300px;
-    transform: translate(100%, -90%);
-}
-
-.adv-card {
+.enquiry-adv-card {
     height: 100%;
     border-radius: 24px;
     padding: 20px 20px;
@@ -142,16 +110,17 @@
     display: flex;
     flex-flow: column wrap;
     gap: 12px;
+    
 }
 
-.adv-card-content {
+.enquiry-adv-card-content {
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
     align-items: flex-start;
 }
 
-.adv-card .content-div p {
+.enquiry-adv-card .content-div p {
     color: #E3DFDF;
     font-family: "Segoe UI";
     font-size: 18px;
@@ -160,7 +129,7 @@
     line-height: 150%;
 }
 
-.adv-card .content-div h4 {
+.enquiry-adv-card .content-div h4 {
     color: #A1ED20;
     font-family: "Segoe UI";
     font-size: 24px;
@@ -170,20 +139,6 @@
     letter-spacing: -0.72px;
 }
 
-.adv-card-content .image_background {
-    width: 88px;
-    height: 88px;
-    border-radius: 20px;
-    position: relative;
-    opacity: 1;
-    background: #131313;
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s;
-    overflow: hidden;
-}
 
 #img_bck {
     z-index: 2;
@@ -197,7 +152,7 @@
     transition: all 0.5s ease;
 }
 
-.adv-card-bg:hover #img_bck {
+.enquiry-adv-card-bg:hover #img_bck {
     width: 100px;
     height: 100px;
     transform: translate(5%, -5%);
@@ -425,7 +380,7 @@
         font-size: 14px; /* Adjust font-size for mobile */
     }
 
-    .adv-card {
+    .enquiry-adv-card {
         height: auto;
         border-radius: 24px;
         padding: 10px;
@@ -435,12 +390,12 @@
         gap: 5px;
     }
     
-    .adv-card-bg {
+    .enquiry-adv-card-bg {
         width: 90%; /* Adjust width for mobile */
         margin: 12px auto; /* Center and adjust margin for mobile */
     }
 
-    .adv-card .content-div p {
+    .enquiry-adv-card .content-div p {
         color: #E3DFDF;
         font-family: "Segoe UI";
         font-size: 1rem;
@@ -450,7 +405,7 @@
         text-align: start;
     }
     
-    .adv-card .content-div h4 {
+    .enquiry-adv-card .content-div h4 {
         color: #A1ED20;
         font-family: "Segoe UI";
         font-size: 1.5rem;
@@ -460,7 +415,7 @@
         letter-spacing: -0.72px;
     }
     
-    .adv-card-content .image_background {
+    .enquiry-adv-card-content .image_background {
         width: 88px;
         height: 88px;
         border-radius: 20px;
@@ -523,5 +478,21 @@
 
     .contact_form-right a {
         font-size: 14px; /* Adjust font-size for mobile */
+    }
+
+    .enquiry-adv-card-bg:last-child .enquiry-adv-card-content  {
+   
+        flex-direction: row-reverse
+    }
+    .enquiry-adv-card-bg:last-child {
+        transform: rotate(0deg);
+    
+    }
+    .enquiry-adv-card-bg:first-child {
+        transform: rotate(0deg);
+    }
+    .enquiry-adv-card-bg:nth-child(2) {
+        transform: rotate(0deg);
+        z-index: 0;
     }
 }

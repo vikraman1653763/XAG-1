@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../style/Career.css';
-import CareerBanner from './careerbanner.jsx';
-import FilterSection from './FilterSection.jsx';
+import CareerBanner from '../career/careerbanner.jsx';
+import FilterSection from '../career/FilterSection.jsx';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import bag from "/assets/bag.svg";
