@@ -51,10 +51,11 @@
     background: radial-gradient(309.94% 158.19% at 50% 50%, #080A0B 0%, #414D27 100%);
     height: 100vh;
     display: flex;
+    
     align-items: center;
 }
 
-.About .about-container {
+.aboutpage-container {
     display: flex;
     flex-flow: row nowrap;
     padding: 48px;
@@ -63,13 +64,13 @@
     gap: 80px;
 }
 
-.About .contents {
+.aboutpage-contents {
     width: 50%;
     position: relative;
     overflow: hidden;
 }
 
-.About .contents h2 {
+.aboutpage-contents h2 {
     margin: 0;
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -83,44 +84,38 @@
     margin: 10px;
 }
 
-.About .contents .title {
+.aboutpage-title {
     display: flex;
 }
 
-.logo {
+.aboutpage-logo {
     margin-left: 0.5rem;
     width: 10em;
     height: 80px;
 }
 
-.About .contents p {
+.aboutpage-contents p {
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size:  1.5rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.8em;
+    line-height: 2em;
     /* 34.5px */
     letter-spacing: -0.69px;
 }
 
-.About .myvideo {
+.aboutpage-myvideo {
     width: 50%;
     position: relative;
 
 }
 
-.myvideo video {
+.aboutpage-myvideo video {
     width: 100%;
     border-radius: 35px;
 }
 
-.About .myvideo .btn {
-    border-radius: 24px;
-    padding: 12px;
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-}
 
 .About .play-button {
     display: flex;
@@ -142,24 +137,22 @@
     width: 40px;
     height: 40px;
 }
-.play-button .icon-bg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #9BF00B;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-  }
 
-.play-button .icon-bg img {
-    width: 20px;
-    height: 20px;
-  }
+.icon-bg img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-36%, -50%);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+
 
 .About .play-button .duration p {
     font-size: 14px;
-    color: #ffffff;
+    color: white;
 }
 
 .About .play-button .duration time {
@@ -180,7 +173,7 @@
     font-family: cursive;
 }
 
-.modal {
+.aboutpage-modal {
     position: fixed;
     left: 0;
     top: 0;
@@ -193,7 +186,7 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.modal-content {
+.aboutpage-modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -376,22 +369,22 @@
 }
 
 .vision .content .aboutcard h2 {
-    color: #262626;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 2rem;
-    font-style: normal;
     font-weight: 700;
     line-height: 27.372px;
     margin-bottom: 10px;
     /* 57.96% */
 }
 
-.vision .content .aboutcard h3 {
+.vision .content .aboutcard h3  {
     margin: 0px;
     font-size: 2rem;
+    font-weight: 600;
+    text-decoration-line: underline;
 }
 
-.vision .content .card p {
+.vision .content .aboutcard p {
     margin-top: 8px;
     font-size: 1.2rem;
 }
@@ -880,25 +873,25 @@
 
 
 /* NEWS & EVENTS */
-#sec-news {
+#sec-7 {
     padding: 48px;
 }
 
-.blog-container {
+.news-container {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
     gap: 24px;
 }
 
-.blog-container .left-sec {
+.news-container .left-sec {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.blog-container .head h3 {
+.news-container .head h3 {
     font-size: 72px;
     text-transform: uppercase;
     font-weight: 800;
@@ -906,33 +899,33 @@
     line-height: 110%;
 }
 
-.blog-container .head h3 span {
+.news-container .head h3 span {
     color: #9BF00B;
 }
 
-.blog-container .head p {
+.news-container .head p {
     font-size: 18px;
     font-weight: 400;
     color: white;
     margin-top: 24px;
 }
 
-.blog-container .recent-blog {
+.news-container .recent-news {
     border: 1px solid rgba(255, 255, 255, 0.571);
     border-radius: 28px;
     padding: 16px;
 }
 
-.blog-container .recent-blog .img-container {
+.news-container .recent-news .img-container {
     width: 100%;
 }
 
-.blog-container .recent-blog .img-container img {
+.news-container .recent-news .img-container img {
     width: 100%;
     object-fit: cover;
 }
 
-.blog-container .category {
+.news-container .category {
     color: #000000f5;
     background-color: white;
     width: fit-content;
@@ -943,34 +936,33 @@
     margin: 12px 0px;
 }
 
-.blog-container .info {
+.news-container .info {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.blog-container .info .duration {
+.news-container .info .duration {
     color: white;
 }
 
-.blog-container h4 {
+.news-container h4 {
     font-size: 24px;
     color: white;
     margin-bottom: 8px;
 }
 
-.blog-container .blog-desc {
+.news-container .news-desc {
     color: #FAFAFA;
     margin-bottom: 24px;
 }
 
-.blog-container a {
+.news-container a {
     text-decoration: none;
     color: #C2C2C2;
 }
 
-
-.blog {
+.news {
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -980,36 +972,32 @@
     padding: 16px;
 }
 
-.blog .img-container {
+.news .img-container {
     width: 30%;
-    /* height: 12.5vw; */
 }
 
-.blog .img-container img {
+.news .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.blog .content {
+.news .content {
     width: 70%;
 }
 
-
-
-.blog-container .right-sec {
+.news-container .right-sec {
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
     gap: 24px;
 }
 
-.blog-container .right-sec .blog {
+.news-container .right-sec .news {
     height: 25%;
 }
 
-
-#sec-news button {
+#sec-7 button {
     background-color: #9BF00B;
     border: none;
     outline: none;
@@ -1021,8 +1009,6 @@
     display: block;
     margin: 36px auto;
 }
-
-
 
 
 /* Mobile view for About page */

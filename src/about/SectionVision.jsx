@@ -15,17 +15,17 @@ const SectionVision = () => {
         <div className="content">
           <div className="aboutcard">
             <h2>#1</h2>
-            <h3><u>“Future-Oriented </u></h3>
+            <h3>“Future-Oriented </h3>
             <p>Focusing on long-term goals and the continual improvement of agricultural methods and technologies.</p>
           </div>
           <div className="aboutcard">
             <h2>#2</h2>
-            <h3><u>“Sustainability</u></h3>
+            <h3>“Sustainability</h3>
             <p>Committing to sustainable farming practices that benefit both the environment and the agricultural industry.</p>
           </div>
           <div className="aboutcard">
             <h2>#3</h2>
-            <h3><u>“Integration of Technology & Agriculture</u></h3>
+            <h3>“Integration of Technology & Agriculture</h3>
             <p>Creating a seamless blend of modern technology with traditional farming techniques to maximize outcomes.</p>
           </div>
         </div>
