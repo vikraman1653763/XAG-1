@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import blogData from './blogData.json';
 import '../style/blog.css';
+import Section2 from '../blog/Section2.jsx';
 
 const BlogDetails = () => {
     const { title } = useParams();
@@ -22,6 +23,11 @@ const BlogDetails = () => {
                     <p>{blog.details}</p>
                 </div>
             </div>
+            <div className='small-blogs'>
+
+            <Section2 />
+            </div>
+
         </div>
     );
 };

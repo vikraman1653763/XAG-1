@@ -124,7 +124,7 @@ nav button {
 .products:hover > .menu {
     opacity: 1;
     visibility: visible;
-    transform: translate(-10px, 14px);
+    transform: translate(-10px, 0px);
 }
 
 .menu a:hover,

@@ -139,9 +139,6 @@ text-transform: uppercase;
     padding: 1rem;
     color:white;
     height: 100%;
-    /* background: rgb(0, 0, 0); */
-    /* background: linear-gradient(164deg, rgba(0,0,0,0.6867121848739496) 33%, rgba(176,176,176,1) 100%); */
-    
   }
   .blog-details-textBox h2{
     color: #9BF00B;
@@ -259,4 +256,8 @@ text-transform: uppercase;
       margin-right: 1rem;
       font-size: .6rem;
   }
+}
+.small-blogs{
+  background-color: #252525;  
+
 }
