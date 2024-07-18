@@ -1,6 +1,14 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Section9 = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 500,
+          mirror: true,
+        });
+      }, []);
     return (
         <section id="sec-8">
             <div className="content_sec">
@@ -10,7 +18,7 @@ const Section9 = () => {
                     <button>GET A QUOTE</button>
                 </div>
                 <div className="right">
-                    <img src="/assets/drone.webp" alt="drone" />
+                    <img data-aos="fade-left" src="/assets/drone.webp" alt="drone" />
                 </div>
             </div>
         </section>

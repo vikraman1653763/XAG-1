@@ -38,14 +38,14 @@ const Section3 = () => {
 
     useEffect(() => {
         AOS.init({
-          duration: 2000,
+          duration: 500,
           mirror: true,
         });
       }, []);
 
     return (
-        <section id="sec-3" data-aos="fade-down">
-            <h3>our scope <span>products</span></h3>
+        <section id="sec-3">
+            <h3  data-aos="fade-right">our scope <span>products</span></h3>
             <div className="gallery-wrap">
                 <div id="scopeProduct1" className="item item-1 itemclick" >
                     <div className="item-content">

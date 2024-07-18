@@ -221,9 +221,11 @@
 }
 
 .training-section h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     color: #9BF00B;
+    font-weight: 800;
+
 }
 
 .course-card-container {

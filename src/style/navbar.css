@@ -35,19 +35,24 @@ nav {
     position: fixed;
     top: 0%;
     z-index: 10;
-    margin-bottom: 20rem;
+    height: 4rem;
 }
 .logooimg{
-    width: 5.5rem;
+    width:clamp(3rem,5rem,5.5rem) ;
     height: 3rem;
-    margin-right:  1rem;
 }
+
 nav ul {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 48px;
     list-style-type: none;
+    justify-content: space-between;
+    width: 70%;
+    position:absolute;
+    right: 0%;
+
+    margin-top: 1rem;
 }
 
 nav ul li a {
@@ -71,6 +76,7 @@ nav button {
     font-weight: 700;
     border: none;
     white-space: nowrap;
+    margin-bottom: 1rem;
 }
 
 .hamburger {
@@ -109,7 +115,7 @@ nav button {
     position: absolute;
     background: black;
     border: none;
-    
+    width: auto;
     align-items: start;
     opacity: 0;
     visibility: hidden;
@@ -118,6 +124,7 @@ nav button {
     text-transform: uppercase;
     border-radius: 5px;
     gap: 4px;
+    right: 70%;
 }
 
 .menu.open,
@@ -224,7 +231,10 @@ nav button {
 
     nav ul li button {
         width: auto;
-        padding: .4rem;
+        font-size: .5rem;
+        padding: .3rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
         text-align:start;
     }
      .menu {
@@ -239,7 +249,7 @@ nav button {
     .products:hover > .menu {
         opacity: 1;
         visibility: visible;
-        transform: translate(-103%,17%); 
+        transform: translate(-38%,17%); 
     }
     
  

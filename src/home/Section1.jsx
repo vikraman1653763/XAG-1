@@ -1,53 +1,66 @@
-import React, { useEffect } from 'react';
-
+import React, { useEffect, useRef } from 'react';
 
 const Section1 = () => {
+    const canvasRef = useRef(null);
+    const imgRef = useRef(new Image());
+    const frameCount = 61;
+    const images = useRef([]);
+    const currentFrame = index => (
+        `/Imagesequence/${index.toString().padStart(1, '0')}.webp`
+    );
+
     useEffect(() => {
-        const html = document.documentElement;
-        const canvas = document.getElementById("img-seq");
+        const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
+        const html = document.documentElement;
 
-        const frameCount = 61;
-        let frameStart = 1;
-        const currentFrame = index => (
-            `/Imagesequence/${index.toString().padStart(1, 0)}.webp`
-        );
         const preloadImages = () => {
-            for (let idx = 0; idx < frameCount; idx++) {
+            for (let i = 1; i <= frameCount; i++) {
                 const img = new Image();
-                img.src = currentFrame(idx);
+                img.src = currentFrame(i);
+                images.current[i] = img;
             }
-        }
+        };
 
-        const img = new Image();
-        img.src = currentFrame(frameStart);
-        canvas.width = 2560;
-        canvas.height = 1440;
-        img.onload = function () {
+        const drawImage = (img) => {
+            context.clearRect(0, 0, canvas.width, canvas.height);
             context.drawImage(img, 0, 0);
-        }
+        };
 
-        const updateImage = idx => {
-            img.src = currentFrame(idx);
-            context.drawImage(img, 0, 0);
-        }
+        imgRef.current.onload = () => {
+            drawImage(imgRef.current);
+        };
 
         window.addEventListener('scroll', () => {
             const scrollTop = html.scrollTop;
             const maxScrollTop = html.scrollHeight - window.innerHeight;
             const scrollFraction = scrollTop / maxScrollTop;
-            const frameIdx = Math.min(
-                frameCount - 1, Math.ceil(scrollFraction * frameCount)
-            );
-            requestAnimationFrame(() => updateImage(frameIdx + 1));
+            const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount*2));
+
+            requestAnimationFrame(() => {
+                if (images.current[frameIndex + 1]) {
+                    drawImage(images.current[frameIndex + 1]);
+                }
+            });
         });
 
         preloadImages();
+
+        // Set canvas dimensions
+        canvas.width = 2560;
+        canvas.height = 1440;
+
+        // Draw the first image
+        imgRef.current.src = currentFrame(1);
+
+        return () => {
+            window.removeEventListener('scroll', () => {});
+        };
     }, []);
 
     return (
         <section id="sec-1">
-            <canvas id="img-seq"></canvas>
+            <canvas ref={canvasRef} id="img-seq"></canvas>
             <div id="outer-layer">
                 <div id="inner-layer">
                     <div id="buttons">

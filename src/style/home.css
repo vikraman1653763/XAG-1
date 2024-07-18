@@ -96,11 +96,13 @@ canvas {
 
 .text-container div .one {
     color: white;
+    font-weight: 800;
 }
 
 .text-container div .two {
     margin-top: 0px;
     color: #9BF00B;
+    font-weight: 800;
     line-height: 64px;
 }
 
@@ -268,6 +270,7 @@ canvas {
     font-size: 78px;
     text-transform: uppercase;
     margin-bottom: 36px;
+    font-weight: 800;
 }
 
 #sec-3 h3 span {
@@ -457,6 +460,7 @@ canvas {
     color: white;
     font-size: 78px;
     text-transform: uppercase;
+    font-weight: 800;
 }
 
 #sec-4 h3 span {
@@ -556,6 +560,7 @@ canvas {
     backdrop-filter: blur(20px);
     border-radius: 2px;
     box-shadow: 0.8px 0.8px 0.8px 0.8px rgba(142, 220, 7, 0.999);
+    height: 1000px;
 }
 
 .adv-card-bg-home {
@@ -734,6 +739,8 @@ canvas {
     font-size: 78px;
     text-transform: uppercase;
     margin-top: 36px;
+    font-weight: 800;
+
 }
 
 #sec-5 h3 span {
@@ -868,9 +875,11 @@ canvas {
 }
 
 #sec-6 h3 {
-    font-size: 64px;
+    font-size: 3rem;
     color: white;
     text-transform: uppercase;
+    font-weight: 800;
+
 }
 
 #sec-6 h3 span {
@@ -910,6 +919,7 @@ canvas {
     font-size: 2rem;
     color: #9BF00B;
     text-align: end;
+    font-weight: 700;
 }
 
 .comments {
@@ -988,7 +998,7 @@ canvas {
         padding: 50px 0;
         text-align: center;
         color: white;
-        background: radial-gradient(circle, #9BF00B, black, black); /* Changed to radial gradient */
+        /* background: radial-gradient(circle, #9BF00B, black, black); Changed to radial gradient */
 
     }
     
@@ -996,6 +1006,8 @@ canvas {
         color: white;
         text-align: center;
         font-size: 5rem;
+        font-weight: 800;
+
     }
     
     #sec-7 h3 span {
@@ -1027,10 +1039,10 @@ canvas {
     
     
     .showcase-set .image {
-        background: rgba(255, 255, 255, 0.1);
+      
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       
         align-items: center;
         justify-content: space-around;
         gap: 20px;
@@ -1039,18 +1051,22 @@ canvas {
         border-radius: 20px;
         
     }
-    .showcase-set .image span{
-        font-weight: 500;
-        font-variant-numeric:slashed-zero;
-        
-    }
+   
    
     .showcase-set .image img {
-        max-width: 10vw;
-        
+        max-width: 20vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         min-height: auto;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 1rem;
+
     }
-    
+    .showcase-set .image span{
+        font-weight: 300;
+        font-size: 1.5rem;
+        font-variant-numeric:slashed-zero;
+        color: white;
+    }
     /* .showcase-set:nth-child(even) {
         flex-direction: row-reverse;
     } */
@@ -1101,6 +1117,8 @@ canvas {
     font-size: 78px;
     text-transform: uppercase;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 800;
+
 }
 
 #sec-8 .content_sec .left h3 span {
@@ -1282,16 +1300,20 @@ canvas {
     }
     
     .item p {
-        font-size: .8rem;
+        font-size: 1rem;
         width: 100%;
-        font-weight:100;
+        font-weight:400;
         color: #ffffff;
+        background-color: #00000018;
+        border-radius: 1rem;
+        padding: .3rem;
     }
     
     .item a {
-        padding: .2rem;
+        border-radius: .5rem;
+        padding: .5rem;
         font-size: .8rem;
-        width: 50%;
+        width: auto;
     }
     .item-vertical-text {
         transform: rotate(0deg);
@@ -1414,12 +1436,12 @@ canvas {
     }
     
     .profile {
-        height: 2em;
-        width: 2em;
+        height: 1em;
+        width: 1em;
     }
     
     .current {
-        transform: scale(.5);
+        transform: scale(1.4);
     }
     
     

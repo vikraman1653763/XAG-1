@@ -10,7 +10,7 @@ const Section2 = () => {
 
     useEffect(() => {
         AOS.init({
-          duration: 2000,
+          duration: 500,
           mirror: true,
         });
       }, []);
@@ -77,8 +77,8 @@ const Section2 = () => {
             <div className="bg-layer">
                 <div className="text-container" data-aos="fade-left">
                     <div>
-                        <h3 className="one">About</h3>
-                        <h3 className="two">xagrotor tek</h3>
+                        <h3 className="one"data-aos="fade-left" data-aos-delay='700'>About</h3>
+                        <h3 className="two"data-aos="fade-left" data-aos-delay='500'>xagrotor tek</h3>
                     </div>
                     <p>Xagrotor Tek Private Limited, founded in 2023, is a pioneering company based in Pondicherry, India. We specialize in developing advanced agricultural drone technology aimed at improving farming practices. Our innovative solutions help farmers manage their crops more efficiently, reduce costs, and increase yields. With a strong commitment to sustainability, we promote precision farming techniques that benefit both farmers and the environment. Our team of experts is dedicated to pushing the boundaries of agricultural technology, ensuring that our products meet the highest standards of quality and reliability.</p>
                 </div>

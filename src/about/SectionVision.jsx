@@ -1,32 +1,45 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { delay } from 'framer-motion';
 
+
+ 
 const SectionVision = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration: 500,
+      mirror: true,
+      easing:"ease-in-out-back"
+    });
+  },[])
+
   return (
     <section className="vision">
       <div className="content-center">
         <div className="header">
-          <div className="title">
-            <h2>What<br />Our</h2>
+          <div className="title" >
+            <h2>What's Our</h2>
           </div>
-          <div className="text-effect">
+          <div className="text-effect"  data-aos="fade-right">
             <h2>Vision</h2>
           </div>
         </div>
         <div className="content">
-          <div className="aboutcard">
-            <h2>#1</h2>
-            <h3>“Future-Oriented </h3>
-            <p>Focusing on long-term goals and the continual improvement of agricultural methods and technologies.</p>
+          <div className="aboutcard" data-aos="fade-up">
+            <h2 data-aos="fade-up">#1</h2>
+            <h3 data-aos="fade-up">“Future-Oriented </h3>
+            <p data-aos="fade-up">Focusing on long-term goals and the continual improvement of agricultural methods and technologies.</p>
           </div>
-          <div className="aboutcard">
-            <h2>#2</h2>
-            <h3>“Sustainability</h3>
-            <p>Committing to sustainable farming practices that benefit both the environment and the agricultural industry.</p>
+          <div className="aboutcard" data-aos="fade-up">
+            <h2 data-aos="fade-up">#2</h2>
+            <h3 data-aos="fade-up">“Sustainability</h3>
+            <p data-aos="fade-up">Committing to sustainable farming practices that benefit both the environment and the agricultural industry.</p>
           </div>
-          <div className="aboutcard">
-            <h2>#3</h2>
-            <h3>“Integration of Technology & Agriculture</h3>
-            <p>Creating a seamless blend of modern technology with traditional farming techniques to maximize outcomes.</p>
+          <div className="aboutcard" data-aos="fade-up">
+            <h2  data-aos="fade-up">#3</h2>
+            <h3 data-aos="fade-up">“Integration of Technology & Agriculture</h3>
+            <p data-aos="fade-up">Creating a seamless blend of modern technology with traditional farming techniques to maximize outcomes.</p>
           </div>
         </div>
       </div>
