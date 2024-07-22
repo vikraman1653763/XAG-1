@@ -59,17 +59,17 @@ const Navbar = () => {
             <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
                 <li><Link to="/about">ABOUT</Link></li>
                 <li className="products" id="products">
-                    <a href="#">PRODUCT</a>
+                   <span>PRODUCT</span> 
                     <ul className="menu">
                         <li>
-                            <a href="#">Agricultural Drone</a>
+                           <span>Agricultural Drone</span>
                             <ul className="submenu">
                                 <li><Link to="/agr10">AGR 10</Link></li>
                                 <li><Link to="/agr16">AGR 16</Link></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Flight Controller</a>
+                            <span>Flight Controller</span>
                             <ul className="submenu">
                                 <li><Link to="/flight-controller">Xrotor Tek India</Link></li>
                             </ul>

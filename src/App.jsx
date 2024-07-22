@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import ScrollToTop from './components/ScrollToTop';
-
+import ScrollToTop from './components/ScrollToTop.jsx';
+import UpButton from './components/upButton.jsx';
 import Home from '/src/components/home.jsx';
 import Contact from '/src/components/contact.jsx';
 import About from '/src/components/about.jsx';
@@ -39,9 +39,7 @@ const App = () => {
             
           </Routes>
           <Footer />
-          <button className="rocketbtn">
-            <a href="#"><img src="/assets/rocket.svg" alt="backtotop" width="24px" height="auto" /></a>
-          </button>
+          <UpButton/>
         </Router>
     
   );
