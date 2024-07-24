@@ -1,24 +1,33 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useEffect } from "react";
-import blogData from './blogData.json';
+// import blogData from './blogData.json';
 import { Link } from "react-router-dom";
-
+let blogData='';
 const Section2 = () => {
   return (
-    <div className="bg-black-800">
+      <>
+      {blogData && blogData.length>0?
+      
+      <div className="bg-black-800">
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Explore
         </span>
       </div>
-      <HorizontalScrollCarousel />
-      <VerticalBlogList />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-900">
-          Scroll up
-        </span>
+        <HorizontalScrollCarousel />
+        <VerticalBlogList /> 
+        <div className="flex h-48 items-center justify-center">
+        
       </div>
     </div>
+      :  <div className="flex h-48 items-center justify-center">
+          <span className="font-semibold uppercase text-neutral-500">
+          No blogs available at the moment
+          </span>
+        </div>
+      }
+      
+      </>
   );
 };
 

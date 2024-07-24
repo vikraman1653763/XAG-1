@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import bag from "/assets/bag.svg";
 
-
 const jobListings = [
     {
         title: 'Software Engineer',
@@ -117,6 +116,7 @@ const Career = () => {
 
     return (
         <>
+
             <CareerBanner />
             <section className="career-section" >
                 <FilterSection
