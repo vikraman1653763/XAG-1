@@ -1,3 +1,10 @@
+@font-face{
+  font-family: karla;
+  src:url(/assets/karla.ttf);
+  font-weight: 300;
+}
+
+
 /* career.css */
 .career-section {
     display: flex;
@@ -6,6 +13,7 @@
     height: 100vh;
     overflow-y: auto;
     scrollbar-width: thin;
+    margin:0rem 2rem 0rem 2rem;
 }
 
 
@@ -15,11 +23,11 @@
     z-index: 2;
     position: sticky;
     top: 20px;
-    width: 200px;
+    width: 300px;
     padding: 20px;
     margin-right: 20px;
-    background: #ffffff26;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: rgba(255, 255, 255, 0.082);
+    box-shadow: 0 8px 32px 0 rgba(94, 95, 109, 0.37);
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 9px );
     border-radius: 10px;
@@ -50,30 +58,43 @@
 }
 
 .job-listings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
 }
 
 .job-card {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 8px;
     margin-bottom: 20px;
-    background: rgba( 255, 255, 255, 0.15 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: rgba(255, 255, 255, 0.082);
+    box-shadow: 0 8px 32px 0 rgba(94, 95, 109, 0.37);
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 9px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #fff;
+    width: 70%;
 }
 
 .job-card h3 {
     margin-top: 0;
     color:#9BF00B;
     font-size:2rem;
+    display: flex;
+    align-items:center ;
 }
-
+.job-card strong{
+  font-weight: 600;
+}
+.job-card p{
+  font-weight: 100;
+  font-family: karla;
+  text-align: justify;
+}
 .job-card h3 img {
     width: 2rem;
     height: 2rem;
@@ -84,10 +105,12 @@
 }
 
 .job-card ul li{
-border: 1px solid gray;
 border-radius: 5px;
-margin: 5px;
+margin-left: 5px;
 padding: 2px;
+font-weight: 100;
+font-family: karla;
+word-spacing: 1px;
 }
 .applydiv{
     width: 100%;
@@ -111,7 +134,7 @@ padding: 2px;
     font-family:  monospace;
     right: 0;
     background-color: #9BF00B;
-    
+    color: black;
    }
    
 
@@ -249,7 +272,7 @@ padding: 2px;
   }
 
 .filter-opt{
-    width: 8rem;
+    width: 80%;
     font-size: 1rem;
     font-weight: 700;
     background-color: #000000;
@@ -285,16 +308,27 @@ padding: 2px;
 
   .job-card {
       padding: 10px;
+      
+      padding: auto;
+      width: 100%;
   }
 
   .job-card h3 {
-      font-size: 1.5rem;
+      font-size: 1rem;
   }
-
+ 
+.job-card p,.job-card ul li{
+  font-size: .7rem;
+  font-weight: normal;
+}
   .apply-button {
-      width: 50%;
+      width: auto;
+      padding: .2rem;
       position: relative;
       margin: 0;
+      font-size: .7rem;
+      border-radius: 5px;
+      height: auto;
   }
 
   .applydiv {
@@ -332,9 +366,7 @@ padding: 2px;
   font-weight: 400;
 }
 
-.filter-opt{
-  width: 18rem;
-}
+
 
 
 }

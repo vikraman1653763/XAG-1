@@ -108,7 +108,7 @@ canvas {
 
 .text-container p {
     margin-top: 24px;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 500;
     color: white;
 
@@ -1494,6 +1494,340 @@ canvas {
     }
     
 
+/* Tablet Version Styles */
+@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+    
+    body {
+        font-size: 1rem;
+    }
+    
+    h3, h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Section 1 */
+    #sec-1 {
+        padding: 0.5rem;
+    }
+
+    canvas {
+        position: sticky;
+        top: 4rem;
+        z-index: -1;
+        height: 100vh;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #outer-layer {
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    #inner-layer {
+        position: relative;
+        width: 100%;
+        height: 8rem;
+        padding-bottom: 3.125rem;
+    }
+
+    #buttons {
+        position: sticky;
+        top: calc(100% - 6.25rem);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    #buttons button {
+        border: 0 solid;
+        box-shadow: inset 0 0 1.25rem rgba(255, 255, 255, 0);
+        outline: 0.125rem solid;
+        outline-color: rgba(255, 255, 255, 0.5);
+        outline-offset: 0;
+        text-shadow: none;
+        transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+        padding: 1rem 1.5rem;
+        border-radius: 1.875rem;
+        background: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* Section 2 */
+    #sec-2 .bg-layer {
+        flex-direction: column;
+        padding: 1.25rem;
+        height: auto;
+        background-size: contain;
+        overflow-x: hidden;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .text-container div {
+        font-size: 2rem;
+    }
+
+    .text-container div .one {
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    .text-container div .two {
+        margin-top: 0;
+        color: #9BF00B;
+        line-height: 4rem;
+        font-size: 2.5rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .carousel-container {
+        width: 100%;
+        margin: 1.25rem 0;
+    }
+
+    .carousel-container .animate img {
+        object-fit: cover;
+    }
+
+    /* Section 3 */
+    #sec-3 {
+        padding: 1.25rem;
+    }
+
+    #sec-3 h3 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .gallery-wrap {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .item {
+        height: auto;
+        min-height: 6.25rem;
+        padding: 1.25rem;
+        width: 100%;
+        transform: all 2s ease-in-out;
+    }
+
+    .item h2 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .item h4 {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    .item p {
+        font-size: 1rem;
+        width: 100%;
+        font-weight: 400;
+        color: #fff;
+        background-color: #00000018;
+        border-radius: 1rem;
+        padding: 0.3rem;
+    }
+
+    .item a {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        width: auto;
+    }
+
+    .item-vertical-text {
+        transform: rotate(0deg);
+        transform-origin: 30px 45px;
+        transition: all 1s ease;
+    }
+
+    /* Section 4 */
+    #sec-4 {
+        flex-direction: column;
+        padding: 1.25rem;
+    }
+
+    #sec-4 .sec-left, #sec-4 .sec-right {
+        width: 100%;
+    }
+
+    #sec-4 .sec-left .heading, #sec-4 .sec-right .heading {
+        text-align: center;
+    }
+
+    #sec-4 .heading h3 {
+        font-size: 1.5rem;
+    }
+
+    #sec-4 .heading h3 span {
+        font-size: 1.5rem;
+    }
+
+    #sec-4 .sec-left .content1, #sec-4 .sec-right .content2 {
+        align-items: center;
+        gap: 0.625rem;
+        overflow: hidden;
+    }
+
+    #sec-4 .left_hr, #sec-4 .right_hr, #sec-4 .middle_hr {
+        width: 80%;
+        margin: 0.625rem auto;
+    }
+    .adv-card{
+
+        align-items: flex-start;
+    }
+    .adv-card-bg-home {
+        width: 60%;
+        margin: 0.625rem 0;
+        border-radius: 0.9375rem;
+    }
+
+    .adv-card-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    .image_background {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    .adv-card-content .image_background {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    .adv-card .content-div h4 {
+        font-size: 1.25rem;
+    }
+
+    .adv-card .content-div p {
+        font-size: 1rem;
+    }
+
+    /* Hide unnecessary elements */
+    #sec-4 .middle_hr, .left_hr, .right_hr {
+        display: none;
+    }
+
+    /* Section 5 */
+    #sec-5 {
+        display: none;
+        padding: 1.25rem;
+    }
+
+    .card-collection {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .card-bg {
+        width: 100%;
+    }
+
+    /* Section 6 */
+    #sec-6 {
+        flex-direction: column;
+        padding: 1.25rem;
+    }
+
+    .textimonial-container {
+        max-width: 100%;
+        margin-top: 10%;
+    }
+
+    .comments p {
+        font-size: 1rem;
+        text-align: justify;
+        color: #fff;
+        height: auto;
+    }
+
+    .textimonial-container h2 {
+        font-size: 1.3rem;
+        margin: 2rem;
+    }
+
+    .profiles {
+        gap: 0.625rem;
+    }
+
+    .profile {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .current {
+        transform: scale(1.4);
+    }
+
+    /* Section 7 */
+    #sec-7 {
+        padding: 1.25rem;
+    }
+
+    #sec-7 h3 {
+        font-size: 3rem;
+    }
+
+    .showcase-set .image {
+        padding: 0.625rem;
+    }
+
+    .showcase-set .image img {
+        max-width: 20vw;
+    }
+
+    /* Section 8 */
+    #sec-8 .content_sec {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    #sec-8 .content_sec .left, #sec-8 .content_sec .right {
+        width: 100%;
+    }
+    #sec-8 .content_sec .right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #sec-8 .content_sec .left h3 {
+        font-size: 1.5rem;
+    }
+
+    #sec-8 .content_sec .left p {
+        font-size: 1rem;
+    }
+
+    #sec-8 .content_sec .left button {
+        padding: 0.625rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    #sec-8 .content_sec .right img {
+        width: 70%;
+        text-align: center;
+    }
+}
 
 
 

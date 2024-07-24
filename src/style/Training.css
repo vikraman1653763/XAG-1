@@ -367,15 +367,14 @@
   .course-card-container {
       flex-direction: column;
       gap: 10px;
-  }
-
-  .course-card {
-      height: auto;
+    }
+    
+    .course-card {
+      height: 100%;
       padding: 1rem;
   }
 
   .course-icon {
-      flex-direction: column;
       gap: 10px;
   }
 

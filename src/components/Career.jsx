@@ -108,7 +108,11 @@ const Career = () => {
     });
 
     useEffect(() => {
-        AOS.init({ duration: 1250 });
+        AOS.init({ 
+            duration: 1250 ,
+            disable:  window.innerWidth < 768,
+            once: true
+        });
     }, []);
 
     return (
@@ -132,12 +136,12 @@ const Career = () => {
                                 <p><strong>Location:</strong> {job.location}</p>
                                 <p><strong>Type:</strong> {job.type}</p>
                                 <p><strong>Experience:</strong> {job.experience}</p>
-                                <strong>Requirements:</strong>
+                                <p><strong>Requirements:</strong>
                                 <ul>
                                     {job.requirements.map((req, reqIndex) => (
                                         <li key={reqIndex}>{req}</li>
                                     ))}
-                                </ul>
+                                </ul></p>
                                 <div className='applydiv'> 
                                     <button type='button' className="apply-button">Apply Now</button>
                                 </div>

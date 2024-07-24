@@ -15,7 +15,7 @@ import Training from '/src/components/Training.jsx';
 import Blog from '/src/components/Blogs.jsx';
 import BlogDetails from './blog/BlogDetails';
 import Career from './components/Career.jsx';
-
+import Login from './components/Login.jsx';
 
 const App = () => {
   return (
@@ -35,7 +35,7 @@ const App = () => {
             <Route path="/Blog" element={<Blog />} />
             <Route path='/Blog/:title' element={<BlogDetails/>}/>
             <Route path="/career" element={<Career />} />
-
+            <Route path='/Login' element={<Login/>}/>
             
           </Routes>
           <Footer />

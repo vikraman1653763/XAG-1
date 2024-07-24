@@ -13,26 +13,6 @@ const Blog = () => {
         <div className="">
         <Section1/>
         <Section2/>
-        {/* <Dummy/>
-            <div className="og-blog-container">
-                {blogData.map((blog, index) => (
-                    <Link to={`/blog/${blog.title}`} key={index}>
-                    <div className="blog-card">
-                        <div className="blog-img">
-                            <img src={blog.image} alt={blog.title}/>
-                        </div>
-                        <div className="blog-textBox">
-                            <div className="blog-textContent">
-                                <h2>{blog.title}</h2>
-                                <p>{blog.description}</p>
-                                <span>{blog.time}</span>
-                            </div>
-                        </div>
-                    </div>
-                    </Link>
-                ))}
-            </div> */}
-
         </div>
     );
 }

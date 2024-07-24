@@ -83,7 +83,7 @@ const Navbar = () => {
                 <li><Link to="/Blog">BLOGS</Link></li>
                 <li><Link to="/career">CAREER</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
-                <li><button type="button">BOOK NOW</button></li>
+                <li className='login-btn'><Link to="/Login">LOGIN</Link></li>
             </ul>
         </nav>
     );

@@ -21,7 +21,7 @@
     text-align: start;
     border: 1px solid #000000;
     transition: opacity 1s, transform 1s ease; /* Smooth transition */
-    
+    height: auto;
 }
 
 .battery-card:hover {
@@ -92,9 +92,9 @@
 .add-to-cart:active {
     transform: scale(0.95) rotateZ(1.7deg);
   }
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .battery-card {
-        width: calc(50% - 20px); /* 2 cards per row */
+        width: calc(50% - 3rem); 
     }
 }
 

@@ -840,7 +840,11 @@ left: 60%;
       line-height: 0;
     }   
 
-
+.parts-section{
+  overflow: hidden;
+  height: 400px;
+  padding-bottom: 10rem;
+}
   .parts-card {
     width: 20rem;
         height: 15rem;
@@ -874,7 +878,7 @@ left: 60%;
         font-size: .7rem;
     }
 .mode-card-container {
-  overflow-x: hidden;
+  overflow: hidden;
 }
     .mode-card {
         width: 90%;
