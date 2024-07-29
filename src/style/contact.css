@@ -84,6 +84,10 @@
    
     flex-direction: row-reverse
 }
+.enquiry-adv-card-bg:nth-child(2) .enquiry-adv-card-content .enquiry-image_background  {
+   transform: translate(150%,0);
+    
+}
 .enquiry-adv-card-bg:last-child {
     transform: rotate(30deg);
 
@@ -389,10 +393,19 @@
         flex-flow: column wrap;
         gap: 5px;
     }
-    
+   
+    .enquiry-adv-card-bg:nth-child(2) .enquiry-adv-card-content .enquiry-image_background ,    .enquiry-adv-card-bg:nth-child(3) .enquiry-adv-card-content .enquiry-image_background  {
+        border: 2px solid red;
+        transform: translate(0,0);         
+     }
+     .enquiry-adv-card-bg:last-child .enquiry-adv-card-content  {
+   
+        flex-direction: row;
+    }
     .enquiry-adv-card-bg {
-        width: 90%;  
-        margin: 12px auto; /* Center and adjust margin for mobile */
+        width: 80%;  
+        margin: 12px auto; 
+        height: auto;
     }
 
     .enquiry-adv-card .content-div p {
@@ -480,10 +493,7 @@
         font-size: 14px;
     }
 
-    .enquiry-adv-card-bg:last-child .enquiry-adv-card-content  {
-   
-        flex-direction: row-reverse
-    }
+    
     .enquiry-adv-card-bg:last-child {
         transform: rotate(0deg);
     
@@ -495,7 +505,9 @@
         transform: rotate(0deg);
         z-index: 0;
     }
-    
+    .enquiry-card:hover .enquiry-adv-card-bg {
+        margin: 12px ;
+      }
 }
 /* Tablet View */
 @media (min-width: 48em) and (max-width: 64em) {
@@ -547,7 +559,7 @@
   }
     
     .enquiry-adv-card-bg {
-        height: 60%;
+        height: 50%;
         width: 40%; 
         margin: 1rem ; 
     }

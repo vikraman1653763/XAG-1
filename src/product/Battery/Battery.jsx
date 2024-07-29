@@ -5,24 +5,26 @@ import data from '../../Batteries.json';
 import { Link } from 'react-router-dom';
 import BatteryBanner from"./BatteryBanner";
 const Battery = () => {
-    const [batteries, setProducts] = useState([]);
+    const [batteries, setBatteries] = useState([]);
 
     useEffect(() => {
-        setProducts(data.batteries);
-        console.log(data); 
+        setBatteries(data.batteries);
     }, []);
 
     useEffect(() => {
         const sr = ScrollReveal({
-            reset: true,
-            duration: 1000,
+            reset: false,
+            duration: 500,
             easing: 'steps(1111)',
-            distance: '50px',
+            distance: '10px',
             origin:"bottom",
-            disable: 'mobile'
+            disable: 'mobile',
         });
 
-        sr.reveal('.battery-card', { interval: 100 });
+        sr.reveal('.battery-card');
+        return () => {
+            sr.destroy();
+        };
     }, [batteries]);
 
     return (
@@ -36,7 +38,7 @@ const Battery = () => {
                     </div> 
                     <div className="battery-info">
                         <h2 className="battery-title">{battery.name}</h2>
-                        <p className="battery-description">{battery.Model}</p>
+                        <p className="battery-model">{battery.Model}</p>
                         <div className='battery-card-footer'>
                             <div className="battery-price">₹{battery.price}</div>
                             <Link to={`/battery/${battery.ID}`} className="add-to-cart">Details</Link>

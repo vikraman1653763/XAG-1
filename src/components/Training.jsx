@@ -15,7 +15,7 @@ const Training = () => {
 
     useEffect(() => {
         AOS.init({
-            duration: 1250,
+            duration: 500,
             easing: 'ease-in-out',
         });
     }, []);
@@ -47,7 +47,7 @@ const Training = () => {
         <>
             <FlipCard />
             <section className="training-section">
-                <h2 data-aos="fade-up">Drone Training Courses</h2>
+                <h2 data-aos="fade-down">Drone Training Courses</h2>
                 <div className="course-card-container">
                     {courses.map((course, index) => (
                         <div 

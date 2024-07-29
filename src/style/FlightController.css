@@ -19,7 +19,7 @@
 .flight-controller-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
     transition: transform 0.5s ease-in-out;
 
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;
   
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .flight-controller-image {
@@ -109,14 +109,15 @@
     position: absolute;
     inset: 0;
     background: rgb(144,70,12);
-    background: linear-gradient(45deg, rgba(144,70,12,1) 0%, rgba(113,230,154,1) 30%, rgba(155,240,11,1) 100%);  
-   }
+    background-image: linear-gradient(to right top, #5ac73b, #5ac73b, #5ac73b, #5ac73b, #5ac73b, #60cc39, #66d037, #6cd535, #7ae02f, #88ea27, #97f51a, #a7ff00);
+  }
     .parts-logo {
     position: absolute;
     right: 50%;
     bottom: 50%;
     transform: translate(50%, 50%) scale(2);
     transition: all 0.6s ease-in-out;
+    /* filter: invert(100%); */
   }
   
 
@@ -809,7 +810,7 @@ left: 60%;
       font-weight: 400;
     }
     .flight-controller-container {
-      padding: 5px;
+      padding: px;
     }
 
     .flight-controller-image {

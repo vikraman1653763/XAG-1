@@ -386,9 +386,9 @@ word-spacing: 1px;
   .job-listings {
       width: 100%;
   }
-  .job-card:nth-child(even){
+  /* .job-card:nth-child(even){
     align-self: flex-end;
-  }
+  } */
   .job-card {
       padding: 1rem;
       width: 70%;

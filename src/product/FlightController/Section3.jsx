@@ -37,7 +37,7 @@ const Section3 = () => {
           onMouseLeave={() => setActivePart(null)}
         >
           <span className="parts-icon">
-            <p>FMU</p>
+          
           </span>
         </div>
         <div 
@@ -46,7 +46,7 @@ const Section3 = () => {
           onMouseLeave={() => setActivePart(null)}
         >
           <span className="parts-icon">
-            <p>PMU</p>
+            
           </span>
         </div>
         <div 
@@ -55,7 +55,7 @@ const Section3 = () => {
           onMouseLeave={() => setActivePart(null)}
         >
           <span className="parts-icon">
-            <p>GNSS</p>
+            
           </span>
          </div>
        

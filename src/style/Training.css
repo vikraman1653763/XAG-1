@@ -52,7 +52,6 @@
     height: 160%;
     background: linear-gradient(90deg, transparent, #9BF00B, #9BF00B, #9BF00B, #9BF00B, transparent);
     animation: rotation_481 5000ms infinite linear;
-    
   }
   
   .flip-back-flip-content {
