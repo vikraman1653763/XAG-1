@@ -22,11 +22,9 @@
     border-radius: 20px;
     width: 600px;
     height: 500px;
-    
+    background-color: rgb(46, 46, 46);
     /* border: 2px solid red; */
- 
-      
-}
+    background-image: radial-gradient(circle, #ffffff, #ededee, #dddbdc, #ccc9ca, #bcb8b8);}
 
 /* zoombox */
 .mag-image{
@@ -265,5 +263,139 @@
         font-size: .8rem;
         width: 100%;
 
+    }
+}
+/* For screens and tablet view */
+@media only screen and (min-width: 48em) and (max-width: 64em) {
+    .indi-battery-details {
+        padding: 2rem;
+        font-size: 18px;
+    }
+    
+    .indi-battery-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+    
+    .img-mag-contianer {
+        position: relative;
+    }
+    
+    .mag-img {
+        border-radius: 20px;
+        width: 500px;
+        height: 400px;
+    }
+    
+    .mag-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .indi-battery-info {
+        text-align: center;
+        margin: 1em;
+    }
+    
+    .indi-battery-info h2 {
+        font-weight: 700;
+        font-size: 2em;
+    }
+    
+    .indi-battery-info h3 {
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+    
+    .indi-battery-info p {
+        font-size: 1rem;
+    }
+    
+    .indi-battery-price {
+        font-size: 1.2em;
+        color: #ffffff;
+    }
+    
+    .rupee {
+        font-weight: 500;
+        font-size: 1em;
+        color: #9BF00B;
+    }
+    
+    .indi-battery-specs {
+        color: #ffffff;
+        margin-top: 20px;
+    }
+    
+    .indi-battery-specs h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .indi-battery-specs table {
+        font-size: 1.2em;
+        width: 70%;
+        border-collapse: collapse;
+        padding: 10%;
+    }
+    
+    .indi-battery-specs td {
+        border: 1px solid #4e504f;
+        padding: 8px;
+        width: 100%;
+    }
+    
+    .indi-battery-caution {
+        margin-top: 20px;
+    }
+    
+    .indi-battery-caution h2,
+    .indi-battery-benefits h2,
+    .indi-battery-specs h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .indi-battery-caution p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .indi-battery-caution ul,
+    .indi-battery-benefits ul {
+        padding: 0 0.5rem;
+        width: 100%;
+    }
+    
+    .indi-battery-caution li,
+    .indi-battery-benefits li {
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .safety-measure {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .safety-measure img {
+        width: 70px;
+        margin: 10px;
+    }
+    
+    .connector-image {
+        justify-content:center;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    
+    .connector-image img {
+        width: 60px;
+        height: 60px;
     }
 }

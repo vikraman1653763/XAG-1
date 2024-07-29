@@ -14,7 +14,7 @@ const enquiryData=[
     "image": "/assets/choose2.webp"
   },
   {
-    "title": "New Ideas & Collaboration",
+    "title": "Collaboration",
     "description": "Stay updated on our latest deals and special offers by subscribing to our newsletter or following us on social media. Don't miss out on exclusive discounts, promotions, and new product announcements!",
     "image": "/assets/choose3.webp"
   }

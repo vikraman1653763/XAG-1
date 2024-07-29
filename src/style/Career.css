@@ -93,7 +93,7 @@
 .job-card p{
   font-weight: 100;
   font-family: karla;
-  text-align: justify;
+  text-align: left;
 }
 .job-card h3 img {
     width: 2rem;
@@ -366,7 +366,85 @@ word-spacing: 1px;
   font-weight: 400;
 }
 
+}
 
+/* Tablet View */
+@media (min-width: 48em) and (max-width: 64em) {
+  .career-section {
+      flex-direction: column;
+      padding: 1rem;
+  }
 
+  .filter-section {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+      top: 0;
+      position: relative;
+  }
 
+  .job-listings {
+      width: 100%;
+  }
+  .job-card:nth-child(even){
+    align-self: flex-end;
+  }
+  .job-card {
+      padding: 1rem;
+      width: 70%;
+      align-self: flex-start;
+
+  }
+
+  .job-card h3 {
+      font-size: 1.5rem;
+  }
+
+  .job-card p, .job-card ul li {
+      font-size: 0.875rem;
+      font-weight: normal;
+  }
+
+  .apply-button {
+      width: auto;
+      padding: 0.5rem 1rem;
+      position: relative;
+      margin: 0;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      height: auto;
+  }
+
+  .applydiv {
+      height: auto;
+      margin-top: 1rem;
+      text-align: center;
+  }
+
+  /* checkbox */
+  .checkbox-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      height: 2.4rem;
+  }
+
+  .checkbox-wrapper * {
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+  }
+
+  .checkbox-wrapper input[type="checkbox"] {
+      display: none;
+  }
+
+  .checkbox-wrapper label {
+      --size: 1rem;
+  }
+
+  .checkbox-wrapper span {
+      font-weight: 400;
+  }
 }

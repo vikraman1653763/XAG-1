@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { TbDrone } from "react-icons/tb";
 const Section6 = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [timer, setTimer] = useState(null);
@@ -27,13 +27,7 @@ const Section6 = () => {
         }
     ];
 
-    const profiles = [
-        '/assets/mini.webp',
-        '/assets/mini.webp',
-        '/assets/mini.webp',
-        '/assets/mini.webp',
-        '/assets/mini.webp'
-    ];
+  
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -72,13 +66,14 @@ const Section6 = () => {
                         ))}
                     </div>
                     <div className="profiles ">
-                        {profiles.map((profile, index) => (
+                        {textimonials.map((textimonial, index) => (
                             <div
                                 key={index}
                                 className={`profile ${currentSlide === index ? 'current' : ''}`}
                                 onClick={() => handleProfileClick(index)}
                             >
-                                <img src={profile} alt={`profile ${index + 1}`} />
+                                <TbDrone  className='profile-img'/>
+
                             </div>
                         ))}
                     </div>

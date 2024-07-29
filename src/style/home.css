@@ -950,20 +950,22 @@ canvas {
     width: 3em;
     margin: 0 4px;
     transition: all 0.2s ease;
+    opacity: .5;
 }
 
-.profile img {
+.profile-img {
     width: 100%;
     height: 100%;
-    opacity: .5;
-
+    color: #9BF00B;
+    transform: scale(.6);
 }
 
 .current {
     width: 4em;
     height: 4em;
-    transform: scale(1.4);
+    transform: scale(1.5);
     transition: transform .8s;
+    opacity: 1;
 }
 
 .current img {

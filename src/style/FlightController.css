@@ -976,3 +976,203 @@ left: 60%;
     height: 30rem;
       }
 }
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .controller {
+    margin-top: 4.375rem;
+  }
+
+  .controller-title {
+    font-size: 3rem;
+    line-height: 3.125rem;
+  }
+
+  .controller p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .flight-controller-container {
+    padding: 1.25rem;
+  }
+
+  .flight-controller-image {
+    max-width: 31.25rem;
+  }
+
+  .translate-right {
+    transform: translateX(31.25rem);
+  }
+
+  .translate-left {
+    transform: translateX(-31.25rem);
+  }
+
+  .des-container {
+    height: auto;
+  }
+
+  .des-container h2,
+  .working-modes h2 {
+    font-size: 2.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .des-text-wrapper {
+    padding-bottom: 0.625rem;
+  }
+
+  .des-text-wrapper p span {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .parts-section {
+    overflow: hidden;
+    height: 25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .parts-card {
+    width: 25rem;
+    height: 18.75rem;
+  }
+
+  .parts-details-content {
+    position: absolute;
+    width: 12.5rem;
+    height: 20%;
+    transform: translate(22rem, -15rem);
+  }
+
+  .parts-details.active {
+    opacity: 1;
+    transform: translate(-22.5rem, 12.5rem);
+  }
+
+  .parts-details-content {
+    line-height: 1;
+    width: 20rem;
+  }
+
+  .parts-details-content h2 {
+    font-size: 1.3rem;
+    padding: 0;
+    line-height: 100%;
+  }
+
+  .parts-details-content p {
+    font-size: 0.7rem;
+  }
+
+  .mode-card-container {
+    overflow: hidden;
+  }
+
+  .mode-card {
+    width:20rem;
+  }
+
+  .mode-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .mode-card p {
+    font-size: 1.125rem;
+  }
+
+  .controller-specifications h2 {
+    font-size: 2.5rem;
+    color: white;
+    z-index: 3;
+  }
+
+  .controller-spec-card {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .controller-spec-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .controller-spec-card p {
+    font-size: 0.875rem;
+    font-weight: normal;
+  }
+
+  .fc-adv {
+    overflow: hidden;
+  }
+
+  .fc-adv-card {
+    width: 90%;
+    height: 40%;
+  }
+
+  .fc-adv-textBox {
+    font-size: 1.5rem;
+  }
+
+  .fc-adv-card {
+    width: 90%;
+    height: 40%;
+    border-radius: 1.25rem;
+  }
+
+  .fc-adv-textBox h2 {
+    font-size: 1.25rem;
+  }
+
+  .fc-adv-textBox p span {
+    font-size: 0.875rem;
+  }
+
+  .fc-adv-img-container {
+    height: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .fc-adv-img {
+    height: 50%;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    object-fit: contain;
+  }
+
+  .fc3 {
+    position: absolute;
+    bottom: 30%;
+    right: 60%;
+  }
+
+  .fc2 {
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+  }
+
+  .fc1 {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+  }
+
+  .ripple-background,
+  .ripple-background2 {
+    display: none;
+  }
+
+  .fc-img {
+    transform: translateX(0);
+  }
+
+  .fc-img img {
+    width: 50rem;
+    height: 30rem;
+  }
+}

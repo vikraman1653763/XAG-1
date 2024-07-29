@@ -350,34 +350,34 @@
 /* Media Queries for Mobile */
 @media screen and (max-width: 767px) {
     .banner img {
-        height: auto; /* Adjust height for mobile */
+        height: auto; 
     }
 
     .image-text {
-        width: 90%; /* Adjust width for mobile */
+        width: 90%;  
     }
 
     .image-text h3 {
-        font-size: 32px; /* Adjust font-size for mobile */
-        line-height: 36px; /* Adjust line-height for mobile */
+        font-size: 32px;  
+        line-height: 36px;  
     }
 
     .image-text p {
-        font-size: 14px; /* Adjust font-size for mobile */
+        font-size: 14px; 
     }
 
     #enquiry {
-        padding: 20px; /* Adjust padding for mobile */
-        gap: 20px; /* Adjust gap for mobile */
+        padding: 20px; 
+        gap: 20px;  
     }
 
     .enquiries-heading h3 {
-        font-size: 36px; /* Adjust font-size for mobile */
-        line-height: 40px; /* Adjust line-height for mobile */
+        font-size: 36px; 
+        line-height: 40px; 
     }
 
     .enquiries-heading h6 {
-        font-size: 14px; /* Adjust font-size for mobile */
+        font-size: 14px; 
     }
 
     .enquiry-adv-card {
@@ -391,7 +391,7 @@
     }
     
     .enquiry-adv-card-bg {
-        width: 90%; /* Adjust width for mobile */
+        width: 90%;  
         margin: 12px auto; /* Center and adjust margin for mobile */
     }
 
@@ -431,53 +431,53 @@
     }
 
     .contact_form {
-        padding: 24px; /* Adjust padding for mobile */
+        padding: 24px;  
     }
 
     .contact_form .contact_form-heading h3 {
-        font-size: 36px; /* Adjust font-size for mobile */
+        font-size: 36px;
     }
 
     .contact_form .contact_form-heading h6 {
-        font-size: 14px; /* Adjust font-size for mobile */
+        font-size: 14px; 
     }
 
     .contact_form-left {
-        width: 100%; /* Adjust width for mobile */
-        padding: 0px 12px; /* Adjust padding for mobile */
+        width: 100%;  
+        padding: 0px 12px;  
     }
 
     .email-phone-div {
-        flex-direction: column; /* Stack inputs vertically on mobile */
-        gap: 12px; /* Adjust gap for mobile */
+        flex-direction: column;  
+        gap: 12px;  
     }
 
     .contact_form-right {
-        flex-direction: column; /* Stack contact methods vertically on mobile */
-        gap: 20px; /* Adjust gap for mobile */
+        flex-direction: column; 
+        gap: 20px;  
     }
 
     .contact_form-right .email-right,
     .contact_form-right .moblie-right,
     .contact_form-right .location-right {
-        width: 100%; /* Adjust width for mobile */
+        width: 100%;  
     }
 
     .contact_form-right .contact_form-right_img-div {
-        width: 40px; /* Adjust size for mobile */
-        height: 40px; /* Adjust size for mobile */
+        width: 40px; 
+        height: 40px; 
     }
 
     .contact_form-right h4 {
-        font-size: 18px; /* Adjust font-size for mobile */
+        font-size: 18px; 
     }
 
     .contact_form-right p {
-        font-size: 14px; /* Adjust font-size for mobile */
+        font-size: 14px; 
     }
 
     .contact_form-right a {
-        font-size: 14px; /* Adjust font-size for mobile */
+        font-size: 14px;
     }
 
     .enquiry-adv-card-bg:last-child .enquiry-adv-card-content  {
@@ -494,5 +494,168 @@
     .enquiry-adv-card-bg:nth-child(2) {
         transform: rotate(0deg);
         z-index: 0;
+    }
+    
+}
+/* Tablet View */
+@media (min-width: 48em) and (max-width: 64em) {
+    .banner {
+        margin-top: 4rem; 
+    }
+
+    .banner img {
+        height: auto;
+    }
+
+    .image-text {
+        width: 80%; 
+    }
+
+    .image-text h3 {
+        font-size: 3rem;
+        line-height: 4rem; 
+    }
+
+    .image-text p {
+        font-size: 1rem; 
+    }
+
+    #enquiry {
+        padding: 2rem 0rem;
+        gap: 2rem; 
+    }
+    
+    .enquiries-heading h3 {
+        font-size: 4rem; 
+        line-height: 5rem; 
+    }
+    
+    .enquiries-heading h6 {
+        font-size: 1rem; 
+    }
+
+.enquiry-card{
+    flex-wrap: nowrap;
+    transform: none;
+    height: auto;
+    width: 100%;
+
+}
+.enquiry-card:hover .enquiry-adv-card-bg {
+    transform: none;
+    margin: 1rem ; 
+  }
+    
+    .enquiry-adv-card-bg {
+        height: 60%;
+        width: 40%; 
+        margin: 1rem ; 
+    }
+
+    .enquiry-adv-card {
+        height: auto;
+        border-radius: 1.5rem;
+        padding: 1rem 1rem 1rem 2rem;
+        background-color: rgba(0, 0, 0, 0.278);
+        display: flex;
+        flex-flow: column wrap;
+        gap: 0.75rem;
+    }
+    
+    
+
+    .enquiry-adv-card .content-div p {
+        color: #E3DFDF;
+        font-family: "Segoe UI";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        text-align: start;
+    }
+    
+    .enquiry-adv-card .content-div h4 {
+        color: #A1ED20;
+        font-family: "Segoe UI";
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5rem;
+        letter-spacing: -0.72px;
+    }
+    
+    .enquiry-adv-card-content .image_background {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 1.25rem;
+        position: relative;
+        opacity: 1;
+        background: #131313;
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    .contact_form {
+        padding: 2rem; 
+    }
+
+    .contact_form .contact_form-heading h3 {
+        font-size: 4rem; 
+    }
+
+    .contact_form .contact_form-heading h6 {
+        font-size: 1rem;  
+    }
+
+    .contact_form-left {
+        width: 70%; 
+        padding: 0px 1rem; 
+    }
+
+    .email-phone-div {
+        flex-direction: column; 
+        gap: 1rem; 
+    }
+
+    .contact_form-right {
+        flex-direction: row; 
+        gap: 1.5rem;  
+    }
+
+    .contact_form-right .email-right,
+    .contact_form-right .moblie-right,
+    .contact_form-right .location-right {
+        width: 100%; 
+    }
+
+    .contact_form-right .contact_form-right_img-div {
+        width: 2.5rem; 
+        height: 2.5rem;  
+    }
+
+    .contact_form-right h4 {
+        font-size: 1.5rem;  
+    }
+
+    .contact_form-right p {
+        font-size: 1rem;  
+    }
+
+    .contact_form-right a {
+        font-size: 1rem;  
+    }
+
+    .enquiry-adv-card-bg:last-child .enquiry-adv-card-content {
+        flex-direction: row;
+    }
+
+    .enquiry-adv-card-bg:last-child,
+    .enquiry-adv-card-bg:first-child,
+    .enquiry-adv-card-bg:nth-child(2) {
+        transform: rotate(0deg);
     }
 }

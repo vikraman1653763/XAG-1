@@ -15,9 +15,9 @@ const cautionIcon = <img src={caution} alt="caution"/>;
 const thumbIcon = <img src={'/assets/thumbsup.svg'} alt="caution"/>;
 
 const BatteryDetails = () => {
-    const { title } = useParams();
-    const battery = batteriesData.batteries.find(b => b.title === title);
-    
+    const { ID } = useParams();
+    const battery = batteriesData.find(b => b['ID'] === parseInt(ID)); // Adjusted to match JSON structure
+
     if (!battery) {
         return <div>Battery not found</div>;
     }
@@ -35,7 +35,10 @@ const BatteryDetails = () => {
         sr.reveal('.listright', { origin: 'right' });
 
     }, []);
-
+   const connecterTitle =(image)=>{
+    const text= image.replace("/connector/","").replace(".webp","");
+    return text
+   }
     
     return (
 
@@ -47,9 +50,9 @@ const BatteryDetails = () => {
                 className="indi-battery-image"/> */}
 
                 <div className="indi-battery-info">
-                    <h2>{battery.title}</h2>
+                    <h2>{battery.name}</h2>
                    
-                        <h3>{battery.type}</h3>
+                        <h3>{battery.Model}</h3>
                    
                     <div className="indi-battery-price">
                         <span className='rupee'>₹</span>
@@ -67,8 +70,8 @@ const BatteryDetails = () => {
                         <img src={umberlla} alt="umberlla"/>
                     </div>
                     <div className='connector-image'>
-                        {battery.connectorImages && battery.connectorImages.map((image,index)=>(
-                            <img src={image} key={index} alt={`Connector ${index+1}`}/>
+                        { battery.connectorImages.map((image,index)=>(
+                            <img src={image} key={index} alt={`Connector ${index+1}`} title={`${connecterTitle(image)}`}/>
                         ))}
                   
                     </div>
@@ -79,10 +82,10 @@ const BatteryDetails = () => {
                 <h2 className='listright'>Specifications</h2>
                 <table>
                     <tbody>
-                        {battery.specs && battery.specs.map((spec, index) => (
+                        {Object.entries( battery.specs).map(([key,value], index) => (
                             <tr key={index}>
-                                <td className='lisst'>{spec.name}</td>
-                                <td className='lisst'>{spec.details}</td>
+                                <td className='lisst'>{key}</td>
+                                <td className='lisst'>{value}</td>
                             </tr>
                         ))}
                     </tbody>

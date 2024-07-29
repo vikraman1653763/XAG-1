@@ -35,30 +35,30 @@ nav {
     position: fixed;
     top: 0%;
     z-index: 10;
-    height: 4rem;
+    height: auto;
 }
 .logooimg{
     width:clamp(3rem,5rem,5.5rem) ;
-    height: 3rem;
+    height: 2.5rem;
+    margin-bottom: .5rem;
 }
 
 nav ul {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    /* align-items: center; */
     list-style-type: none;
     justify-content: space-between;
     width: 70%;
     position:absolute;
     right: 0%;
-
-    margin-top: 1rem;
+/* border: 2px solid red; */
 }
 
 nav ul li a ,nav ul span {
     text-decoration: none;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 250%;
     font-weight: 500;
     margin: 1rem;
@@ -130,7 +130,7 @@ border: 2px solid #9BF00B;}
     align-items: start;
     opacity: 0;
     visibility: hidden;
-    transform: translate(-10px, 10px);
+    transform: translate(-10px, -10px);
     transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     text-transform: uppercase;
     border-radius: 5px;
@@ -142,7 +142,7 @@ border: 2px solid #9BF00B;}
 .products:hover > .menu {
     opacity: 1;
     visibility: visible;
-    transform: translate(-10px, 0px);
+    transform: translate(-10px, -5px);
 }
 
 .menu a:hover,
@@ -347,14 +347,14 @@ border: 2px solid #9BF00B;}
 
     .submenu {
         width: auto;
-        transform: translate(-8rem, 0); 
+        transform: translate(-8rem, -5rem); 
     }
 
     .subopen,
     .menu li:hover > .submenu {
         opacity: 1;
         visibility: visible;
-        transform: translate(-8rem, 0); 
+        transform: translate(-12rem, -5rem); 
         width: 100%;
     }
 }

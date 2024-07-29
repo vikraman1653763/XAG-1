@@ -1,8 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useEffect } from "react";
-// import blogData from './blogData.json';
+import blogData from './blogData.json';
 import { Link } from "react-router-dom";
-let blogData='';
+// let blogData='';
 const Section2 = () => {
   return (
       <>

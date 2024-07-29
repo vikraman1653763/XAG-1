@@ -217,18 +217,7 @@ span {
     color: #9BF00B;
 }
 
-@media (max-width: 1375px) {
-    .agr16-card {
-        width: 50vw;
-        transform: translateY(0);
-    }
 
-    .agr16-card-container {
-        gap: 40px;
-        justify-content: space-around;
-       
-    }
-}
 /*advantages*/
 
 .advantages {
@@ -751,6 +740,189 @@ position: relative;
 
   .fc-sec-card-content p {
       font-size: .8rem;
+      font-weight: normal;
+  }
+}
+/* Tablet View */
+@media (min-width: 48em) and (max-width: 64em) {
+  .agr16-header {
+      top: 4rem;
+      max-height: 5rem;
+  }
+
+  .agr16-desc {
+      height: auto;
+      padding: 1rem;
+      align-items: center;
+  }
+
+  .agr16-Title {
+      font-size: 2rem;
+      line-height: 2.5rem;
+  }
+
+  .Model, .spec-agr16-card h4, .agr16-type, .agr16-desc h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+
+  .agr16-desc p, .agr16-card-content p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: justify;
+  }
+
+  main {
+      padding: 1rem;
+  }
+
+  .gif-container {
+      min-height: 100%;
+  }
+
+  .gif-container img {
+      width: 100%;
+      height: auto;
+  }
+
+  .spec-agr16-card {
+      padding: 1rem;
+      height: auto;
+  }
+
+
+  .spec-item {
+      width: 30%;
+      padding: 1rem;
+      font-size: 0.875rem;
+  }
+
+  .spec-img {
+      width: 2.5rem;
+      height: 2.5rem;
+  }
+
+  .agr16-card-container {
+      flex-direction: row;
+      gap: 1.5rem;
+      flex-wrap: nowrap;
+  }
+
+  .agr16-card {
+      width: 50%;
+      transform: translateY(-10rem);
+      margin-bottom: 1.5rem;
+  }
+
+  .agr16-card:hover {
+      transform: translateY(0);
+  }
+
+  .type-name {
+      font-size: 2rem;
+  }
+
+  .advantages {
+      padding: 1rem;
+      min-height: auto;
+  }
+
+  .advantage-points {
+      width: 100%;
+      display:flex ;
+      align-items: center;
+  }
+
+  .advantage-point {
+    width: 60%;
+      padding: 0.5rem;
+  }
+
+  .advantage-point h5 {
+      font-size: 1.5rem;
+  }
+
+  .advantage-point p {
+      font-size: 1rem;
+      font-weight: normal;
+  }
+
+  .cube-section {
+  
+      padding: 1rem;
+      height:400px;
+      align-items: center;
+      justify-items: center;
+  }
+
+  .cube-item {
+      width: 6rem;
+      height: 6rem;
+  }
+
+  .cube-item.active, .cube-item:hover {
+      width: 10rem;
+      height: 10rem;
+      background-size: cover;
+  }
+  .big-blocky{
+      width: 10rem;
+      font-weight: normal;
+      font-size: 1.5rem;
+      opacity: 0;
+  }
+  .top-left.active .big-blocky, .top-left:hover .big-blocky{
+    transform: translate(-200px, -50px);
+
+  }
+  .top-right.active .big-blocky, .top-right:hover .big-blocky
+  {
+    transform: translate(200px, -50px);
+
+  }
+  .bottom-left.active .big-blocky, .bottom-left:hover .big-blocky{
+    transform: translate(-200px, 50px);
+
+  }
+  .bottom-right.active .big-blocky, .bottom-right:hover .big-blocky{
+    transform: translate(200px, 50px);
+
+  }
+
+  .blocky {
+      font-size: 1rem;
+  }
+
+  .tabs-container {
+      padding: 0;
+  }
+
+  .tabs button {
+      font-size: 1rem;
+      padding: 0.5rem;
+      font-weight: 400;
+  }
+
+  .tab-content p, .tab-content h2 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+  }
+
+  .fc-sec-card {
+      width: 100%;
+      height: 30vh;
+      margin-bottom: 1.5rem;
+      background-size: cover;
+      background-color: #000;
+      background-repeat: no-repeat;
+  }
+
+  .fc-sec-card-content h3 {
+      font-size: 1.5rem;
+  }
+
+  .fc-sec-card-content p {
+      font-size: 1rem;
       font-weight: normal;
   }
 }

@@ -29,7 +29,7 @@ const App = () => {
             <Route path="/agr16" element={<AGR16 />} />
             <Route path="/agr10" element={<AGR16 />} />
             <Route path="/Batteries" element={<Battery />} />
-            <Route path="/battery/:title" element={<BatteryDetails />} />
+            <Route path="/battery/:ID" element={<BatteryDetails />} />
             <Route path="/flight-controller" element={<FlightController />} />
             <Route path="/training" element={<Training />} />
             <Route path="/Blog" element={<Blog />} />
