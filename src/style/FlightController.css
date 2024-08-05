@@ -19,7 +19,6 @@
 .flight-controller-container {
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: 20px; */
     text-align: center;
     transition: transform 0.5s ease-in-out;
 
@@ -36,8 +35,6 @@
 .images-container {
     display: flex;
     justify-content: center;
-  
-    /* margin-bottom: 20px; */
 }
 
 .flight-controller-image {

@@ -8,7 +8,7 @@ import SectionMission from '../about/SectionMission';
 import SectionNews from '../about/SectionNews';
 import Section6 from '../home/Section6';
 import SectionFAQ from '../about/SectionFAQ';
-
+import SectionCore from '../about/SectionCore';
 function About() {
   return (
     <div>
@@ -16,10 +16,10 @@ function About() {
       <SectionAbout />
       <SectionVision />
       <SectionMission />
+      <SectionCore/>
       <Section6/>
       <SectionFAQ/>
       <SectionNews />
-      
     </div>
   );
 }

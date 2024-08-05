@@ -7,7 +7,7 @@ const Section4 = () => {
 
     useEffect(() => {
         AOS.init({
-          duration: 500,
+          duration: 300,
           mirror: true,
         });
       }, []);

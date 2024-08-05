@@ -16,7 +16,10 @@ import Blog from '/src/components/Blogs.jsx';
 import BlogDetails from './blog/BlogDetails';
 import Career from './components/Career.jsx';
 import Login from './components/Login.jsx';
-
+import Admin from'./admin/admin.jsx';
+import BatteryUpdate from'./admin/BatteryUpdate.jsx';
+import BlogUpdate from'./admin/BlogUpdate.jsx';
+import CareerUpdate from'./admin/CareerUpdate.jsx';
 const App = () => {
   return (
     <Router>
@@ -36,7 +39,10 @@ const App = () => {
             <Route path='/Blog/:title' element={<BlogDetails/>}/>
             <Route path="/career" element={<Career />} />
             <Route path='/Login' element={<Login/>}/>
-            
+            <Route path= '/admin' element={<Admin/>}/>
+            <Route path= '/admin/battery' element={<BatteryUpdate/>}/>
+            <Route path= '/admin/blog' element={<BlogUpdate/>}/>
+            <Route path= '/admin/career' element={<CareerUpdate/>}/>
           </Routes>
           <Footer />
           <UpButton/>

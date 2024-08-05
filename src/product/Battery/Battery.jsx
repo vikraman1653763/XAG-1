@@ -4,6 +4,9 @@ import '../../style/Battery.css';
 import data from '../../Batteries.json';
 import { Link } from 'react-router-dom';
 import BatteryBanner from"./BatteryBanner";
+import BatterySpec from "./BatterySpec"
+import BatteryIntro from './BatteryIntro';
+
 const Battery = () => {
     const [batteries, setBatteries] = useState([]);
 
@@ -29,6 +32,8 @@ const Battery = () => {
 
     return (
         <>
+        <BatteryIntro/>
+        <BatterySpec/>
         <BatteryBanner/>
         <div id="battery-container">
             {data.map((battery,index) => (

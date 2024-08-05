@@ -300,6 +300,8 @@ canvas {
     align-items: flex-start;
     gap: 10px;
     overflow: hidden;
+    background-size: cover;
+
 }
 
 .itemclick {
@@ -311,12 +313,13 @@ canvas {
 }
 
 .item-1 {
-    background-image: url("/assets/product1.webp");
+    background-image: url("/product/product1.webp");
 }
 
 .item-2 {
-    background-image: url("/assets/product2.webp");
-  
+    background-image: url("/product/product3.webp");
+   
+    
 }
 
 .item-3 {
@@ -324,7 +327,7 @@ canvas {
 }
 
 .item-4 {
-    background-image: url("/assets/product4.webp");
+    background-image: url("/product/product4.webp");
 }
 
 

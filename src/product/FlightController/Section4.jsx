@@ -31,7 +31,7 @@ const Section4 = () => {
                 <h2 data-aos="fade-right"> MODES</h2>
                 <div className="mode-card-container">
                     {workingModes.map((mode, index) => (
-                        <div className={`mode-card mode-${index}`} key={index}  data-aos={index%2===0 ?'flip-left':'flip-right'}>
+                        <div className={`mode-card mode-${index}`} key={index}  data-aos='flip-left' data-aos-delay={(1+index) * 100} data-aos-duration={(1+index) * 100}>
                             <img src={mode.icon}/>
                             <h3>{mode.title}</h3>
                             <p>{mode.details}</p>

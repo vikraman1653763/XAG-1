@@ -28,24 +28,9 @@ const SectionAbout = () => {
           <video id="myVideo" autoPlay loop>
             <source src="/assets/video.webm" type="video/mp4" />
           </video>
-          <div className="play-button" id="trigger">
-            <div className="icon-bg">
-              <img src='/assets/Play.svg' alt="Play Icon" />
-            </div>
-            <div className="duration">
-              <p>Quick explainer</p>
-              <time>00:13 mins</time>
-            </div>
-          </div>
+         
         </div>
-        <div className="aboutpage-modal" id="modal">
-          <div className="aboutpage-modal-content">
-            <span className="close-button" id="close-btn"><i className="fa-solid fa-xmark fa-xl"></i></span>
-            <video controls>
-              <source src="/assets/video.mp4" />
-            </video>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

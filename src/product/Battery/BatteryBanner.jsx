@@ -2,7 +2,7 @@ import React from 'react';
 
 const BatteryBanner = () => {
   return (
-    <section className="banner">
+    <section className="banner" style={{ marginTop: '0px' }}>
       <img src="/assets/banner.webp" alt="banner" />
       <div className="image-text">
         <h3>Explore our <br /> <span>Battery Solutions!</span></h3>

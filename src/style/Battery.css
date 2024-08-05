@@ -1,3 +1,9 @@
+@font-face{
+    font-family: wasted;
+    src:url(/assets/wasted.ttf);
+    font-weight: 300;
+  }
+
 
 #battery-container {
     position: relative;
@@ -8,7 +14,7 @@
     width: 100%;
     top: 5rem;
     margin-bottom: 7em;
-    background: rgb(36, 46, 20);
+    background: rgb(15, 15, 15);
 
 }
 
@@ -93,37 +99,171 @@
 
 
 
-.horizontal-slider{
-    transform: translateX(100px);
-    width: 100%;
-    position: relative;
-    max-width: 500px;
-    height: 10px;
-    border: 1px solid grey;
-    background-color: rgb(51, 51, 51);
-    border-radius: 2rem;
-}
-.horizontal-slider .example-track{
-    position: absolute;
-    height: 10px;
-    border-radius: 2rem;
 
-}
-.example-track-1{
-    background-color: #9BF00B;
-}
-.horizontal-slider .example-thumb{
-    transform: translateY(-25%);
-    background-color:rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border-radius: 2rem;
-    padding: 0rem .5rem 0rem .5rem;
-    font-weight: 600;
-    font-size: .9em;
-}
+
+
+
 .add-to-cart:active {
     transform: scale(0.95) rotateZ(1.7deg);
   }
+
+
+
+  .intro-container{
+    margin-top: 64px;
+    height:900px;
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+    margin-bottom:5rem ;
+}
+
+.intro-container .sky{
+    position: absolute;
+    bottom: 0;
+    height: max-content;
+}
+
+
+.intro-container .field{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+}
+.intro-container .batteries{
+    position: absolute;
+    transform: scale(0.9) ; 
+    z-index: 1;
+    top: 10%; 
+    left: -35%;
+}
+.intro-container .text {
+    position: absolute;
+    height: 1%;
+    text-align: center;
+    width:auto;
+    top:0;
+    font-weight: 700;
+    line-height: 600%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #00000000;
+}
+
+.intro-container .text h2{
+    font-size: 6em;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    position: block;
+}
+.intro-container .text h3{
+    color: #bea930;
+    font-size: 4.5em;
+    z-index: 6;
+    width: auto;
+    
+}
+
+.intro-container .text h3 img{
+   
+    position: absolute;
+    transform: scale(1.2);
+    top: 5%;
+    width: 1em;
+    left: 14%;
+    filter: invert(60%) sepia(90%) saturate(348%) hue-rotate(14deg) brightness(93%) contrast(86%);
+    
+}
+
+
+
+.battery-spec-container{
+    overflow: hidden;
+    background: #ffffff;
+    width:100%;
+    height: 50rem;
+    position: relative;
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+}
+.battery-spec-box{
+    display: flex;
+    width: 60%;
+    color: #bdbdbb;
+    height: 50vh;
+    position: absolute;
+    right: 10rem;
+    bottom: 5rem;
+    overflow: hidden;
+    
+}
+.btpt1{
+    
+    transform: translateY(-200%);
+}
+.battery-points{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: .4em 0em;
+        width: 100%;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 1.8rem;
+        font-family: Arial, Helvetica, sans-serif;
+         flex-wrap: nowrap;
+         /* border: 2px solid red; */
+         padding-left: 1rem;
+       
+
+    }
+    
+    .battery-points p{
+        white-space: nowrap;
+        width: 100%;
+        font-weight: 600;
+        font-size: 1em;
+        border-radius: 1rem;
+        padding: .5rem;
+        margin: .6rem;
+        color: #000000;
+        text-align: center; 
+       
+   
+        background: #ffffff;
+        box-shadow: inset 12px 12px 18px #c7c7c7,
+                    inset -12px -12px 18px #ffffff;
+    }
+
+
+    .battery-spec-title{
+        position: absolute;
+        top: 12%;
+        left: 4%;
+        font-weight: 800;
+        font-size: 6rem;
+        margin-bottom: 7vw;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+
+    .t2{
+        top: 26%;
+        color: #9BF00B;
+    }
+
+
+    .battery-spec-image{
+        transform:translate(-10%,20%) scale(50%);
+        position: absolute;
+        
+    }
+
+
+
+
+
 @media (max-width: 1280px) {
     .battery-card {
         width: calc(50% - 3rem); 
@@ -140,7 +280,7 @@
 }
 
 /* For screens 768px or less */
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .battery-card {
         width: 100%;
     }
@@ -163,6 +303,65 @@
 
     .battery-card-footer {
         align-items: flex-start;
+    }
+    .intro-container {
+        margin-top: 64px;
+        height: 400px; /* Adjusted height for mobile view */
+        width: 100vw;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3rem;
+        object-fit: cover;
+    }
+
+    .intro-container .sky {
+        position: absolute;
+        top: 0;
+        height:300px;
+        width: 100%; 
+    }
+
+    .intro-container .field {
+        position: absolute;
+        bottom: 17%;
+        width: 100%; /* Adjust width for mobile */
+    }
+
+    .intro-container .batteries {
+        position: absolute;
+        transform: scale(0.7); /* Adjust scale for mobile */
+        top: 20%; 
+        left: -35%; /* Adjust position for mobile */
+    }
+
+    .intro-container .text {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 10%; /* Adjust position for mobile */
+        font-weight: 700;
+        line-height: normal;
+        font-family: 'Times New Roman', Times, serif;
+        height: 200px;
+    }
+
+    .intro-container .text h2 {
+        font-size: 2em; /* Adjust font size for mobile */
+        color: rgb(255, 255, 255);
+    }
+
+    .intro-container .text h3 {
+        color: #bea930;
+        font-size: 1em;
+        width: auto;
+    }
+
+    .intro-container .text h3 img {
+        position: absolute;
+        transform: scale(1);
+        top: 10%; 
+        width: 1em;
+        left: 30%; 
     }
 }
 
@@ -191,4 +390,67 @@
     .battery-card-footer {
         align-items: flex-start;
     }
+
+    .intro-container {
+        margin-top: 1px;
+        height: 600px;  
+        width: 100vw;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 4rem;
+        object-fit: cover;
+    }
+
+    .intro-container .sky {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .intro-container .field {
+        position: absolute;
+        bottom: 0;
+        width: 100%; /* Adjust width for tablet */
+    }
+
+    .intro-container .batteries {
+        position: absolute;
+        transform: scale(0.9); /* Adjust scale for tablet */
+        top: 20%; 
+        left: -30%; /* Adjust position for tablet */
+    }
+
+    .intro-container .text {
+        position: absolute;
+        height: 1%;
+        text-align: center;
+        width: 100%;
+        top: 5%; 
+        font-weight: 700;
+        line-height: normal;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #00000000;
+    }
+
+    .intro-container .text h2 {
+        font-size: 4em; /* Adjust font size for tablet */
+        color: rgb(0, 0, 0);
+    }
+
+    .intro-container .text h3 {
+        color: #bea930;
+        font-size: 3em; /* Adjust font size for tablet */
+        width: auto;
+    }
+
+    .intro-container .text h3 img {
+        position: absolute;
+        transform: scale(1.1);
+        top: 1%; /* Adjust position for tablet */
+        width: 1em;
+        left: 23%; /* Adjust position for tablet */
+    }
 }
+
+

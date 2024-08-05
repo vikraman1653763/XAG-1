@@ -435,6 +435,78 @@
 
 
 /* mission end */
+/*core value*/
+.coreSection{
+    background: rgb(0,0,0);
+    background-image: linear-gradient(to top, #020d14, #0c1318, #13191b, #191d1f, #1f2223, #1c3437, #104747, #005a50, #00805e, #00a65e, #00cb4b, #3df00b);
+
+}
+.coreSection .head .heading{
+
+    color: #FFF;
+    text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -2.257px;
+    text-transform: uppercase;
+}
+.coreSection .misson-texteffect h2 {
+    background-image: url('/assets/mission1.gif');
+    background-size:120%;
+    background-position: -390px -90px;
+    color: transparent;
+    background-clip: border-box;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 16rem;
+    font-weight: 900;
+    margin-top: -50px;
+}
+.coreSection .content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.coreSection .content .card {
+    padding: 0px 2rem;
+    border-radius: 1.3rem;
+    background: linear-gradient(225deg, #5cd70a07, #6dff0c13);
+    box-shadow: -10px 10px 20px #0707071c, 10px -10px 20px #1e1f1e3f;
+    margin: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    width: auto;
+}
+
+.coreSection .content .card h2 {
+    color: #bebcbc;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27.372px;
+    margin-bottom: 10px;
+    /* 57.96% */
+}
+
+.coreSection .content .card h3 {
+    margin: 0px;
+    font-size: 2rem;
+    font-weight: 700;
+    /* text-decoration-line: underline; */
+    color: rgb(255, 252, 252);
+    text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
+
+}
+
+.coreSection .content .card p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: rgb(173, 173, 173);
+}
 
 /* SECTION-6 */
 
@@ -962,45 +1034,45 @@ cursor: pointer;
   
   /* Mission Section */
   @media screen and (max-width: 767px) {
-    .mission {
+    .mission ,.coreSection {
       padding: 24px;
     }
   
-    .mission .head {
+    .mission .head,.coreSection .head {
       flex-direction: column;
       gap: 1rem;
     }
   
-    .mission .head .heading {
+    .mission .head .heading,.coreSection .head .heading {
       font-size: 3rem;
     }
   
-    .mission .misson-texteffect h2 {
+    .mission .misson-texteffect h2, .coreSection .misson-texteffect h2 {
       font-size: 3rem;
       margin-top: -20px;
     }
   
-    .mission .content {
+    .mission .content,.coreSection .content {
         flex-direction: column;
   
         gap: 0px;
     }
   
-    .mission .content .card {
+    .mission .content .card,.coreSection .content .card {
         padding: .3rem;
         margin: .4rem;
     }
   
-    .mission .content .card h2 {
+    .mission .content .card h2,.coreSection .content .card h2 {
         font-size: 1rem;
         color: white;
     }
   
-    .mission .content .card h3 {
+    .mission .content .card h3,.coreSection .content .card h3 {
         font-size: 1.2rem;
     }
   
-    .mission .content .card p {
+    .mission .content .card p,.coreSection .content .card p {
         font-size: .9rem;
         color: rgb(255, 255, 255);
 
@@ -1178,46 +1250,46 @@ cursor: pointer;
         font-size: 1rem;
     }
 
-    .mission {
+    .mission ,.coreSection {
         padding: 2rem;
     }
 
-    .mission .head {
+    .mission .head ,.coreSection .head {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .mission .head .heading {
+    .mission .head .heading ,.coreSection .head .heading {
         font-size: 4rem;
     }
 
-    .mission .misson-texteffect h2 {
+    .mission .misson-texteffect h2,.coreSection .misson-texteffect h2 {
         font-size: 7rem;
         margin-top: -2rem;
     }
 
-    .mission .content {
+    .mission .content,.coreSection .content {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
     }
 
-    .mission .content .card {
+    .mission .content .card ,.coreSection .content .card{
         padding: 1rem;
         margin: 1rem;
         width: 70%;
     }
 
-    .mission .content .card h2 {
+    .mission .content .card h2 , .coreSection .content .card h2 {
         font-size: 1.5rem;
         color: white;
     }
 
-    .mission .content .card h3 {
+    .mission .content .card h3,.coreSection .content .card h3 {
         font-size: 2rem;
     }
 
-    .mission .content .card p {
+    .mission .content .card p ,.coreSection .content .card p{
         font-size: 1rem;
         color: rgb(255, 255, 255);
     }
