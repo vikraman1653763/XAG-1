@@ -21,9 +21,7 @@ function BatteryIntro() {
     };
 
   return (
-    <section
-   
-    >
+    <section>
 
         <div className='intro-container'
         style={{transform:`translateY(${offsetY*.8}px)`}}>

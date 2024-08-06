@@ -75,3 +75,23 @@
 .ad-3 {
     color: rgba(0, 128, 0, 0.555);
 }
+
+
+.battery-form{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid blue;
+    background-color: #fff;
+    transform: translate(50%,50%);
+    top: 50%;
+    left: 50%;
+    height: 50vh;
+    width: 50%;
+}
+
+.battery-form form label{
+    background-color: orange;
+    border: 2px solid red;
+    width: 100%;
+    display: block;
+}

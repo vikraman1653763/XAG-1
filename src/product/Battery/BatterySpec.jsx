@@ -33,7 +33,7 @@ function BatterySpec() {
   const containerRef = useRef(null);
 
   const handleScroll = () => {
-    if (inView) {
+    if (inView && window.innerWidth>=768) {
       setOffsetY(window.scrollY);
     }
   };
@@ -90,7 +90,7 @@ function BatterySpec() {
             </p>
           ))}
         </section>
-        <section className='battery-points'>
+        <section className='battery-points btpt2'>
           {duplicatedData2.map((pt, index) => (
             <p
               key={index}

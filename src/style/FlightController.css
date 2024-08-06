@@ -418,31 +418,7 @@ align-items: center;
   z-index: 4;
 }
 
-.controller-spec-card:hover {
-  animation: coin .8s ease-in-out ;
-}
 
-@keyframes coin {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  25% {
-    transform: scale(1.2,.8);
-  }
-
-  50% {
-    transform: scale(.8,1.2);
-  }
-
-  75% {
-    transform: scale(1.2,.8);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
 
 
 
