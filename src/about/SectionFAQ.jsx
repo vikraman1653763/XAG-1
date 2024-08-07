@@ -6,25 +6,29 @@ function SectionFAQ() {
 
     const faqs = [
         {
-            q: 'What is a drone?',
-            a: "A drone is an unmanned aircraft or ship guided by remote control or onboard computers."
+            q: 'Why choose Xagrotor Tek?',
+            a: `Choosing Xagrotor Tek means opting for innovative and reliable agricultural drone solutions that are tailored to the needs of modern farming. Our drones are equipped with advanced technology, including the X RotorTek India flight controller, and are designed to be cost-effective, safe, and efficient. We provide comprehensive support and continuous monitoring to ensure optimal performance, making us a trusted partner in enhancing agricultural productivity.`
+        },
+        {
+            q: 'What services does Xagrotor Tek offer?',
+            a: "Xagrotor Tek offers a range of services including drone-based crop spraying, real-time video monitoring, precision agriculture solutions, and custom drone manufacturing."
         }, {
-            q: 'What is a drone used for?',
-            a: "Drones are used for various purposes including photography, delivery, surveillance, and more."
+            q: 'What is the X RotorTek India flight controller?',
+            a: "The X RotorTek India flight controller is a custom-made autopilot system developed by Xagrotor Tek, featuring real-time video recording and point-to-point tree spraying capabilities."
         }, {
-            q: 'How do drones impact environmental monitoring?',
-            a: `Drones play a significant role in environmental monitoring by providing a unique vantage point that is less invasive, more cost-effective, and often more detailed than traditional monitoring methods. They are used to:
-    
-    - **Track wildlife and monitor populations:** Drones collect data on animal numbers, behaviors, and movements without significant human interference, which can be especially useful in remote or sensitive habitats.
-    
-    - **Assess plant health and forest coverage:** Using various imaging technologies, including infrared and multispectral sensors, drones can assess plant health over large areas and detect changes in forest coverage, helping in efforts to combat deforestation.
-    
-    - **Monitor water quality:** Equipped with appropriate sensors, drones can help in collecting data from water bodies, detecting pollutants, and understanding water flow patterns.
-    
-    - **Observe weather and atmospheric conditions:** Drones equipped with weather monitoring instruments can provide data for forecasting and tracking environmental changes.
-    
-    These capabilities make drones invaluable tools in conservation efforts, helping researchers, governments, and organizations monitor the health of the planet more effectively and react more quickly to environmental crises.`
-        }
+            q: 'How are Xagrotor Tek drones cost-effective?',
+            a: "Xagrotor Tek drones are designed to be more affordable compared to competitors, offering high efficiency and reliability while reducing operational costs for farmers."
+        }, {
+            q: 'What is the payload capacity of Xagrotor Tek drones?',
+            a: "Xagrotor Tek drones have various payload capacities, including both 16-liter and 10-liter sprayer payload with precision spraying, adjustable nozzles, anti-drip design, and a high-efficiency pump."
+        }, {
+            q: 'What safety features are included in Xagrotor Tek drones?',
+            a: `Xagrotor Tek drones are equipped with over-current and overheating protection systems for the motor-ESC, and the battery contains a Battery Management System (BMS) for accurate current sensing and temperature recording.`
+        }, {
+            q: 'What kind of batteries does Xagrotor Tek use?',
+            a: "Xagrotor Tek uses customized batteries specifically designed for Indian agricultural conditions, featuring a special chemical formula, lightweight design, and a greater discharge rate of up to 10C."
+        },
+       
     ];
     
 
@@ -58,15 +62,7 @@ setActiveIndex(activeIndex===index?null:index);
             </div>
         ))}
 
-      <div className='faq-card'>
-      <div className='faq-question'>
-        <h3>what is xagrotor ?</h3>
-         <FaPlus />
-      </div>
-    <div className='faq-answer'>
-        <p>Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.</p>
-    </div>
-    </div>
+      
     </div>
         </section>
   )
