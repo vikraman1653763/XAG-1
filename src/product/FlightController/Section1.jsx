@@ -67,18 +67,18 @@ const Section1 = () => {
             
             <div ref={containerRef1} className={`flight-controller-container ${scrollDirection === 'down' ? 'translate-right' : scrollDirection === 'up' ? 'translate-left' : ''}`}>
                 <div className="images-container">
-                    <img src="/fc/1.png" alt="Flight Controller Image 1" className="flight-controller-image" />
-                    <img src="/fc/2.png" alt="Flight Controller Image 1" className="flight-controller-image" />
-                    <img src="/fc/3.png" alt="Flight Controller Image 1" className="flight-controller-image" />
-                    <img src="/fc/4.png" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/1.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/2.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/3.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/4.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
                 </div>
             </div>   
             <div ref={containerRef1} className={`flight-controller-container ${scrollDirection === 'down' ? 'translate-left' : scrollDirection === 'up' ? 'translate-right' : ''}`}>
                 <div className="images-container">
-                    <img src="/fc/3.png" alt="Flight Controller Image 1" className="flight-controller-image" />
-                    <img src="/fc/4.png" alt="Flight Controller Image 1" className="flight-controller-image" />
-                    <img src="/fc/1.png" alt="Flight Controller Image 1" className="flight-controller-image" />
-                    <img src="/fc/2.png" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/3.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/4.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/1.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
+                    <img src="/fc/2.webp" alt="Flight Controller Image 1" className="flight-controller-image" />
                 </div>
             </div>
 

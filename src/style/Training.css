@@ -12,7 +12,7 @@
   .flip-card {
     overflow: visible;
     width: 23rem;
-    height: 30rem;
+    height: 20rem;
   }
   
   .flip-content {
@@ -69,7 +69,7 @@
     font-size: 24px;
     line-height: 150%;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight:normal;
     text-align: center;
 
   }
@@ -123,9 +123,10 @@
     box-shadow: 0px 0px 10px 5px #00000088;
     width: 100%;
     padding: 10px;
-    background-color: #00000099;
+    background-color: #00000048;
     backdrop-filter: blur(5px);
     border-radius: 5px;
+    font-weight: normal;
   }
   
   .flip-title {
@@ -142,7 +143,7 @@
   .flip-card-footer {
     color: #9BF00B;
     margin-top: 5px;
-    font-size: 8px;
+    font-size: .8em;
   }
   .flip-card-footer img{
     position: absolute;
@@ -165,12 +166,12 @@
     width: 100%;
     height: 100%;
    
-    background-image: url('/Imagesequence/60.webp'); /* Replace with your image path */
+    background-image: url('/product/product1.webp'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     position: relative;
    
-    background-size: cover;
+    background-clip: border-box;
     background-position: center;
     background-repeat: no-repeat;
   } 
@@ -179,9 +180,13 @@
     position: absolute;
     left: 1%;
     bottom: 20%;
-    font-size: 20px;
+    font-size: 1.1em;
     color: rgb(255, 255, 255);
     z-index: 1;
+    font-weight: 500;
+    text-indent: 1%;
+    text-align: left;
+    margin-bottom: 1rem;
   }
   
  

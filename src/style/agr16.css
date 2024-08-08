@@ -337,7 +337,7 @@ span {
   .cube-item.active, .cube-item:hover {
     height: 20em;
     width: 20rem;
-    z-index: 10;
+    z-index: 4;
     background-size: cover;
     background-position: right center ;
     background-repeat: no-repeat;
@@ -349,7 +349,7 @@ span {
     justify-self: end;
     align-self: end;
     border-top-left-radius: 100%;
-    background-image: url('/fc/camera.png');
+    background-image: url('/fc/camera.webp');
     
  
 
@@ -365,7 +365,7 @@ span {
     justify-self: start;
     align-self: end;
     border-top-right-radius: 100%;
-    background-image: url('/fc/sensor.png');
+    background-image: url('/fc/sensor.webp');
   }
   
   .top-right.active .big-blocky, .top-right:hover .big-blocky {
@@ -378,7 +378,7 @@ span {
     justify-self: end;
     align-self: start;
     border-bottom-left-radius: 100%;
-    background-image: url('/fc/wingmotor.png');
+    background-image: url('/fc/wingmotor.webp');
   }
   
   .bottom-left.active .big-blocky, .bottom-left:hover .big-blocky {
@@ -391,7 +391,7 @@ span {
     justify-self: start;
     align-self: start;
     border-bottom-right-radius: 100%;
-    background-image: url('/fc/pump.png');
+    background-image: url('/fc/pump.webp');
   }
   
   .bottom-right.active .big-blocky, .bottom-right:hover .big-blocky {
@@ -478,21 +478,27 @@ span {
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 30px;
+    margin-top: 1rem;
     text-transform: uppercase;
 }
 
 .tabs button:hover {
-    border-top: 2px solid #9BF00B;
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
+    transform: scale(1.03);
+    font-weight: 700;
+
   }
 
 .tabs button.active {
     color: #9BF00B;
     border-top: 2px solid #9BF00B;
   border-bottom: 2px solid #9BF00B;
+  transform: scale(1.03);
+  font-weight: 700;
+
 }
 
 .tabb-content {
@@ -516,7 +522,7 @@ span {
     color: rgb(255, 255, 255);
     line-height: 50px;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1.2em;
     text-align: center;
 }
 

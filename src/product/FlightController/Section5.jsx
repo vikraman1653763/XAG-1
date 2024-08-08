@@ -19,7 +19,7 @@ const Section5 = () => {
             <div className="controller-specs-container">
 
                 <div className='fc-img'> 
-                    <img src='/fc/fc.png'/>
+                    <img src='/fc/fc.webp'/>
                 </div>
 
     <div className='controller-spec-card'  data-aos="fade-up">

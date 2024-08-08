@@ -4,7 +4,7 @@ import batteriesData from '../../Batteries.json';
 import '../../style/BatteryDetails.css';
 import caution from '/assets/caution.svg';
 import fire from '/assets/fire.svg';
-import mii from '/assets/mii.png';
+import mii from '/assets/mii.webp';
 import trash from '/assets/trash.svg';
 import CE from '/assets/CE.svg';
 import umberlla from '/assets/umberlla.svg';

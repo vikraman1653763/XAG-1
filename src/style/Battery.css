@@ -84,7 +84,7 @@
     transition: all 0.3s ease;
     border-radius: 2rem;
     background-image: radial-gradient(circle, #f0e3e3,#e7e5e5, #90a0a7, #556168, #353435, #000000e3);
-    background-image: url('/assets/darkblue.png');
+    background-image: url('/assets/darkblue.webp');
 }
 
     .battery-info {

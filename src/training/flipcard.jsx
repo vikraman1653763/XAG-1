@@ -10,7 +10,7 @@ const cardData = [
     description: 'Learn the basics of drone operation including safety protocols and basic flight maneuvers.',
     badge: 'Beginner',
     imgSrc: DroneIcon1,
-    footer: 'Duration: 5 days',
+    footer: 'Duration: 7 days',
     link: '#7days'
   },
   {
@@ -19,7 +19,7 @@ const cardData = [
     description: 'Master advanced flight techniques and maneuvers for various drone models.',
     badge: 'Advanced',
     imgSrc: DroneIcon1,
-    footer: 'Duration: 7 days',
+    footer: 'Duration: 10 days',
     link: '#10days'
   }
   
@@ -49,7 +49,7 @@ const FlipCard = () => {
                 <div className="flip-desc">
                   <div className="flip-title">
                     <p className="flip-title">
-                      <strong>DETAiLS</strong>
+                      <strong>{card.flipTitle}</strong>
                     </p>
 
                   </div>

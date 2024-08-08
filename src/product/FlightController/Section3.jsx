@@ -1,9 +1,10 @@
-import React, { useState,useEffect  } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 const Section3 = () => {
   const [activePart, setActivePart] = useState(null);
+  const intervalRef = useRef(null);
 
   const partDetails = {
     fmu: {
@@ -20,9 +21,31 @@ const Section3 = () => {
     },
   };
 
+  const partKeys = Object.keys(partDetails);
+  let partIndex = 0;
+
   useEffect(() => {
     AOS.init({ duration: 1500 });
-}, []);
+
+    intervalRef.current = setInterval(() => {
+      setActivePart(partKeys[partIndex]);
+      partIndex = (partIndex + 1) % partKeys.length;
+    }, 3000); // Change part every 3 seconds
+
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  const handleMouseEnter = (part) => {
+    clearInterval(intervalRef.current);
+    setActivePart(part);
+  };
+
+  const handleMouseLeave = () => {
+    intervalRef.current = setInterval(() => {
+      setActivePart(partKeys[partIndex]);
+      partIndex = (partIndex + 1) % partKeys.length;
+    }, 3000); // Restart the interval
+  };
 
   return (
     <div className='parts-section' data-aos="fade-up">
@@ -32,33 +55,26 @@ const Section3 = () => {
           <img src='assets/logoxx.svg' alt="Logo" />
         </div>
         <div 
-          className="parts-box parts-box1" 
-          onMouseEnter={() => setActivePart('fmu')} 
-          onMouseLeave={() => setActivePart(null)}
+          className={`parts-box parts-box1 ${activePart === 'fmu' ? 'active' : ''}`} 
+          onMouseEnter={() => handleMouseEnter('fmu')} 
+          onMouseLeave={handleMouseLeave}
         >
-          <span className="parts-icon">
-          
-          </span>
+          <span className="parts-icon"></span>
         </div>
         <div 
-          className="parts-box parts-box2" 
-          onMouseEnter={() => setActivePart('pmu')} 
-          onMouseLeave={() => setActivePart(null)}
+          className={`parts-box parts-box2 ${activePart === 'pmu' ? 'active' : ''}`} 
+          onMouseEnter={() => handleMouseEnter('pmu')} 
+          onMouseLeave={handleMouseLeave}
         >
-          <span className="parts-icon">
-            
-          </span>
+          <span className="parts-icon"></span>
         </div>
         <div 
-          className="parts-box parts-box3" 
-          onMouseEnter={() => setActivePart('gnss')} 
-          onMouseLeave={() => setActivePart(null)}
+          className={`parts-box parts-box3 ${activePart === 'gnss' ? 'active' : ''}`} 
+          onMouseEnter={() => handleMouseEnter('gnss')} 
+          onMouseLeave={handleMouseLeave}
         >
-          <span className="parts-icon">
-            
-          </span>
-         </div>
-       
+          <span className="parts-icon"></span>
+        </div>
       </div>
       <div className={`parts-details ${activePart ? 'active' : ''}`}>
         {activePart && (

@@ -34,9 +34,9 @@ const Section6 = () => {
       
     <div className="fc-adv-card">
       <div className='fc-adv-img-container'>
-        <img className='fc-adv-img fc1' src="/fc/fmu.png" alt="Flight Controller Image 1" />
-        <img className='fc-adv-img fc2' src="/fc/gnss.png" alt="Flight Controller Image 1" />
-        <img className='fc-adv-img fc3' src="/fc/pmu.png" alt="Flight Controller Image 1" />
+        <img className='fc-adv-img fc1' src="/fc/fmu.webp" alt="Flight Controller Image 1" />
+        <img className='fc-adv-img fc2' src="/fc/gnss.webp" alt="Flight Controller Image 1" />
+        <img className='fc-adv-img fc3' src="/fc/pmu.webp" alt="Flight Controller Image 1" />
       </div>
 
 

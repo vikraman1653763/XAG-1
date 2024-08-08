@@ -39,6 +39,7 @@ const SectionMission = () => {
           <p data-aos="fade-down">Delivering exceptional support to help farmers utilize new technologies effectively and to their fullest potential.</p>
         </div>
       </div>
+      
     </section>
   );
 };

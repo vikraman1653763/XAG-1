@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import sky from '/Battery/4.png';
-import batteries from '/Battery/1.png';
-import field from '/Battery/3.png';
+import sky from '/Battery/4.webp';
+import batteries from '/Battery/1.webp';
+import field from '/Battery/3.webp';
 import xlogo from '/assets/logoxx.svg';
 
 
