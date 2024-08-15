@@ -64,7 +64,7 @@ const Navbar = () => {
                         <li>
                            <span>Agricultural Drone</span>
                             <ul className="submenu">
-                                <li><Link to="/agr10">AGR 10</Link></li>
+                                {/* <li><Link to="/agr10">AGR 10</Link></li> */}
                                 <li><Link to="/agr16">AGR 16</Link></li>
                             </ul>
                         </li>
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <li><Link to="/Blog">BLOGS</Link></li>
                 <li><Link to="/career">CAREER</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
-                <li className='login-btn'><Link to="/Login">LOGIN</Link></li>
+                <li className='login-btn'><Link to="/">Buy Now</Link></li>
             </ul>
         </nav>
     );

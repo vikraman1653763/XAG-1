@@ -77,21 +77,8 @@ main {
     height: auto;
     border-radius: 20px;
     position: relative;
-    animation: scaleUp 5s  alternate ease-in-out ;
-
 }
 
-@keyframes scaleUp {
-  0% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-}
-}
 
 video::-internal-media-controls {
     display: none;
@@ -316,6 +303,7 @@ span {
     height: 100vh;
     overflow: hidden;
     background-color: #080A0B;
+    /* background-image: url('/assets/bgcube.webp'); */
   }
   
   .cube-item {
@@ -617,16 +605,19 @@ span {
   font-size: 1.5em;
   font-weight: 700;
   margin: 10px 0 0;
-  color: #000000;
+  color: #9bf00b;
   font-weight: 600;
-  background-color: #9bf00b;
-  border: 3px solid rgb(0, 0, 0);
-  border-radius: 10% 90% 90% 10% / 49% 50% 50% 51% ;
+
+  border: .1em solid  #646464;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0.7rem;
+  margin-right: 1rem ;
   
   padding: 0rem .5rem;
   transform: translateY(-6px);
 }
-.fc-sec-card-content ul li {
+.fc-sec-card-content ul li span{
   display: flex;
   font-size: 1.1em;
 
@@ -636,25 +627,32 @@ span {
   justify-content: flex-start;
   align-items: center;
   width:fit-content;
+  text-transform: capitalize;
+  
 }
 
 .fc-link-btn{
-  border: 2px solid #9bf00b;
   width: auto;
   height: auto;
-  color: #9bf00b;
   padding: .5rem;
   border-radius: 1rem;
   font-size: 1.3em;
   font-weight: 500;
   margin-left: 5rem;
+  color: #9bf00b;
+
+  border: .1em solid  #646464;
+  border-right: none;
+  border-bottom: none;  
+  transform-origin: left center; /* Ensures the button scales from the left side */
+  transition: transform 0.3s ease-in-out; /* Adds smooth scaling */
 }
 
-.fc-link-btn:hover{
-  color: #000;
-  transition:color 1s ease-in;
-  background-color: #9BF00B;
+.fc-link-btn:hover .fc-link-btn-a{
+
+  font-size:1.5;
 }
+
 @media (max-width: 768px) {
   .agr16-header {
       top: 60px;

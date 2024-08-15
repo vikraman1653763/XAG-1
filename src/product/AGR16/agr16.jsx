@@ -25,8 +25,8 @@ const AGR16 = () => {
 
   return (
     <div>
-      <Header />
-      <main>
+    
+      <main> 
         <GifContainer />
         <Description />
         <Specifications />

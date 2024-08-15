@@ -8,6 +8,7 @@ import Home from '/src/components/home.jsx';
 import Contact from '/src/components/contact.jsx';
 import About from '/src/components/about.jsx';
 import AGR16 from './product/AGR16/agr16.jsx';
+import AGR10 from './product/AGR10/agr10.jsx';
 import FlightController from './product/FlightController/FlightController.jsx';
 import Battery from './product/Battery/Battery.jsx';
 import BatteryDetails from './product/Battery/BatteryDetails';
@@ -30,7 +31,7 @@ const App = () => {
             <Route path="/about" element={<About/>} /> 
             <Route path="/contact" element={<Contact/>} /> 
             <Route path="/agr16" element={<AGR16 />} />
-            <Route path="/agr10" element={<AGR16 />} />
+            <Route path="/agr10" element={<AGR10 />} />
             <Route path="/Batteries" element={<Battery />} />
             <Route path="/battery/:ID" element={<BatteryDetails />} />
             <Route path="/flight-controller" element={<FlightController />} />

@@ -26,17 +26,17 @@ const Fc = () => {
         </p>
         <ul>
           <li>
-            <strong >GNSS</strong> <MotionWrapper> Ensures precise positioning and navigation, enhancing the drone's stability and accuracy. </MotionWrapper>
+            <strong >GNSS</strong> <span><MotionWrapper> Ensures precise positioning and navigation, enhancing the drone's stability and accuracy. </MotionWrapper></span>
           </li>
           <li>
-            <strong>PMU</strong> <MotionWrapper> Manages the power distribution, ensuring efficient and reliable operation of the drone's systems. </MotionWrapper>
+            <strong>PMU</strong> <span> <MotionWrapper> Manages the power distribution, ensuring efficient and reliable operation of the drone's systems. </MotionWrapper></span>
           </li>
           <li>
-            <strong>FMU</strong> <MotionWrapper> Provides overall control and stability, coordinating the drone's various systems for optimal performance. </MotionWrapper>
+            <strong>FMU  </strong> <span> <MotionWrapper> Provides overall control and stability, coordinating the drone's various systems for optimal performance. </MotionWrapper></span>
           </li>
         </ul>
         <div className="fc-link-btn" data-aos="fade-up">
-          <Link to="/flight-controller">Learn&nbsp;more</Link>
+          <Link  to="/flight-controller">Learn&nbsp;more</Link>
         </div>
       </div>
       <div

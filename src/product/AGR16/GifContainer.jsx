@@ -1,12 +1,12 @@
 // GifContainer.jsx
 import React from 'react';
 import MotionWrapper from '../../components/MotionWrapper';
-import drone001 from "/assets/drone001.webp";
+import drone001 from "/product/product1.webp";
 
 const GifContainer = () => {
   return (
     <>
-      <h2 className='Model'>AGR<span>16</span></h2>
+  
     <section className="gif-container">
       <MotionWrapper>
       </MotionWrapper>
