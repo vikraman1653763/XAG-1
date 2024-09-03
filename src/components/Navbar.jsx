@@ -68,17 +68,13 @@ const Navbar = () => {
                                 <li><Link to="/agr16">AGR 16</Link></li>
                             </ul>
                         </li>
-                        <li>
-                            <span>Flight Controller</span>
-                            <ul className="submenu">
-                                <li><Link to="/flight-controller">Xrotor Tek India</Link></li>
-                            </ul>
-                        </li>
+                        <li><Link to="/flight-controller">Xrotor Tek India</Link></li>
                         <li>
                             <Link to="/Batteries">Batteries</Link>
                         </li>
                     </ul>
                 </li>
+                <li> <Link to='/Dealer'>DEALER&nbsp;PORTAL</Link></li>
                 <li><Link to="/training">TRAINING</Link></li>
                 <li><Link to="/Blog">BLOGS</Link></li>
                 <li><Link to="/career">CAREER</Link></li>

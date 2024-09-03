@@ -1,95 +1,122 @@
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    
+}
+
+:root {
+    --fs-s: 1rem; 
+    --fs-m: 1.5rem;  
+    --fs-l: 2rem;   
+    --fs-xl: 3rem;  
+    --fs-xxl: 4rem;  
+    --fs-xxxl: 8rem; 
 }
 
 html {
     scrollbar-width: thin;
     scrollbar-color: #7FB00B #0C0C0C;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
+    scroll-snap-type:y mandatory;
+    scroll-snap-align: start;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #000000;
     position: relative;
     -ms-overflow-style: -ms-autohiding-scrollbar; /* Hide scrollbar automatically when not in use */
     overflow-y: scroll;
 }
 
-p{
-    font-size: 1rem;
+p {
+    font-size: var(--fs-s);
     font-weight: 500;
 }
+span{
 
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-weight: 800;
+}
+.error{
+    color: red;
+    
+}
 /* NAVIGATION starts */
 nav {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.486);
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 48px;
+    padding: 0 48px;
     position: fixed;
-    top: 0%;
+    top: 0;
     z-index: 10;
     height: auto;
+backdrop-filter: blur( 1em );
+-webkit-backdrop-filter: blur( 1em );
 }
-.logooimg{
-    width:clamp(3rem,5rem,5.5rem) ;
+
+.logooimg {
+    width: clamp(3rem, 5rem, 5.5rem);
     height: 2.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 nav ul {
     display: flex;
     flex-flow: row nowrap;
-    /* align-items: center; */
     list-style-type: none;
     justify-content: space-between;
     width: 70%;
-    position:absolute;
-    right: 0%;
-/* border: 2px solid red; */
+    position: absolute;
+    right: 0;
 }
 
-nav ul li a ,nav ul span {
+nav ul li a, nav ul span {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: var(--fs-s);
     line-height: 250%;
     font-weight: 500;
     margin: 1rem;
     cursor: pointer;
 }
 
-nav ul li:hover > a ,nav ul span:hover{
+nav ul li:hover > a, nav ul span:hover {
     color: #9BF00B;
 }
 
-.login-btn{
+.login-btn {
     background-color: #9BF00B;
-    padding: 0em;
-    border-radius: .5em;
-    font-size: 1rem;
+    padding: 0;
+    border-radius: 0.5em;
+    font-size: var(--fs-s);
     font-weight: 700;
     white-space: nowrap;
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
     height: 2.4em;
     text-align: center;
     display: flex;
     align-items: center;
     border: 2px solid #000000;
+}
 
-}
-.login-btn:hover{
+.login-btn:hover {
     background-color: #9cf00b00;
-border: 2px solid #9BF00B;}
-.login-btn a{
-    line-height: 0%;
+    border: 2px solid #9BF00B;
 }
+
+.login-btn a {
+    line-height: 0;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -115,10 +142,9 @@ border: 2px solid #9BF00B;}
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
 /* Submenu styles */
 .menu {
-    font-size: 16px;
+    font-size: var(--fs-s);
     font-weight: 500;
     padding: 0;
     margin: 0;
@@ -162,7 +188,6 @@ border: 2px solid #9BF00B;}
     opacity: 0;
     visibility: hidden;
     gap: 4px;
-
     transition: transform 0.7s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
@@ -203,11 +228,13 @@ border: 2px solid #9BF00B;}
     background: #9BF00B;
     color: #000000;
 }
-@media (max-width: 767px) {
 
-    body{
+/* Mobile View */
+@media (max-width: 767px) {
+    body {
         background-color: #0C0C0C;
     }
+    
     .hamburger {
         display: block;
     }
@@ -222,38 +249,38 @@ border: 2px solid #9BF00B;}
         justify-content: flex-start;
         align-items: center;
         width: auto;
-        transform: translate(100%,1%);
+        transform: translate(100%, 1%);
         transition: transform 0.3s ease-in-out;
         border-radius: 5px;
-        padding-bottom:5px ;
-        gap:1rem;
-        
+        padding-bottom: 5px;
+        gap: 1rem;
     }
     
     nav ul.open {
-        transform: translate(20%,15%);
+        transform: translate(20%, 15%);
         margin-right: 1rem;
     }
-    
-    nav ul li a,nav ul span {
-        font-size: .7rem;
+
+    nav ul li a, nav ul span {
+        font-size: var(--fs-s);
         margin: 0;
     }
 
     .login-btn {
         width: auto;
-        font-size: .5rem;
-        padding: .3rem;
+        font-size: 0.5rem;
+        padding: 0.3rem;
         margin-right: 1rem;
         margin-left: 1rem;
-        text-align:start;
+        text-align: start;
     }
-     .menu {
-        font-size: 16px;
+
+    .menu {
+        font-size: var(--fs-s);
         font-weight: 500;
         padding: 0;
         margin: 0;
-        transform: translate(-0%,17%); 
+        transform: translate(0, 17%);
         text-align: start;
         width: 9rem;
         align-items: center;
@@ -262,29 +289,26 @@ border: 2px solid #9BF00B;}
     .products:hover > .menu {
         opacity: 1;
         visibility: visible;
-    
-        transform: translate(-16%,17%); 
+        transform: translate(-16%, 17%);
     }
     
- 
-
     .submenu {
         width: auto;
-
         align-items: center;
-        transform: translate(-100%,10%); 
+        transform: translate(-100%, 10%);
     }
 
     .subopen,
     .menu li:hover > .submenu {
         opacity: 1;
         visibility: visible;
-        transform: translate(-104%,10%); 
+        transform: translate(-104%, 10%);
         width: 100%;
     }
 }
+
 /* Tablet View */
-@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     body {
         background-color: #0C0C0C;
     }
@@ -316,7 +340,7 @@ border: 2px solid #9BF00B;}
     }
 
     nav ul li a, nav ul span {
-        font-size: 1rem;
+        font-size: var(--fs-s);
         margin: 0.5rem;
     }
 
@@ -330,7 +354,7 @@ border: 2px solid #9BF00B;}
     }
 
     .menu {
-        font-size: 1rem;
+        font-size: var(--fs-m);
         font-weight: 500;
         padding: 0;
         margin: 0;

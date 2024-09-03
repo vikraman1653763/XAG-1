@@ -6,8 +6,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Section2 = () => {
-
-
     useEffect(() => {
         AOS.init({
           duration: 500,
@@ -16,12 +14,19 @@ const Section2 = () => {
       }, []);
 
     useEffect(() => {
-        let slideIndex = 0;
+        let slideIndex = 1;
         let timer;
 
-        const showSlides = () => {
+        const showSlides = (n) => {
             const slides = document.querySelectorAll(".mySlides");
             const dots = document.querySelectorAll(".dots");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
 
             slides.forEach((slide) => {
                 slide.style.display = "none";
@@ -31,32 +36,23 @@ const Section2 = () => {
                 dot.classList.remove("active");
             });
 
-            slideIndex++;
-            if (slideIndex > slides.length) slideIndex = 1;
-            if (slideIndex < 1) slideIndex = slides.length;
-
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].classList.add("active");
 
-            timer = setTimeout(showSlides, 3000);
+            clearTimeout(timer);
+            timer = setTimeout(() => showSlides(slideIndex += 1), 3000);
         };
 
         const nextSlide = () => {
-            clearTimeout(timer);
-            slideIndex++;
-            showSlides();
+            showSlides(slideIndex += 1);
         };
 
         const prevSlide = () => {
-            clearTimeout(timer);
-            slideIndex--;
-            showSlides();
+            showSlides(slideIndex -= 1);
         };
 
         const currentSlide = (n) => {
-            clearTimeout(timer);
-            slideIndex = n;
-            showSlides();
+            showSlides(slideIndex = n);
         };
 
         document.querySelector(".prev").addEventListener("click", prevSlide);
@@ -65,7 +61,7 @@ const Section2 = () => {
             dot.addEventListener("click", () => currentSlide(index + 1));
         });
 
-        showSlides();
+        showSlides(slideIndex);
 
         return () => {
             clearTimeout(timer);
@@ -77,8 +73,8 @@ const Section2 = () => {
             <div className="bg-layer">
                 <div className="text-container" data-aos="fade-left">
                     <div>
-                        <h3 className="one"data-aos="fade-left" data-aos-delay='700'>About</h3>
-                        <h3 className="two"data-aos="fade-left" data-aos-delay='500'>xagrotor tek</h3>
+                        <h3 className="one" data-aos="fade-left" data-aos-delay='700'>About</h3>
+                        <h3 className="two" data-aos="fade-left" data-aos-delay='500'>xagrotor tek</h3>
                     </div>
                     <p>Xagrotor Tek Private Limited, founded in 2023, is a pioneering company based in Pondicherry, India. We specialize in developing advanced agricultural drone technology aimed at improving farming practices. Our innovative solutions help farmers manage their crops more efficiently, reduce costs, and increase yields. With a strong commitment to sustainability, we promote precision farming techniques that benefit both farmers and the environment. Our team of experts is dedicated to pushing the boundaries of agricultural technology, ensuring that our products meet the highest standards of quality and reliability.</p>
                 </div>

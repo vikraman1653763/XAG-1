@@ -13,6 +13,7 @@ import Advantages from '../AGR16/Advantages';
 import DroneTabs from './dronetab.jsx';
 import CubeSection from '../AGR16/CubeSection';
 import Fc from '../AGR16/fCSection.jsx';
+import Section11 from '../../home/Section1.jsx';
 
 
 const AGR16 = () => {
@@ -27,6 +28,7 @@ const AGR16 = () => {
     <div>
     
       <main>
+        <Section11/>
         <GifContainer />
         <Description />
         <Specifications />

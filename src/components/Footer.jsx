@@ -58,7 +58,7 @@ const Footer = () => {
                         <p>&copy; 2023. All rights reserved.</p>
                         <a href="/privacy-policy">Privacy Policy</a>
                         <a href="/terms-of-service">Terms of Service</a>
-                        <a href="/cookie-settings">Cookie settings</a>
+                        <a href="/admin">Admin</a>
                         <a href="/site-map">Site Map</a>
                     </div>
                     <div className="right_content">

@@ -976,7 +976,7 @@ left: 60%;
 
   .des-container h2,
   .working-modes h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-top: 1.25rem;
   }
 
@@ -986,7 +986,7 @@ left: 60%;
 
   .des-text-wrapper p span {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .parts-section {
@@ -1087,7 +1087,7 @@ left: 60%;
   }
 
   .fc-adv-textBox p span {
-    font-size: 0.875rem;
+    font-size: 1.5rem;
   }
 
   .fc-adv-img-container {

@@ -1,8 +1,4 @@
 
-
-
-
-
 .banner {
     width: 100%;
     margin-top: 64px;
@@ -27,9 +23,9 @@
 
 .image-text h3 {
     color: white;
-    font-size: 64px;
+    font-size: var(--fs-xxl); /* 64px */
     text-transform: uppercase;
-    line-height: 72px;
+    line-height: var(--fs-xl); /* 72px */
     font-weight: 800;
     margin-bottom: 24px;
 }
@@ -39,7 +35,7 @@
 }
 
 .image-text p {
-    font-size: 18px;
+    font-size: var(--fs-m); /* 18px */
     font-weight: 600;
     color: white;
 }
@@ -49,7 +45,6 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    
     align-items: center;
 }
 
@@ -72,7 +67,7 @@
     margin: 0;
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 71px;
+    font-size: var(--fs-xxl); /* 71px */
     font-style: normal;
     font-weight: 800;
     line-height: 110%;
@@ -95,25 +90,24 @@
 .aboutpage-contents p {
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size:  1.5rem;
+    font-size: var(--fs-m); /* 1.5rem */
     font-style: normal;
     font-weight: 400;
     line-height: 2em;
     /* 34.5px */
     letter-spacing: -0.69px;
+    text-align: justify;
 }
 
 .aboutpage-myvideo {
     width: 50%;
     position: relative;
-
 }
 
 .aboutpage-myvideo video {
     width: 100%;
     border-radius: 35px;
 }
-
 
 .About .play-button {
     display: flex;
@@ -136,7 +130,7 @@
     height: 40px;
 }
 
-.icon-bg img{
+.icon-bg img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -145,26 +139,22 @@
     height: 1.5rem;
 }
 
-
-
-
 .About .play-button .duration p {
-    font-size: 14px;
+    font-size: var(--fs-s); /* 14px */
     color: white;
 }
 
 .About .play-button .duration time {
-    font-size: 14px;
+    font-size: var(--fs-s); /* 14px */
     color: #ABABAB;
 }
-
 
 .trigger {
     text-align: center;
     padding: 7px 13px;
     background: #3e3e3e;
     color: #fff;
-    font-size: 15px;
+    font-size: var(--fs-s); /* 15px */
     outline: none;
     border: none;
     border-radius: 5px;
@@ -233,7 +223,6 @@
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-
 /* about end */
 /*Vision*/
 
@@ -256,7 +245,6 @@
 .content-center {
     display: flex;
     flex-direction: column;
-
 }
 
 .header {
@@ -266,17 +254,17 @@
     width: 100%;
     margin-bottom: 36px;
 }
-.header .title{
+
+.header .title {
     width: 30%;
 }
 
 .vision .title h2 {
-
     height: auto;
     color: #FFF;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
     white-space: wrap;
-    font-size: 8rem;
+    font-size: var(--fs-xxxl); /* 8rem */
     margin-top: 2.5rem;
     font-weight: 700;
     line-height: 100%;
@@ -291,7 +279,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .vision .text-effect h2 {
@@ -320,36 +307,33 @@
     padding: 0px 2rem;
     border-radius: 1.3rem;
     background: linear-gradient(225deg, #5cd70a07, #6dff0c13);
-    box-shadow:  -10px 10px 20px #0707071c,
-    10px -10px 20px #1e1f1e3f;
+    box-shadow: -10px 10px 20px #0707071c,
+        10px -10px 20px #1e1f1e3f;
     margin: 2rem;
     padding: 1rem;
-    overflow:hidden ;
+    overflow: hidden;
 }
 
 .vision .content .aboutcard h2 {
-    font-size: 2rem;
+    font-size: var(--fs-l); /* 2rem */
     font-weight: 700;
     line-height: 27.372px;
     margin-bottom: 10px;
 }
 
-.vision .content .aboutcard h3  {
+.vision .content .aboutcard h3 {
     margin: 0px;
-    font-size: 2rem;
+    font-size: var(--fs-l); /* 2rem */
     font-weight: 700;
     /* text-decoration-line: underline; */
     color: white;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
-
 }
 
 .vision .content .aboutcard p {
     margin-top: 8px;
-    font-size: 1.2rem;
-    
+    font-size: var(--fs-s); /* 1.2rem */
 }
-
 
 /* vision end */
 
@@ -366,7 +350,7 @@
 .mission .head .heading {
     color: #FFF;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
-    font-size: 8rem;
+    font-size: var(--fs-xxxl); /* 8rem */
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -2.257px;
@@ -395,21 +379,20 @@
 
 .mission .content .card {
     padding: 0px 2rem;
-    padding: 0px 2rem;
     border-radius: 1.3rem;
     background: linear-gradient(225deg, #5cd70a07, #6dff0c13);
-    box-shadow:  -10px 10px 20px #0707071c,
-    10px -10px 20px #1e1f1e3f;
+    box-shadow: -10px 10px 20px #0707071c,
+        10px -10px 20px #1e1f1e3f;
     margin: 2rem;
     padding: 1rem;
-    overflow:hidden ;
+    overflow: hidden;
     width: auto;
 }
 
 .mission .content .card h2 {
     color: #000000;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 2rem;
+    font-size: var(--fs-l); /* 2rem */
     font-style: normal;
     font-weight: 700;
     line-height: 27.372px;
@@ -419,41 +402,39 @@
 
 .mission .content .card h3 {
     margin: 0px;
-    font-size: 2rem;
+    font-size: var(--fs-l); /* 2rem */
     font-weight: 700;
     /* text-decoration-line: underline; */
     color: white;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
-
 }
 
 .mission .content .card p {
     margin-top: 8px;
-    font-size: 1.2rem;
+    font-size: var(--fs-s); /* 1.2rem */
     color: rgb(0, 0, 0);
 }
 
-
 /* mission end */
 /*core value*/
-.coreSection{
-    background: rgb(0,0,0);
+.coreSection {
+    background: rgb(0, 0, 0);
     background-image: linear-gradient(to top, #020d14, #0c1318, #13191b, #191d1f, #1f2223, #1c3437, #104747, #005a50, #00805e, #00a65e, #00cb4b, #3df00b);
-
 }
-.coreSection .head .heading{
 
+.coreSection .head .heading {
     color: #FFF;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
-    font-size: 8rem;
+    font-size: var(--fs-xxxl); /* 8rem */
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -2.257px;
     text-transform: uppercase;
 }
+
 .coreSection .misson-texteffect h2 {
     background-image: url('/assets/mission1.gif');
-    background-size:120%;
+    background-size: 120%;
     background-position: -390px -90px;
     color: transparent;
     background-clip: border-box;
@@ -464,6 +445,7 @@
     font-weight: 900;
     margin-top: -50px;
 }
+
 .coreSection .content {
     display: flex;
     width: 100%;
@@ -474,7 +456,8 @@
     padding: 0px 2rem;
     border-radius: 1.3rem;
     background: linear-gradient(225deg, #5cd70a07, #6dff0c13);
-    box-shadow: -10px 10px 20px #0707071c, 10px -10px 20px #1e1f1e3f;
+    box-shadow: -10px 10px 20px #0707071c,
+        10px -10px 20px #1e1f1e3f;
     margin: 2rem;
     padding: 1rem;
     overflow: hidden;
@@ -484,7 +467,7 @@
 .coreSection .content .card h2 {
     color: #bebcbc;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 2rem;
+    font-size: var(--fs-l); /* 2rem */
     font-style: normal;
     font-weight: 700;
     line-height: 27.372px;
@@ -494,25 +477,22 @@
 
 .coreSection .content .card h3 {
     margin: 0px;
-    font-size: 2rem;
+    font-size: var(--fs-l); /* 2rem */
     font-weight: 700;
     /* text-decoration-line: underline; */
     color: rgb(255, 252, 252);
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
-
 }
 
 .coreSection .content .card p {
     margin-top: 8px;
-    font-size: 1.2rem;
+    font-size: var(--fs-s); /* 1.2rem */
     color: rgb(173, 173, 173);
 }
 
 /* SECTION-6 */
 
-
 #sec-6 {
-
     background: radial-gradient(362.06% 154.47% at 5.03% 115.89%, rgba(57, 83, 41, 0.44) 0%, rgba(11, 14, 10, 0.00) 44.4%, rgba(57, 83, 41, 0.44) 100%);
 }
 
@@ -524,11 +504,9 @@
     height: 80vh;
     padding: 48px;
     background-color: #223344;
-
     background: url('/assets/icon.webp'), url('/assets/GRAPHIC.webp');
     background-position: 5% 5%, right center;
     background-repeat: no-repeat, no-repeat;
-
 }
 
 .main-textimonial {
@@ -537,7 +515,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 .news {
     padding: 60px 94px;
@@ -565,8 +542,7 @@
 }
 
 .cards h2 {
-
-    font-size: 24.631px;
+    font-size: 24.631px; /* Consider using a custom variable if this size is used frequently */
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
@@ -574,8 +550,7 @@
 }
 
 .cards p {
-
-    font-size: 16.421px;
+    font-size: 16.421px; /* Consider using a custom variable if this size is used frequently */
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -589,8 +564,7 @@
     background: #f4f4f4;
     padding: 3px 7x;
     color: #2d2a2a;
-
-    font-size: 13.165px;
+    font-size: 13.165px; /* Consider using a custom variable if this size is used frequently */
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -602,8 +576,7 @@
     border: none;
     color: #c2c2c2;
     /* Text/Regular/Normal */
-
-    font-size: 16px;
+    font-size: 16px; /* Consider using var(--fs-s) if appropriate */
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -635,7 +608,7 @@
 .item1 h2 {
     color: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 71px;
+    font-size: var(--fs-xxl); /* 71px */
     font-style: normal;
     font-weight: 800;
     line-height: 110%;
@@ -650,8 +623,7 @@
 
 .item1 p {
     color: #9bf00b;
-
-    font-size: 18px;
+    font-size: var(--fs-s); /* 18px */
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -695,7 +667,6 @@
     grid-area: item7;
 }
 
-
 /* NEWS & EVENTS */
 #sec-7 {
     padding: 48px;
@@ -707,7 +678,6 @@
     width: 100%;
     gap: 24px;
     display: none;
-
 }
 
 .news-container .left-sec {
@@ -718,7 +688,7 @@
 }
 
 .news-container .head h3 {
-    font-size: 72px;
+    font-size: var(--fs-xxxl); /* 72px */
     text-transform: uppercase;
     font-weight: 800;
     color: white;
@@ -730,7 +700,7 @@
 }
 
 .news-container .head p {
-    font-size: 18px;
+    font-size: var(--fs-s); /* 18px */
     font-weight: 400;
     color: white;
     margin-top: 24px;
@@ -755,7 +725,7 @@
     color: #000000f5;
     background-color: white;
     width: fit-content;
-    font-size: 14px;
+    font-size: var(--fs-s); /* 14px */
     font-weight: 700;
     padding: 4px 12px;
     border-radius: 12px;
@@ -773,7 +743,7 @@
 }
 
 .news-container h4 {
-    font-size: 24px;
+    font-size: 24px; /* Consider using var(--fs-m) if appropriate */
     color: white;
     margin-bottom: 8px;
 }
@@ -827,7 +797,7 @@
     background-color: #9BF00B;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: var(--fs-s); /* 14px */
     font-weight: 700;
     text-transform: uppercase;
     padding: 20px 40px;
@@ -837,15 +807,16 @@
 }
 
 /* faqsection  */
-.faq-container{
+.faq-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.faq-section{
+
+.faq-section {
     background-color: #00000000;
-    color:white;
+    color: white;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -854,49 +825,51 @@
     width: 90%;
     margin-bottom: 2rem;
 }
-.faq-title{
-    font-size: 3rem;
+
+.faq-title {
+    font-size: var(--fs-xxl); /* 71px */
     color: white;
     margin: 2rem 0rem;
-    font-size: 71px;
-    font-style: normal;
     font-weight: 800;
     line-height: 110%;
 }
-.faq-title span{
-    color:#9BF00B;
+
+.faq-title span {
+    color: #9BF00B;
     text-transform: lowercase;
-    font-style:italic;
-    
-}
-.faq-card{
-max-width: 100%;
-margin-top: 2rem;
-padding-bottom: 1rem;
-border-bottom: 2px solid white;
-cursor: pointer;
+    font-style: italic;
 }
 
-.faq-question{
+.faq-card {
+    max-width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.faq-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #9BF00B;
 }
-.faq-question h3{
-    font-size: 1.8rem;
+
+.faq-question h3 {
+    font-size: 1.8rem; /* Consider using var(--fs-m) if appropriate */
     font-weight: 500;
 }
 
-.faq-answer{
-   padding-top: 1rem;
-   line-height: 1.6;
-   font-size: 1rem;
-   max-height: 0;
-   overflow: hidden;
-   transition: max-height 0s ease-out;
+.faq-answer {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: var(--fs-s); /* 1rem */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0s ease-out;
 }
-.faq-active  .faq-answer{
+
+.faq-active .faq-answer {
     max-height: 500px;
     transition: max-height .7s ease-out;
 }
@@ -906,184 +879,190 @@ cursor: pointer;
 /* Banner */
 @media screen and (max-width: 767px) {
     .banner {
-      margin-top: 5em; /* Adjusted for mobile navigation bar */
+        margin-top: 5em; /* Adjusted for mobile navigation bar */
     }
-  
+
     .banner img {
-      height: auto;
+        height: auto;
     }
-  
+
     .image-text {
-      width: 90%;
+        width: 90%;
     }
-  
+
     .image-text h3 {
-      font-size: 36px;
-      line-height: 40px;
+        font-size: var(--fs-xl); /* 36px */
+        line-height: var(--fs-xl); /* 40px */
     }
-  
+
     .image-text p {
-      font-size: .8rem;
-      font-weight: normal;
+        font-size: var(--fs-s);
+        font-weight: normal;
     }
-  }
-  
-  /* About Section */
-  @media screen and (max-width: 767px) {
+}
+
+/* About Section */
+@media screen and (max-width: 767px) {
     .About {
-      height: auto;
-      padding: 24px;
+        height: auto;
+        padding: 24px;
     }
-  
+
     .About .aboutpage-container {
-      flex-direction: column;
-      padding: .1rem;
-      gap: 24px;
+        flex-direction: column;
+        padding: .1rem;
+        gap: 24px;
     }
-  
+
     .About .aboutpage-contents {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .About .aboutpage-contents h2 {
-      font-size: 36px;
+        font-size: var(--fs-xl); /* 36px */
     }
-  
+
     .About .aboutpage-contents p {
-      font-size: 16px;
-      text-align: justify;
+        font-size: var(--fs-m); /* 16px */
+        text-align: justify;
     }
-  
+
     .About .aboutpage-myvideo {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .About .play-button {
-      display: flex;
-      bottom: 5%;
-      left: 5%;
-      padding: 1rem ;
-      width: auto;
-      height: 3rem;
-      align-items: center;
+        display: flex;
+        bottom: 5%;
+        left: 5%;
+        padding: 1rem;
+        width: auto;
+        height: 3rem;
+        align-items: center;
     }
-  
+
     .About .play-button .icon-bg {
-      width: 1rem;
-      height: 1rem;
+        width: 1rem;
+        height: 1rem;
     }
-  
+
     .About .play-button .icon-bg img {
-      width: 50%;
-      padding: 0rem;
+        width: 50%;
+        padding: 0rem;
     }
-  .duration{
-    padding: 0px;
-    
-  }
+
+    .duration {
+        padding: 0px;
+    }
+
     .About .play-button .duration p,
     .About .play-button .duration time {
-      font-size: .5rem;
+        font-size: 0.5rem;
     }
-  }
-  
-  /* Vision Section */
-  @media screen and (max-width: 767px) {
+}
+
+/* Vision Section */
+@media screen and (max-width: 767px) {
     .vision {
-      padding: 48px 24px;
+        padding: 48px 24px;
     }
-  
+
     .vision .header {
-      gap: 1rem;
-      margin-bottom: 24px;
-
+        gap: 1rem;
+        margin-bottom: 24px;
     }
-  
+
     .vision .title h2 {
-      font-size: 3rem;
-      margin-top: 1rem;
+        font-size: var(--fs-xl); /* 3rem */
+        margin-top: 1rem;
     }
-  
+
     .vision .text-effect h2 {
-      font-size: 3rem;
-      transform: translateY(2rem);
-
+        font-size: var(--fs-xl); /* 3rem */
+        transform: translateY(2rem);
     }
-  
+
     .vision .content {
-      flex-direction: column;
-
-      gap: 0px;
-    }
-  
-    .vision .content .aboutcard {
-      padding: .3rem;
-      margin: .4rem;
-    }
-  
-    .vision .content .aboutcard h2 {
-      font-size: 1rem;
-    }
-  
-    .vision .content .aboutcard h3 {
-      font-size: 1.2rem;
-    }
-  
-    .vision .content .aboutcard p {
-      font-size: .9rem;
-    }
-  }
-  
-  /* Mission Section */
-  @media screen and (max-width: 767px) {
-    .mission ,.coreSection {
-      padding: 24px;
-    }
-  
-    .mission .head,.coreSection .head {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .mission .head .heading,.coreSection .head .heading {
-      font-size: 3rem;
-    }
-  
-    .mission .misson-texteffect h2, .coreSection .misson-texteffect h2 {
-      font-size: 3rem;
-      margin-top: -20px;
-    }
-  
-    .mission .content,.coreSection .content {
         flex-direction: column;
-  
         gap: 0px;
     }
-  
-    .mission .content .card,.coreSection .content .card {
+
+    .vision .content .aboutcard {
         padding: .3rem;
         margin: .4rem;
     }
-  
-    .mission .content .card h2,.coreSection .content .card h2 {
-        font-size: 1rem;
-        color: white;
+
+    .vision .content .aboutcard h2 {
+        font-size: var(--fs-m); /* 1rem */
     }
-  
-    .mission .content .card h3,.coreSection .content .card h3 {
+
+    .vision .content .aboutcard h3 {
         font-size: 1.2rem;
     }
-  
-    .mission .content .card p,.coreSection .content .card p {
-        font-size: .9rem;
-        color: rgb(255, 255, 255);
 
+    .vision .content .aboutcard p {
+        font-size: 0.9rem;
     }
+}
+
+/* Mission Section */
+@media screen and (max-width: 767px) {
+    .mission,
+    .coreSection {
+        padding: 24px;
+    }
+
+    .mission .head,
+    .coreSection .head {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .mission .head .heading,
+    .coreSection .head .heading {
+        font-size: var(--fs-xl); /* 3rem */
+    }
+
+    .mission .misson-texteffect h2,
+    .coreSection .misson-texteffect h2 {
+        font-size: var(--fs-xl); /* 3rem */
+        margin-top: -20px;
+    }
+
+    .mission .content,
+    .coreSection .content {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .mission .content .card,
+    .coreSection .content .card {
+        padding: .3rem;
+        margin: .4rem;
+    }
+
+    .mission .content .card h2,
+    .coreSection .content .card h2 {
+        font-size: var(--fs-m); /* 1rem */
+        color: white;
+    }
+
+    .mission .content .card h3,
+    .coreSection .content .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .mission .content .card p,
+    .coreSection .content .card p {
+        font-size: 0.9rem;
+        color: rgb(255, 255, 255);
+    }
+
     #sec-news {
         padding: 24px;
         display: none;
-      }
-      
+    }
+
     .faq-container {
         padding: 2rem;
     }
@@ -1094,7 +1073,7 @@ cursor: pointer;
     }
 
     .faq-title {
-        font-size: 3rem;
+        font-size: var(--fs-xl); /* 3rem */
         margin: 1rem 0;
     }
 
@@ -1111,27 +1090,25 @@ cursor: pointer;
         font-size: 1.2rem;
     }
 
-    .faq-answer p{
-        font-size: .7rem;
+    .faq-answer p {
+        font-size: 0.7rem;
         font-weight: 500;
         line-height: 130%;
     }
-  }
-  
-  
-  
+}
+
 /* Tablet View */
 
 /* Banner */
 /* About Section */
-@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     #sec-news {
         padding: 24px;
         display: none;
-      }
-    
+    }
+
     .banner {
-        margin-top: 4rem; 
+        margin-top: 4rem;
     }
 
     .banner img {
@@ -1143,15 +1120,14 @@ cursor: pointer;
     }
 
     .image-text h3 {
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: var(--fs-xl); /* 3rem */
+        line-height: var(--fs-xl); /* 4rem */
     }
 
     .image-text p {
-        font-size: 1rem;
+        font-size: var(--fs-m); /* 1rem */
         font-weight: normal;
     }
-
 
     .About {
         height: auto;
@@ -1169,11 +1145,11 @@ cursor: pointer;
     }
 
     .About .aboutpage-contents h2 {
-        font-size: 3rem;
+        font-size: var(--fs-xl); /* 3rem */
     }
 
     .About .aboutpage-contents p {
-        font-size: 1rem;
+        font-size: var(--fs-m); /* 1rem */
         text-align: justify;
     }
 
@@ -1216,7 +1192,7 @@ cursor: pointer;
     }
 
     .vision .title h2 {
-        font-size: 4rem;
+        font-size: var(--fs-xxl); /* 4rem */
         margin-top: 1rem;
     }
 
@@ -1245,74 +1221,82 @@ cursor: pointer;
     }
 
     .vision .content .aboutcard h3 {
-        font-size: 2rem;
+        font-size: var(--fs-l); /* 2rem */
     }
 
     .vision .content .aboutcard p {
-        font-size: 1rem;
+        font-size: var(--fs-m); /* 1rem */
     }
 
-    .mission ,.coreSection {
+    .mission,
+    .coreSection {
         padding: 2rem;
     }
 
-    .mission .head ,.coreSection .head {
+    .mission .head,
+    .coreSection .head {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .mission .head .heading ,.coreSection .head .heading {
-        font-size: 4rem;
+    .mission .head .heading,
+    .coreSection .head .heading {
+        font-size: var(--fs-xxl); /* 4rem */
     }
 
-    .mission .misson-texteffect h2,.coreSection .misson-texteffect h2 {
+    .mission .misson-texteffect h2,
+    .coreSection .misson-texteffect h2 {
         font-size: 7rem;
         margin-top: -2rem;
     }
 
-    .mission .content,.coreSection .content {
+    .mission .content,
+    .coreSection .content {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
     }
 
-    .mission .content .card ,.coreSection .content .card{
+    .mission .content .card,
+    .coreSection .content .card {
         padding: 1rem;
         margin: 1rem;
         width: 70%;
     }
 
-    .mission .content .card h2 , .coreSection .content .card h2 {
+    .mission .content .card h2,
+    .coreSection .content .card h2 {
         font-size: 1.5rem;
         color: white;
     }
 
-    .mission .content .card h3,.coreSection .content .card h3 {
-        font-size: 2rem;
+    .mission .content .card h3,
+    .coreSection .content .card h3 {
+        font-size: var(--fs-l); /* 2rem */
     }
 
-    .mission .content .card p ,.coreSection .content .card p{
-        font-size: 1rem;
+    .mission .content .card p,
+    .coreSection .content .card p {
+        font-size: var(--fs-m); /* 1rem */
         color: rgb(255, 255, 255);
     }
-
-   
 
     .news-container {
         flex-direction: column;
         gap: 1.5rem;
     }
 
-    .news-container .left-sec, .news-container .right-sec {
+    .news-container .left-sec,
+    .news-container .right-sec {
         width: 100%;
     }
 
     .news-container .head h3 {
-        font-size: 4rem;
+        font-size: var(--fs-xxl); /* 4rem */
     }
 
     .news-container .head p {
-        font-size: 1rem;
+        font-size: var(--fs-m); /* 1rem */
     }
 
     .news-container .recent-news {
@@ -1324,7 +1308,7 @@ cursor: pointer;
     }
 
     .news-container .recent-news p {
-        font-size: 1rem;
+        font-size: var(--fs-m); /* 1rem */
     }
 
     .news-container .news-desc {
@@ -1350,7 +1334,7 @@ cursor: pointer;
     }
 
     .faq-title {
-        font-size: 5rem;
+        font-size: var(--fs-xxl); /* 5rem */
         margin: 1rem 0;
     }
 
@@ -1368,8 +1352,6 @@ cursor: pointer;
     }
 
     .faq-answer {
-        font-size: 1rem;
+        font-size: var(--fs-m); /* 1rem */
     }
 }
-
-  

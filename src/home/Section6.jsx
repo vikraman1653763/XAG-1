@@ -7,11 +7,11 @@ const Section6 = () => {
     const textimonials = [
         {
             text: `"Xagrotor Tek's drones have transformed my farming practice. The ease of use and precision have made managing my crops more efficient and less labor-intensive. The technology has also helped me reduce pesticide use, which is great for both the environment and my bottom line. Their support team is incredibly responsive and knowledgeable."`,
-            author: 'Sanjana Patel, Organic Farmer'
+            author: 'Dheepak Raj, Organic Farmer'
         },
         {
             text: `"Since integrating Xagrotor Tek's drone technology into our operations, we've seen a remarkable improvement in crop health and yield. The data-driven insights provided by the drones allow us to make more informed decisions, leading to better resource management and cost savings. The company's commitment to sustainability aligns perfectly with our values."`,
-            author: 'Vikram Singh, Agribusiness Owner'
+            author: 'Vikraman, Agribusiness Owner'
         },
         {
             text: `"Xagrotor Tek's agricultural drones have been a game-changer for us. The precision and efficiency of the drones have significantly improved our crop monitoring and management. We've been able to detect and address issues early, preventing potential losses. The team at Xagrotor Tek is always helpful and provides excellent support."`,

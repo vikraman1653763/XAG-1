@@ -14,31 +14,31 @@ const Specifications = () => {
       <div className="spec-details">
         <div className="spec-item" data-aos="fade-left">
           <img className="spec-img" src={weightIcon} alt="Weight Icon" />
-          <span>Weight: 1.2 kg</span>
+          <span>Weight: 42.8 kg</span>
         </div>
         <div className="spec-item">
           <img className="spec-img" src={speedIcon} alt="Speed Icon" />
-          <span>Speed: 50 km/h</span>
+          <span>Speed: 8m/s</span>
         </div>
         <div className="spec-item" data-aos="fade-right">
           <img className="spec-img" src={payloadIcon} alt="Payload Icon" />
-          <span>Payload: 500 g</span>
+          <span>Payload: 15Kg</span>
         </div>
         <div className="spec-item" data-aos="fade-left">
           <img className="spec-img" src={flightIcon} alt="Flight Time Icon" />
-          <span>Flight Time: 30 minutes</span>
+          <span>Flight Time: 15 min</span>
         </div>
         <div className="spec-item">
           <img className="spec-img" src={rangeIcon} alt="Range Icon" />
-          <span>Range: 5 km</span>
+          <span>Range: 1 km</span>
         </div>
         <div className="spec-item" data-aos="fade-right">
           <img className="spec-img" src={cameraIcon} alt="Camera Icon" />
-          <span>Camera: 4K Ultra HD</span>
+          <span>Camera: MIPI-DCAM</span>
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default Specifications;

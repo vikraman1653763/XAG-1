@@ -11,14 +11,7 @@ function Admin() {
 
       <div className='change-box'>
 
-      <section className='admin-box'>
-        <h3 className='ad-1 admin-box-title'>Battery</h3>
-        <h4 className='admin-box-date'> last update : 31-07-2024</h4>
-        <h4 className='admin-box-count'>Total count: 20</h4>
-        <Link to={`/admin/battery`}  className='ad-1 admin-box-enter' >
-        <MdTransitEnterexit />
-        </Link>
-      </section>
+      
       <section className='admin-box'>
         <h3 className='ad-2 admin-box-title'>Blogs</h3>
         <h4 className='admin-box-date'> last update : 31-07-2024</h4>
@@ -30,7 +23,7 @@ function Admin() {
         <h3 className='ad-3 admin-box-title'>Career</h3>
         <h4 className='admin-box-date'> last update : 31-07-2024</h4>
         <h4 className='admin-box-count'>Total count: 20</h4>
-        <Link to={`/admin/career`} className='ad-3 admin-box-enter' >
+        <Link to={`/admin/careers`} className='ad-3 admin-box-enter' >
         <MdTransitEnterexit />
         </Link>      </section>
       </div>

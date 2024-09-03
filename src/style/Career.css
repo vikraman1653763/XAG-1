@@ -4,7 +4,6 @@
   font-weight: 300;
 }
 
-
 /* career.css */
 .career-section {
     display: flex;
@@ -15,9 +14,6 @@
     scrollbar-width: thin;
     margin:0rem 2rem 0rem 2rem;
 }
-
-
-
 
 .filter-section {
     z-index: 2;
@@ -35,8 +31,8 @@
     color: #fff;
 }
 
-.filter-section h4{
-    font-size: 1rem;
+.filter-section h4 {
+    font-size: var(--fs-s);
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -49,7 +45,7 @@
     margin: 0 0 10px;
     color: #9BF00B;
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: var(--fs-l);
 }
 
 .filter-group label {
@@ -82,40 +78,47 @@
 
 .job-card h3 {
     margin-top: 0;
-    color:#9BF00B;
-    font-size:2rem;
+    color: #9BF00B;
+    font-size: var(--fs-l);
     display: flex;
     align-items:center ;
 }
-.job-card strong{
-  font-weight: 600;
-}
-.job-card p{
-  font-weight: 100;
-  font-family: karla;
-  text-align: left;
-}
-.job-card h3 img {
-    width: 2rem;
-    height: 2rem;
-    margin-right: .5rem;
-}
-.job-card strong{
-    color:#9BF00B;
+
+.job-card strong {
+    font-weight: 600;
 }
 
-.job-card ul li{
-border-radius: 5px;
-margin-left: 5px;
-padding: 2px;
-font-weight: 100;
-font-family: karla;
-word-spacing: 1px;
+.job-card p {
+    font-weight: 100;
+    font-family: karla;
+    text-align: left;
+    font-size: var(--fs-s);
 }
-.applydiv{
+
+.job-card h3 img {
+    width: var(--fs-s);
+    height: var(--fs-s);
+    margin-right: .5rem;
+}
+
+.job-card strong {
+    color: #9BF00B;
+}
+
+.job-card ul li {
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 2px;
+    font-weight: 100;
+    font-family: karla;
+    word-spacing: 1px;
+    font-size: var(--fs-s);
+}
+
+.applydiv {
     width: 100%;
     position: relative;
-    height: 3rem;
+    height: var(--fs-xl);
 }
 
 .apply-button {
@@ -123,50 +126,43 @@ word-spacing: 1px;
     right: 0;
     width: 7em;
     height: 2.5em;
-    border-radius:10px;
-    font-size: 15px;
+    border-radius: 10px;
+    font-size: var(--fs-s);
     font-family: inherit;
     border: none;
     z-index: 1;
     margin: 1rem;
-    font-size: 1.1rem;
     font-weight: 700;
-    font-family:  monospace;
-    right: 0;
+    font-family: monospace;
     background-color: #9BF00B;
     color: black;
-   }
-   
+}
 
-   
-   .apply-button:hover {
+.apply-button:hover {
     color: #9BF00B;
     background-color: #000000;
     border: 2px solid #9BF00B;
+}
 
-   }
-
-
-   /* checkbox */
-.checkbox-wrapper{
+/* checkbox */
+.checkbox-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1rem;
-
+    gap: var(--fs-s);
 }
-   .checkbox-wrapper * {
+
+.checkbox-wrapper * {
     -webkit-tap-highlight-color: transparent;
     outline: none;
-   
-  }
-  
-  .checkbox-wrapper input[type="checkbox"] {
+}
+
+.checkbox-wrapper input[type="checkbox"] {
     display: none;
-  }
-  
-  .checkbox-wrapper label {
-    --size: 1.5rem;
+}
+
+.checkbox-wrapper label {
+    --size: var(--fs-l);
     --shadow: calc(var(--size) * .07) calc(var(--size) * .1);
     position: relative;
     display: block;
@@ -178,12 +174,12 @@ word-spacing: 1px;
     box-shadow: 0 var(--shadow) #ffbeb8;
     cursor: pointer;
     transition: 0.2s ease transform, 0.2s ease background-color,
-        0.2s ease box-shadow;
+                0.2s ease box-shadow;
     overflow: hidden;
     z-index: 1;
-  }
-  
-  .checkbox-wrapper label:before {
+}
+
+.checkbox-wrapper label:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -197,19 +193,19 @@ word-spacing: 1px;
     border-radius: 50%;
     box-shadow: inset 0 var(--shadow) #ffbeb8;
     transition: 0.2s ease width, 0.2s ease height;
-  }
-  
-  .checkbox-wrapper label:hover:before {
+}
+
+.checkbox-wrapper label:hover:before {
     width: calc(var(--size) * .55);
     height: calc(var(--size) * .55);
     box-shadow: inset 0 var(--shadow) #ff9d96;
-  }
-  
-  .checkbox-wrapper label:active {
+}
+
+.checkbox-wrapper label:active {
     transform: scale(0.9);
-  }
-  
-  .checkbox-wrapper .tick_mark {
+}
+
+.checkbox-wrapper .tick_mark {
     position: absolute;
     top: -1px;
     right: 0;
@@ -219,215 +215,203 @@ word-spacing: 1px;
     margin: 0 auto;
     margin-left: calc(var(--size) * .14);
     transform: rotateZ(-40deg);
-  }
-  
-  .checkbox-wrapper .tick_mark:before,
-    .checkbox-wrapper .tick_mark:after {
+}
+
+.checkbox-wrapper .tick_mark:before,
+.checkbox-wrapper .tick_mark:after {
     content: "";
     position: absolute;
     background-color: #000000;
     border-radius: 2px;
     opacity: 0;
     transition: 0.2s ease transform, 0.2s ease opacity;
-  }
-  
-  .checkbox-wrapper .tick_mark:before {
+}
+
+.checkbox-wrapper .tick_mark:before {
     left: 0;
     bottom: 0;
     width: calc(var(--size) * .16);
     height: calc(var(--size) * .4);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
     transform: translateY(calc(var(--size) * -.68));
-  }
-  
-  .checkbox-wrapper .tick_mark:after {
+}
+
+.checkbox-wrapper .tick_mark:after {
     left: 0;
     bottom: 0;
     width: 100%;
     height: calc(var(--size) * .2);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
     transform: translateX(calc(var(--size) * .78));
-  }
-  
-  
-  
-  
+}
 
-
-.filter-opt{
+.filter-opt {
     width: 80%;
-    font-size: 1rem;
+    font-size: var(--fs-s);
     font-weight: 700;
     background-color: #000000;
-    color:rgb(221, 220, 220);
+    color: rgb(221, 220, 220);
     border: 1px solid #daff38;
     border-radius: 5px;
 }
 
-.no-jobs h3{
-  text-align: center;
-  color: white;
+.no-jobs h3 {
+    text-align: center;
+    color: white;
 }
-
 
 /* Media Queries for Mobile */
 @media screen and (max-width: 767px) {
-  .career-section {
-      flex-direction: column;
-      padding: 10px;
-  }
+    .career-section {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-  .filter-section {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px;
-      top: 0;
-      position: relative;
-  }
+    .filter-section {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        top: 0;
+        position: relative;
+    }
 
-  .job-listings {
-      width: 100%;
-  }
+    .job-listings {
+        width: 100%;
+    }
 
-  .job-card {
-      padding: 10px;
-      
-      padding: auto;
-      width: 100%;
-  }
+    .job-card {
+        padding: 10px;
+        padding: auto;
+        width: 100%;
+    }
 
-  .job-card h3 {
-      font-size: 1rem;
-  }
- 
-.job-card p,.job-card ul li{
-  font-size: .7rem;
-  font-weight: normal;
-}
-  .apply-button {
-      width: auto;
-      padding: .2rem;
-      position: relative;
-      margin: 0;
-      font-size: .7rem;
-      border-radius: 5px;
-      height: auto;
-  }
+    .job-card h3 {
+        font-size: var(--fs-s);
+    }
 
-  .applydiv {
-      height: auto;
-      margin-top: 10px;
-      text-align: center;
-  }
+    .job-card p, .job-card ul li {
+        font-size: 0.7rem;
+        font-weight: normal;
+    }
 
+    .apply-button {
+        width: auto;
+        padding: 0.2rem;
+        position: relative;
+        margin: 0;
+        font-size: 0.7rem;
+        border-radius: 5px;
+        height: auto;
+    }
 
-   /* checkbox */
-.checkbox-wrapper{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: .6rem;
-  height: 2.4rem;
-}
- .checkbox-wrapper * {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
- 
-}
+    .applydiv {
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-.checkbox-wrapper input[type="checkbox"] {
-  display: none;
-}
+    /* checkbox */
+    .checkbox-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.6rem;
+        height: 2.4rem;
+    }
 
-.checkbox-wrapper label {
-  --size: 1rem;
-  
-}
+    .checkbox-wrapper * {
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
 
-.checkbox-wrapper span{
-  font-weight: 400;
-}
+    .checkbox-wrapper input[type="checkbox"] {
+        display: none;
+    }
 
+    .checkbox-wrapper label {
+        --size: 1rem;
+    }
+
+    .checkbox-wrapper span {
+        font-weight: 400;
+    }
 }
 
 /* Tablet View */
 @media (min-width: 48em) and (max-width: 64em) {
-  .career-section {
-      flex-direction: column;
-      padding: 1rem;
-  }
+    .career-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
 
-  .filter-section {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 1rem;
-      top: 0;
-      position: relative;
-  }
+    .filter-section {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        top: 0;
+        position: relative;
+    }
 
-  .job-listings {
-      width: 100%;
-  }
-  /* .job-card:nth-child(even){
-    align-self: flex-end;
-  } */
-  .job-card {
-      padding: 1rem;
-      width: 70%;
-      align-self: flex-start;
+    .job-listings {
+        width: 100%;
+    }
 
-  }
+    .job-card {
+        padding: 1rem;
+        width: 70%;
+        align-self: flex-start;
+    }
 
-  .job-card h3 {
-      font-size: 1.5rem;
-  }
+    .job-card h3 {
+        font-size: var(--fs-m);
+    }
 
-  .job-card p, .job-card ul li {
-      font-size: 0.875rem;
-      font-weight: normal;
-  }
+    .job-card p, .job-card ul li {
+        font-size: var(--fs-s);
+        font-weight: normal;
+    }
 
-  .apply-button {
-      width: auto;
-      padding: 0.5rem 1rem;
-      position: relative;
-      margin: 0;
-      font-size: 1rem;
-      border-radius: 0.5rem;
-      height: auto;
-  }
+    .apply-button {
+        width: auto;
+        padding: 0.5rem 1rem;
+        position: relative;
+        margin: 0;
+        font-size: var(--fs-s);
+        border-radius: 0.5rem;
+        height: auto;
+    }
 
-  .applydiv {
-      height: auto;
-      margin-top: 1rem;
-      text-align: center;
-  }
+    .applydiv {
+        height: auto;
+        margin-top: 1rem;
+        text-align: center;
+    }
 
-  /* checkbox */
-  .checkbox-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 0.5rem;
-      height: 2.4rem;
-  }
+    /* checkbox */
+    .checkbox-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        height: 2.4rem;
+    }
 
-  .checkbox-wrapper * {
-      -webkit-tap-highlight-color: transparent;
-      outline: none;
-  }
+    .checkbox-wrapper * {
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
 
-  .checkbox-wrapper input[type="checkbox"] {
-      display: none;
-  }
+    .checkbox-wrapper input[type="checkbox"] {
+        display: none;
+    }
 
-  .checkbox-wrapper label {
-      --size: 1rem;
-  }
+    .checkbox-wrapper label {
+        --size: var(--fs-s);
+    }
 
-  .checkbox-wrapper span {
-      font-weight: 400;
-  }
+    .checkbox-wrapper span {
+        font-weight: 400;
+    }
 }
