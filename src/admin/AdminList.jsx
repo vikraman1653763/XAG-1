@@ -29,29 +29,42 @@ const navigate = useNavigate();
   }, [endpoint]);
 
   const handleDelete = async (id) => {
-    try {
-      const response = await fetch(`http://localhost:8080/api/${endpoint}/${id}`, {
-        method: 'DELETE',
-      });
-      const data = await response.json();
-      if (response.ok) {
-        setItems(items.filter(item => item.id !== id));
-        setMessage(data.message);
-        setTimeout(() =>setMessage(null), 5000);
-      } else {
-        setError(data.error);
-        setTimeout(() =>setError(null), 5000);
+    const confirmed = window.confirm('Are you sure you want to delete this item?');
+if(confirmed){
 
-      }
-    } catch (err) {
-      setError('Failed to delete item');
+  try {
+    const response = await fetch(`http://localhost:8080/api/${endpoint}/${id}`, {
+      method: 'DELETE',
+    });
+    const data = await response.json();
+    if (response.ok) {
+      setItems(items.filter(item => item.id !== id));
+      setMessage(data.message);
+      setTimeout(() =>setMessage(null), 5000);
+    } else {
+      setError(data.error);
       setTimeout(() =>setError(null), 5000);
-
+      
     }
+  } catch (err) {
+    setError('Failed to delete item');
+    setTimeout(() =>setError(null), 5000);
+    
+  }
+}
+};
+const handleBack = () => {
+  navigate('/admin');
+};
+const formatToIST = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-IN').replace(/\//g, '-');
   };
-  const handleBack = () => {
-    navigate('/admin');
+  const formatTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleTimeString('en-IN');
   };
+
 
   return (
 <div className={`admin-list-container ${classes}`}>
@@ -70,6 +83,8 @@ const navigate = useNavigate();
         <thead>
           <tr>
             <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -77,6 +92,8 @@ const navigate = useNavigate();
           {items.map(item => (
             <tr key={item.id}>
               <td>{item.title}</td>
+              <td>{formatToIST(item.date)}</td>
+              <td>{formatTime(item.date)}</td>
               <td>
                 <button onClick={() => handleDelete(item.id)} className="delete-button">
                   <FaTrashAlt />

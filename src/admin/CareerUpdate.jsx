@@ -18,11 +18,20 @@ function CareerUpdate() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
     const currentDate = new Date();
-    const offset = 5.5 * 60 * 60 * 1000; 
-    const istDate = new Date(currentDate.getTime() + offset);
-    const formattedDate = istDate.toISOString().split('T')[0];
+
+    // Convert to IST (Indian Standard Time)
+    const utcOffset = currentDate.getTimezoneOffset() * 60000; // Offset in milliseconds
+    const istDate = new Date(currentDate.getTime() + utcOffset + (5.5 * 3600000)); // Adjust for IST
+  
+    // Format the IST date and time (YYYY-MM-DD HH:MM:SS)
+    const formattedDate = istDate.getFullYear() + '-' +
+                          String(istDate.getMonth() + 1).padStart(2, '0') + '-' +
+                          String(istDate.getDate()).padStart(2, '0') + ' ' +
+                          String(istDate.getHours()).padStart(2, '0') + ':' +
+                          String(istDate.getMinutes()).padStart(2, '0') + ':' +
+                          String(istDate.getSeconds()).padStart(2, '0');
+  
 
     const careerData = {
       title,

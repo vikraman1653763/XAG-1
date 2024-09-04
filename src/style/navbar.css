@@ -46,6 +46,9 @@ span{
     color: red;
     
 }
+main{
+    margin-top: 3rem;
+}
 /* NAVIGATION starts */
 nav {
     background-color: rgba(0, 0, 0, 0.486);
