@@ -42,15 +42,23 @@ function CareerUpdate() {
       linkedin,
       date: formattedDate,
     };
-     console.log(careerData)
+    const token = localStorage.getItem('token');
     const response = await fetch('http://localhost:8080/api/career', {
       method: 'POST',
       body:JSON.stringify(careerData),
       headers:{
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+      "Authorization": `Bearer ${token}`
       }
 
     });
+
+    if(response.status===401||response.status===403){
+      console.log("unauthorized or forbidden. redirecting to login");
+      localStorage.removeItem('token')
+      navigate('/login');
+      return;
+    }
 
     const data = await response.json();
 
@@ -61,7 +69,6 @@ if(response.ok){
   setError(null)
   setTimeout(()=>{
     setMsg(null)
-    navigate("/admin/careers/new")
   },3000)
   setTitle('');
   setJobType('');
@@ -73,7 +80,7 @@ if(response.ok){
   console.error("error response:",data)
   setError(data.error)
   setTimeout(() =>setError(null), 5000);
-  navigate('/admin/careers/new')
+  navigate('/admin/careers/new')                    
 }
 }finally{
   setLoading(false);

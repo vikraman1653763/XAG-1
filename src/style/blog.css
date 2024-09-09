@@ -1,6 +1,7 @@
 .blog-container-block{
   background-color: rgb(0, 0, 0);
  height: 100vh;
+ background-color: #161616;
 }
 
 
@@ -17,6 +18,7 @@
     height: 20px;
     width: auto;
     height: 60vh;
+    border-radius: 2em;
   }
   
   .og-blog-container a{
@@ -24,23 +26,25 @@
 }
 
 .blog-card {
-    width: 450px;
-    height:600px;
-    border-radius: 20px;
+    width: 25em;
+    height:30em;
     display: flex;
     flex-direction: column;
     justify-content: left;
     backdrop-filter: blur(10px);
-    transition: 0.5s ease-in-out;
-    background: #111111;
-    padding: 1rem;
-    border: 2px solid rgb(46, 45, 45);
+    transition: 0.2s ease-in-out;
+    background: #000000;
+  
+
   }
   
-  /* .blog-card:hover {
+  .blog-card:hover {
     cursor: pointer;
-    transform: scale(1.05);
-  } */
+    transform: scale(1.01);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(71,71,71,0.44);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(71,71,71,0.44);
+    box-shadow: 10px 10px 5px 0px rgba(71,71,71,0.44);  
+  } 
   
 .blog-img {
     display: flex;
@@ -69,7 +73,7 @@
     color: rgb(255, 255, 255);
     display: flex;
     
-    background-color: #252525;
+    background-color: #000000;
    
   }
   
@@ -102,17 +106,19 @@
     width: 100%;
 text-transform: uppercase;
     font-size: clamp(.5rem,2rem,2rem);
-    color: #9BF00B;
+    color: #ffffff;
     font-weight: bold;
     text-overflow: ellipsis;
   }
   
   .blog-textContent p {
     font-size: 1rem;
-    font-weight: 700;
-    font-weight: lighter;
+    font-weight: 400;
     text-overflow: ellipsis;
     padding: .5rem;
+    color:rgb(157, 161, 165);
+    white-space: pre-wrap;
+    text-align: justify;
   }
   
   /* blog details */
@@ -157,7 +163,7 @@ text-transform: uppercase;
   
   .blog-details-textBox p {
     flex: 1 0 auto; /* Make the paragraph take the remaining space */
-    font-size: 1.3rem;
+    font-size: unset;
     padding: 3rem;
     margin-left: 15rem;
     margin-right: 15rem;
@@ -166,7 +172,6 @@ text-transform: uppercase;
     text-align: justify;
     letter-spacing: 1px;
     line-height: 200%;
-    font-family: Georgia;
     background: rgba(0, 0, 0, 0.603);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20px );
@@ -175,6 +180,8 @@ text-transform: uppercase;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
     color: #d6d4d4;
+    white-space: pre-wrap;
+
   }
 
 

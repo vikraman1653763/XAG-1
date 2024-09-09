@@ -5,7 +5,6 @@ import Section2 from '../blog/Section2.jsx';
 
 const BlogDetails = () => {
     const { id } = useParams(); 
-    console.log(id)
     const [blog, setBlog] = useState(null);
     const [error, setError] = useState(null);
 

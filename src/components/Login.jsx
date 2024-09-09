@@ -1,69 +1,80 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../style/login.css';
 
 function Login() {
-  const vantaRef = useRef(null);
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const scriptThree = document.createElement('script');
-    scriptThree.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js';
-    scriptThree.onload = () => loadVanta(); 
-    document.body.appendChild(scriptThree);
+  const navigate = useNavigate();
 
-    const loadVanta = () => {
-      const scriptVanta = document.createElement('script');
-      scriptVanta.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js';
-      scriptVanta.onload = () => {
-        if (window.VANTA) {
-          vantaRef.current = window.VANTA.BIRDS({
-            el: ".login-container",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            backgroundColor: 0x0,
-            color1: 0x3cf708,
-            color2: 0xdffd4
-          });
-        }
-      };
-      document.body.appendChild(scriptVanta);
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    return () => {
-      // Clean 
-      if (vantaRef.current) {
-        vantaRef.current.destroy();
+    const loginData = { user, password };
+    
+    const response = await fetch('http://localhost:8080/api/login', {
+      method: "POST",
+      body: JSON.stringify(loginData),
+      headers: {
+        "Content-Type": "application/json"
       }
-      document.body.removeChild(scriptThree);
-      const vantaScript = document.querySelector('script[src*="vanta.birds.min.js"]');
-      if (vantaScript) {
-        document.body.removeChild(vantaScript);
-      }
-    };
-  }, []);
+    });
+    
+    const data = await response.json();
+    
+    if (response.ok) {
+      // Store JWT token in local storage
+      localStorage.setItem('token', data.token);
+      console.log("Logged in successfully");
+      setError(null)
+      
+      navigate('/admin'); // Redirect to admin dashboard or other page
+    } else {
+      console.log("Invalid username or password");
+      setError(data.error)
+      
+    }
+  };
 
   return (
-    <section className='login-container' >
+    <section className="login-container">
       <div className="login-box">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="user-box">
-            <input type="text" name="" required="" placeholder="Username"/>
+            <input
+              type="text"
+              name=""
+              required=""
+              placeholder="Username"
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
+              />
           </div>
           <div className="user-box">
-            <input type="password" name="" required="" placeholder='Password'/>
+            <input
+              type="password"
+              name=""
+              required=""
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
           <center>
-
-          <button class="login-button" data-text="Awesome">
-          <span class="actual-text">&nbsp;LOGIN&nbsp;</span>
-          <span aria-hidden="true" class="hover-text">&nbsp;LOGIN&nbsp;</span>
-        </button>
+            <button className="login-button" type="submit">
+              <span className="actual-text">&nbsp;LOGIN&nbsp;</span>
+              <span aria-hidden="true" className="hover-text">&nbsp;LOGIN&nbsp;</span>
+            </button>
           </center>
+
         </form>
+        {error && (
+          <div className="alert alert-danger">
+            {error}
+          </div>
+        )}
       </div>
     </section>
   );

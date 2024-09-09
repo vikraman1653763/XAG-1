@@ -25,9 +25,10 @@ import BlogUpdate from'./admin/BlogUpdate.jsx';
 import CareerUpdate from'./admin/CareerUpdate.jsx';
 import BlogList from'./admin/BlogList.jsx';
 import CareerList from'./admin/CareerList.jsx';
-import NotFound from './components/NotFound.jsx'; // Import the 404 page component
+import NotFound from './components/NotFound.jsx'; 
+import FormSuccess from './components/success.jsx';
 
-import FormSuccess from './components/success.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 const App = () => {
 
 
@@ -52,12 +53,13 @@ const App = () => {
               <Route path="/Dealer" element={<Dealer />}/>          
               <Route path='/Login' element={<Login/>}/>
               <Route path='/success' element={<FormSuccess/>}/>
-              <Route path= '/admin' element={<Admin/>}/>
-              <Route path="/admin/blogs" element={<BlogList />} />
-              <Route path="/admin/careers" element={<CareerList />} />
-              <Route path= '/admin/battery' element={<BatteryUpdate/>}/>
-              <Route path= '/admin/blogs/new' element={<BlogUpdate/>}/>
-              <Route path= '/admin/careers/new' element={<CareerUpdate/>}/>
+              <Route path='/admin' element={<ProtectedRoute element={Admin} />} />
+              <Route path='/admin/blogs' element={<ProtectedRoute element={BlogList} />} />
+              <Route path='/admin/careers' element={<ProtectedRoute element={CareerList} />} />
+              <Route path='/admin/battery' element={<ProtectedRoute element={BatteryUpdate} />} />
+              <Route path='/admin/blogs/new' element={<ProtectedRoute element={BlogUpdate} />} />
+              <Route path='/admin/careers/new' element={<ProtectedRoute element={CareerUpdate} />} />
+            
               <Route path="*" element={<NotFound />} />
 
             </Routes>

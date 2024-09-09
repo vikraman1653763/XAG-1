@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { LiaSpinnerSolid } from "react-icons/lia";
@@ -11,6 +11,8 @@ function BlogUpdate() {
   const [error, setError] = useState(null);
   const [msg, setMsg] = useState(null);
   const [loading, setLoading] = useState(false);
+  const fileInputRef = useRef(null);
+
   const navigate = useNavigate();
 
   const handleImageUpload = (e) => {
@@ -39,11 +41,22 @@ function BlogUpdate() {
     blogData.append('details', details);
     blogData.append('image', image);  
     blogData.append('date', formattedDate);
+
+    const token = localStorage.getItem('token');
+
     const response = await fetch('http://localhost:8080/api/blog', {
       method: 'POST',
       body: blogData,  
+      headers:{
+         "Authorization": `Bearer ${token}`
+      }
     });
-
+if(response.status===401||response.status===403){
+  console.log("unauthorized or forbidden. redirecting to login");
+  localStorage.removeItem('token')
+  navigate('/login');
+  return;
+}
     const data = await response.json();
     try{
       if(response.ok){
@@ -51,12 +64,14 @@ function BlogUpdate() {
         setError(null);
         setTimeout(() => {
           setMsg(null);
-          navigate('/admin/blogs/new');
         }, 3000);
         setTitle('');
         setSmallDesc('');
         setDetails('');
         setImage('');
+        if (fileInputRef.current) {
+          fileInputRef.current.value = null; 
+        }
       }else{
         console.error("error response:",data)
         setError(data.error);
@@ -139,6 +154,7 @@ function BlogUpdate() {
             type="file"
             name="image"
             id="image"
+            ref={fileInputRef}
             onChange={handleImageUpload}
           /> 
 

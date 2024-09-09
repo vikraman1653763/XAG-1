@@ -75,7 +75,9 @@
     color: #fff;
     width: 70%;
 }
-
+.job-card .require{
+    white-space: pre-wrap;
+}
 .job-card h3 {
     margin-top: 0;
     color: #9BF00B;

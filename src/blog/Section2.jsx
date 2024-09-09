@@ -42,6 +42,11 @@ const Section2 = () => {
           <span className="font-semibold uppercase text-neutral-500">
             No blogs available at the moment
           </span>
+          {error && (
+          <div className="alert alert-danger">
+            {error}
+          </div>
+        )}
         </div>
       )}
     </>
@@ -80,7 +85,6 @@ const VerticalBlogList = ({ items }) => {
       {items.map((blog, index) => {
        
         const formattedDate = new Date(blog.date).toISOString().split('T')[0];
-        console.log(blog)
         return (
           <Link to={`/blog/${blog.id}`} key={index} className="blog-container group">
           <div className="blog-card">

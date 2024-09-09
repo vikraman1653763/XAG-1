@@ -28,6 +28,9 @@ const navigate = useNavigate();
     fetchItems();
   }, [endpoint]);
 
+  const token = localStorage.getItem('token');
+
+
   const handleDelete = async (id) => {
     const confirmed = window.confirm('Are you sure you want to delete this item?');
 if(confirmed){
@@ -35,6 +38,10 @@ if(confirmed){
   try {
     const response = await fetch(`http://localhost:8080/api/${endpoint}/${id}`, {
       method: 'DELETE',
+      headers:{
+      
+      "Authorization": `Bearer ${token}`
+      }
     });
     const data = await response.json();
     if (response.ok) {

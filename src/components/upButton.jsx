@@ -1,32 +1,22 @@
-
-
- import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const UpButton = () => {
-    const [pageHeight, setPageHeight] = useState(0);
-    const [visible, setVisible] = useState(false);
+    // const [visible, setVisible] = useState(false);
 
-    useEffect(() => {
-        const updateHeight = () => {
-            const height = document.documentElement.scrollHeight;
-            setPageHeight(height);
-        };
+    // useEffect(() => {
+    //     const toggleVisible = () => {
+    //         const scrolled = window.scrollY || document.documentElement.scrollTop;
+    //         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    //         setVisible(scrolled > (height / 2));
+    //     };
 
-        updateHeight();
+    //     window.addEventListener("scroll", toggleVisible);
 
-        const toggleVisible = () => {
-            const scrolled = window.scrollY;
-            setVisible(scrolled > (pageHeight / 2));
-        };
+    //     return () => {
+    //         window.removeEventListener("scroll", toggleVisible);
+    //     };
+    // }, []);
 
-        window.addEventListener("scroll", toggleVisible);
-        window.addEventListener("resize", updateHeight);
-
-        return () => {
-            window.removeEventListener("scroll", toggleVisible);
-            window.removeEventListener("resize", updateHeight);
-        };
-    }, [pageHeight]); 
     const goTop = () => {
         window.scrollTo({
             top: 0,
@@ -35,8 +25,8 @@ const UpButton = () => {
     };
 
     return (
-        <button onClick={goTop} className="rocketbtn"  style={{ display: visible ? 'block' : 'none' }}>
-            <img  width="24px" height="auto" src="/assets/rocket.svg" alt="Back to top" />
+        <button onClick={goTop} className="rocketbtn" >
+            <img width="24px" height="auto" src="/assets/rocket.svg" alt="Back to top" />
         </button>
     );
 };
