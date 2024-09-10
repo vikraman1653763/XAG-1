@@ -1328,10 +1328,12 @@ canvas {
     }
     
     .textimonial-container h2 {
-        font-size: var(--fs-m);
+        font-size: var(--fs-s);
         margin: 2rem;
     }
-    
+    .textimonial-container p{
+        font-size: var(--fs-xs);
+    }
     .profiles {
         gap: 10px;
     }

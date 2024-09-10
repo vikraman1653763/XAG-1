@@ -877,21 +877,21 @@
 
 /* Banner */
 @media screen and (max-width: 767px) {
-    .banner {
-        margin-top: 5em; /* Adjusted for mobile navigation bar */
-    }
-
-    .banner img {
-        height: auto;
-    }
+    
+.banner{
+    margin-top: 1em;
+    height:15em;
+}
 
     .image-text {
-        width: 90%;
+        width: 100%;
+        font-size: var(--fs-s);
+        padding:0px ;
     }
 
     .image-text h3 {
-        font-size: var(--fs-xl); /* 36px */
-        line-height: var(--fs-xl); /* 40px */
+        font-size: var(--fs-l); 
+        line-height: 0px; 
     }
 
     .image-text p {
@@ -922,7 +922,7 @@
     }
 
     .About .aboutpage-contents p {
-        font-size: var(--fs-m); /* 16px */
+        font-size: var(--fs-s); /* 16px */
         text-align: justify;
     }
 

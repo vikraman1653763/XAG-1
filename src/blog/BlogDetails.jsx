@@ -24,7 +24,7 @@ const BlogDetails = () => {
             }
         };
         fetchBlog();
-    }, [id]);  // Dependency now is the id
+    }, [id]); 
 
     if (error) {
         return <div>{error}</div>;

@@ -6,6 +6,8 @@
 }
 
 :root {
+    --fs-xxs: .5rem; 
+    --fs-xs: .8rem; 
     --fs-s: 1rem; 
     --fs-m: 1.5rem;  
     --fs-l: 2rem;   
@@ -29,7 +31,13 @@ body {
     -ms-overflow-style: -ms-autohiding-scrollbar; /* Hide scrollbar automatically when not in use */
     overflow-y: scroll;
 }
-
+a{
+    color: white ;
+    text-decoration: none !important;
+}
+a:visited {
+    color: inherit; 
+  }
 p {
     font-size: var(--fs-s);
     font-weight: 500;
@@ -84,7 +92,7 @@ nav ul {
 
 nav ul li a, nav ul span {
     text-decoration: none;
-    color: white;
+    color: white !important;
     font-size: var(--fs-s);
     line-height: 250%;
     font-weight: 500;

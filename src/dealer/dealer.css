@@ -1,10 +1,4 @@
-/*  --fs-s: 1rem; 
-    --fs-m: 1.5rem;  
-    --fs-l: 2rem;   
-    --fs-xl: 3rem;  
-    --fs-xxl: 4rem;  
-    --fs-xxxl: 8rem;  */
-    
+   
     .dealer-sec-1 {
     position: relative;
     height: 100vh;
@@ -243,7 +237,9 @@
     padding: 0.75rem;
     border-radius: 4px;
     font-size: 1rem;
-    background-color: rgb(41, 40, 40);
+    background-color: rgba(83, 82, 82, 0.308);
+    border: none;
+    color: rgba(240, 248, 255, 0.623);
   }
   
   .dealer-form-group textarea {
@@ -282,6 +278,10 @@
 .dealer-form-group textarea :focus {
   outline: none;
   border: 1px solid #A1ED20;
+}
+.dealer-form-group select option{
+  color: #ffffff;
+  background-color: #000000e0;
 }
 /* General mobile and tablet styles */
 @media (max-width: 768px) {

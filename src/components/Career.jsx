@@ -72,7 +72,7 @@ const Career = () => {
         <>
             <CareerBanner />
             <section className="career-section" >
-                {jobListings.length>0 &&(
+                {items.length>0 &&(
 
                     <FilterSection
                     selectedType={selectedType}

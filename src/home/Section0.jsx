@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import image1 from './images/img1.png';
+import image1 from './images/demo.webp';
 import image2 from './images/img2.png';
 import image3 from './images/img3.png';
 import image4 from './images/img4.png';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const HomeCarousel = () => {
+  const [hasLoaded, setHasLoaded] = useState(false);
+
   const items = [
     {
       image: image1,
@@ -46,7 +49,7 @@ const HomeCarousel = () => {
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 5000);
+    }, 7000);
   };
 
   const stopAutoSlide = () => {
@@ -77,13 +80,19 @@ const HomeCarousel = () => {
   useEffect(() => {
     startAutoSlide();
 
-    return () => stopAutoSlide(); // Clean up interval on component unmount
+    return () => stopAutoSlide();
   }, []);
 
   useEffect(() => {
-    setIsTransitioning(false); // Reset transitioning after slide change
+    setIsTransitioning(false); 
   }, [currentIndex]);
 
+  useEffect(() => {
+    setHasLoaded(true);  
+    startAutoSlide();
+    return () => stopAutoSlide();
+  }, []);
+  
   return (
     <div className="home-carousel">
       <div
@@ -91,19 +100,22 @@ const HomeCarousel = () => {
         style={{
           transform: `translateX(-${currentIndex * 100}%)`,
           transition: isTransitioning ? "transform 0.6s ease-in-out" : "none"
-        }}
-      >
-        {items.map((item, index) => (
-          <div className={`home-item ${currentIndex === index ? "home-active" : ""}`} key={index}>
-            <img className="home-image" src={item.image} alt={item.title} />
-            <div className="home-introduce">
-              <div className="home-title">{item.title}</div>
-              <div className="home-topic">{item.topic}</div>
-              <div className="home-des">
-                {item.description}
-              </div>
+        }}>
+
+       {items.map((item, index) => (
+  <div
+    className={`home-item ${
+      currentIndex === index && hasLoaded ? "home-active" : ""
+    }`}
+    key={index}
+  >
+    <img className="home-image" src={item.image} alt={item.title} />
+    <div className="home-introduce">
+      <div className="home-title">{item.title}</div>
+      <div className="home-topic">{item.topic}</div>
+      <div className="home-des">{item.description}</div>
               <button className="home-seeMore">
-                <a href={item.link}> SEE MORE &#8599; </a>
+                <a href={item.link}> SEE MORE <MdKeyboardDoubleArrowRight /> </a>
               </button>
             </div>
           </div>

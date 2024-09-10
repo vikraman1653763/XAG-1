@@ -42,7 +42,7 @@ const FilterSection = ({ selectedType, handleTypeChange, selectedLocation, handl
                     </label>
                         <span>Remote</span>
                 </div>
-                <div className="checkbox-wrappe r">
+                <div className="checkbox-wrapper">
                     <input
                         id="_checkbox-freelance"
                         type="checkbox"

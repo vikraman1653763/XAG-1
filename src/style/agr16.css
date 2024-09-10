@@ -660,9 +660,6 @@ video::-webkit-media-controls {
       padding: 0%;
   }
 
-  main {
-      padding: 20px;
-  }
 
   .gif-container {
       min-height: 100%;

@@ -247,6 +247,11 @@
     transform: translateX(calc(var(--size) * .78));
 }
 
+.checkbox-wrapper span{
+    color: white;
+    font-weight: normal;
+}
+
 .filter-opt {
     width: 80%;
     font-size: var(--fs-s);
@@ -262,11 +267,14 @@
     color: white;
 }
 
-/* Media Queries for Mobile */
+/* Mobile View */
 @media screen and (max-width: 767px) {
     .career-section {
         flex-direction: column;
-        padding: 10px;
+        padding: 1px;
+        width: 90vw;
+        left: 0;
+        margin: 0px;
     }
 
     .filter-section {
@@ -274,9 +282,15 @@
         margin-right: 0;
         margin-bottom: 20px;
         top: 0;
-        position: relative;
+        position: relative; /* Changed to relative for better flow in mobile */
+        z-index: 1;
     }
-
+    .checkbox-wrapper span{
+        color: white;
+        font-weight: normal;
+        font-size:var(--fs-xs);
+    }
+    
     .job-listings {
         width: 100%;
     }
@@ -333,84 +347,6 @@
 
     .checkbox-wrapper label {
         --size: 1rem;
-    }
-
-    .checkbox-wrapper span {
-        font-weight: 400;
-    }
-}
-
-/* Tablet View */
-@media (min-width: 48em) and (max-width: 64em) {
-    .career-section {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .filter-section {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 1rem;
-        top: 0;
-        position: relative;
-    }
-
-    .job-listings {
-        width: 100%;
-    }
-
-    .job-card {
-        padding: 1rem;
-        width: 70%;
-        align-self: flex-start;
-    }
-
-    .job-card h3 {
-        font-size: var(--fs-m);
-    }
-
-    .job-card p, .job-card ul li {
-        font-size: var(--fs-s);
-        font-weight: normal;
-    }
-
-    .apply-button {
-        width: auto;
-        padding: 0.5rem 1rem;
-        position: relative;
-        margin: 0;
-        font-size: var(--fs-s);
-        border-radius: 0.5rem;
-        height: auto;
-    }
-
-    .applydiv {
-        height: auto;
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    /* checkbox */
-    .checkbox-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 0.5rem;
-        height: 2.4rem;
-    }
-
-    .checkbox-wrapper * {
-        -webkit-tap-highlight-color: transparent;
-        outline: none;
-    }
-
-    .checkbox-wrapper input[type="checkbox"] {
-        display: none;
-    }
-
-    .checkbox-wrapper label {
-        --size: var(--fs-s);
     }
 
     .checkbox-wrapper span {
