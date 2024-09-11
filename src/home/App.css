@@ -124,7 +124,7 @@ background: none;
 }
 .home-image {
   width: 100vw;
-  height: 113vh;
+  height: 100vh;
   position: fixed;
   z-index: -1;
   transform: translate(-20%);

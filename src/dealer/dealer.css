@@ -438,3 +438,118 @@
     padding: 0.75rem 1.5rem;
   }
 }
+
+
+.dealer-sec-7 {
+  padding: 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.dealer-sec-7 h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: 1.5rem;
+}
+
+.order-now-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 10%;
+}
+
+.order-now-item {
+  position: relative;
+  margin: 0.1rem .3em; 
+  width: calc(40% - 2rem); 
+  height: 32em;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border: none;
+  border: 1px solid black;
+
+}
+.order-now-item:hover{
+  border: 2px solid black;
+  transition: all .1s ease-in-out;
+}
+
+.order-now-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #9b9a9a;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+  transition: background 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+.order-now-item:hover .overlay {
+  color: white;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+.order-now-item .overlay strong{
+  color: #4b4949;
+  font-size: var(--fs-xl);
+  background: -webkit-linear-gradient( #ffffff,#fff,#fff, #000000f3); 
+    background: linear-gradient(  #ffffff,#fff, #000000f3);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.order-cta {
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.order-cta strong {
+  color: #9BF00B;
+}
+
+/* Specific background images for each list item */
+.itemdeal-1 {
+  background-image: url('/dealer/1.webp');  
+}
+
+.itemdeal-2 {
+  background-image: url('/dealer/2.webp');  
+}
+
+.itemdeal-3 {
+  background-image: url('/dealer/3.webp');  
+}
+
+.itemdeal-4 {
+  background-image: url('/dealer/4.webp');  
+}
+
+.itemdeal-5 {
+  background-image: url('/dealer/5.webp');  
+}
+.itemdeal-6{
+  background-image: url('/dealer/6.webp');  
+
+}

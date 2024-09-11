@@ -7,7 +7,6 @@ import AOS from 'aos';
 import bag from "/assets/bag.svg";
 import { Link, useParams } from "react-router-dom";
 
-const jobListings = [];
 const Career = () => {
     const { id } = useParams(); 
 
@@ -35,15 +34,17 @@ const Career = () => {
                 : [...prev, experience]
         );
     };
-
-    const filteredJobs = jobListings.filter((job) => {
-        const typeMatch = selectedType.length === 0 || selectedType.includes(job.type);
-        const locationMatch = selectedLocation === 'All' || job.location === selectedLocation;
-        const experienceMatch =
-            selectedExperience.length === 0 || selectedExperience.includes(job.experience);
+    const filteredJobs = items.filter((job) => {
+        const typeMatch = selectedType.length === 0 || selectedType.some((type) =>
+            job.jobType.toLowerCase().trim() === type.toLowerCase().trim()
+        );
+        const locationMatch = selectedLocation === 'All' || job.location.toLowerCase().trim() === selectedLocation.toLowerCase().trim();
+        const experienceMatch = selectedExperience.length === 0 || selectedExperience.some((experience) =>
+            job.experience.toLowerCase().trim() === experience.toLowerCase().trim()
+        );
         return typeMatch && locationMatch && experienceMatch;
     });
-
+    
     useEffect(() => {
         AOS.init({ 
             duration: 1250 ,
@@ -83,11 +84,11 @@ const Career = () => {
                     handleExperienceChange={handleExperienceChange}
                     />
                 )}
-                <div className="job-listings" data-aos="fade-up">
-                {items && items.length > 0 ? (
-                    items.map((job, index) => (
-                        <div className="job-card" key={index} >
-                                <h3><img src={bag}/>{job.title}</h3>
+              <div className="job-listings" data-aos="fade-up">
+                    {filteredJobs && filteredJobs.length > 0 ? (
+                        filteredJobs.map((job, index) => (
+                            <div className="job-card" key={index} >
+                                <h3><img src={bag} alt="job-icon"/>{job.title}</h3>
                                 <p>{job.description}</p>
                                 <p><strong>Location:</strong> {job.location}</p>
                                 <p><strong>Type:</strong> {job.jobType}</p>
@@ -104,9 +105,7 @@ const Career = () => {
                         <div className="no-jobs">
                             <h3>There are currently no openings available. Please check back later.</h3>
                         </div>
-
                     )}
-
                 </div>
                 {error && (
                     <div className="alert alert-danger">

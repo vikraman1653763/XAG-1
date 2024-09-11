@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import image1 from './images/demo.webp';
-import image2 from './images/img2.png';
-import image3 from './images/img3.png';
+import image1 from './images/demo3.webp';
+import image2 from './images/demo3.webp';
+import image3 from './images/demo3.webp';
 import image4 from './images/img4.png';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
