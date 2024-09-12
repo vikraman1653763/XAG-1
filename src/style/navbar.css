@@ -12,8 +12,7 @@ nav {
     top: 0;
     z-index: 10;
     height: auto;
-backdrop-filter: blur( 1em );
--webkit-backdrop-filter: blur( 1em );
+
 }
 
 .logooimg {
@@ -114,6 +113,7 @@ nav ul li:hover > a, nav ul span:hover {
     border-radius: 5px;
     gap: 4px;
     right: 70%;
+    
 }
 
 

@@ -37,6 +37,21 @@ const menuVariants = {
   },
 };
 
+
+const hamburgerVariants = {
+  open: { rotate: 45, y: 6 },
+  closed: { rotate: 0, y: 0 },
+};
+
+const middleLineVariants = {
+  open: { opacity: 0 },
+  closed: { opacity: 1 },
+};
+
+const bottomLineVariants = {
+  open: { rotate: -45, y: -6 },
+  closed: { rotate: 0, y: 0 },
+};
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -55,9 +70,27 @@ const Navbar = () => {
         <img className="logooimg" src="/assets/logo.webp" alt="logo" />
       </Link>
       <div className="hamburger" onClick={toggleMenu}>
-        <div className={`line1 ${isOpen ? 'open' : ''}`}></div>
-        <div className={`line2 ${isOpen ? 'open' : ''}`}></div>
-        <div className={`line3 ${isOpen ? 'open' : ''}`}></div>
+      <motion.div
+          className="line1"
+          variants={hamburgerVariants}
+          initial={false}
+          animate={isOpen ? 'open' : 'closed'}
+          transition={{ duration: 0.3 }}
+        />
+        <motion.div
+          className="line2"
+          variants={middleLineVariants}
+          initial={false}
+          animate={isOpen ? 'open' : 'closed'}
+          transition={{ duration: 0.3 }}
+        />
+        <motion.div
+          className="line3"
+          variants={bottomLineVariants}
+          initial={false}
+          animate={isOpen ? 'open' : 'closed'}
+          transition={{ duration: 0.3 }}
+        />
       </div>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
   <li><Link to="/about">ABOUT</Link></li>

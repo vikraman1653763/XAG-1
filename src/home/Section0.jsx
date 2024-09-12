@@ -5,16 +5,13 @@ import image2 from './images/vid1.webm';
 import image3 from './images/vid1.webm';
 import image4 from './images/vid1.webm';
 
-import { IoIosArrowBack,IoIosArrowForward  } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const HomeCarousel = () => {
-  const [hasLoaded, setHasLoaded] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const intervalRef = useRef(null);
-  const videoRefs=useRef([]);
-
+  const videoRefs = useRef([]);
 
   const items = [
     {
@@ -47,8 +44,6 @@ const HomeCarousel = () => {
     },
   ];
 
-
-
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -63,21 +58,15 @@ const HomeCarousel = () => {
   };
 
   const showNextSlide = () => {
-    if (!isTransitioning) {
-      stopAutoSlide();
-      setIsTransitioning(true);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-      startAutoSlide();
-    }
+    stopAutoSlide(); // Stop the current interval
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    startAutoSlide(); // Start a new interval
   };
 
   const showPrevSlide = () => {
-    if (!isTransitioning) {
-      stopAutoSlide();
-      setIsTransitioning(true);
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-      startAutoSlide();
-    }
+    stopAutoSlide();
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+    startAutoSlide();
   };
 
   useEffect(() => {
@@ -86,55 +75,50 @@ const HomeCarousel = () => {
   }, []);
 
   useEffect(() => {
-    setIsTransitioning(false); 
-    videoRefs.current.forEach((video,index)=>{
-      if(video){
-        if(index === currentIndex){
-          video.currentTime=0;
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === currentIndex) {
+          video.currentTime = 0;
           video.play();
-        }else{
-          video.pause;
+        } else {
+          video.pause();
         }
       }
-    })
+    });
   }, [currentIndex]);
 
-  useEffect(() => {
-    setHasLoaded(true);  
-    startAutoSlide();
-    return () => stopAutoSlide();
-  }, []);
-  
   return (
     <div className="home-carousel">
       <div
         className="home-list"
         style={{
           transform: `translateX(-${currentIndex * 100}%)`,
-          transition: isTransitioning ? "transform 0.6s ease-in-out" : "none"
-        }}>
+          transition: "transform 0.1s cubic-bezier(.175, .885, .32, 1.275)  "
+        }}
+      >
+        {items.map((item, index) => (
+          <div
+            className={`home-item ${currentIndex === index ? "home-active" : ""}`}
+            key={index}
+          >
+            <video
+              className="home-image"
+              autoPlay
+              muted
+              ref={(el) => (videoRefs.current[index] = el)}
+            >
+              <source src={item.image} type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
 
-       {items.map((item, index) => (
-  <div
-    className={`home-item ${
-      currentIndex === index && hasLoaded ? "home-active" : ""
-    }`}
-    key={index}
-  >
-    {/* <img className="home-image" src={item.image} alt={item.title} /> */}
-    <video className="home-image" autoPlay muted
-    ref={(el)=>(videoRefs.current[index]=el)}>
-  <source src={item.image} type="video/webm"  />
-  Your browser does not support the video tag.
-</video>
-
-    
-    <div className="home-introduce">
-      <div className="home-title">{item.title}</div>
-      <div className="home-topic">{item.topic}</div>
-      <div className="home-des">{item.description}</div>
+            <div className="home-introduce">
+              <div className="home-title">{item.title}</div>
+              <div className="home-topic">{item.topic}</div>
+              <div className="home-des">{item.description}</div>
               <button className="home-seeMore">
-                <a href={item.link}> SEE MORE <MdKeyboardDoubleArrowRight /> </a>
+                <a href={item.link}>
+                  SEE MORE <MdKeyboardDoubleArrowRight />
+                </a>
               </button>
             </div>
           </div>
