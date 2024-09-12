@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import image1 from './images/demo3.webp';
-import image2 from './images/demo3.webp';
-import image3 from './images/demo3.webp';
-import image4 from './images/img4.png';
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import image1 from './images/demo.webm';
+import image2 from './images/vid1.webm';
+import image3 from './images/vid1.webm';
+import image4 from './images/vid1.webm';
+
+import { IoIosArrowBack,IoIosArrowForward  } from "react-icons/io";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const HomeCarousel = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const intervalRef = useRef(null);
+  const videoRefs=useRef([]);
+
 
   const items = [
     {
@@ -42,9 +47,7 @@ const HomeCarousel = () => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const intervalRef = useRef(null);
+
 
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
@@ -79,12 +82,21 @@ const HomeCarousel = () => {
 
   useEffect(() => {
     startAutoSlide();
-
     return () => stopAutoSlide();
   }, []);
 
   useEffect(() => {
     setIsTransitioning(false); 
+    videoRefs.current.forEach((video,index)=>{
+      if(video){
+        if(index === currentIndex){
+          video.currentTime=0;
+          video.play();
+        }else{
+          video.pause;
+        }
+      }
+    })
   }, [currentIndex]);
 
   useEffect(() => {
@@ -109,7 +121,14 @@ const HomeCarousel = () => {
     }`}
     key={index}
   >
-    <img className="home-image" src={item.image} alt={item.title} />
+    {/* <img className="home-image" src={item.image} alt={item.title} /> */}
+    <video className="home-image" autoPlay muted
+    ref={(el)=>(videoRefs.current[index]=el)}>
+  <source src={item.image} type="video/webm"  />
+  Your browser does not support the video tag.
+</video>
+
+    
     <div className="home-introduce">
       <div className="home-title">{item.title}</div>
       <div className="home-topic">{item.topic}</div>

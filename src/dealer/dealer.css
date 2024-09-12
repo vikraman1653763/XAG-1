@@ -367,10 +367,14 @@
     padding: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    border: 1px solid red;
+    height: 30vh;
   }
-
+  .semi-circle{
+    display: none;
+  }
   .dealer-head {
-    font-size: var(--fs-xxl) !important;
+    font-size: var(--fs-xl) !important;
     margin-bottom: 1rem;
   }
 

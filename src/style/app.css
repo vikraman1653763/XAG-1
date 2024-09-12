@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --fs-xxs: .5rem; 
+    --fs-xs: .8rem; 
+    --fs-s: 1rem; 
+    --fs-m: 1.5rem;  
+    --fs-l: 2rem;   
+    --fs-xl: 3rem;  
+    --fs-xxl: 4rem;  
+    --fs-xxxl: 8rem; 
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #7FB00B #0C0C0C;
+    scroll-behavior: smooth;
+    scroll-snap-type:y mandatory;
+    scroll-snap-align: start;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    position: relative;
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Hide scrollbar automatically when not in use */
+    overflow-y: scroll;
+}
+a{
+    color: white ;
+    text-decoration: none !important;
+}
+a:visited {
+    color: inherit; 
+  }
+p {
+    font-size: var(--fs-s);
+    font-weight: 500;
+}
+span{
+
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-weight: 800;
+}
+.error{
+    color: red;
+    
+}
+main{
+    margin-top: 3rem;
+}
+
+@media( max-width: 767px){
+main{
+    margin-top: 3.5em;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    main{
+        margin-top: 3.5em;   
+    }
+}
+
+
+.Home-page{
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(323deg, rgba(0,0,0,1) 68%, rgba(94,253,45,0.21052170868347342) 100%);
+    background: -webkit-linear-gradient(323deg, rgba(0,0,0,1) 68%, rgba(94,253,45,0.21052170868347342) 100%);
+    background: linear-gradient(323deg, rgba(0,0,0,1) 68%, rgba(94,253,45,0.21052170868347342) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#5efd2d",GradientType=1);
+
+
+
+
+
+
+
+
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}

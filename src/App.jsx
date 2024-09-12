@@ -27,8 +27,8 @@ import BlogList from'./admin/BlogList.jsx';
 import CareerList from'./admin/CareerList.jsx';
 import NotFound from './components/NotFound.jsx'; 
 import FormSuccess from './components/success.jsx';
-
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import './style/app.css'
 const App = () => {
 
 

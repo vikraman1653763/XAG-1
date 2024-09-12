@@ -25,6 +25,7 @@ const SectionAbout = () => {
           </p>
         </div>
         <div className="aboutpage-myvideo" >
+          
           <video id="myVideo" autoPlay loop>
             <source src="/assets/video.webm" type="video/mp4" />
           </video>

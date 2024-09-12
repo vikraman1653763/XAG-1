@@ -13,7 +13,7 @@ import Section9 from '../home/Section8';
 
 function Home() {
   return (
-    <div>
+    <div className='Home-page'>
       <Section0/>
       <Section2/>
       <Section3/>

@@ -864,9 +864,6 @@ video::-webkit-media-controls {
       text-align: justify;
   }
 
-  main {
-      padding: 1rem;
-  }
 
   .gif-container {
       min-height: 100%;
