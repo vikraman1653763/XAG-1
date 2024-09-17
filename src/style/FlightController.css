@@ -1,0 +1,1139 @@
+/* FlightController.css */
+.controller{
+    overflow-x: hidden;
+}
+.contoller-title{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 50px;
+    color: #9BF00B;
+    text-transform: uppercase;
+    font-size: 64px;
+}
+.controller p{
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.flight-controller-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.translate-right {
+    transform: translateX(500px); 
+}
+
+.translate-left {
+    transform: translateX(-500px); 
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flight-controller-image {
+    max-width: 50rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+.description {
+    text-align: left;
+    color: aqua;
+    margin-top: 20px;
+}
+
+
+  
+  .description ul  {
+      list-style-type: none;
+      padding-left: 20px;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      flex-direction: column;
+  }
+  .description ul li {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #9BF00B;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 10px;
+    transition: all 1s ease-in-out;
+  }
+
+.description ul li:hover{
+    color: #000000;
+    background-color: #9BF00B;
+    border: 2px solid #ffffff;
+
+}
+
+
+/* part */
+.parts-section {
+  height: 120%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  overflow-x: hidden;
+}
+
+.parts-card {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+  background: rgb(0, 72, 226);
+  border-radius: 83% 17% 47% 53% / 39% 0% 100% 61%;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+
+.parts-background {
+  position: absolute;
+  inset: 0;
+  background: rgb(144,70,12);
+  background-image: linear-gradient(to right top, #5ac73b, #5ac73b, #5ac73b, #5ac73b, #5ac73b, #60cc39, #66d037, #6cd535, #7ae02f, #88ea27, #97f51a, #a7ff00);
+}
+
+.parts-logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%) scale(2);
+  transition: all 0.6s ease-in-out;
+}
+
+.parts-logo img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.parts-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: #000000;
+  transform: translateX(-2rem);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.parts-icon .parts-svg {
+  fill: rgba(255, 255, 255, 0.797);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.parts-box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.075);
+  border-top: 2px solid rgba(255, 255, 255, 0.473);
+  border-right: 1px solid rgba(255, 255, 255, 0.445);
+  border-radius: inherit;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.parts-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.parts-box:hover .parts-svg,
+.parts-box.active .parts-svg {
+  fill: white;
+}
+
+.parts-box1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+}
+
+.parts-box1::before {
+  background-image: url('/fc/fmu.webp');
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: left top;
+  background-color: #d6d3d300;
+  transform: translateX(-10%);
+}
+
+.parts-box1:hover::before,
+.parts-box1.active::before {
+  opacity: 1;
+}
+
+.parts-box1:hover .parts-icon .parts-svg,
+.parts-box1.active .parts-icon .parts-svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.parts-box2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  transition-delay: 0.2s;
+}
+
+.parts-box2::before {
+  background-image: url('/fc/pmu.webp');
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: left top;
+  background-color: #d6d3d300;
+  transform: translateX(-11%);
+}
+
+.parts-box2:hover::before,
+.parts-box2.active::before {
+  opacity: 1;
+}
+
+.parts-box2:hover .parts-icon .parts-svg,
+.parts-box2.active .parts-icon .parts-svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.parts-box3 {
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
+  transition-delay: 0.4s;
+}
+
+.parts-box3::before {
+  overflow: hidden;
+  background-image: url('/fc/gnss.webp');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: left top;
+  background-color: #00000000;
+  transform: translate(-5%, -15%);
+}
+
+.parts-box3:hover::before,
+.parts-box3.active::before {
+  opacity: 1;
+}
+
+.parts-box3:hover .parts-icon .parts-svg,
+.parts-box3.active .parts-icon .parts-svg {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.parts-card:hover .parts-box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.parts-card:hover .parts-logo {
+  transform: translate(0, -150%);
+  bottom: 20px;
+  right: 20px;
+}
+
+.parts-icon-4 {
+  border: 2ps solid black;
+}
+
+.parts-details {
+  flex: 1;
+  padding: 1rem;
+  color: #9bf00b;
+  border-radius: 10px;
+  transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  background-color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  opacity: 0;
+  transform: translateX(-50rem);
+}
+
+.parts-details-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.parts-details-content p {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.parts-details.active {
+  opacity: 1;
+  transform: translateX(0rem);
+}
+
+.parts-details-content {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+  /* Section4 */
+.mode-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 2rem;
+ 
+}
+.description h2 ,.working-modes h2{
+  font-size: clamp(2vw, 7vw, 50vw);
+}
+
+.mode-card {
+  background-color: #9BF00B;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease-in-out, ;
+}
+
+.mode-card:hover {
+  box-shadow: inset -10px 10px 20px rgba(0, 0, 0, 0.6);
+
+}
+
+.mode-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.mode-card p {
+  margin: 10px 0 0;
+  font-weight: 400;
+}
+
+.mode-card:hover  img {
+  transform: translateX(400%);
+  filter: drop-shadow(-6px 10px 2px rgba(0, 0, 0, .4)); 
+
+
+} 
+
+.mode-card img{
+  transition: transform 1s;
+  filter: drop-shadow(6px 10px 2px rgba(0, 0, 0, .4)); 
+
+  height: 50px;
+  width: 50px;
+}
+
+/* section 5 */
+
+
+.controller-specifications {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+}
+.controller-specifications H2{
+  color: #9BF00B;
+  font-weight: 700;
+  font-size: 5rem;
+
+
+}
+
+.controller-specs-container { 
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+justify-items: center;
+align-items: center;
+  margin-top: 20px;
+  gap: 2rem;
+
+}
+
+.controller-spec-card {
+  background-color: #000000;
+  border: 2px solid #9BF00B;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-align: center;
+  text-overflow:clip;
+  line-break:strict;
+  padding: 20px;
+  width: 15rem;
+  z-index: 2;
+  height: 15rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 4;
+}
+
+
+
+
+
+
+
+
+.controller-spec-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.controller-spec-card p {
+  font-size: 1rem;
+  color: #ffffff;
+    margin-top: 10px;
+}
+
+.fc-img{
+  position: absolute;
+  transform: translateX(-2rem);
+}
+
+.fc-img img{
+width: 80rem;
+height: 50rem;
+
+}
+
+
+.ripple-background ,.ripple-background2{
+  position: relative;
+  transform: translateY(-24rem);
+ 
+}
+
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: #9BF00B;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+.small2{
+  width: 200px;
+  height: 200px;
+  right: -100px;
+  bottom: -100px;
+}
+
+
+.medium{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+.medium2{
+  width: 400px;
+  height: 400px;
+  right: -200px;
+  bottom: -200px;
+}
+
+.large{
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+.large2{
+  width: 600px;
+  height: 600px;
+  right: -300px;
+  bottom: -300px;
+}
+
+.xlarge{
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+.xlarge2{
+  width: 800px;
+  height: 800px;
+  right: -400px;
+  bottom: -400px;
+}
+.xxlarge{
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px;
+}
+.xxlarge2{
+  width: 1000px;
+  height: 1000px;
+  right: -500px;
+  bottom: -500px;
+}
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+/*new section2 */
+
+.des-container{
+  height: 50vh;
+  text-align: center;
+  
+}
+
+.des-container h2,.working-modes h2{
+  font-size: clamp(2vw, 10vw, 50vw);
+  margin-bottom: 10px;
+  background-image: url('/assets/dronecamera.gif');
+  background-size: contain;
+
+  background-position: center top;
+  color: transparent;
+  background-clip: border-box;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  text-shadow: rgba(185, 185, 185, 0.219) 1px 0 1px;
+  font-weight: 900;
+  margin-top: -50px;
+}
+.des-text-wrapper p{
+  padding-top: .5rem;
+  line-height: 0;
+  height: 0;
+
+}
+.des-text-wrapper p span{
+  color: #9BF00B;
+  font-size: clamp(.5vw, 4vw, 10vw);
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  line-height: 0;
+  
+  &:nth-of-type(5)
+    {
+    color: #9BF00B;
+  }
+}
+
+/* section6 */
+.fc-adv{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #212121;
+
+}
+.fc-adv-card {
+  width: 70%;
+  height: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.2s ease-in-out;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+}
+.fc-adv-img-container{
+  height: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.fc-adv-img {
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+  object-fit: contain;
+}
+.fc3{
+  position: absolute;
+  bottom: 30%;
+  right: 60%;
+}
+.fc2{
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+}
+
+.fc1{
+  position: absolute;
+  top: 15%;
+left: 60%;
+}
+
+
+.fc-adv-textBox {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+  color: #9BF00B;
+  text-shadow: 1px 1px 2px #9BF00B;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+
+
+.fc-adv-textBox h2 {
+  margin-bottom: 1rem;
+}
+.fc-adv-textBox p {
+  line-height: 0%;
+}
+
+.fc-adv-textBox p span{
+  color: white;
+  line-height: 0%;
+  font-size: 1.6em;
+}
+
+.fc-adv-card:hover > .fc-adv-textBox {
+  opacity: 1;
+}
+.fc-adv-card:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.fc-adv-card:hover > .fc-adv-img-container .fc1 {
+  filter: blur(7px);
+  animation: fc-adv-anim1 7s infinite;
+}
+
+@keyframes fc-adv-anim1 {
+  0% {
+    transform: translateY(0) scale(.5);
+  
+  }
+
+  33% {
+    
+    transform: translate(-300px,-100px) scale(.8);
+  }
+  66%{
+    transform: translate(-1000px,0) scale(.6);
+
+  }
+
+  100% {
+    transform: translateY(0) scale(.5);
+}}
+
+
+
+.fc-adv-card:hover > .fc-adv-img-container .fc2 {
+  filter: blur(7px);
+  animation: fc-adv-anim 3s infinite;
+}
+
+@keyframes fc-adv-anim {
+  0% {
+    transform: translateY(0) scale(1.2);
+  
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1.2);
+}}
+
+
+
+.fc-adv-card:hover > .fc-adv-img-container .fc3 {
+  filter: blur(7px);
+  animation: fc-adv-anim3 7s infinite;
+}
+
+@keyframes fc-adv-anim3 {
+  0% {
+    transform: translateY(0) scale(.5);
+  
+  }
+
+  33% {
+    
+    transform: translate(300px,100px) scale(.8);
+  }
+  66%{
+    transform: translate(1000px,0px) scale(.6);
+
+  }
+
+  100% {
+    transform: translateY(0) scale(.5);
+}}
+
+
+/* For screens 768px or less */
+@media (max-width: 768px) {
+    .controller {
+        margin-top: 50px;
+      }
+      
+      .contoller-title {
+        margin-top: 3rem;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .controller p{
+      font-size: .8rem;
+      font-weight: 400;
+    }
+    .flight-controller-container {
+      padding: px;
+    }
+
+    .flight-controller-image {
+        max-width: 25rem;
+      }
+
+      .translate-right {
+        transform: translateX(250px); 
+    }
+    
+    .translate-left {
+        transform: translateX(-250px); 
+    }
+    .des-container{
+      height: auto;
+    }
+    .des-container h2, .working-modes h2 {
+      font-size: 3rem;
+      margin-top: 1em;
+    }
+
+    .des-text-wrapper{
+      padding-bottom: .5rem;
+    }
+    .des-text-wrapper p span{
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 0;
+    }   
+
+.parts-section{
+  overflow: hidden;
+  height: 400px;
+  padding-bottom: 10rem;
+}
+  .parts-card {
+    width: 20rem;
+        height: 15rem;
+        object-fit: contain;
+    }
+    .parts-details-content {
+      position: absolute;
+      width: 10rem;
+      height: 20%;
+      transform: translate(2rem,0rem);
+
+    }
+    
+    .parts-details.active {
+      
+      opacity: 1;
+      transform: translate(-18rem,10rem);
+    }
+    .parts-details-content{
+      line-height: 100%;
+      width: 80vw;
+    }
+    .parts-details-content h2 {
+        font-size: 1rem;
+        padding: 0;
+        line-height: 100%;
+
+    }
+
+    .parts-details-content p {
+        font-size: .7rem;
+    }
+.mode-card-container {
+  overflow: hidden;
+}
+    .mode-card {
+        width: 90%;
+    }
+
+    .mode-card h3 {
+      font-size: 1.2rem;
+  }
+  .mode-card p {
+    font-size: 1rem;
+}
+.controller-specifications h2{
+    font-size: 2.2rem;
+    color: white;
+    z-index: 3;
+}
+    .controller-spec-card {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .controller-spec-card h3 {
+        font-size: 1.3rem;
+        
+      }
+
+    .controller-spec-card p {
+        font-size: .7rem;
+        font-weight: normal;
+    }
+    .fc-adv{
+      overflow: hidden;
+    }
+
+    .fc-adv-card {
+        width: 90%;
+        height: 60%;
+    }
+ 
+    .fc-adv-textBox {
+        font-size: 1.5rem;
+    }
+    .fc-adv-card {
+      width: 90%;
+      height: 30%;
+      border-radius: 20px;
+    }
+    .fc-adv-textBox h2{
+      font-size: 1rem;
+    }
+    .fc-adv-textBox p span {
+      font-size: .6rem;
+    }
+    .fc-adv-img-container{
+      height: inherit;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+    }
+    .fc-adv-img {
+      height: 50%;
+      transition: 0.2s ease-in-out;
+      z-index: 1;
+      object-fit: contain;
+    }
+    .fc3{
+      position: absolute;
+      bottom: 30%;
+      right: 60%;
+    }
+    .fc2{
+      position: absolute;
+      bottom: 0;
+      right: 30%;
+    }
+    
+    .fc1{
+      position: absolute;
+      top: 15%;
+    left: 60%;
+    }
+
+    .ripple-background, .ripple-background2 {
+      display: none;
+    }
+    .fc-img {
+      transform: translateX(0rem);
+    }
+
+    .fc-img  img{
+    width: 50rem;
+    height: 30rem;
+      }
+}
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .controller {
+    margin-top: 4.375rem;
+  }
+
+  .controller-title {
+    font-size: 3rem;
+    line-height: 3.125rem;
+  }
+
+  .controller p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .flight-controller-container {
+    padding: 1.25rem;
+  }
+
+  .flight-controller-image {
+    max-width: 31.25rem;
+  }
+
+  .translate-right {
+    transform: translateX(31.25rem);
+  }
+
+  .translate-left {
+    transform: translateX(-31.25rem);
+  }
+
+  .des-container {
+    height: auto;
+  }
+
+  .des-container h2,
+  .working-modes h2 {
+    font-size: 4rem;
+    margin-top: 1.25rem;
+  }
+
+  .des-text-wrapper {
+    padding-bottom: 0.625rem;
+  }
+
+  .des-text-wrapper p span {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .parts-section {
+    overflow: hidden;
+    height: 25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .parts-card {
+    width: 25rem;
+    height: 18.75rem;
+  }
+
+  .parts-details-content {
+    position: absolute;
+    width: 12.5rem;
+    height: 20%;
+    transform: translate(22rem, -15rem);
+  }
+
+  .parts-details.active {
+    opacity: 1;
+    transform: translate(-22.5rem, 12.5rem);
+  }
+
+  .parts-details-content {
+    line-height: 1;
+    width: 20rem;
+  }
+
+  .parts-details-content h2 {
+    font-size: 1.3rem;
+    padding: 0;
+    line-height: 100%;
+  }
+
+  .parts-details-content p {
+    font-size: 0.7rem;
+  }
+
+  .mode-card-container {
+    overflow: hidden;
+  }
+
+  .mode-card {
+    width:20rem;
+  }
+
+  .mode-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .mode-card p {
+    font-size: 1.125rem;
+  }
+
+  .controller-specifications h2 {
+    font-size: 2.5rem;
+    color: white;
+    z-index: 3;
+  }
+
+  .controller-spec-card {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .controller-spec-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .controller-spec-card p {
+    font-size: 0.875rem;
+    font-weight: normal;
+  }
+
+  .fc-adv {
+    overflow: hidden;
+  }
+
+  .fc-adv-card {
+    width: 90%;
+    height: 40%;
+  }
+
+  .fc-adv-textBox {
+    font-size: 1.5rem;
+  }
+
+  .fc-adv-card {
+    width: 90%;
+    height: 40%;
+    border-radius: 1.25rem;
+  }
+
+  .fc-adv-textBox h2 {
+    font-size: 1.25rem;
+  }
+
+  .fc-adv-textBox p span {
+    font-size: 1.5rem;
+  }
+
+  .fc-adv-img-container {
+    height: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .fc-adv-img {
+    height: 50%;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    object-fit: contain;
+  }
+
+  .fc3 {
+    position: absolute;
+    bottom: 30%;
+    right: 60%;
+  }
+
+  .fc2 {
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+  }
+
+  .fc1 {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+  }
+
+  .ripple-background,
+  .ripple-background2 {
+    display: none;
+  }
+
+  .fc-img {
+    transform: translateX(0);
+  }
+
+  .fc-img img {
+    width: 50rem;
+    height: 30rem;
+  }
+}

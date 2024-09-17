@@ -1,0 +1,522 @@
+[
+    {
+        "ID": 1,
+        "Product": "260Wh/kg -10C-LION -",
+        "Model": "ZXGT-6S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-6S40Ah model offers a 23.1V rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 924whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 6 cells rated at 3.85 V each.",
+        "price": "282",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/1.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "23.1V",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "924wh",
+            "Cell Rated Voltage": "3.85 V",
+            "Cells": 6,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 2,
+        "Product": "260Wh/kg -10C-LION -",
+        "Model": "ZXGT-12S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S40Ah model offers a 46.2V rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 1848whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.85 V each.",
+        "price": "168",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/2.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "46.2V",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "1848wh",
+            "Cell Rated Voltage": "3.85 V",
+            "Cells": 12,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 3,
+        "Product": "260Wh/kg -10C-LION -",
+        "Model": "ZXGT-14S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S40Ah model offers a 53.9V rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 2156whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 14 cells rated at 3.85 V each.",
+        "price": "126",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/3.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "53.9V",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "2156wh",
+            "Cell Rated Voltage": "3.85 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 4,
+        "Product": "260Wh/kg -10C-LION -",
+        "Model": "ZXGT-18S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-18S40Ah model offers a 69.3v rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 2772whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 18 cells rated at 3.85 V each.",
+        "price": "340",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/4.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "69.3v",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "2772wh",
+            "Cell Rated Voltage": "3.85 V",
+            "Cells": 18,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 5,
+        "Product": "270Wh/kg -10C-LION ",
+        "Model": "ZXGT-6S54Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-6S54Ah model offers a 22.2V rated voltage and 54 AH capacity, making it ideal for high-performance applications. With a wattage of 1198.8whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 6 cells rated at 3.7 V each.",
+        "price": "434",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/5.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "22.2V",
+            "Capacity-Ah": "54 AH",
+            "Wattage": "1198.8wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 6,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 6,
+        "Product": "270Wh/kg -10C-LION ",
+        "Model": "ZXGT-12S30Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S30Ah model offers a 44.4V rated voltage and 30 AH capacity, making it ideal for high-performance applications. With a wattage of 1332whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.7 V each.",
+        "price": "386",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/6.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "44.4V",
+            "Capacity-Ah": "30 AH",
+            "Wattage": "1332wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 12,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 7,
+        "Product": "270Wh/kg -10C-LION ",
+        "Model": "ZXGT-14S30Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S30Ah model offers a 51.8V rated voltage and 30 AH capacity, making it ideal for high-performance applications. With a wattage of 1554whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 14 cells rated at 3.7 V each.",
+        "price": "342",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/7.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "51.8V",
+            "Capacity-Ah": "30 AH",
+            "Wattage": "1554wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 8,
+        "Product": "270Wh/kg -10C-LION ",
+        "Model": "ZXGT-18S30Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-18S30Ah model offers a 66.6v rated voltage and 30 AH capacity, making it ideal for high-performance applications. With a wattage of 1998WhWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 18 cells rated at 3.7 V each.",
+        "price": "193",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/8.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "66.6v",
+            "Capacity-Ah": "30 AH",
+            "Wattage": "1998Wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 18,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 9,
+        "Product": "270Wh/kg -10C-LION ",
+        "Model": "ZXGT-24s54Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-24s54Ah model offers a 88.8V rated voltage and 54 AH capacity, making it ideal for high-performance applications. With a wattage of 4795.2whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 24 cells rated at 3.7 V each.",
+        "price": "443",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/9.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "88.8V",
+            "Capacity-Ah": "54 AH",
+            "Wattage": "4795.2wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 24,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 10,
+        "Product": "320Wh/kg -10C-LION ",
+        "Model": "ZXGT-12S36Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S36Ah model offers a 44.4V rated voltage and 36 AH capacity, making it ideal for high-performance applications. With a wattage of 1598.4WhWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.7 V each.",
+        "price": "233",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/10.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "44.4V",
+            "Capacity-Ah": "36 AH",
+            "Wattage": "1598.4Wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 12,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 11,
+        "Product": "320Wh/kg -10C-LION ",
+        "Model": "ZXGT-14S36Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S36Ah model offers a 51.8V rated voltage and 36 AH capacity, making it ideal for high-performance applications. With a wattage of 1864.8WhWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 14 cells rated at 3.7 V each.",
+        "price": "321",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/11.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "51.8V",
+            "Capacity-Ah": "36 AH",
+            "Wattage": "1864.8Wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 12,
+        "Product": "320Wh/kg -10C-LION ",
+        "Model": "ZXGT-18S36Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-18S36Ah model offers a 66.6v rated voltage and 36 AH capacity, making it ideal for high-performance applications. With a wattage of 2397.6WhWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 18 cells rated at 3.7 V each.",
+        "price": "416",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/12.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "66.6v",
+            "Capacity-Ah": "36 AH",
+            "Wattage": "2397.6Wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 18,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 13,
+        "Product": "300Wh/kg -10C-LION",
+        "Model": "ZXGT-6S32Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-6S32Ah model offers a 22.2V rated voltage and 32 AH capacity, making it ideal for high-performance applications. With a wattage of 710.4whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 6 cells rated at 3.7 V each.",
+        "price": "233",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/13.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "22.2V",
+            "Capacity-Ah": "32 AH",
+            "Wattage": "710.4wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 6,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 14,
+        "Product": "300Wh/kg -10C-LION",
+        "Model": "ZXGT-7S32Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-7S32Ah model offers a 25.9V rated voltage and 32 AH capacity, making it ideal for high-performance applications. With a wattage of 828.8whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 7 cells rated at 3.7 V each.",
+        "price": "418",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/14.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "25.9V",
+            "Capacity-Ah": "32 AH",
+            "Wattage": "828.8wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 7,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 15,
+        "Product": "300Wh/kg -10C-LION",
+        "Model": "ZXGT-8s17.5Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-8s17.5Ah model offers a 29.6V rated voltage and 17.5 AH capacity, making it ideal for high-performance applications. With a wattage of 518whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 8 cells rated at 3.7 V each.",
+        "price": "307",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/15.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "29.6V",
+            "Capacity-Ah": "17.5 AH",
+            "Wattage": "518wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 8,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 16,
+        "Product": "300Wh/kg -10C-LION",
+        "Model": "ZXGT-12S32Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S32Ah model offers a 44.4V rated voltage and 32 AH capacity, making it ideal for high-performance applications. With a wattage of 1420.8whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.7 V each.",
+        "price": "227",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/16.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "44.4V",
+            "Capacity-Ah": "32 AH",
+            "Wattage": "1420.8wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 12,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 17,
+        "Product": "300Wh/kg -10C-LION",
+        "Model": "ZXGT-14S48Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S48Ah model offers a 51.8V rated voltage and 48 AH capacity, making it ideal for high-performance applications. With a wattage of 2486.4whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 14 cells rated at 3.7 V each.",
+        "price": "497",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/17.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "51.8V",
+            "Capacity-Ah": "48 AH",
+            "Wattage": "2486.4wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 18,
+        "Product": "236Wh/kg -10C-LION",
+        "Model": "ZXGT-4S16Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-4S16Ah model offers a 14.8V rated voltage and 16 AH capacity, making it ideal for high-performance applications. With a wattage of 236.8whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 4 cells rated at 3.7 V each.",
+        "price": "138",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/18.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "14.8V",
+            "Capacity-Ah": "16 AH",
+            "Wattage": "236.8wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 4,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 19,
+        "Product": "310Wh/kg -10C-LION -SEMI SOLID",
+        "Model": "ZXGT-12S67AH",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S67AH model offers a 44.4V rated voltage and 67 AH capacity, making it ideal for high-performance applications. With a wattage of 2974.8whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.7 V each.",
+        "price": "495",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/19.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "44.4V",
+            "Capacity-Ah": "67 AH",
+            "Wattage": "2974.8wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 12,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 20,
+        "Product": "310Wh/kg -10C-LION -SEMI SOLID",
+        "Model": "ZXGT-14S67AH",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S67AH model offers a 51.8V rated voltage and 67 AH capacity, making it ideal for high-performance applications. With a wattage of 3470.6whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 14 cells rated at 3.7 V each.",
+        "price": "369",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/20.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "51.8V",
+            "Capacity-Ah": "67 AH",
+            "Wattage": "3470.6wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 21,
+        "Product": "976Wh/kg -10C-LION -SEMI SOLID",
+        "Model": "ZXGT-12S22AH",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S22AH model offers a 44.4V rated voltage and 22 AH capacity, making it ideal for high-performance applications. With a wattage of 976.8whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 44.4 V each.",
+        "price": "166",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/21.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "44.4V",
+            "Capacity-Ah": "22 AH",
+            "Wattage": "4462.2wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 18,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 22,
+        "Product": "340Wh/kg -10C-LION ",
+        "Model": "ZXGT-6S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-6S40Ah model offers a 22.2V rated voltage and 40 AH  capacity, making it ideal for high-performance applications. With a wattage of 888whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 6 cells rated at 3.7 V each.",
+        "price": "295",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/22.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "22.2V",
+            "Capacity-Ah": "40 AH ",
+            "Wattage": "888wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 6,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 23,
+        "Product": "340Wh/kg -10C-LION ",
+        "Model": "ZXGT-12S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-12S40Ah model offers a 44.4V rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 1776whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.7 V each.",
+        "price": "244",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/23.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "44.4V",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "1776wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 12,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 24,
+        "Product": "340Wh/kg -10C-LION ",
+        "Model": "ZXGT-14S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S40Ah model offers a 51.8V rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 2072whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 14 cells rated at 3.7 V each.",
+        "price": "241",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/24.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "51.8V",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "2072wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 25,
+        "Product": "340Wh/kg -10C-LION ",
+        "Model": "ZXGT-18S40Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-18S40Ah model offers a 66.6V rated voltage and 40 AH capacity, making it ideal for high-performance applications. With a wattage of 2664whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 18 cells rated at 3.7 V each.",
+        "price": "371",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/25.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "66.6V",
+            "Capacity-Ah": "40 AH",
+            "Wattage": "2664wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 18,
+            "Dimensions": "150x50x30mm"
+        }
+    },
+    {
+        "ID": 26,
+        "Product": "1450Wh/kg -10C-LION ",
+        "Model": "ZXGT-14S28Ah",
+        "type": "SEMI SOLID",
+        "description": "The ZXGT-14S28Ah model offers a 51.8V rated voltage and 28 AH capacity, making it ideal for high-performance applications. With a wattage of 1450whWh and semi solid cell type, it ensures optimal efficiency and reliability. Suitable for various industrial uses with 12 cells rated at 3.7 V each.",
+        "price": "371",
+        "connectorImages": ["/connector/c1.webp", "/connector/c2.webp", "/connector/c5.webp", "/connector/c3.webp", "/connector/c4.webp"],
+
+        "image": "/batteryPic/26.webp",
+        "name": "X Power Plus",
+        "specs": {
+            "Rated Voltage": "51.8V",
+            "Capacity-Ah": "28 AH",
+            "Wattage": "2664wh",
+            "Cell Rated Voltage": "3.7 V",
+            "Cells": 14,
+            "Dimensions": "150x50x30mm"
+        }
+    }
+]

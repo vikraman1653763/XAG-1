@@ -1,0 +1,47 @@
+.dealer-form-success {
+    padding: 2rem;
+    
+    border-radius: 8px;
+    width: 99vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .success-tick{
+    margin-left: 2rem;
+    width: 30em;
+    height: 30em;
+
+  }
+  .success-thank1 {
+    font-size: 2rem;
+    color: #5beea4; 
+    margin-bottom: 1.5rem;
+  }
+  
+  .success-thank2 {
+    color: aliceblue;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dealer-back-button {
+    background-color: #9BF00B;
+    color: #000000;
+    padding: 0.55rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .dealer-back-button:hover {
+    background-color: #5beea4;
+  }
+  

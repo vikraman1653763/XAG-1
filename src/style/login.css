@@ -1,0 +1,106 @@
+.login-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 30em;
+    padding: 2em;
+   height: 20em;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.61);
+    box-shadow: 0 8px 32px 0 rgba(117, 117, 117, 0.158);
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100% !important;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border: 1px solid #949494;
+    outline: none;
+    background: transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .login-box .user-box input:focus{
+    border: 1px solid #ffffff;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+  }
+  .login-box .user-box input::placeholder{
+    color: #949494;
+  } 
+  
+ /* === removing default button style ===*/
+.login-button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.login-button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #9BF00B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.login-button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+  
+
+@media only screen and (max-width: 767px) {
+
+  .login-container{
+    height: 400px;
+  }
+  .login-box{
+    width: 300px;
+    padding: 40px;
+   height: 300px;
+  }
+}

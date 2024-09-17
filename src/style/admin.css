@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'legacy';
+    src: url('/fonts/legacy.ttf');
+    font-weight: 800;
+}
+
+.admin-container {
+    border: 1px solid #636363;
+    background-color: #d8d6d6;
+    color: aliceblue;
+    background-image: url('/assets/adminbg.png');
+}
+
+.admin-title {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 115%;
+    letter-spacing: -1.82px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.change-box {
+    width: 95%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    margin: 10rem 1rem;
+}
+
+.admin-box {
+    min-width: calc(33% - 20px);
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    height: 70%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    backdrop-filter: blur(10px) saturate(10%);
+    color: #000000;
+    background: #ffffff2a;
+    box-shadow: 15px 15px 30px #1a19195b,
+                -15px -15px 30px #31313159;
+    
+
+
+}
+
+.admin-box-title {
+    font-size: 3rem;
+    font-weight: 700;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    text-shadow: 0px 4px 4px rgba(131, 129, 129, 0.541);
+    color: rgb(0, 0, 0);
+}
+
+.admin-box-date {
+    grid-row: 2 / 2;
+    grid-column: 1 / 2;
+    align-self: flex-end;
+}
+
+.admin-box-count {
+    grid-row: 3 / 6;
+    grid-column: 1 / 3;
+}
+
+.admin-box-enter {
+    grid-area: 1/2/2/3;
+    transform: scale(4);
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+.admin-form {
+    display: flex;
+    background-color: #d8d6d6;
+    margin-top: 3rem;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: top;
+    background-origin: border-box;
+    background-attachment: fixed;
+    align-items: flex-start;
+}
+.career-form ,.career-list{
+    background-image: url('/assets/careerbg.png');
+}
+.blog-form,.blog-list{
+    background-image: url('/assets/blogbg.png');
+}
+.admin-form form {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 60%;
+    justify-content: center;
+    margin: 6rem 2rem 2rem 2rem;
+    padding: 2em;
+    border-radius: 1em;
+    backdrop-filter: blur(10px) saturate(10%);
+    background-color: rgba(255, 255, 255, 0.363);
+    border-radius: 12px;
+}
+
+
+
+
+.admin-form form label {
+    width: 100%;
+    
+}
+.job-radio{
+    display: flex;
+    height:2em;
+
+    width: 10em !important;
+    text-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.job-radio input{
+    justify-content:right;
+}
+input[type="radio"] {
+    border: 2px solid red !important;
+    background-color:  red !important;
+    width: 2em !important;
+}
+.admin-form form label textarea {
+    background-color: #d8d6d68e;
+    width: 100%;
+    border-radius: 0.5em;
+    border: 1px solid #797878;
+    padding: 1rem;
+    height: 35vh;
+}
+
+.admin-form form label input {
+    display: flex;
+    background-color: #d8d6d68e;
+    width: 100%;
+    border-radius: 0.5em;
+    border: 1px solid #797878;
+    padding: 1rem;
+    padding-right: 10em;
+}
+
+.admin-form form label span,
+.admin-form form fieldset span {
+    color: #000000;
+    font-size: 1.3em;
+}
+
+.admin-form form label ul li,
+.admin-form form fieldset ul li {
+    font-family: 'legacy';
+    font-weight: 500;
+    font-size: 1.1em;
+    color: white;
+}
+
+.connector-check {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    width: 20px;
+    color: #fff;
+}
+
+.connector-check input {
+    width: .4rem !important;
+    height:.4rem !important;
+    border-radius: 50% !important;
+    margin-right: 0.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid orange;
+    padding: .5rem !important;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+}
+
+.connector-check input:checked {
+    background-color: #000000;
+}
+
+.connector-check input:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: .3rem;
+    height: .3rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.img-upload{
+width: 60% !important;
+}
+.submit-button-container{
+width: 100%;
+display: flex;
+justify-content: center;
+margin: 1em;
+}
+.admin-submit{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #000000;
+    color: ghostwhite;
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+}
+.admin-submit:hover{
+    background: #9BF00B;
+    color: #000000;
+    transition: background .5s ease-in-out;
+}
+
+.back-button {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem ;
+    margin: 1em;
+    border-radius: 500px;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 1rem;   
+    background: #000000;
+    color: ghostwhite;
+    width: auto;
+    height: 2rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert {
+    position: fixed;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius:1em;
+    font-size: 16px;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+  }
+  
+  .alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  
+  .alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+/* AdminList Component Styles */
+.admin-list-container {
+    padding: 20px;
+    margin: 4em auto auto auto;
+    background-color: #d8d6d6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .admin-list-container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #333;
+    font-weight: 600;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .add-button {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 1em;
+    height: 2em;
+    align-items: center;
+    justify-content: space-between;
+    color: white !important;
+    text-decoration: none;
+    border-radius: .5em;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    background-color: black;
+
+    
+}
+
+.add-button:hover {
+    background-color: #9BF00B;
+    color: #000000;
+  }
+  .admin-list-table {
+    width: 70%;
+    border-collapse: separate; 
+    border-spacing: 0; 
+    margin-top: 20px;
+    backdrop-filter: blur(10px); 
+    border-radius: 1em;
+    overflow: hidden; 
+  }
+  
+
+.admin-list-table th,
+.admin-list-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.admin-list-table td{
+    font-weight: 600;
+}
+.admin-list-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.4rem;
+}
+.admin-list-table th:last-child,
+.admin-list-table td:last-child {
+    width: 1%; 
+    text-align: center; 
+}
+
+
+.admin-list-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+ 
+  .loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    transform:scale(1.3);
+  
+    z-index: 2;
+  }
+  
+  .spinner-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
