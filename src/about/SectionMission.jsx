@@ -13,6 +13,7 @@ const SectionMission = () => {
       mirror: true,
       easing:"ease-in-out-back"
     });
+    
   },[])
   return (
     <section className="mission">

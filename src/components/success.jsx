@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/success.css';
-import tick from "/assets/tick1.png"
+import tick from "/assets/tick.webp"
 function FormSuccess() {
 
   const handleBackToHome = () => {

@@ -8,7 +8,7 @@
     border: 1px solid #636363;
     background-color: #d8d6d6;
     color: aliceblue;
-    background-image: url('/assets/adminbg.png');
+    background-image: url('/assets/adminbg.webp');
 }
 
 .admin-title {
@@ -97,10 +97,10 @@
     align-items: flex-start;
 }
 .career-form ,.career-list{
-    background-image: url('/assets/careerbg.png');
+    background-image: url('/assets/careerbg.webp');
 }
 .blog-form,.blog-list{
-    background-image: url('/assets/blogbg.png');
+    background-image: url('/assets/blogbg.webp');
 }
 .admin-form form {
     display: flex;

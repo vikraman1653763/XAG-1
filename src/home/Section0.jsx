@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import image1 from './images/vid1.webm';
-import image2 from './images/vid1.webm';
-import image3 from './images/vid1.webm';
-import image4 from './images/vid1.webm';
-
+import shade from "/assets/shade.png";
+import image1 from './images/demo1.webp';
+import image2 from './images/demo2.webp';
+import image3 from './images/demo3.webp';
+import image4 from './images/demo1.webp';
+import image from './images/vid1.webm'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
@@ -13,6 +14,15 @@ const HomeCarousel = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const intervalRef = useRef(null);
   const videoRefs = useRef([]); 
+const[offsetY,setOffsetY]=useState(0)
+const handleScroll = ()=>{setOffsetY(window.scrollY)};
+
+useEffect(()=>{
+window.addEventListener("scroll",handleScroll)
+return () => {
+  window.removeEventListener("scroll", handleScroll);
+};
+},[])
 
   const items = [
     {
@@ -88,9 +98,9 @@ const HomeCarousel = () => {
       if (video) {
         if (index === currentIndex) {
           video.currentTime = 0;
-          video.play(); // Play the current video
+          video.play(); 
         } else {
-          video.pause(); // Pause other videos
+          video.pause(); 
         }
       }
     });
@@ -103,7 +113,10 @@ const HomeCarousel = () => {
   }, []);
 
   return (
-    <div className="home-carousel">
+    <div className="home-carousel" >
+      <img src={shade} alt="shade" className="shade" style={{
+          transform: `translateY(-${offsetY * .2}px)` // Apply parallax effect
+        }}/>
       <div
         className="home-list"
         style={{
@@ -118,23 +131,21 @@ const HomeCarousel = () => {
             }`}
             key={index}
           >
-            <video
-              className="home-image"
-              autoPlay
-              muted
-              ref={(el) => (videoRefs.current[index] = el)} 
-            >
-              <source src={item.image} type="video/webm" />
-              Your browser does not support the video tag.
+            <video className="home-image" autoPlay muted ref={(el) => (videoRefs.current[index] = el)} >
+                <source src={image} type="video/webm" />
+                Your browser does not support the video tag.
             </video>
 
+
+            
+              <img src={item.image} className="home-image"/>
             <div className="home-introduce">
               <div className="home-title">{item.title}</div>
               <div className="home-topic">{item.topic}</div>
               <div className="home-des">{item.description}</div>
               <button className="home-seeMore">
                 <a href={item.link}>
-                  SEE MORE <MdKeyboardDoubleArrowRight />
+                  Learn More <MdKeyboardDoubleArrowRight />
                 </a>
               </button>
             </div>

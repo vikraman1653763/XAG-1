@@ -28,7 +28,7 @@ const AGR16 = () => {
     
       <main> 
       
-        <GifContainer />
+        {/* <GifContainer /> */}
       <Section11/>
         <Description />
         <Specifications />

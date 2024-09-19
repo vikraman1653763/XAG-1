@@ -24,6 +24,8 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type:y mandatory;
     scroll-snap-align: start;
+    
+      
 }
 
 body {
@@ -72,38 +74,17 @@ main{
 
 
 .Home-page{
-    /* background: linear-gradient(158deg, rgba(0,0,0,1) 0%, rgba(102, 194, 27, 0.144) 66%, rgba(0,0,0,1) 100%); */
  background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; 
     overflow: hidden;
-    /* background: rgb(75,75,75); */
-    /* background: linear-gradient(96deg, rgba(75,75,75,1) 0%, rgba(46,45,45,1) 5%, rgba(36,35,35,1) 15%, rgba(0,0,0,1) 35%, rgba(4,4,4,1) 93%, rgba(46,45,45,1) 97%, rgba(0,0,0,1) 100%); */
-
-
+   
 
 }
 
 
-.Home-page::before{
-    content: "";
-    position: absolute;
 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
- 
-    background-image: url('/corner/2.png');
-    background-repeat: no-repeat;
-    background-position:top right;
-    background-size: 40em;
-    /* background-attachment: fixed; */
-
-    /* filter: blur(.3em); */
-    z-index: -1;
-}
 /* Scroll */
 ::-webkit-scrollbar {
     width: 12px;
@@ -134,3 +115,36 @@ main{
     background: #9BF00B;
     color: #000000;
 }
+
+
+
+/* Scroll Snap Container */
+/* .scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior:smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none ;
+    background-image: linear-gradient(to right, #9bf00b, #89eb18, #75e722, #60e22a, #48dd31, #36d841, #22d34e, #00cd59, #00c669, #00be76, #00b680, #00ad87);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .scroll-snap-container::-webkit-scrollbar {
+    display: none; 
+}
+
+  .scroll-snap-container > * {
+    scroll-snap-align: start;
+  }
+  
+
+  .scroll-snap-container > *:nth-child(1) {
+    background-color: #f5f5f5;
+  }
+  
+  .scroll-snap-container > *:nth-child(2) {
+    background-color: #e0e0e0;
+  } */

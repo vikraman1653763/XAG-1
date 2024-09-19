@@ -5,15 +5,15 @@ import '../style/dealer.css';
 import Section1 from '../dealer/section1'
 import Section2 from '../dealer/section2'
 import Section3 from '../dealer/section3'
-import Section7 from '../dealer/Section7'
+import Section4 from '../dealer/Section4'
 function Dealer() {
   return (
-    <div>
+    <div className='blogPageContainer'> 
       <Section1/>
       <Section2/>
-      <Section7/>
+      <Section4/>
       <Section3/>
-      </div>
+    </div>
   )
 }
 

@@ -56,7 +56,7 @@ const Career = () => {
     useEffect(() => {
         const fetchCareer = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/careers`); 
+                const response = await fetch(`/api/careers`); 
                 if (response.ok) {
                     const data = await response.json();
                     setItems(data);

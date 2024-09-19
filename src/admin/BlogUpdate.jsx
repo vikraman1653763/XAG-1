@@ -44,7 +44,7 @@ function BlogUpdate() {
 
     const token = localStorage.getItem('token');
 
-    const response = await fetch('http://localhost:8080/api/blog', {
+    const response = await fetch('/api/blog', {
       method: 'POST',
       body: blogData,  
       headers:{

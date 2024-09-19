@@ -28,6 +28,7 @@ import CareerList from'./admin/CareerList.jsx';
 import NotFound from './components/NotFound.jsx'; 
 import FormSuccess from './components/success.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import EX from './components/EX.jsx';
 import './style/app.css'
 const App = () => {
 
@@ -59,7 +60,7 @@ const App = () => {
               <Route path='/admin/battery' element={<ProtectedRoute element={BatteryUpdate} />} />
               <Route path='/admin/blogs/new' element={<ProtectedRoute element={BlogUpdate} />} />
               <Route path='/admin/careers/new' element={<ProtectedRoute element={CareerUpdate} />} />
-            
+            <Route path='/ex' element={<EX/>}/>
               <Route path="*" element={<NotFound />} />
 
             </Routes>

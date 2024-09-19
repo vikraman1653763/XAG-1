@@ -43,7 +43,7 @@ function CareerUpdate() {
       date: formattedDate,
     };
     const token = localStorage.getItem('token');
-    const response = await fetch('http://localhost:8080/api/career', {
+    const response = await fetch('/api/career', {
       method: 'POST',
       body:JSON.stringify(careerData),
       headers:{

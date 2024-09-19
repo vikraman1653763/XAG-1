@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { Link } from 'react-router-dom';
 const Section9 = () => {
     useEffect(() => {
         AOS.init({
@@ -15,7 +15,10 @@ const Section9 = () => {
                 <div className="left">
                     <h3>GET IN <span>TOUCH!</span></h3>
                     <p>Feel free to contact us! Whether you have questions about our products, need support, or want to learn more about our latest deals, our team is here to help.</p>
-                    <button>GET A QUOTE</button>
+                    <button>
+                        <Link to='/contact'>
+                        GET A QUOTE</Link>
+                       </button>
                 </div>
                 <div className="right">
                     <img data-aos="fade-left" src="/assets/drone.webp" alt="drone" />

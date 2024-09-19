@@ -2,13 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;900&display=swap');
 
 .home-carousel {
-  display: flex;
+    display: flex;
+    position: relative;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   background-color: rgb(0, 0, 0);
-
 }
+
+.shade {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    top:20%;
+  }
+  
 
 .home-list {
   display: flex;
@@ -29,7 +38,7 @@
 .home-item.home-active {
   opacity: 1;
   transform: translate(0, 0);
-  transition:opacity 2s ease-in-out;
+  transition:opacity .5s ease-in-out;
 }
 
 
@@ -97,13 +106,13 @@
   filter: blur(0);
   transition-delay: 1.5s;
   margin-top: 1.2em;
-  padding: .5em .5em .5em .5em;
+  padding: .5em .9em .6em .9em;
   letter-spacing: 3px;
   color: #fcfcfc !important;
   font-weight: 530;
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   border:1px solid white;
-  border-radius: 1em;
+  border-radius: 3em;
   background: rgba(73, 72, 72, 0.15);
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
@@ -126,7 +135,7 @@ background: none;
 
 
 .home-item.home-active .home-seeMore svg{
-  transform:translateY(.1em) scale(2);
+  transform:translateY(.2em) scale(2);
 }
 .home-image {
   width: 100vw;
@@ -139,13 +148,14 @@ background: none;
 
 .home-arrows-container{
   position: absolute;
-  top: 5%;
+  top: 40%;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   overflow: hidden;
+  z-index: 10;
 }
 .home-arrows {
   width: 100%;
@@ -550,6 +560,9 @@ canvas {
     font-weight: 400;
     line-height: 150%;
     letter-spacing: -0.572px;
+    opacity: 1;
+    width: 40vw;
+    transition: opacity 1s ease-in-out;
 }
 
 .item a {
@@ -570,11 +583,13 @@ canvas {
 }
 
 .item-vertical-text {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg)  translate(-10%);
     transform-origin: 30px 45px;
     transition: all .5s ease;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column ;
+    width: 40vw;
+    
 }
 
 .item-vertical-text h2, h4 {
@@ -582,7 +597,10 @@ canvas {
 }
 
 .d-none {
-    display: none !important;
+    display: block;
+    opacity: 0 !important;
+    transition: all 1s ease-in-out;
+    transform: translate(-130%,0%) !important;
 }
 
 .social {
@@ -813,8 +831,8 @@ canvas {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    text-align: justify;
-    word-spacing: .5em
+    text-align:left;
+    word-spacing: .1em
 }
 
 .adv-card .content-div h4 {
@@ -991,7 +1009,7 @@ canvas {
     height: 80vh;
     padding: 48px;
     background-color: transparent;
-    background: url('assets/icon.webp'), url('assets/GRAPHIC.webp');
+    background: url('assets/icon.webp'), url('assets/graphic.webp');
     background-position: 5% 5%, right center;
     background-repeat: no-repeat, no-repeat;
 }
@@ -1254,7 +1272,7 @@ canvas {
 #sec-8 .content_sec .left button {
     background: #9BF00B;
     font-size: var(--fs-m);
-    padding: 20px 40px;
+    padding: .4em;
     border-radius: 16px;
     font-weight: 700;
     border: none;
@@ -1262,7 +1280,10 @@ canvas {
     margin-top: 20px;
     cursor: pointer;
 }
-
+#sec-8 .content_sec .left button:hover{
+    background: black;
+    
+}
 #sec-8 .content_sec .right {
     width: 50%;
 }
@@ -1433,15 +1454,23 @@ canvas {
     
     .gallery-wrap {
         flex-direction: column;
-        gap: 10px;
+        gap: .5em;
+        height: 90vh;
+        
     }
     
     .item {
         height: auto;
         min-height: 100px;
-        padding: 20px;
+        padding: 2px;
         width: 100%;
         transform: all 2s ease-in-out;
+        
+    }
+    .item-content{
+        margin: 1em;
+        
+        justify-content: center;
     }
     
     .item h2 {
@@ -1455,7 +1484,7 @@ canvas {
     }
     
     .item p {
-        font-size: var(--fs-s);
+        font-size: var(--fs-xs);
         width: 100%;
         font-weight: 400;
         color: #ffffff;
@@ -1466,8 +1495,8 @@ canvas {
     
     .item a {
         border-radius: .5rem;
-        padding: .5rem;
-        font-size: var(--fs-s);
+        padding: .4rem;
+        font-size: var(--fs-xs);
         width: auto;
     }
     
@@ -1476,7 +1505,16 @@ canvas {
         transform-origin: 30px 45px;
         transition: all 1s ease;
     }
-    
+    .itemclick{
+        flex:2;
+    }
+    .d-none{
+
+        display: block;
+        opacity: 0;
+        transition: all .0001s ease-in-out;
+        transform: translate(-140%,0%) !important;
+    }
     #sec-4 {
         flex-direction: column;
         padding: 20px;
@@ -1689,6 +1727,9 @@ canvas {
       .home-item.home-active .home-des {
         font-size: var(--fs-s);
       }
+      .home-arrows-container{
+        top: 70%;
+      }
     
       .home-arrows {
         
@@ -1761,6 +1802,9 @@ canvas {
         font-size: var(--fs-m);
         font-weight: 600;
     }
+    #sec-2 {
+        height: max-content;
+    }
 
     #sec-2 .bg-layer {
         flex-direction: column;
@@ -1806,6 +1850,7 @@ canvas {
 
     #sec-3 {
         padding: 1.25rem;
+        height: 100%;
     }
 
     #sec-3 h3 {
@@ -1841,7 +1886,6 @@ canvas {
 
     .item p {
         font-size: var(--fs-s);
-        width: 100%;
         font-weight: 400;
         color: #fff;
         background-color: #00000018;
@@ -1853,14 +1897,9 @@ canvas {
         border-radius: 0.5rem;
         padding: 0.5rem;
         font-size: var(--fs-xs);
-        width: auto;
     }
 
-    /* .item-vertical-text {
-        transform: rotate(0deg);
-        transform-origin: 30px 45px;
-        transition: all 1s ease;
-    }  */
+  
     #sec-4 {
         flex-direction: column;
         padding: 1.25rem;
@@ -1920,11 +1959,11 @@ canvas {
     }
 
     .adv-card .content-div h4 {
-        font-size: var(--fs-l);
+        font-size: var(--fs-m);
     }
 
     .adv-card .content-div p {
-        font-size: var(--fs-m);
+        font-size: var(--fs-s);
     }
 
     #sec-4 .middle_hr, .left_hr, .right_hr {
@@ -1956,7 +1995,7 @@ canvas {
     }
 
     .comments p {
-        font-size: var(--fs-m);
+        font-size: var(--fs-s);
         text-align: justify;
         color: #fff;
         height: auto;
@@ -2020,7 +2059,7 @@ canvas {
     }
 
     #sec-8 .content_sec .left p {
-        font-size: var(--fs-m);
+        font-size: var(--fs-s);
     }
 
     #sec-8 .content_sec .left button {

@@ -8,7 +8,7 @@ import Section2 from '../blog/Section2.jsx';
 
 const Blog = () => {
     return (
-        <div className="">
+        <div className="blogPageContainer">
         <Section1/>
         <Section2/>
         </div>

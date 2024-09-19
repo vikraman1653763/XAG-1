@@ -11,7 +11,7 @@ function Admin() {
   useEffect(()=>{
     const fetchBlog = async()=>{
       try{
-        const response = await fetch('http://localhost:8080/api/blogs/stats')
+        const response = await fetch('/api/blogs/stats')
         const data= await response.json()
         const lastUpdate =data.lastUpdate?new Date(data.lastUpdate).toLocaleDateString().replace(/\//g, '-')+ ' ' + new Date(data.lastUpdate).toLocaleTimeString() :"no updates Yet"
         setBlogStats({
@@ -25,7 +25,7 @@ function Admin() {
 
     const fetchCareer = async()=>{
       try{
-        const response = await fetch('http://localhost:8080/api/careers/stats')
+        const response = await fetch('/api/careers/stats')
         const data= await response.json()
         const lastUpdate =data.lastUpdate?new Date(data.lastUpdate).toLocaleDateString().replace(/\//g, '-')+ ' ' + new Date(data.lastUpdate).toLocaleTimeString() :"no updates Yet"
 

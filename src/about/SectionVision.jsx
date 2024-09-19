@@ -12,6 +12,15 @@ const SectionVision = () => {
       mirror: true,
       easing:"ease-in-out-back"
     });
+    const handleScroll = () => {
+      AOS.refresh();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   },[])
 
   return (

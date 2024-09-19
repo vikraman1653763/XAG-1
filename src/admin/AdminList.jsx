@@ -13,7 +13,7 @@ const navigate = useNavigate();
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/${endpoint}`);
+        const response = await fetch(`/api/${endpoint}`);
         const data = await response.json();
         if (response.ok) {
           setItems(data);
