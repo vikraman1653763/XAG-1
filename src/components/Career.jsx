@@ -6,7 +6,11 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import bag from "/assets/bag.svg";
 import { Link, useParams } from "react-router-dom";
+<<<<<<< HEAD
 import { serverUrl } from '../constant';
+=======
+
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 const Career = () => {
     const { id } = useParams(); 
 
@@ -56,7 +60,11 @@ const Career = () => {
     useEffect(() => {
         const fetchCareer = async () => {
             try {
+<<<<<<< HEAD
                 const response = await fetch(`${serverUrl}/api/careers`); 
+=======
+                const response = await fetch(`http://localhost:8080/api/careers`); 
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                 if (response.ok) {
                     const data = await response.json();
                     setItems(data);
@@ -84,7 +92,11 @@ const Career = () => {
                     handleExperienceChange={handleExperienceChange}
                     />
                 )}
+<<<<<<< HEAD
               <div className="job-listings" >
+=======
+              <div className="job-listings" data-aos="fade-up">
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                     {filteredJobs && filteredJobs.length > 0 ? (
                         filteredJobs.map((job, index) => (
                             <div className="job-card" key={index} >
@@ -102,6 +114,7 @@ const Career = () => {
                             </div>
                         ))
                     ) : (
+<<<<<<< HEAD
             <div className="no-Jobs">
               <div className="noJobText">
                         <h2>We're Not Hiring Right Now</h2>
@@ -116,6 +129,18 @@ const Career = () => {
                         {error}
                     </div>
                     )} */}
+=======
+                        <div className="no-jobs">
+                            <h3>There are currently no openings available. Please check back later.</h3>
+                        </div>
+                    )}
+                </div>
+                {error && (
+                    <div className="alert alert-danger">
+                        {error}
+                    </div>
+                    )}
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             </section>
         </>
     );

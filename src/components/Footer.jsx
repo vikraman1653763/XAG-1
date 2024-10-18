@@ -22,6 +22,7 @@ const Footer = () => {
                         <ul className="list_links">
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/training">Training</a></li>
+<<<<<<< HEAD
                                 <li><a href="/blog">Blogs</a></li>
                                 <li><a href="/career">Career</a></li>
                                 <li><a href="/contact">Contact</a></li>
@@ -35,6 +36,21 @@ const Footer = () => {
                         <li><a href="/about">Ag10</a></li>
                         <li><a href="/about">Xrotor&nbsp;Tek</a></li>
                         <li><a href="/about">Batteries</a></li>
+=======
+                                <li><a href="/blogs">Blogs</a></li>
+                                <li><a href="/career">Career</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div className="part-23">
+                            <h3>Customer Support</h3>
+                            <ul>
+                                <li><a href="/#">Shipping</a></li>
+                                <li><a href="/#">Returns</a></li>
+                                <li><a href="/#">Track Order</a></li>
+                                <li><a href="/#">Privacy Policy</a></li>
+                                <li><a href="/#">Terms of Service</a></li>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                             </ul>
                         </div>
                     </div>
@@ -63,11 +79,19 @@ const Footer = () => {
                     </div>
                     <div className="right_content">
 
+<<<<<<< HEAD
                     <img src={facebook} alt='facebook'/>
                     <img src={instagram}  alt='instagram'/>
                     <img src={linkedin} alt='linkedin'/>
                     <img className='tw' src={twitter} alt='twitter'/>
                     <img className='yt' src={youtube} alt='youtube'/>
+=======
+                    <img src={facebook}/>
+                    <img src={instagram}/>
+                    <img src={linkedin}/>
+                    <img className='tw' src={twitter}/>
+                    <img className='yt' src={youtube}/>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                         
                     </div>
                 </div>

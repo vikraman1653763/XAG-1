@@ -58,6 +58,7 @@ const Section0 = () => {
             window.removeEventListener('scroll', () => {});
         };
     }, []);
+    
     const handleScroll = () => {
         setOffsetY(window.scrollY);
       };

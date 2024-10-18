@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+<<<<<<< HEAD
 
 import person from '/assets/person.webp';
 import coin from '/assets/coin.webp';
 import suitcase from '/assets/suitcase.webp';
 import suitcase2 from '/assets/suitcase2.webp';
+=======
+import './dealer.css'; // Assume that the styling is in this file
+import person from '/assets/person.png';
+import coin from '/assets/coin.png';
+import suitcase from '/assets/suitcase.png';
+import suitcase2 from '/assets/suitcase2.png';
+import multicoin  from '/assets/multicoin.png';
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
 const Section1 = () => {
   const { scrollY } = useScroll();

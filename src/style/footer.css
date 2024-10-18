@@ -8,7 +8,11 @@
     width: 100%;
     height: auto;
     display: flex;
+<<<<<<< HEAD
     padding: 1rem 8rem;
+=======
+    padding: 3rem 6rem;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     gap: 3rem;
 }
 

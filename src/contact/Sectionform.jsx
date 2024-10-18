@@ -1,18 +1,26 @@
 import React,{useEffect, useState} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+<<<<<<< HEAD
 import {useNavigate}from 'react-router-dom';
 
 
 const SectionForm = () => {
   const navigate = useNavigate();
+=======
+const SectionForm = () => {
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
   const [companyName, setCompanyName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
+<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+  
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -23,10 +31,17 @@ const SectionForm = () => {
 
 const handleSubmit = async (e)=>{
   e.preventDefault()
+<<<<<<< HEAD
   setIsSubmitting(true);
   const enquiryData={companyName,email,phoneNumber,message}
 
   const response = await fetch('/api/enquiry', { 
+=======
+
+  const enquiryData={companyName,email,phoneNumber,message}
+
+  const response = await fetch('http://localhost:8080/api/enquiry', { 
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     method: 'POST',
     body: JSON.stringify(enquiryData),
     headers: {
@@ -42,15 +57,23 @@ const handleSubmit = async (e)=>{
   if(response.ok){
     
     setError(null)
+<<<<<<< HEAD
     navigate('/success')
     setIsSubmitting(false)
+=======
+    console.log("good",json)
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   }
 }
 
   return (
     <section className="contact_form">
       <div className="contact_form-heading">
+<<<<<<< HEAD
         <h1>Contact us:)</h1>
+=======
+        <h3>Contact us:)</h3>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         <h6>
           Kindly submit your details and share your message to us, thank you
         </h6>
@@ -60,9 +83,13 @@ const handleSubmit = async (e)=>{
 
 
 
+<<<<<<< HEAD
       <form className="contact_form-left"
        onSubmit={handleSubmit}
       style={{ cursor: isSubmitting ? 'wait' : 'auto' }} >
+=======
+      <form className="contact_form-left" onSubmit={handleSubmit}>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
           <div>
             <label htmlFor="companyname">Company name</label>
             <input
@@ -70,7 +97,10 @@ const handleSubmit = async (e)=>{
               name="companyname"
               id="companyname"
               value={companyName}
+<<<<<<< HEAD
               disabled={isSubmitting}
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
               onChange={(e) => setCompanyName(e.target.value)}
             />
           </div>
@@ -82,7 +112,10 @@ const handleSubmit = async (e)=>{
                 name="email"
                 id="email"
                 value={email}
+<<<<<<< HEAD
                 disabled={isSubmitting}
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -94,7 +127,10 @@ const handleSubmit = async (e)=>{
                 id="phonenumber"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
+<<<<<<< HEAD
                 disabled={isSubmitting}
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
               />
             </div>
           </div>
@@ -106,11 +142,17 @@ const handleSubmit = async (e)=>{
               placeholder="Type your message..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+<<<<<<< HEAD
               disabled={isSubmitting}
             />
           </div>
           <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}</button>
+=======
+            />
+          </div>
+          <button type="submit">Submit</button>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
           {error && <div className="error">{error}</div>}
         </form>
 

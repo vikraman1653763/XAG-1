@@ -1,0 +1,73 @@
+{
+  "hash": "e37aed0c",
+  "configHash": "d14efc09",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "0b77ad8d",
+  "optimized": {
+    "aos": {
+      "src": "../../node_modules/aos/dist/aos.js",
+      "file": "aos.js",
+      "fileHash": "89e93501",
+      "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "74a2bd86",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "c9038b3c",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "e0f9f884",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "32b16d43",
+      "needsInterop": true
+    },
+    "react-intersection-observer": {
+      "src": "../../node_modules/react-intersection-observer/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "a001bf2a",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "18bd8262",
+      "needsInterop": false
+    },
+    "scrollreveal": {
+      "src": "../../node_modules/scrollreveal/dist/scrollreveal.es.js",
+      "file": "scrollreveal.js",
+      "fileHash": "1cdce2be",
+      "needsInterop": false
+    },
+    "split-text-js": {
+      "src": "../../node_modules/split-text-js/SplitTextJS.js",
+      "file": "split-text-js.js",
+      "fileHash": "f7fc9a25",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-HCGKX5ED": {
+      "file": "chunk-HCGKX5ED.js"
+    },
+    "chunk-WNPTCGAH": {
+      "file": "chunk-WNPTCGAH.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}

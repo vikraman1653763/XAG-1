@@ -1,17 +1,28 @@
 import React,{useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+<<<<<<< HEAD
+=======
+import { delay } from 'framer-motion';
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
 
  
 const SectionVision = () => {
   useEffect(()=>{
     AOS.init({
+<<<<<<< HEAD
       duration:700,
       mirror:true,
       easing:"ease-in-out",
     });
     
+=======
+      duration: 500,
+      mirror: true,
+      easing:"ease-in-out-back"
+    });
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   },[])
 
   return (
@@ -21,7 +32,11 @@ const SectionVision = () => {
           <div className="title" >
             <h2>What's Our</h2>
           </div>
+<<<<<<< HEAD
           <div className="text-effect"  data-aos="fade-up">
+=======
+          <div className="text-effect"  data-aos="fade-right">
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             <h2>Vision</h2>
           </div>
         </div>
@@ -38,7 +53,11 @@ const SectionVision = () => {
           </div>
           <div className="aboutcard" data-aos="fade-up">
             <h2  data-aos="fade-up">#3</h2>
+<<<<<<< HEAD
             <h3 data-aos="fade-up">“Integration </h3>
+=======
+            <h3 data-aos="fade-up">“Integration of Technology & Agriculture</h3>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             <p data-aos="fade-up">Creating a seamless blend of modern technology with traditional farming techniques to maximize outcomes.</p>
           </div>
         </div>

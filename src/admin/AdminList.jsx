@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
 import { FaTrashAlt, FaPlus } from 'react-icons/fa';
+<<<<<<< HEAD
 import { serverUrl } from '../constant';
+=======
+
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 function AdminList({ title, endpoint, addPath,classes }) {
   const [items, setItems] = useState([]);
 const [error, setError] = useState(null);
@@ -13,7 +17,11 @@ const navigate = useNavigate();
   useEffect(() => {
     const fetchItems = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch(`${serverUrl}/api/${endpoint}`);
+=======
+        const response = await fetch(`http://localhost:8080/api/${endpoint}`);
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         const data = await response.json();
         if (response.ok) {
           setItems(data);
@@ -36,7 +44,11 @@ const navigate = useNavigate();
 if(confirmed){
 
   try {
+<<<<<<< HEAD
     const response = await fetch(`${serverUrl}/api/${endpoint}/${id}`, {
+=======
+    const response = await fetch(`http://localhost:8080/api/${endpoint}/${id}`, {
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       method: 'DELETE',
       headers:{
       
@@ -44,9 +56,12 @@ if(confirmed){
       }
     });
     const data = await response.json();
+<<<<<<< HEAD
     if (response.status === 403){
       navigate('/login');
     }
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     if (response.ok) {
       setItems(items.filter(item => item.id !== id));
       setMessage(data.message);
@@ -101,7 +116,11 @@ const formatToIST = (dateString) => {
         <tbody>
           {items.map(item => (
             <tr key={item.id}>
+<<<<<<< HEAD
               <td>{item.title || item.name}</td>
+=======
+              <td>{item.title}</td>
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
               <td>{formatToIST(item.date)}</td>
               <td>{formatTime(item.date)}</td>
               <td>

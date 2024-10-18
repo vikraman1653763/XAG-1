@@ -1,7 +1,11 @@
 
 /* NAVIGATION starts */
 nav {
+<<<<<<< HEAD
     background-color: rgb(0, 0, 0);
+=======
+    background-color: rgba(0, 0, 0, 0.486);
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -33,7 +37,11 @@ nav ul {
 
 nav ul li a, nav ul span {
     text-decoration: none;
+<<<<<<< HEAD
     color: white ;
+=======
+    color: white !important;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     font-size: var(--fs-s);
     line-height: 250%;
     font-weight: 500;
@@ -41,8 +49,13 @@ nav ul li a, nav ul span {
     cursor: pointer;
     
 }
+<<<<<<< HEAD
 nav ul li a:hover, nav ul span:hover{
 
+=======
+
+nav ul li:hover > a, nav ul span:hover {
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     color: #9BF00B;
 }
 
@@ -68,7 +81,10 @@ nav ul li a:hover, nav ul span:hover{
 
 .login-btn a {
     line-height: 0;
+<<<<<<< HEAD
     color: #000000;
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .hamburger {
@@ -77,15 +93,36 @@ nav ul li a:hover, nav ul span:hover{
 }
 
 .hamburger div {
+<<<<<<< HEAD
     width: 20px;
+=======
+    width: 30px;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     height: 3px;
     background: #f2f5f7;
     margin: 5px;
     transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
 
 /* Submenu styles */
+=======
+.hamburger.open .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open .line2 {
+    opacity: 0;
+}
+
+.hamburger.open .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Submenu styles */
+/* Remove these rules as they're handled by Framer Motion */
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 .menu {
     font-size: var(--fs-s);
     font-weight: 500;
@@ -97,18 +134,29 @@ nav ul li a:hover, nav ul span:hover{
     border: none;
     width: auto;
     align-items: start;
+<<<<<<< HEAD
     transform: translate(-4.5em, -10px);
+=======
+    transform: translate(-3em, -10px);
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     text-transform: uppercase;
     border-radius: 5px;
     gap: 4px;
     right: 70%;
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 
 
+<<<<<<< HEAD
 .menu li:hover,
+=======
+.menu a:hover,
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 .submenu a:hover {
     color: #9BF00B;
 }
@@ -128,8 +176,48 @@ nav ul li a:hover, nav ul span:hover{
     transition: transform 0.7s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
+<<<<<<< HEAD
 
 
+=======
+.subopen,
+.menu li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(5em, -2.5rem);
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0C0C0C;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9BF00B;
+    border-radius: 10px;
+    border: 3px solid #0C0C0C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7FB00B;
+}
+
+/* Example CSS for styling selected text */
+::selection {
+    background: #9BF00B;
+    color: #000000;
+}
+
+/* For Firefox */
+::-moz-selection {
+    background: #9BF00B;
+    color: #000000;
+}
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
 /* Mobile View */
 @media (max-width: 767px) {
@@ -140,6 +228,7 @@ nav ul li a:hover, nav ul span:hover{
     .hamburger {
         display: block;
     }
+<<<<<<< HEAD
     
     nav{
         width: 99vw;
@@ -195,6 +284,45 @@ nav ul li a:hover, nav ul span:hover{
     color: white;
 
 }
+=======
+
+    nav ul {
+        position: fixed;
+        right: 0;
+        height: auto;
+        top: 0;
+        background-color: black;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: auto;
+        transform: translate(100%, 10%);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 5px;
+        padding-bottom: 5px;
+        gap: 1rem;
+    }
+    
+    nav ul.open {
+        transform: translate(20%, 10%);
+        margin-right: 1rem;
+    }
+
+    nav ul li a, nav ul span {
+        font-size: var(--fs-s);
+        margin: 0;
+    }
+
+    .login-btn {
+        width: auto;
+        font-size: 0.5rem;
+        padding: 0.3rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        text-align: start;
+    }
+
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     .menu {
         font-size: var(--fs-s);
         font-weight: 500;
@@ -202,6 +330,7 @@ nav ul li a:hover, nav ul span:hover{
         margin: 0;
         transform: translate(0, 17%);
         text-align: start;
+<<<<<<< HEAD
         min-width: max-content;
         align-items: center;
         position: absolute;
@@ -217,6 +346,31 @@ nav ul li a:hover, nav ul span:hover{
     
    
   
+=======
+        width: 9rem;
+        align-items: center;
+    }
+
+    .products:hover > .menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-16%, 17%);
+    }
+    
+    .submenu {
+        width: auto;
+        align-items: center;
+        transform: translate(-100%, 10%);
+    }
+
+    .subopen,
+    .menu li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-104%, 10%);
+        width: 100%;
+    }
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 /* Tablet View */
@@ -234,7 +388,11 @@ nav ul li a:hover, nav ul span:hover{
         right: 0;
         height: auto;
         top: 4rem;
+<<<<<<< HEAD
         background-color: rgb(0, 0, 0);
+=======
+        background-color: black;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -244,13 +402,19 @@ nav ul li a:hover, nav ul span:hover{
         border-radius: 0.3rem;
         padding-bottom: 0.3rem;
         gap: 1rem;
+<<<<<<< HEAD
         z-index: 100;
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     }
 
     nav ul.open {
         transform: translate(20%, -5%);
         margin-right: 1rem;
+<<<<<<< HEAD
         z-index: 10000;
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     }
 
     nav ul li a, nav ul span {
@@ -277,5 +441,26 @@ nav ul li a:hover, nav ul span:hover{
         width: 12rem;
     }
 
+<<<<<<< HEAD
     
+=======
+    .products:hover > .menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-2.4rem, 0); 
+    }
+
+    .submenu {
+        width: auto;
+        transform: translate(-8rem, -5rem); 
+    }
+
+    .subopen,
+    .menu li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-12rem, -5rem); 
+        width: 100%;
+    }
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }

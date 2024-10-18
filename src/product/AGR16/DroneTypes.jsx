@@ -1,8 +1,13 @@
 // DroneTypes.jsx
 import React from 'react';
 import MotionWrapper from '../../components/MotionWrapper';
+<<<<<<< HEAD
 import sprayImage from '/assets/spray.webp';
 import seederImage from '/assets/seeder.webp';
+=======
+import sprayImage from '/assets/spray.jpg';
+import seederImage from '/assets/seeder.png';
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
 const DroneTypes = () => {
   return (

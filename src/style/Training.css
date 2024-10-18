@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  .train h1{
   font-size: var(--fs-xxl);
@@ -11,6 +12,8 @@
   font-size: var(--fs-m);
 }
 
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 /*flipcard*/
 .flip-container {
   display: flex;
@@ -64,7 +67,11 @@
   width: 160px;
   height: 160%;
   background: linear-gradient(90deg, transparent, #9BF00B, #9BF00B, #9BF00B, #9BF00B, transparent);
+<<<<<<< HEAD
 
+=======
+  animation: rotation_481 5000ms infinite linear;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 
@@ -150,8 +157,12 @@
 }
 
 .flip-title p {
+<<<<<<< HEAD
   width: 100%;
   
+=======
+  width: 50%;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .flip-card-footer {
@@ -179,6 +190,7 @@
 .flip-bottom {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-color:hsla(0,0%,100%,1);
   background-image:
   radial-gradient(at 40% 20%, hsla(25,0%,0%,1) 0px, transparent 50%),
@@ -188,11 +200,16 @@
   radial-gradient(at 0% 100%, hsla(16,0%,0%,1) 0px, transparent 50%),
   radial-gradient(at 80% 100%, hsla(240,0%,0%,1) 0px, transparent 50%),
   radial-gradient(at 0% 0%, hsla(342,0%,0%,1) 0px, transparent 50%);  background-size: cover;
+=======
+  background-image: url('/product/product1.webp'); /* Replace with your image path */
+  background-size: cover;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   background-position: center;
   position: relative;
   background-clip: border-box;
   background-position: center;
   background-repeat: no-repeat;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,18 +223,38 @@
   z-index: 1;
   font-weight: 500;
   text-align: center;
+=======
+}
+
+.flip-bottom p {
+  position: absolute;
+  left: 1%;
+  bottom: 20%;
+  font-size: var(--fs-s);
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  font-weight: 500;
+  text-indent: 1%;
+  text-align: left;
+  margin-bottom: 1rem;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 #flip-bottom {
   background-image: url('/Imagesequence/45.webp'); /* Replace with your image path */
   left: 50px;
   top: 0px;
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 150px;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   height: 150px;
 }
 
 @keyframes floating {
   0% {
+<<<<<<< HEAD
     transform: translateY(0px);
   }
   50% {
@@ -225,11 +262,24 @@
   }
   100% {
     transform: translateY(0px);
+=======
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0px);
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   }
 }
 
 /* .training-section */
 .training-section {
+<<<<<<< HEAD
+=======
+  padding: 50px;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   background-color: #000000;
   text-align: center;
 }
@@ -243,9 +293,15 @@
 
 .course-card-container {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column ;
   flex-wrap: wrap;
   justify-content: space-around;
+=======
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .course-card {
@@ -256,6 +312,10 @@
   flex-direction: row;
   background-color: #1d1d1d;
   border-radius: 10px;
+<<<<<<< HEAD
+=======
+  padding: 1rem;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   width: 100%;
   height: clamp(10vh, 70vh, 100vh);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -263,7 +323,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+<<<<<<< HEAD
   background-image: url('/assets/trainingBg.webp');
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .course-card:hover {
@@ -278,7 +341,11 @@
   height: auto;
   margin-bottom: 10px;
   background: rgba(0, 0, 0, 0);
+<<<<<<< HEAD
   box-shadow:  8px 3px 25px rgba(136, 252, 5, 0.432);
+=======
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(2.5px);
   border-radius: 10px;
@@ -296,7 +363,11 @@
 }
 
 .course-icon1 span, .course-icon2 span {
+<<<<<<< HEAD
   color: #d4d4d4;
+=======
+  color: white;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
@@ -304,13 +375,21 @@
   font-size: clamp(var(--fs-s), var(--fs-m), var(--fs-l));
   font-weight: 700;
   margin-bottom: 10px;
+<<<<<<< HEAD
   color: #d4d4d4;
+=======
+  color: #000000;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   margin-left: 0px;
 }
 
 .course-card p {
   font-size: var(--fs-s);
+<<<<<<< HEAD
   color: #ffffff;
+=======
+  color: #000000;
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .course-icon p {
@@ -319,6 +398,7 @@
   font-weight: 800;
 }
 
+<<<<<<< HEAD
 .day-nav{
   display: flex;
   flex-direction: row;
@@ -416,6 +496,8 @@
 
 
 
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 /* Media Queries for Mobile */
 @media screen and (max-width: 767px) {
   .flip-container {
@@ -501,6 +583,7 @@
       font-weight: 400;
   }
 }
+<<<<<<< HEAD
 /* Media Queries for Tablet */
 @media screen and (max-width: 1024px) {
   .training-section {
@@ -646,3 +729,5 @@
       font-size: var(--fs-xs);
   }
 }
+=======
+>>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
