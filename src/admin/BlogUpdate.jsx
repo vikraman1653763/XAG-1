@@ -2,11 +2,7 @@ import React, { useState,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { LiaSpinnerSolid } from "react-icons/lia";
-<<<<<<< HEAD
 import { serverUrl } from '../constant';
-=======
-
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 function BlogUpdate() {
   const [title, setTitle] = useState('');
   const [smallDesc, setSmallDesc] = useState('');
@@ -14,13 +10,8 @@ function BlogUpdate() {
   const [image, setImage] = useState('');
   const [error, setError] = useState(null);
   const [msg, setMsg] = useState(null);
-<<<<<<< HEAD
   const fileInputRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-  const [loading, setLoading] = useState(false);
-  const fileInputRef = useRef(null);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
   const navigate = useNavigate();
 
@@ -33,12 +24,8 @@ function BlogUpdate() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
     setIsSubmitting(true);
 
-=======
-    setLoading(true);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     const currentDate = new Date();
     const utcOffset = currentDate.getTimezoneOffset() * 60000; // Offset in milliseconds
     const istDate = new Date(currentDate.getTime() + utcOffset + (5.5 * 3600000)); // Adjust for IST
@@ -58,11 +45,7 @@ function BlogUpdate() {
 
     const token = localStorage.getItem('token');
 
-<<<<<<< HEAD
     const response = await fetch(`${serverUrl}/api/blog`, {
-=======
-    const response = await fetch('http://localhost:8080/api/blog', {
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       method: 'POST',
       body: blogData,  
       headers:{
@@ -90,11 +73,8 @@ if(response.status===401||response.status===403){
         if (fileInputRef.current) {
           fileInputRef.current.value = null; 
         }
-<<<<<<< HEAD
         setIsSubmitting(false)
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       }else{
         console.error("error response:",data)
         setError(data.error);
@@ -102,11 +82,7 @@ if(response.status===401||response.status===403){
         navigate('/admin/blogs/new');
       }
     }finally{
-<<<<<<< HEAD
       setIsSubmitting(false)
-=======
-      setLoading(false);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     }
 
     
@@ -131,18 +107,8 @@ if(response.status===401||response.status===403){
             {msg}
           </div>
         )}
-<<<<<<< HEAD
         
       <form onSubmit={handleSubmit} style={{ cursor: isSubmitting ? 'wait' : 'auto' }}>
-=======
-         {loading && (
-      <div className="loading-spinner">
-        <LiaSpinnerSolid className="spinner-icon" />
-        <p>Uploading data, please wait...</p>
-      </div>
-    )}
-      <form onSubmit={handleSubmit}>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         
         <label htmlFor="title">
           <span>Title:</span>

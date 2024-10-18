@@ -12,7 +12,6 @@ export default defineConfig({
 // Target your production server
         // changeOrigin: true,
         // secure: false, 
-
       },
     },
   },

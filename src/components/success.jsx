@@ -1,17 +1,10 @@
 import React from 'react';
 import '../style/success.css';
-<<<<<<< HEAD
 import tick from "/assets/tick.webp"
 function FormSuccess() {
 
-=======
-import tick from "/assets/tick1.png"
-function FormSuccess() {
 
-  const handleBackToHome = () => {
-    
- };
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
+
 
   return (
     <div className="dealer-form-success">

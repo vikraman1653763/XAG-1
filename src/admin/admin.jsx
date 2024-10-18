@@ -2,30 +2,18 @@ import React, { useEffect, useState } from 'react'
 import '../style/admin.css';
 import { AiFillPlusCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { serverUrl } from '../constant';
 function Admin() {
   const [blogStats,setBlogStats]=useState({count:0,lastUpdate:""})
   const [careerStats,setCareerStats]=useState({count:0,lastUpdate:""})
   const[testimonialStats,setTestimonialStats] = useState({count:0,lastUpdate:""})
-=======
-
-function Admin() {
-  const [blogStats,setBlogStats]=useState({count:0,lastUpdate:""})
-  const [careerStats,setCareerStats]=useState({count:0,lastUpdate:""})
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   const[loading,setLoading]=useState(true)
 
   useEffect(()=>{
     const fetchBlog = async()=>{
-<<<<<<< HEAD
      
       try{
         const response = await fetch(`${serverUrl}/api/blogs/stats`)
-=======
-      try{
-        const response = await fetch('http://localhost:8080/api/blogs/stats')
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         const data= await response.json()
         const lastUpdate =data.lastUpdate?new Date(data.lastUpdate).toLocaleDateString().replace(/\//g, '-')+ ' ' + new Date(data.lastUpdate).toLocaleTimeString() :"no updates Yet"
         setBlogStats({
@@ -33,21 +21,13 @@ function Admin() {
           lastUpdate:lastUpdate
         })
       }catch(error){
-<<<<<<< HEAD
         console.error("Error fetching in Blog stats")
-=======
-        console.error("Error fetchinb in Blog stats")
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       }
     }
 
     const fetchCareer = async()=>{
       try{
-<<<<<<< HEAD
         const response = await fetch(`${serverUrl}/api/careers/stats`)
-=======
-        const response = await fetch('http://localhost:8080/api/careers/stats')
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         const data= await response.json()
         const lastUpdate =data.lastUpdate?new Date(data.lastUpdate).toLocaleDateString().replace(/\//g, '-')+ ' ' + new Date(data.lastUpdate).toLocaleTimeString() :"no updates Yet"
 
@@ -56,7 +36,6 @@ function Admin() {
           lastUpdate:lastUpdate
         })
       }catch(error){
-<<<<<<< HEAD
         console.error("Error fetching in Career stats")
       }
     }
@@ -74,12 +53,6 @@ function Admin() {
       }
     }
     Promise.all([fetchBlog(),fetchCareer(),fetchTestimonial()]).then(()=>{
-=======
-        console.error("Error fetchinb in Career stats")
-      }
-    }
-    Promise.all([fetchBlog(),fetchCareer()]).then(()=>{
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       setLoading(false)
     })
   },[]);
@@ -105,16 +78,11 @@ function Admin() {
         <h4 className='admin-box-count'>Total count: {blogStats.count}</h4>
         <Link to={`/admin/blogs`} className='ad-2 admin-box-enter' ><AiFillPlusCircle /></Link>      
         </section>
-<<<<<<< HEAD
         <section className='admin-box'>
-=======
-      <section className='admin-box'>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         <h3 className='ad-3 admin-box-title'>Career</h3>
         <h4 className='admin-box-date'> last update : {careerStats.lastUpdate}</h4>
         <h4 className='admin-box-count'>Total count: {careerStats.count}</h4>
         <Link to={`/admin/careers`} className='ad-3 admin-box-enter' >
-<<<<<<< HEAD
         <AiFillPlusCircle /></Link>      
         </section>
         <section className='admin-box'>
@@ -124,11 +92,6 @@ function Admin() {
         <Link to={`/admin/testimonial`} className='ad-3 admin-box-enter' >
         <AiFillPlusCircle /></Link>      
         </section>
-=======
-        <AiFillPlusCircle />
-
-        </Link>      </section>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       </div>
     </div>
   )

@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-
-=======
-@font-face {
-    font-family: 'legacy';
-    src: url('/fonts/legacy.ttf');
-    font-weight: 800;
-}
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
 .admin-container {
     border: 1px solid #636363;
     background-color: #d8d6d6;
     color: aliceblue;
-<<<<<<< HEAD
     background-image: url('/assets/adminbg.webp');
-=======
-    background-image: url('/assets/adminbg.png');
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .admin-title {
@@ -105,17 +92,10 @@
     align-items: flex-start;
 }
 .career-form ,.career-list{
-<<<<<<< HEAD
     background-image: url('/assets/careerbg.webp');
 }
 .blog-form,.blog-list{
     background-image: url('/assets/blogbg.webp');
-=======
-    background-image: url('/assets/careerbg.png');
-}
-.blog-form,.blog-list{
-    background-image: url('/assets/blogbg.png');
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 .admin-form form {
     display: flex;
@@ -182,11 +162,7 @@ input[type="radio"] {
 
 .admin-form form label ul li,
 .admin-form form fieldset ul li {
-<<<<<<< HEAD
     font-family: 'Poppins';
-=======
-    font-family: 'legacy';
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     font-weight: 500;
     font-size: 1.1em;
     color: white;

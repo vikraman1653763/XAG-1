@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { TbDrone } from "react-icons/tb";
-<<<<<<< HEAD
 import { serverUrl } from "../constant.js";
 
 const Section6 = () => {
@@ -46,35 +45,6 @@ useEffect(()=>{
     }
     fetchTest()
 },[])
-=======
-const Section6 = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [timer, setTimer] = useState(null);
-
-    const textimonials = [
-        {
-            text: `"Xagrotor Tek's drones have transformed my farming practice. The ease of use and precision have made managing my crops more efficient and less labor-intensive. The technology has also helped me reduce pesticide use, which is great for both the environment and my bottom line. Their support team is incredibly responsive and knowledgeable."`,
-            author: 'Dheepak Raj, Organic Farmer'
-        },
-        {
-            text: `"Since integrating Xagrotor Tek's drone technology into our operations, we've seen a remarkable improvement in crop health and yield. The data-driven insights provided by the drones allow us to make more informed decisions, leading to better resource management and cost savings. The company's commitment to sustainability aligns perfectly with our values."`,
-            author: 'Vikraman, Agribusiness Owner'
-        },
-        {
-            text: `"Xagrotor Tek's agricultural drones have been a game-changer for us. The precision and efficiency of the drones have significantly improved our crop monitoring and management. We've been able to detect and address issues early, preventing potential losses. The team at Xagrotor Tek is always helpful and provides excellent support."`,
-            author: 'Anita Desai, Vineyard Manager'
-        },
-        {
-            text: `"Using Xagrotor Tek's drones has streamlined our farming processes. The real-time data and aerial views have given us new perspectives on our fields, helping us to optimize planting and irrigation strategies. The technology is user-friendly, and the customer service is top-notch. We've never been more efficient."`,
-            author: 'Ramesh Gupta, Rice Farmer'
-        },
-        {
-            text: `"The impact of Xagrotor Tek's drone technology on our farm has been profound. We've experienced a notable increase in efficiency and productivity. The drones' ability to cover large areas quickly and provide detailed analysis has saved us time and money. Xagrotor Tek's commitment to innovation and sustainability makes them a trusted partner in our agricultural journey."`,
-            author: 'Priya Nair, Coffee Plantation Owner'
-        }
-    ];
-
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   
 
     useEffect(() => {
@@ -108,13 +78,8 @@ const Section6 = () => {
                                 className={`comments effect ${currentSlide === index ? 'acti' : 'inacti'}`}
                                 style={{ display: currentSlide === index ? 'block' : 'none' }}
                             >
-<<<<<<< HEAD
                                 <p>{textimonial.feedback}</p>
                                 <h2>- {textimonial.name}</h2>
-=======
-                                <p>{textimonial.text}</p>
-                                <h2>- {textimonial.author}</h2>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                             </div>
                         ))}
                     </div>

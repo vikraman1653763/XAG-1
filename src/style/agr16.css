@@ -209,13 +209,9 @@ video::-webkit-media-controls {
   padding: 20px;
   background-size: cover;
   border-radius: 10px;
-<<<<<<< HEAD
   /* background-image: url('/assets/wingsspin.gif'); */
   background-image: url('/assets/trainingBg.webp');
 
-=======
-  background-image: url('/assets/wingsspin.gif');
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   background-clip: border-box;
   -moz-background-clip: text;
   justify-content: center;

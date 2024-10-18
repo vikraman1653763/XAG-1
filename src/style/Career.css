@@ -4,7 +4,6 @@
   font-weight: 300;
 }
 
-<<<<<<< HEAD
 .no-Jobs{
     text-align: center;
     color: #d4d4d4;
@@ -42,18 +41,12 @@
     width: 30vw;
   }
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 /* career.css */
 .career-section {
     display: flex;
     padding: 20px;
     background-color: #000000;
-<<<<<<< HEAD
     height: auto;
-=======
-    height: 100vh;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     overflow-y: auto;
     scrollbar-width: thin;
     margin:0rem 2rem 0rem 2rem;
@@ -72,11 +65,7 @@
     -webkit-backdrop-filter: blur( 9px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-<<<<<<< HEAD
     color: #d4d4d4;
-=======
-    color: #fff;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }
 
 .filter-section h4 {
@@ -120,11 +109,7 @@
     -webkit-backdrop-filter: blur( 9px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-<<<<<<< HEAD
     color: #d4d4d4;
-=======
-    color: #fff;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     width: 70%;
 }
 .job-card .require{
@@ -237,11 +222,7 @@
     width: calc(var(--size) * .7);
     height: calc(var(--size) * .7);
     margin: 0 auto;
-<<<<<<< HEAD
     background-color: #000000;
-=======
-    background-color: #fff;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     transform: translateY(-50%);
     border-radius: 50%;
     box-shadow: inset 0 var(--shadow) #9BF00B;
@@ -264,11 +245,7 @@
     right: 0;
     left: calc(var(--size) * -.05);
     width: calc(var(--size) * .6);
-<<<<<<< HEAD
     height: calc(var(--size) * .7);
-=======
-    height: calc(var(--size) * .6);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     margin: 0 auto;
     margin-left: calc(var(--size) * .14);
     transform: rotateZ(-40deg);
@@ -278,11 +255,7 @@
 .checkbox-wrapper .tick_mark:after {
     content: "";
     position: absolute;
-<<<<<<< HEAD
     background-color: #000000;
-=======
-    background-color: #fff;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     border-radius: 2px;
     opacity: 0;
     transition: 0.2s ease transform, 0.2s ease opacity;
@@ -291,11 +264,7 @@
 .checkbox-wrapper .tick_mark:before {
     left: 0;
     bottom: 0;
-<<<<<<< HEAD
     width: calc(var(--size) * .2);
-=======
-    width: calc(var(--size) * .1);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     height: calc(var(--size) * .3);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
     transform: translateY(calc(var(--size) * -.68));
@@ -306,11 +275,7 @@
     bottom: 0;
     
     width: 100%;
-<<<<<<< HEAD
     height: calc(var(--size) * .2);
-=======
-    height: calc(var(--size) * .1);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
     transform: translateX(calc(var(--size) * .78));
 }
@@ -344,7 +309,6 @@
 
 .no-jobs h3 {
     text-align: center;
-<<<<<<< HEAD
     color: #d4d4d4;
     font-size: var(--fs-xs);
     font-weight: 400;
@@ -355,19 +319,12 @@
 }
 .checkbox-wrapper span{
     color: #d4d4d4;
-=======
-    color: white;
-}
-.checkbox-wrapper span{
-    color: white;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     font-weight: normal !important;
     font-size:var(--fs-s);
 }
 
 /* Mobile View */
 @media screen and (max-width: 767px) {
-<<<<<<< HEAD
 
     
 
@@ -382,8 +339,6 @@
             font-size: var(--fs-xs);
         }
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     .career-section {
         flex-direction: column;
         padding: 1px;
@@ -401,11 +356,7 @@
         z-index: 1;
     }
     .checkbox-wrapper span{
-<<<<<<< HEAD
         color: #d4d4d4;
-=======
-        color: white;
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         font-weight: normal !important;
         font-size:var(--fs-xs);
     }
@@ -477,13 +428,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-<<<<<<< HEAD
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
 .no-Jobs{
     padding: 3rem 7rem;
   }
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 }

@@ -10,25 +10,16 @@ function Section3() {
   const[orderVolume,setOrderVolume]=useState("")
   const[comments,setComments]=useState("")
   const [error, setError] = useState(null);
-<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 
  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-<<<<<<< HEAD
     setIsSubmitting(true);
 
     e.preventDefault();
     const dealerData={companyName,contactPerson,email,phone,product,orderVolume,comments}
     const response = await fetch('/api/dealer',{
-=======
-    e.preventDefault();
-    const dealerData={companyName,contactPerson,email,phone,product,orderVolume,comments}
-    const response = await fetch('http://localhost:8080/api/dealer',{
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       method:'POST',
       body:JSON.stringify(dealerData),
       headers:{
@@ -42,25 +33,16 @@ function Section3() {
    }
    if(response.ok){
     setError(null)
-<<<<<<< HEAD
     navigate('/success')
     setIsSubmitting(false)
 
-=======
-    console.log("good",json)
-    navigate('/success')
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
    }
   };
 
   return (
     <div className="dealer-section3">
       <h2 className="dealer-section3-title">Request a Quote</h2>
-<<<<<<< HEAD
       <form className="dealer-quote-form" onSubmit={handleSubmit} style={{ cursor: isSubmitting ? 'wait' : 'auto' }}>
-=======
-      <form className="dealer-quote-form" onSubmit={handleSubmit}>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         <div className="dealer-form-group">
           <label htmlFor="companyName">Company Name</label>
           <input
@@ -70,11 +52,8 @@ function Section3() {
             value={companyName}
             onChange={(e) => setCompanyName(e.target.value)}
             required
-<<<<<<< HEAD
             disabled={isSubmitting}
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
           />
         </div>
 
@@ -87,11 +66,8 @@ function Section3() {
             value={contactPerson}
             onChange={(e) => setContactPerson(e.target.value)}
             required
-<<<<<<< HEAD
             disabled={isSubmitting}
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
           />
         </div>
 
@@ -105,11 +81,8 @@ function Section3() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-<<<<<<< HEAD
               disabled={isSubmitting}
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             />
           </div>
 
@@ -122,11 +95,8 @@ function Section3() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
-<<<<<<< HEAD
               disabled={isSubmitting}
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             />
           </div>
         </div>
@@ -141,11 +111,8 @@ function Section3() {
               value={product}
               onChange={(e) => setProduct(e.target.value)}
               required
-<<<<<<< HEAD
               disabled={isSubmitting}
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             />
           </div>
 
@@ -157,11 +124,8 @@ function Section3() {
               value={orderVolume}
               onChange={(e) => setOrderVolume(e.target.value)}
               required
-<<<<<<< HEAD
               disabled={isSubmitting}
 
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
             >
               <option value="">Select Volume</option>
               <option value="0-100">0-100</option>
@@ -179,7 +143,6 @@ function Section3() {
             name="comments"
             value={comments}
             onChange={(e) => setComments(e.target.value)}
-<<<<<<< HEAD
             disabled={isSubmitting}
 
           ></textarea>
@@ -187,12 +150,6 @@ function Section3() {
         <div className='dealer-submit-container'>
         <button type="submit" className="dealer-submit-button"disabled={isSubmitting}
         >{isSubmitting ? "Sumbitting...":'Submit'}</button>
-=======
-          ></textarea>
-        </div>
-        <div className='dealer-submit-container'>
-        <button type="submit" className="dealer-submit-button">Submit</button>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         {error && <div className="error">{error}</div>}
         </div>
       </form>

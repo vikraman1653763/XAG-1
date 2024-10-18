@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../style/login.css';
-<<<<<<< HEAD
 import { serverUrl } from '../constant';
-=======
 
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -18,11 +15,8 @@ function Login() {
 
     const loginData = { user, password };
     
-<<<<<<< HEAD
     const response = await fetch(`${serverUrl}/api/login`, {
-=======
-    const response = await fetch('http://localhost:8080/api/login', {
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
+
       method: "POST",
       body: JSON.stringify(loginData),
       headers: {
@@ -38,11 +32,8 @@ function Login() {
       console.log("Logged in successfully");
       setError(null)
       
-<<<<<<< HEAD
       navigate('/admin'); 
-=======
-      navigate('/admin'); // Redirect to admin dashboard or other page
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
+
     } else {
       console.log("Invalid username or password");
       setError(data.error)

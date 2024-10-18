@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { LiaSpinnerSolid } from "react-icons/lia";
-<<<<<<< HEAD
 import { serverUrl } from '../constant';
-=======
-
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 function CareerUpdate() {
   const [title, setTitle] = useState('');
   const [jobType, setJobType] = useState('');
@@ -18,18 +14,12 @@ function CareerUpdate() {
   const [msg, setMsg] = useState(null);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-=======
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
     setLoading(true);
     const currentDate = new Date();
 
@@ -56,11 +46,7 @@ function CareerUpdate() {
       date: formattedDate,
     };
     const token = localStorage.getItem('token');
-<<<<<<< HEAD
     const response = await fetch(`${serverUrl}/api/career`, {
-=======
-    const response = await fetch('http://localhost:8080/api/career', {
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       method: 'POST',
       body:JSON.stringify(careerData),
       headers:{
@@ -128,11 +114,7 @@ if(response.ok){
         <p>Uploading data, please wait...</p>
       </div>
     )}
-<<<<<<< HEAD
       <form onSubmit={handleSubmit} style={{ cursor: isSubmitting ? 'wait' : 'auto' }}>
-=======
-      <form onSubmit={handleSubmit}>
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
       
         <label htmlFor="title">
           <span>Title:</span>

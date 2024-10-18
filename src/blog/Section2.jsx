@@ -3,12 +3,9 @@ import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsCardHeading } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
-<<<<<<< HEAD
 import { serverUrl } from "../constant";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-=======
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
 const Section2 = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
@@ -16,11 +13,7 @@ const Section2 = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-<<<<<<< HEAD
         const response = await fetch(`${serverUrl}/api/blogs`);
-=======
-        const response = await fetch(`http://localhost:8080/api/blogs`);
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         const data = await response.json();
         if (response.ok) {
           setItems(data);
@@ -34,7 +27,6 @@ const Section2 = () => {
 
     fetchItems();
   }, []);
-<<<<<<< HEAD
   useEffect(() => {
     AOS.init({ 
         duration: 1250 ,
@@ -42,9 +34,6 @@ const Section2 = () => {
         once: true
     });
 }, []);
-=======
-
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   return (
     <>
       {items && items.length > 0 ? (
@@ -57,7 +46,6 @@ const Section2 = () => {
         </div>
       ) : (
         <div className="flex h-48 items-center justify-center">
-<<<<<<< HEAD
             <div className="no-Blogs">
               <div className="noBlogText">
                 <h2>No Blogs Available</h2>
@@ -70,16 +58,6 @@ const Section2 = () => {
             {error}
           </div>
         )} */}
-=======
-          <span className="font-semibold uppercase text-neutral-500">
-            No blogs available at the moment
-          </span>
-          {error && (
-          <div className="alert alert-danger">
-            {error}
-          </div>
-        )}
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         </div>
       )}
     </>

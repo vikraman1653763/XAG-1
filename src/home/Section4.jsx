@@ -7,14 +7,9 @@ const Section4 = () => {
 
     useEffect(() => {
         AOS.init({
-<<<<<<< HEAD
           duration: 900,
           mirror: false,
           offset:10
-=======
-          duration: 300,
-          mirror: true,
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
         });
       }, []);
     return (
@@ -24,11 +19,7 @@ const Section4 = () => {
                     <h3>Why Choose <span>Xagrotor Tek?</span></h3>
                 </div>
                 <div className="content1">
-<<<<<<< HEAD
                     <div data-aos="fade-up" className="adv-card-bg-home" >
-=======
-                    <div data-aos="fade-up-left" className="adv-card-bg-home" >
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
@@ -47,11 +38,7 @@ const Section4 = () => {
                         </div>
                     </div>
                     <hr className="left_hr" />
-<<<<<<< HEAD
                     <div data-aos="fade-up" className="adv-card-bg-home">
-=======
-                    <div data-aos="fade-down-left" className="adv-card-bg-home">
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
@@ -74,11 +61,7 @@ const Section4 = () => {
             <hr className="middle_hr" />
             <div className="sec-right">
                 <div className="content2">
-<<<<<<< HEAD
                     <div data-aos='fade-up' className="adv-card-bg-home">
-=======
-                    <div data-aos='fade-up-right' className="adv-card-bg-home">
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
@@ -97,11 +80,7 @@ const Section4 = () => {
                         </div>
                     </div>
                     <hr className="right_hr" />
-<<<<<<< HEAD
                     <div data-aos='fade-up' className="adv-card-bg-home">
-=======
-                    <div data-aos='fade-down-right' className="adv-card-bg-home">
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
