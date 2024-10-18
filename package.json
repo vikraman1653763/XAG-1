@@ -1,17 +1,9 @@
 {
   "name": "xagrotor-tek",
-<<<<<<< HEAD
   "homepage": "https://xagrotortek.in/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
-=======
-  "homepage": "http://xagrotortek.in/",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
->>>>>>> c761e88e9f6229914a1f012bc5bffa4867e74579
   "scripts": {
     "dev": "vite",
     "build": "vite build",
