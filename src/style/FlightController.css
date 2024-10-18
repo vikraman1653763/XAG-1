@@ -1,4 +1,28 @@
 /* FlightController.css */
+
+.fc-intro {
+  position: absolute;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  
+}
+.active-fc{
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: .6s;
+}
+.fc-intro h1{
+  font-size: var(--fs-xxxl);
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.fc-intro p{
+  font-size: var(--fs-m);
+}
 .controller{
     overflow-x: hidden;
 }
@@ -557,7 +581,9 @@ height: 50rem;
 .des-container h2,.working-modes h2{
   font-size: clamp(2vw, 10vw, 50vw);
   margin-bottom: 10px;
-  background-image: url('/assets/dronecamera.gif');
+  /* background-image: url('/assets/dronecamera.gif'); */
+  background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(75,75,75,1) 24%, rgba(36,35,35,1) 44%, rgba(0,0,0,1) 68%, rgba(4,4,4,1) 93%, rgba(46,45,45,1) 99%, rgba(0,0,0,1) 100%);
+
   background-size: contain;
 
   background-position: center top;

@@ -15,10 +15,9 @@ const Section9 = () => {
                 <div className="left">
                     <h3>GET IN <span>TOUCH!</span></h3>
                     <p>Feel free to contact us! Whether you have questions about our products, need support, or want to learn more about our latest deals, our team is here to help.</p>
-                    <button>
-                        <Link to='/contact'>
+                   
+                        <Link to='/contact' >
                         GET A QUOTE</Link>
-                       </button>
                 </div>
                 <div className="right">
                     <img data-aos="fade-left" src="/assets/drone.webp" alt="drone" />

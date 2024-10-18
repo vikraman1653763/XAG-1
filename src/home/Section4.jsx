@@ -7,8 +7,9 @@ const Section4 = () => {
 
     useEffect(() => {
         AOS.init({
-          duration: 300,
+          duration: 900,
           mirror: false,
+          offset:10
         });
       }, []);
     return (
@@ -18,7 +19,7 @@ const Section4 = () => {
                     <h3>Why Choose <span>Xagrotor Tek?</span></h3>
                 </div>
                 <div className="content1">
-                    <div data-aos="fade-up-left" className="adv-card-bg-home" >
+                    <div data-aos="fade-up" className="adv-card-bg-home" >
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
@@ -37,7 +38,7 @@ const Section4 = () => {
                         </div>
                     </div>
                     <hr className="left_hr" />
-                    <div data-aos="fade-down-left" className="adv-card-bg-home">
+                    <div data-aos="fade-up" className="adv-card-bg-home">
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
@@ -60,7 +61,7 @@ const Section4 = () => {
             <hr className="middle_hr" />
             <div className="sec-right">
                 <div className="content2">
-                    <div data-aos='fade-up-right' className="adv-card-bg-home">
+                    <div data-aos='fade-up' className="adv-card-bg-home">
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>
@@ -79,7 +80,7 @@ const Section4 = () => {
                         </div>
                     </div>
                     <hr className="right_hr" />
-                    <div data-aos='fade-down-right' className="adv-card-bg-home">
+                    <div data-aos='fade-up' className="adv-card-bg-home">
                         <span className="green-border1"></span>
                         <span className="green-border2"></span>
                         <span className="black_background"></span>

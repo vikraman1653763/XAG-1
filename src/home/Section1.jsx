@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
+import shade from "/assets/shade.webp";
 
 const Section1 = () => {
     const canvasRef = useRef(null);
@@ -35,7 +36,7 @@ const Section1 = () => {
             const scrollTop = html.scrollTop;
             const maxScrollTop = html.scrollHeight - window.innerHeight;
             const scrollFraction = scrollTop / maxScrollTop;
-            const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount*2));
+            const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount*5));
 
             requestAnimationFrame(() => {
                 if (images.current[frameIndex + 1]) {
@@ -58,6 +59,19 @@ const Section1 = () => {
         };
     }, []);
 
+    const handleScroll = () => {
+        setOffsetY(window.scrollY);
+      };
+
+   //   parallex for shade 
+   const [offsetY, setOffsetY] = useState(0);
+   useEffect(() => {
+     window.addEventListener("scroll", handleScroll);
+     return () => {
+       window.removeEventListener("scroll", handleScroll);
+     };
+   }, []);
+
     return (
         <section id="sec-1">
             <canvas ref={canvasRef} id="img-seq"></canvas>
@@ -66,6 +80,8 @@ const Section1 = () => {
                     <div id="buttons">
                         <button>Learn more &nbsp; <i className="fa-solid fa-arrow-trend-up fa-lg"></i></button>
                         <button>Watch video &nbsp; <i className="fa-regular fa-circle-play fa-lg"></i></button>
+                        <img src={shade}alt="shade"className="scroll-shade"
+                            style={{transform: `translateY(-${offsetY * .2}px)`}}/>
                     </div>
                 </div>
             </div>

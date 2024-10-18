@@ -68,6 +68,7 @@ nav ul li a:hover, nav ul span:hover{
 
 .login-btn a {
     line-height: 0;
+    color: #000000;
 }
 
 .hamburger {
@@ -96,11 +97,12 @@ nav ul li a:hover, nav ul span:hover{
     border: none;
     width: auto;
     align-items: start;
-    transform: translate(-3em, -10px);
+    transform: translate(-4.5em, -10px);
     text-transform: uppercase;
     border-radius: 5px;
     gap: 4px;
     right: 70%;
+    
     
 }
 
@@ -138,9 +140,12 @@ nav ul li a:hover, nav ul span:hover{
     .hamburger {
         display: block;
     }
-
+    
+    nav{
+        width: 99vw;
+    }
     nav ul {
-        position: fixed;
+        position: absolute;
         right: 0;
         top: 0;
         height: max-content;
@@ -149,34 +154,47 @@ nav ul li a:hover, nav ul span:hover{
         justify-content: flex-start;
         align-items: center;
         
-        transform: translate(100%,15%);
+        transform: translate(100%,0%);
         opacity: 0;
         transition: transform 0.5s ease-in-out ,opacity 1s ease-in-out,background-color 2s ease-in-out;
-        padding: 1em .5em;
+        padding: 1em;
         gap: .1rem;
         z-index: 10;
-        max-width:max-content;
+        top:3rem;
+        width: 9vw;
     }
-      nav ul.open {
+    nav ul.open {
         background-color: #000000;
         opacity: 1;
-        transform: translate(20%,15%);
+        transform: translate(1%,0%);
+        z-index: 100;
+        right: 0;
       }
-  
-    nav ul li a, nav ul span {
-        font-size: var(--fs-s);
+      .nav-links{
+        width: 100vw;
+        justify-content:center;
+        align-items: flex-end;
+        display: flex;
+        
         margin: 0;
+      }
+    nav ul li , nav ul span {
+        font-size: var(--fs-s);
+        width: 50%;
     }
 
     .login-btn {
-        width: auto;
+        background-color: black;
         font-size: 0.5rem;
-        padding: 0.3rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
-        text-align: start;
+        padding: 2em 2em 2em 0em;
+        margin-right: 0rem;
+        
+        text-align: end;
     }
+.login-btn a{
+    color: white;
 
+}
     .menu {
         font-size: var(--fs-s);
         font-weight: 500;
@@ -184,29 +202,21 @@ nav ul li a:hover, nav ul span:hover{
         margin: 0;
         transform: translate(0, 17%);
         text-align: start;
-        width: 9rem;
+        min-width: max-content;
         align-items: center;
-    }
-
-    .products:hover > .menu {
+        position: absolute;
+        top: 10%;
+        left: 0%;
         opacity: 1;
-        visibility: visible;
-        transform: translate(-16%, 17%);
+    }
+    .menu li{
+        width: 100%;
+       
     }
     
-    .submenu {
-        width: auto;
-        align-items: center;
-        transform: translate(-100%, 10%);
-    }
-
-    .subopen,
-    .menu li:hover > .submenu {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-104%, 10%);
-        width: 100%;
-    }
+    
+   
+  
 }
 
 /* Tablet View */
@@ -234,11 +244,13 @@ nav ul li a:hover, nav ul span:hover{
         border-radius: 0.3rem;
         padding-bottom: 0.3rem;
         gap: 1rem;
+        z-index: 100;
     }
 
     nav ul.open {
         transform: translate(20%, -5%);
         margin-right: 1rem;
+        z-index: 10000;
     }
 
     nav ul li a, nav ul span {
@@ -265,20 +277,5 @@ nav ul li a:hover, nav ul span:hover{
         width: 12rem;
     }
 
-    .products:hover > .menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-2.4rem, 0); 
-    }
-
-    .submenu {
-        width: auto;
-    }
-
-    .subopen,
-    .menu li:hover > .submenu {
-        opacity: 1;
-        visibility: visible;
-        width: 100%;
-    }
+    
 }

@@ -3,9 +3,6 @@ import '../style/success.css';
 import tick from "/assets/tick.webp"
 function FormSuccess() {
 
-  const handleBackToHome = () => {
-    
- };
 
   return (
     <div className="dealer-form-success">

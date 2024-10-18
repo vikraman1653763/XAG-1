@@ -2,7 +2,7 @@ import React, { useState,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { LiaSpinnerSolid } from "react-icons/lia";
-
+import { serverUrl } from '../constant';
 function BlogUpdate() {
   const [title, setTitle] = useState('');
   const [smallDesc, setSmallDesc] = useState('');
@@ -10,8 +10,8 @@ function BlogUpdate() {
   const [image, setImage] = useState('');
   const [error, setError] = useState(null);
   const [msg, setMsg] = useState(null);
-  const [loading, setLoading] = useState(false);
   const fileInputRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const navigate = useNavigate();
 
@@ -24,7 +24,8 @@ function BlogUpdate() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setIsSubmitting(true);
+
     const currentDate = new Date();
     const utcOffset = currentDate.getTimezoneOffset() * 60000; // Offset in milliseconds
     const istDate = new Date(currentDate.getTime() + utcOffset + (5.5 * 3600000)); // Adjust for IST
@@ -44,7 +45,7 @@ function BlogUpdate() {
 
     const token = localStorage.getItem('token');
 
-    const response = await fetch('/api/blog', {
+    const response = await fetch(`${serverUrl}/api/blog`, {
       method: 'POST',
       body: blogData,  
       headers:{
@@ -72,6 +73,8 @@ if(response.status===401||response.status===403){
         if (fileInputRef.current) {
           fileInputRef.current.value = null; 
         }
+        setIsSubmitting(false)
+
       }else{
         console.error("error response:",data)
         setError(data.error);
@@ -79,7 +82,7 @@ if(response.status===401||response.status===403){
         navigate('/admin/blogs/new');
       }
     }finally{
-      setLoading(false);
+      setIsSubmitting(false)
     }
 
     
@@ -104,13 +107,8 @@ if(response.status===401||response.status===403){
             {msg}
           </div>
         )}
-         {loading && (
-      <div className="loading-spinner">
-        <LiaSpinnerSolid className="spinner-icon" />
-        <p>Uploading data, please wait...</p>
-      </div>
-    )}
-      <form onSubmit={handleSubmit}>
+        
+      <form onSubmit={handleSubmit} style={{ cursor: isSubmitting ? 'wait' : 'auto' }}>
         
         <label htmlFor="title">
           <span>Title:</span>

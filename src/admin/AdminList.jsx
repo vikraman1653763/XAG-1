@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
 import { FaTrashAlt, FaPlus } from 'react-icons/fa';
-
+import { serverUrl } from '../constant';
 function AdminList({ title, endpoint, addPath,classes }) {
   const [items, setItems] = useState([]);
 const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const navigate = useNavigate();
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch(`/api/${endpoint}`);
+        const response = await fetch(`${serverUrl}/api/${endpoint}`);
         const data = await response.json();
         if (response.ok) {
           setItems(data);
@@ -36,7 +36,7 @@ const navigate = useNavigate();
 if(confirmed){
 
   try {
-    const response = await fetch(`http://localhost:8080/api/${endpoint}/${id}`, {
+    const response = await fetch(`${serverUrl}/api/${endpoint}/${id}`, {
       method: 'DELETE',
       headers:{
       
@@ -44,6 +44,9 @@ if(confirmed){
       }
     });
     const data = await response.json();
+    if (response.status === 403){
+      navigate('/login');
+    }
     if (response.ok) {
       setItems(items.filter(item => item.id !== id));
       setMessage(data.message);
@@ -98,7 +101,7 @@ const formatToIST = (dateString) => {
         <tbody>
           {items.map(item => (
             <tr key={item.id}>
-              <td>{item.title}</td>
+              <td>{item.title || item.name}</td>
               <td>{formatToIST(item.date)}</td>
               <td>{formatTime(item.date)}</td>
               <td>

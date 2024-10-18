@@ -28,14 +28,17 @@
   }
   .dealer-head{
     color:black;
-    font-size: 6rem !important;
+    font-size: clamp(3rem, 5vw + 1rem, 6rem) !important; 
     font-weight: 800;
     text-transform: uppercase;
     z-index: 2;
+    object-fit: contain;
+object-position: top;
     
   }
   .dealer-intro p{
-    color:white;
+    color: #d4d4d4;
+
   }
 
 
@@ -46,7 +49,7 @@
     gap: 1rem;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    top: 0;
     padding: 0 2rem;
   }
   
@@ -54,6 +57,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: contain;
+object-position: top;
   }
   
   .dealer-img-item img {
@@ -68,7 +73,8 @@
   }
   .deal-2{
     grid-area:5/3/11/9;
-    max-width: auto;
+    max-width: 100%;
+    transform: translateX(7%) !important;
     }
   .deal-3{
     grid-area:7/6/11/9 ;
@@ -122,7 +128,7 @@
 
   .dealer-sec-2-h3{
     font-size: var(--fs-xl);
-    color: rgb(255, 243, 243);
+    color: #ffffff;
     font-weight: 700;
   }
   .dealer-sec-2-h3 strong { 
@@ -148,7 +154,7 @@
     justify-content: space-between;
     text-align: center;
     padding: 1em;
-    color: rgba(255, 255, 255, 0.575);
+    color: #d4d4d4;
     height: 100%;
     align-items: center;
   
@@ -160,7 +166,7 @@
       display: block;
       text-align: center;
       font-weight: 700;
-      color: aliceblue;
+      color: #d4d4d4;
     }
     
     .dealer-why h3 {
@@ -310,7 +316,7 @@
 .dealer-sec-4 {
   padding: 2rem;
   background-color: #000000;
-  color: #ffffff;
+  color: #d4d4d4;
   text-align: center;
 }
 
@@ -389,36 +395,36 @@
   margin-top: 1.5rem;
   font-size: var(--fs-m);
   font-weight: 500;
-  color: #fff;
+  color: #d4d4d4;
 }
 
 .order-cta strong {
   color: #9BF00B;
   font-weight: 800;
-  
+  text-decoration-line: underline;
 }
 
 .itemdeal-1 {
-  background-image: url('/dealer/1.webp');  
+  background-image: url('/assets/dealer1.webp');  
 }
 
 .itemdeal-2 {
-  background-image: url('/dealer/2.webp');  
+  background-image: url('/assets/dealer2.webp');  
 }
 
 .itemdeal-3 {
-  background-image: url('/dealer/3.webp');  
+  background-image: url('/assets/dealer3.webp');  
 }
 
 .itemdeal-4 {
-  background-image: url('/dealer/4.webp');  
+  background-image: url('/assets/dealer4.webp');  
 }
 
 .itemdeal-5 {
-  background-image: url('/dealer/5.webp');  
+  background-image: url('/assets/dealer5.webp');  
 }
 .itemdeal-6{
-  background-image: url('/dealer/6.webp');  
+  background-image: url('/assets/dealer6.webp');  
 
 }
 

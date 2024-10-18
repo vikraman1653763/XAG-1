@@ -10,13 +10,16 @@ function Section3() {
   const[orderVolume,setOrderVolume]=useState("")
   const[comments,setComments]=useState("")
   const [error, setError] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    setIsSubmitting(true);
+
     e.preventDefault();
     const dealerData={companyName,contactPerson,email,phone,product,orderVolume,comments}
-    const response = await fetch('http://localhost:8080/api/dealer',{
+    const response = await fetch('/api/dealer',{
       method:'POST',
       body:JSON.stringify(dealerData),
       headers:{
@@ -30,15 +33,16 @@ function Section3() {
    }
    if(response.ok){
     setError(null)
-    console.log("good",json)
     navigate('/success')
+    setIsSubmitting(false)
+
    }
   };
 
   return (
     <div className="dealer-section3">
       <h2 className="dealer-section3-title">Request a Quote</h2>
-      <form className="dealer-quote-form" onSubmit={handleSubmit}>
+      <form className="dealer-quote-form" onSubmit={handleSubmit} style={{ cursor: isSubmitting ? 'wait' : 'auto' }}>
         <div className="dealer-form-group">
           <label htmlFor="companyName">Company Name</label>
           <input
@@ -48,6 +52,8 @@ function Section3() {
             value={companyName}
             onChange={(e) => setCompanyName(e.target.value)}
             required
+            disabled={isSubmitting}
+
           />
         </div>
 
@@ -60,6 +66,8 @@ function Section3() {
             value={contactPerson}
             onChange={(e) => setContactPerson(e.target.value)}
             required
+            disabled={isSubmitting}
+
           />
         </div>
 
@@ -73,6 +81,8 @@ function Section3() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              disabled={isSubmitting}
+
             />
           </div>
 
@@ -85,6 +95,8 @@ function Section3() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
+              disabled={isSubmitting}
+
             />
           </div>
         </div>
@@ -99,6 +111,8 @@ function Section3() {
               value={product}
               onChange={(e) => setProduct(e.target.value)}
               required
+              disabled={isSubmitting}
+
             />
           </div>
 
@@ -110,6 +124,8 @@ function Section3() {
               value={orderVolume}
               onChange={(e) => setOrderVolume(e.target.value)}
               required
+              disabled={isSubmitting}
+
             >
               <option value="">Select Volume</option>
               <option value="0-100">0-100</option>
@@ -127,10 +143,13 @@ function Section3() {
             name="comments"
             value={comments}
             onChange={(e) => setComments(e.target.value)}
+            disabled={isSubmitting}
+
           ></textarea>
         </div>
         <div className='dealer-submit-container'>
-        <button type="submit" className="dealer-submit-button">Submit</button>
+        <button type="submit" className="dealer-submit-button"disabled={isSubmitting}
+        >{isSubmitting ? "Sumbitting...":'Submit'}</button>
         {error && <div className="error">{error}</div>}
         </div>
       </form>

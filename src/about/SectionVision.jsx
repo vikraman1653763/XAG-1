@@ -1,26 +1,17 @@
 import React,{useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { delay } from 'framer-motion';
 
 
  
 const SectionVision = () => {
   useEffect(()=>{
     AOS.init({
-      duration: 500,
-      mirror: true,
-      easing:"ease-in-out-back"
+      duration:700,
+      mirror:true,
+      easing:"ease-in-out",
     });
-    const handleScroll = () => {
-      AOS.refresh();
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    
   },[])
 
   return (
@@ -30,7 +21,7 @@ const SectionVision = () => {
           <div className="title" >
             <h2>What's Our</h2>
           </div>
-          <div className="text-effect"  data-aos="fade-right">
+          <div className="text-effect"  data-aos="fade-up">
             <h2>Vision</h2>
           </div>
         </div>
@@ -47,7 +38,7 @@ const SectionVision = () => {
           </div>
           <div className="aboutcard" data-aos="fade-up">
             <h2  data-aos="fade-up">#3</h2>
-            <h3 data-aos="fade-up">“Integration of Technology & Agriculture</h3>
+            <h3 data-aos="fade-up">“Integration </h3>
             <p data-aos="fade-up">Creating a seamless blend of modern technology with traditional farming techniques to maximize outcomes.</p>
           </div>
         </div>

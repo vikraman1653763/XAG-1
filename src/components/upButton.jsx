@@ -1,21 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const UpButton = () => {
-    // const [visible, setVisible] = useState(false);
-
-    // useEffect(() => {
-    //     const toggleVisible = () => {
-    //         const scrolled = window.scrollY || document.documentElement.scrollTop;
-    //         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    //         setVisible(scrolled > (height / 2));
-    //     };
-
-    //     window.addEventListener("scroll", toggleVisible);
-
-    //     return () => {
-    //         window.removeEventListener("scroll", toggleVisible);
-    //     };
-    // }, []);
+  
 
     const goTop = () => {
         window.scrollTo({

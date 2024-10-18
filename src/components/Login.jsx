@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../style/login.css';
-
+import { serverUrl } from '../constant';
 function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +14,7 @@ function Login() {
 
     const loginData = { user, password };
     
-    const response = await fetch('http://localhost:8080/api/login', {
+    const response = await fetch(`${serverUrl}/api/login`, {
       method: "POST",
       body: JSON.stringify(loginData),
       headers: {
@@ -30,7 +30,7 @@ function Login() {
       console.log("Logged in successfully");
       setError(null)
       
-      navigate('/admin'); // Redirect to admin dashboard or other page
+      navigate('/admin'); 
     } else {
       console.log("Invalid username or password");
       setError(data.error)

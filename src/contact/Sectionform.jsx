@@ -1,14 +1,18 @@
 import React,{useEffect, useState} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {useNavigate}from 'react-router-dom';
+
+
 const SectionForm = () => {
+  const navigate = useNavigate();
 
   const [companyName, setCompanyName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
-  
+  const [isSubmitting, setIsSubmitting] = useState(false);
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -19,10 +23,10 @@ const SectionForm = () => {
 
 const handleSubmit = async (e)=>{
   e.preventDefault()
-
+  setIsSubmitting(true);
   const enquiryData={companyName,email,phoneNumber,message}
 
-  const response = await fetch('http://localhost:8080/api/enquiry', { 
+  const response = await fetch('/api/enquiry', { 
     method: 'POST',
     body: JSON.stringify(enquiryData),
     headers: {
@@ -38,14 +42,15 @@ const handleSubmit = async (e)=>{
   if(response.ok){
     
     setError(null)
-    console.log("good",json)
+    navigate('/success')
+    setIsSubmitting(false)
   }
 }
 
   return (
     <section className="contact_form">
       <div className="contact_form-heading">
-        <h3>Contact us:)</h3>
+        <h1>Contact us:)</h1>
         <h6>
           Kindly submit your details and share your message to us, thank you
         </h6>
@@ -55,7 +60,9 @@ const handleSubmit = async (e)=>{
 
 
 
-      <form className="contact_form-left" onSubmit={handleSubmit}>
+      <form className="contact_form-left"
+       onSubmit={handleSubmit}
+      style={{ cursor: isSubmitting ? 'wait' : 'auto' }} >
           <div>
             <label htmlFor="companyname">Company name</label>
             <input
@@ -63,6 +70,7 @@ const handleSubmit = async (e)=>{
               name="companyname"
               id="companyname"
               value={companyName}
+              disabled={isSubmitting}
               onChange={(e) => setCompanyName(e.target.value)}
             />
           </div>
@@ -74,6 +82,7 @@ const handleSubmit = async (e)=>{
                 name="email"
                 id="email"
                 value={email}
+                disabled={isSubmitting}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -85,6 +94,7 @@ const handleSubmit = async (e)=>{
                 id="phonenumber"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -96,9 +106,11 @@ const handleSubmit = async (e)=>{
               placeholder="Type your message..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              disabled={isSubmitting}
             />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Submitting...' : 'Submit'}</button>
           {error && <div className="error">{error}</div>}
         </form>
 

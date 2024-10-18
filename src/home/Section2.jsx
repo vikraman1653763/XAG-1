@@ -4,14 +4,13 @@ import about2 from '/assets/about2.webp';
 import about3 from '/assets/about3.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { easeInOut } from 'framer-motion';
 
 const Section2 = () => {
     useEffect(() => {
         AOS.init({
-          duration: 1000,
-          mirror: true,
-          easing:easeInOut
+            duration: 1000,
+            mirror: false,
+            offset:10,
         });
       }, []);
 
@@ -75,12 +74,12 @@ const Section2 = () => {
             <div className="bg-layer">
                 <div className="text-container" >
                     <div>
-                        <h3 className="one" data-aos="fade-left" data-aos-delay='700'>About</h3>
-                        <h3 className="two" data-aos="fade-right" data-aos-delay='1000'>xagrotor tek</h3>
+                        <h3 className="one" data-aos="fade-up" data-aos-delay='800'>About</h3>
+                        <h1 className="two" data-aos="fade-up" data-aos-delay='900'>xagrotor tek</h1>
                     </div>
-                    <p data-aos="fade-up">Xagrotor Tek Private Limited, founded in 2023, is a pioneering company based in Pondicherry, India. We specialize in developing advanced agricultural drone technology aimed at improving farming practices. Our innovative solutions help farmers manage their crops more efficiently, reduce costs, and increase yields. With a strong commitment to sustainability, we promote precision farming techniques that benefit both farmers and the environment. Our team of experts is dedicated to pushing the boundaries of agricultural technology, ensuring that our products meet the highest standards of quality and reliability.</p>
+                    <p data-aos="fade-up" data-aos-delay='1000'>Xagrotor Tek Private Limited, founded in 2023, is a pioneering company based in Pondicherry, India. We specialize in developing advanced agricultural drone technology aimed at improving farming practices. Our innovative solutions help farmers manage their crops more efficiently, reduce costs, and increase yields. With a strong commitment to sustainability, we promote precision farming techniques that benefit both farmers and the environment. Our team of experts is dedicated to pushing the boundaries of agricultural technology, ensuring that our products meet the highest standards of quality and reliability.</p>
                 </div>
-                <div className="carousel-container" data-aos="fade-right">
+                <div className="carousel-container" data-aos="fade-up">
                     <div className="mySlides animate">
                         <img src={about1} alt="slide" />
                     </div>
@@ -90,8 +89,8 @@ const Section2 = () => {
                     <div className="mySlides animate">
                         <img src={about3} alt="slide" />
                     </div>
-                    <a className="prev">&#10094;</a>
-                    <a className="next">&#10095;</a>
+                    <button className="prev">&#10094;</button>
+                    <button className="next">&#10095;</button>
                     <div className="dots-container">
                         <span className="dots"></span>
                         <span className="dots"></span>

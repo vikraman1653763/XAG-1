@@ -1,3 +1,16 @@
+
+ .train h1{
+  font-size: var(--fs-xxl);
+  color: #9BF00B;
+}
+.train h2{
+  font-size: var(--fs-l);
+  color: white;
+}
+.train p{
+  font-size: var(--fs-m);
+}
+
 /*flipcard*/
 .flip-container {
   display: flex;
@@ -51,7 +64,7 @@
   width: 160px;
   height: 160%;
   background: linear-gradient(90deg, transparent, #9BF00B, #9BF00B, #9BF00B, #9BF00B, transparent);
-  animation: rotation_481 5000ms infinite linear;
+
 }
 
 
@@ -137,7 +150,8 @@
 }
 
 .flip-title p {
-  width: 50%;
+  width: 100%;
+  
 }
 
 .flip-card-footer {
@@ -165,51 +179,57 @@
 .flip-bottom {
   width: 100%;
   height: 100%;
-  background-image: url('/product/product1.webp'); /* Replace with your image path */
-  background-size: cover;
+  background-color:hsla(0,0%,100%,1);
+  background-image:
+  radial-gradient(at 40% 20%, hsla(25,0%,0%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 0%, hsla(0,0%,0%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 50%, hsla(352,0%,38%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 50%, hsla(340,0%,0%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(16,0%,0%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 100%, hsla(240,0%,0%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(342,0%,0%,1) 0px, transparent 50%);  background-size: cover;
   background-position: center;
   position: relative;
   background-clip: border-box;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .flip-bottom p {
-  position: absolute;
-  left: 1%;
-  bottom: 20%;
-  font-size: var(--fs-s);
+  position: relative;
+  font-size: var(--fs-m);
   color: rgb(255, 255, 255);
   z-index: 1;
   font-weight: 500;
-  text-indent: 1%;
-  text-align: left;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 #flip-bottom {
   background-image: url('/Imagesequence/45.webp'); /* Replace with your image path */
   left: 50px;
   top: 0px;
-  width: 150px;
+  width: 100%;
   height: 150px;
 }
 
 @keyframes floating {
   0% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
   50% {
-      transform: translateY(10px);
+    transform: translateY(10px);
   }
   100% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
 /* .training-section */
 .training-section {
-  padding: 50px;
   background-color: #000000;
   text-align: center;
 }
@@ -223,9 +243,9 @@
 
 .course-card-container {
   display: flex;
+  flex-direction: column ;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
 }
 
 .course-card {
@@ -236,7 +256,6 @@
   flex-direction: row;
   background-color: #1d1d1d;
   border-radius: 10px;
-  padding: 1rem;
   width: 100%;
   height: clamp(10vh, 70vh, 100vh);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -244,6 +263,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: url('/assets/trainingBg.webp');
 }
 
 .course-card:hover {
@@ -258,7 +278,7 @@
   height: auto;
   margin-bottom: 10px;
   background: rgba(0, 0, 0, 0);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow:  8px 3px 25px rgba(136, 252, 5, 0.432);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(2.5px);
   border-radius: 10px;
@@ -276,7 +296,7 @@
 }
 
 .course-icon1 span, .course-icon2 span {
-  color: white;
+  color: #d4d4d4;
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
@@ -284,13 +304,13 @@
   font-size: clamp(var(--fs-s), var(--fs-m), var(--fs-l));
   font-weight: 700;
   margin-bottom: 10px;
-  color: #000000;
+  color: #d4d4d4;
   margin-left: 0px;
 }
 
 .course-card p {
   font-size: var(--fs-s);
-  color: #000000;
+  color: #ffffff;
 }
 
 .course-icon p {
@@ -298,6 +318,103 @@
   color: #9BF00B;
   font-weight: 800;
 }
+
+.day-nav{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4em;
+}
+.day-nav button{
+  color: #d4d4d4;
+  border: none;
+  padding:.5em 1em;
+  font-size: var(--fs-s);
+  transition: all .5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+
+.day-nav button.selected ,.day-nav button:hover{
+  transition: all .5s ease-in-out;
+  color: #9BF00B;
+  border-radius: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.301);
+}
+
+.day-content{
+  color: #d4d4d4;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+
+}
+.course-day-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.course-day-details{
+  display: flex;
+
+  justify-content: space-evenly ;
+  padding: 1em;
+  width: 100%;
+  gap: 1em;
+  
+}
+.course-day-details-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:left;
+  width:100%;
+  
+  /* border: 1px solid yellow; */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(9, 20, 16, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 1em;
+}
+
+.course-day-details-box h3{
+  color: #9BF00B;
+  font-size: var(--fs-m);
+  font-weight: 500;
+  width: 100%;
+  text-align:initial;
+  /* border: 1px solid red; */
+}
+
+.course-day-details-box li{
+  text-align: left;
+  font-size: var(--fs-xs);
+  line-height: 200%;
+  color: #d4d4d4;
+}
+.course-day-details-box li svg{
+  color:#9BF00B;
+  margin-right: .5em
+}
+
+
+
+
 
 /* Media Queries for Mobile */
 @media screen and (max-width: 767px) {
@@ -382,5 +499,150 @@
   .course-card p {
       font-size: var(--fs-s);
       font-weight: 400;
+  }
+}
+/* Media Queries for Tablet */
+@media screen and (max-width: 1024px) {
+  .training-section {
+      padding: 30px;
+      text-align: center;
+  }
+
+  .course-card-container {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .course-card {
+      height: auto;
+      padding: 1rem;
+      margin-bottom: 20px;
+  }
+
+  .course-icon {
+      flex-direction: row;
+      gap: 15px;
+  }
+
+  .course-icon img {
+      width: 4rem;
+      height: 4rem;
+  }
+
+  .course-icon p {
+      font-size: var(--fs-l);
+  }
+
+  .course-card h3 {
+      font-size: var(--fs-m);
+  }
+
+  .course-card p {
+      font-size: var(--fs-s);
+  }
+
+  .day-nav button {
+      font-size: var(--fs-xs);
+      padding: 0.5em 0.8em;
+  }
+
+  .day-content {
+      align-items: center;
+      justify-content: center;
+  }
+
+  .course-day-details {
+      flex-direction: column;
+  }
+
+  .course-day-details-box {
+      width: 90%;
+      padding: 0.8em;
+  }
+
+  .course-day-details-box h3 {
+      font-size: var(--fs-s);
+  }
+
+  .course-day-details-box li {
+      font-size: var(--fs-xs);
+  }
+  .training-section h2 {
+    font-size: var(--fs-l);
+    text-align: center;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .training-section {
+      padding: 20px;
+      text-align: center;
+  }
+  .training-section h2 {
+    font-size: var(--fs-l);
+  }
+  .course-card-container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .course-card {
+      height: auto;
+      padding: 1rem;
+  }
+
+  .course-icon {
+      flex-direction: row;
+      gap: 10px;
+  }
+
+  .course-icon img {
+      width: 3rem;
+      height: 3rem;
+  }
+
+  .course-icon p {
+      font-size: var(--fs-m);
+  }
+
+  .course-card h3 {
+      font-size: var(--fs-m);
+  }
+
+  .course-card p {
+      font-size: var(--fs-s);
+  }
+
+  .day-nav button {
+      font-size: var(--fs-xs);
+      padding: 0.3em 0.6em;
+  }
+
+  .day-content {
+      align-items: center;
+      justify-content: center;
+  }
+
+  .course-day-container h2 {
+      font-size: var(--fs-m);
+  }
+
+  .course-day-details {
+      flex-direction: column;
+      padding: 0.5em;
+  }
+
+  .course-day-details-box {
+      width: 90%;
+      padding: 0.5em;
+  }
+
+  .course-day-details-box h3 {
+      font-size: var(--fs-xs);
+  }
+
+  .course-day-details-box li {
+      font-size: var(--fs-xs);
   }
 }

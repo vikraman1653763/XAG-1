@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/navbar.css';
 import {  motion } from 'framer-motion';
@@ -79,7 +79,7 @@ const bottomLineVariants = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
-
+  const submenuRef = useRef(null);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if(submenuOpen){
@@ -88,9 +88,25 @@ const Navbar = () => {
   };
 
   const toggleSubmenu = () => {
-    setSubmenuOpen(!submenuOpen);
+    setSubmenuOpen(true);
+ 
 
   };
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if(submenuOpen && submenuRef.current && !submenuRef.current.contains(event.target)){
+        setSubmenuOpen(false);
+      }
+    };
+  
+    document.addEventListener('mousedown', handleOutsideClick);
+  
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [submenuOpen, submenuRef]);
+
+
 
   return (
     <nav>
@@ -123,39 +139,38 @@ const Navbar = () => {
       </div>
 
       
-      <ul className={`nav-links ${isOpen ? 'open' : ''}`}
-      
-      >
-  <li><Link to="/about">ABOUT</Link></li>
-  <li className="products">
-    <span onClick={toggleSubmenu}>PRODUCT</span>
-    <motion.ul
-      className="menu"
-      variants={menuVariants}
-      initial={false}
-      animate={submenuOpen ? "open" : "closed"}
-      style={{ pointerEvents: submenuOpen ? "auto" : "none" }}
-    >
-      <motion.li variants={itemVariants} onClick={toggleMenu}>
-          <Link to="/agr16">AGR 16</Link>
-      </motion.li>
-      <motion.li variants={itemVariants} onClick={toggleMenu}>
-        <Link to="/flight-controller">Xrotor Tek India</Link>
-      </motion.li>
-      <motion.li variants={itemVariants} onClick={toggleMenu}>
-        <Link to="/Batteries">Batteries</Link>
-      </motion.li>
-    </motion.ul>
-  </li>
-  <motion.li variants={itemVariants}>
-  <Link to="/Dealer">DEALER&nbsp;PORTAL</Link></motion.li>
-  <motion.li variants={itemVariants}>
-  <Link to="/training">TRAINING</Link></motion.li>
-  <li><Link to="/Blog">BLOGS</Link></li>
-  <li><Link to="/career">CAREER</Link></li>
-  <li><Link to="/contact">CONTACT</Link></li>
-  <li className='login-btn'><Link to="/">Buy Now</Link></li>
-</ul>
+      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <li><Link to="/about" onClick={toggleMenu}>ABOUT</Link></li>
+        <li className="products">
+          <span onClick={toggleSubmenu}>PRODUCT</span>
+          <motion.ul
+            className="menu"
+            variants={menuVariants}
+            initial={false}
+            animate={submenuOpen ? "open" : "closed"}
+            style={{ pointerEvents: submenuOpen ? "auto" : "none" }}
+            ref={submenuRef}
+          >
+            <motion.li variants={itemVariants} >
+                <Link to="/agr16" onClick={toggleMenu}>AGR 16</Link>
+            </motion.li>
+            <motion.li variants={itemVariants} >
+              <Link to="/flight-controller" onClick={toggleMenu}>Xrotor&nbsp;Tek&nbsp;India</Link>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              <Link to="/Batteries" onClick={toggleMenu}>Batteries</Link>
+            </motion.li>
+          </motion.ul>
+        </li>
+        <motion.li variants={itemVariants}>
+        <Link to="/dealer" onClick={toggleMenu}>DEALER&nbsp;PORTAL</Link></motion.li>
+        <motion.li variants={itemVariants}>
+        <Link to="/training" onClick={toggleMenu}>TRAINING</Link></motion.li>
+        <li><Link to="/blog" onClick={toggleMenu}>BLOGS</Link></li>
+        <li><Link to="/career" onClick={toggleMenu}>CAREER</Link></li>
+        <li><Link to="/contact" onClick={toggleMenu}> CONTACT</Link></li>
+        <li className='login-btn' onClick={toggleMenu}><Link to="/">Buy Now</Link></li>
+      </ul>
 
     </nav>
   );

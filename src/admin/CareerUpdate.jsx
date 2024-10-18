@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TiArrowLeftThick } from "react-icons/ti";
 import { LiaSpinnerSolid } from "react-icons/lia";
-
+import { serverUrl } from '../constant';
 function CareerUpdate() {
   const [title, setTitle] = useState('');
   const [jobType, setJobType] = useState('');
@@ -14,9 +14,12 @@ function CareerUpdate() {
   const [msg, setMsg] = useState(null);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     setLoading(true);
     const currentDate = new Date();
 
@@ -43,7 +46,7 @@ function CareerUpdate() {
       date: formattedDate,
     };
     const token = localStorage.getItem('token');
-    const response = await fetch('/api/career', {
+    const response = await fetch(`${serverUrl}/api/career`, {
       method: 'POST',
       body:JSON.stringify(careerData),
       headers:{
@@ -111,7 +114,7 @@ if(response.ok){
         <p>Uploading data, please wait...</p>
       </div>
     )}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ cursor: isSubmitting ? 'wait' : 'auto' }}>
       
         <label htmlFor="title">
           <span>Title:</span>

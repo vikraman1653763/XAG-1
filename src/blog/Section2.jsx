@@ -3,6 +3,9 @@ import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsCardHeading } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
+import { serverUrl } from "../constant";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 const Section2 = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
@@ -10,7 +13,7 @@ const Section2 = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/blogs`);
+        const response = await fetch(`${serverUrl}/api/blogs`);
         const data = await response.json();
         if (response.ok) {
           setItems(data);
@@ -24,7 +27,13 @@ const Section2 = () => {
 
     fetchItems();
   }, []);
-
+  useEffect(() => {
+    AOS.init({ 
+        duration: 1250 ,
+        disable:  window.innerWidth < 768,
+        once: true
+    });
+}, []);
   return (
     <>
       {items && items.length > 0 ? (
@@ -37,14 +46,18 @@ const Section2 = () => {
         </div>
       ) : (
         <div className="flex h-48 items-center justify-center">
-          <span className="font-semibold uppercase text-neutral-500">
-            No blogs available at the moment
-          </span>
-          {error && (
+            <div className="no-Blogs">
+              <div className="noBlogText">
+                <h2>No Blogs Available</h2>
+                <p>There are no blogs available at the moment. Please check back later for updates.</p>
+              </div>
+              <img src="/assets/noBlog.webp" data-aos="fade-up" alt="no blogs" />
+          </div>
+          {/* {error && (
           <div className="alert alert-danger">
             {error}
           </div>
-        )}
+        )} */}
         </div>
       )}
     </>

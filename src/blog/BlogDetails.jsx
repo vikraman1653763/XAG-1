@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import '../style/blog.css';
 import Section2 from '../blog/Section2.jsx';
-
+import { serverUrl } from "../constant.js";
 const BlogDetails = () => {
     const { id } = useParams(); 
     const [blog, setBlog] = useState(null);
@@ -11,7 +11,7 @@ const BlogDetails = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await fetch(`/api/blogs/${id}`);  // Fetch by id
+                const response = await fetch(`${serverUrl}/api/blogs/${id}`);  // Fetch by id
                 if (response.ok) {
                     const data = await response.json();
                     setBlog(data);

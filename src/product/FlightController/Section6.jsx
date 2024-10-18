@@ -41,7 +41,7 @@ const Section6 = () => {
 
 
       <div ref={containerRef}  className="fc-adv-textBox">
-        <h2 className="fc-adv-text fc-adv-head">Key Capabilities of Our Flight Controller</h2>
+        <h2 className="fc-adv-t ext fc-adv-head">Key Capabilities of Our Flight Controller</h2>
         <p>The flight controller can handle up to 100kg.</p>
         <p>Can support more than 8 regional languages.</p>
         <p>log data are stored in the cloud.</p>

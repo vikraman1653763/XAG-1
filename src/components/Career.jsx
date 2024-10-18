@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import bag from "/assets/bag.svg";
 import { Link, useParams } from "react-router-dom";
-
+import { serverUrl } from '../constant';
 const Career = () => {
     const { id } = useParams(); 
 
@@ -56,7 +56,7 @@ const Career = () => {
     useEffect(() => {
         const fetchCareer = async () => {
             try {
-                const response = await fetch(`/api/careers`); 
+                const response = await fetch(`${serverUrl}/api/careers`); 
                 if (response.ok) {
                     const data = await response.json();
                     setItems(data);
@@ -84,7 +84,7 @@ const Career = () => {
                     handleExperienceChange={handleExperienceChange}
                     />
                 )}
-              <div className="job-listings" data-aos="fade-up">
+              <div className="job-listings" >
                     {filteredJobs && filteredJobs.length > 0 ? (
                         filteredJobs.map((job, index) => (
                             <div className="job-card" key={index} >
@@ -102,16 +102,20 @@ const Career = () => {
                             </div>
                         ))
                     ) : (
-                        <div className="no-jobs">
-                            <h3>There are currently no openings available. Please check back later.</h3>
-                        </div>
+            <div className="no-Jobs">
+              <div className="noJobText">
+                        <h2>We're Not Hiring Right Now</h2>
+                        <p>Thank you for your interest in joining our team! While there are no open positions at the moment, we encourage you to check back soon or follow us for updates on future opportunities.</p>
+                      </div>
+              <img src="/assets/noJob.webp" alt="no Jobs" data-aos="fade-up" />
+                  </div>
                     )}
                 </div>
-                {error && (
+                {/* {error && (
                     <div className="alert alert-danger">
                         {error}
                     </div>
-                    )}
+                    )} */}
             </section>
         </>
     );

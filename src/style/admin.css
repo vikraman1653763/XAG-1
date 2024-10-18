@@ -1,8 +1,4 @@
-@font-face {
-    font-family: 'legacy';
-    src: url('/fonts/legacy.ttf');
-    font-weight: 800;
-}
+
 
 .admin-container {
     border: 1px solid #636363;
@@ -167,7 +163,7 @@ input[type="radio"] {
 
 .admin-form form label ul li,
 .admin-form form fieldset ul li {
-    font-family: 'legacy';
+    font-family: 'Poppins';
     font-weight: 500;
     font-size: 1.1em;
     color: white;

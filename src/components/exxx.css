@@ -1,0 +1,43 @@
+/* General styling for sections */
+.section {
+  height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the scroll-snap section */
+.scroll-snap-section {
+  height: 100vh;
+  overflow-y: hidden; /* Disable scrolling initially */
+  transition: overflow 0.3s; /* Smooth transition for enabling scroll */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+.scroll-snap-section::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.scroll-snap-section.active {
+  overflow-y: scroll; /* Enable scrolling when active */
+  scroll-snap-type: y mandatory; /* Enable vertical snapping */
+}
+
+.card {
+  scroll-snap-align:start end; /* Ensures cards snap to the top */
+  scroll-snap-stop: always;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: orange;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-type: y mandatory;
+
+}

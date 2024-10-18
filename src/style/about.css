@@ -1,44 +1,4 @@
 
-.banner {
-    width: 100%;
-    position: relative;
-    display: inline-block;
-}
-
-.banner img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-}
-
-.image-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 70%;
-}
-
-.image-text h3 {
-    color: white;
-    font-size: var(--fs-xxl); /* 64px */
-    text-transform: uppercase;
-    line-height: var(--fs-xl); /* 72px */
-    font-weight: 800;
-    margin-bottom: 24px;
-}
-
-.image-text h3 span {
-    color: #9BF00B;
-}
-
-.image-text p {
-    font-size: var(--fs-m); /* 18px */
-    font-weight: 600;
-    color: white;
-}
-
 /*About*/
 .About {
     width: 100%;
@@ -50,19 +10,20 @@
 .aboutpage-container {
     display: flex;
     flex-flow: row nowrap;
-    padding: 48px;
+    padding: 7rem 13rem;
     justify-content: center;
     align-items: flex-start;
-    gap: 80px;
+    gap: 1rem;
 }
 
 .aboutpage-contents {
     width: 50%;
     position: relative;
     overflow: hidden;
+    flex: 1;
 }
 
-.aboutpage-contents h2 {
+.aboutpage-contents h1 {
     margin: 0;
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -89,18 +50,24 @@
 .aboutpage-contents p {
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: var(--fs-m); /* 1.5rem */
+    font-size: var(--fs-s); /* 1.5rem */
     font-style: normal;
     font-weight: 400;
     line-height: 2em;
-    /* 34.5px */
+    word-spacing: .5em;
     letter-spacing: -0.69px;
     text-align: justify;
+    width: 90%;
+    height: max-content;
+    color: #d4d4d4;
 }
 
 .aboutpage-myvideo {
-    width: 50%;
+    flex:1.2;
+    width: 40%;
     position: relative;
+    object-fit: contain;
+    object-position: left;
 }
 
 .aboutpage-myvideo video {
@@ -108,119 +75,12 @@
     border-radius: 35px;
 }
 
-.About .play-button {
-    display: flex;
-    background-color: #111111;
-    width: fit-content;
-    padding: 8px 16px 8px 8px;
-    border-radius: 50px;
-    gap: 10px;
-    border: 1px solid #9BF00B;
-    position: absolute;
-    bottom: 4%;
-    left: 2%;
-}
 
-.About .play-button .icon-bg {
-    position: relative;
-    background-color: #9BF00B;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-}
 
-.icon-bg img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-36%, -50%);
-    width: 1.5rem;
-    height: 1.5rem;
-}
 
-.About .play-button .duration p {
-    font-size: var(--fs-s); /* 14px */
-    color: white;
-}
 
-.About .play-button .duration time {
-    font-size: var(--fs-s); /* 14px */
-    color: #ABABAB;
-}
 
-.trigger {
-    text-align: center;
-    padding: 7px 13px;
-    background: #3e3e3e;
-    color: #fff;
-    font-size: var(--fs-s); /* 15px */
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-}
 
-.aboutpage-modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-
-.aboutpage-modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(12, 12, 12, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(7.2px);
-    width: 50%;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: end;
-    padding: 12px;
-}
-
-.close-button {
-    float: right;
-    width: 1.5rem;
-    color: white;
-    line-height: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 0.25rem;
-}
-
-.close-button:hover {
-    background-color: darkgray;
-}
-
-.modal-content video {
-    width: 100%;
-    height: 88%;
-    border-radius: 8px;
-}
-
-.modal-content video source {
-    object-fit: cover;
-}
-
-.show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
 
 /* about end */
 /*Vision*/
@@ -246,44 +106,50 @@
 .content-center {
     display: flex;
     flex-direction: column;
+    padding: 7rem 13rem;
 }
 
 .header {
     display: flex;
-    gap: 0rem;
-    height: auto;
+    gap: 2rem;
+    height: 100%;
     width: 100%;
-    margin-bottom: 36px;
 }
 
 .header .title {
-    width: 30%;
+    width: auto;
+    flex: 1;
 }
 
 .vision .title h2 {
-    height: auto;
+    height: 100%;
+    width: 100%;
     color: #FFF;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
     white-space: wrap;
-    font-size: var(--fs-xxxl); /* 8rem */
-    margin-top: 2.5rem;
+    font-size: 8em; /* 8rem */
+    margin-top: 0;
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -2.257px;
     text-transform: uppercase;
+    
 }
 
 .vision .text-effect {
-    width: 70%;
-    height: auto;
+    width: 100%;
+
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    flex: 3;
+    align-items: flex-start;
 }
 
 .vision .text-effect h2 {
-    background-image: url('/assets/wingspin.gif');
+    /* background-image: url('/assets/wingspin.gif'); */
+    background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(75,75,75,1) 24%, rgba(36,35,35,1) 44%, rgba(0,0,0,1) 68%, rgba(4,4,4,1) 93%, rgba(46,45,45,1) 99%, rgba(0,0,0,1) 100%);
     background-size: cover;
     background-position: 20%;
     background-color: #000;
@@ -292,12 +158,13 @@
     -moz-background-clip: text;
     -webkit-background-clip: text;
     text-transform: uppercase;
-    font-size: 14rem;
+    font-size: 15rem;
     font-weight: 900;
     /* padding: 5px; */
-    margin: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    vertical-align: top;
+    line-height: 100%;
 }
 
 .vision .content {
@@ -313,6 +180,7 @@
     margin: 2rem;
     padding: 1rem;
     overflow: hidden;
+
 }
 
 .vision .content .aboutcard h2 {
@@ -333,7 +201,7 @@
 
 .vision .content .aboutcard p {
     margin-top: 8px;
-    font-size: var(--fs-s); /* 1.2rem */
+    font-size: var(--fs-s); 
 }
 
 /* vision end */
@@ -343,9 +211,9 @@
     width: 100%;
     height: auto;
     flex-direction: column;
-    padding: 48px;
+    padding: 7rem 13rem;
     gap: 10px;
-    background-image: linear-gradient(to bottom, #020d14, #0c1318, #13191b, #191d1f, #1f2223, #1c3437, #104747, #005a50, #00805e, #00a65e, #00cb4b, #3df00b);
+    background: #000;
 }
 
 .mission .head .heading {
@@ -359,8 +227,9 @@
 }
 
 .mission .misson-texteffect h2 {
-    background-image: url('/assets/mission1.gif');
-    background-size: cover;
+    /* background-image: url('/assets/mission1.gif'); */
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 31%, rgba(75,75,75,1) 76%, rgba(4,4,4,1) 98%, rgba(46,45,45,1) 99%, rgba(36,35,35,1) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);    background-size: cover;
     background-position: -390px -90px;
     color: transparent;
     background-clip: border-box;
@@ -378,42 +247,40 @@
     justify-content: space-evenly;
 }
 
-.mission .content .card {
+.mission .content .mission-card {
     padding: 0px 2rem;
     border-radius: 1.3rem;
-    background: linear-gradient(225deg, #5cd70a07, #6dff0c13);
-    box-shadow: -10px 10px 20px #0707071c,
-        10px -10px 20px #1e1f1e3f;
+    background: linear-gradient(225deg, #00000007, #6dff0c13);
+    box-shadow: -10px 10px 20px #adadad1c,
+        10px -10px 20px #6e6e6e6e;
     margin: 2rem;
     padding: 1rem;
     overflow: hidden;
     width: auto;
 }
 
-.mission .content .card h2 {
-    color: #000000;
+.mission .content .mission-card h2 {
+    color: #e9e9e9;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: var(--fs-l); /* 2rem */
+    font-size: var(--fs-l); 
     font-style: normal;
     font-weight: 700;
     line-height: 27.372px;
     margin-bottom: 10px;
-    /* 57.96% */
 }
 
-.mission .content .card h3 {
+.mission .content .mission-card h3 {
     margin: 0px;
-    font-size: var(--fs-l); /* 2rem */
+    font-size: var(--fs-l);
     font-weight: 700;
-    /* text-decoration-line: underline; */
     color: white;
     text-shadow: 0px 4.96px 4.96px rgba(0, 0, 0, 0.25);
 }
 
-.mission .content .card p {
+.mission .content .mission-card p {
     margin-top: 8px;
-    font-size: var(--fs-s); /* 1.2rem */
-    color: rgb(0, 0, 0);
+    font-size: var(--fs-s);
+    color: #d4d4d4;
 }
 
 /* mission end */
@@ -423,6 +290,8 @@
 .coreSection {
     background: rgb(0, 0, 0);
     min-height: 100%;
+    padding: 7rem 13rem;
+
   }
 
   .coreSection .head .heading {
@@ -433,47 +302,48 @@
     line-height: 100%;
     letter-spacing: -2.257px;
     text-transform: uppercase;
+
   }
   
   .coreSection .misson-texteffect h2 {
-    background-image: url('/assets/mission1.gif');
-    background-size: 120%;
-    background-position: -390px -90px;
+    /* background-image: url('/assets/mission1.gif'); */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(180, 180, 180) 31%, rgba(75,75,75,1) 76%, rgba(4,4,4,1) 98%, rgba(46,45,45,1) 99%, rgba(36,35,35,1) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%); 
+    background-size: cover;
+    
+    background-position: center;
     color: transparent;
     background-clip: border-box;
     -moz-background-clip: text;
     -webkit-background-clip: text;
     text-transform: uppercase;
-    font-size: 16rem;
+    font-size: 15rem;
     font-weight: 900;
     margin-top: -50px;
+    line-height: 110%;
+    white-space: nowrap;
   }
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 23%);
     grid-template-rows: repeat(4, 1fr);
-    gap: 0;
-    
-    width: 52%;
+    width:100%;
     height: 50%;
     box-sizing: border-box;
-    left: -50%;
-    transform: translateX(50%);
+    justify-content: center;
 }
 
 .coreContent {
-    /* border: 1px solid rgba(255, 255, 255, 0.1);  */
-    border-radius: 0; 
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    color: whitesmoke;
+    color: #d4d4d4;
     text-align: center;
     border-radius: 1em;
-    background-color: rgba(0, 0, 0, 0); /* Slightly darkened background */
-    padding: 0; /* Remove padding */
+    background-color: rgba(0, 0, 0, 0); 
+    padding: 0; 
     height: 100%;
-    /* background-color: #fff; */
+    
     align-self: center;
     justify-self: center;
     width: 20em;
@@ -494,7 +364,7 @@
     transform: scale(1.05);
     transition: all .5s ease-in-out;
 }
-/* Grid Area Assignments */
+
 .coreBox1 { grid-area: 1/1/2/2; }
 .coreBox2 { grid-area: 1/2/4/3; }
 .coreBox3 { grid-area: 1/3/2/4; }
@@ -533,12 +403,7 @@
     background-repeat: no-repeat, no-repeat;
 }
 
-.main-textimonial {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .news {
     padding: 60px 94px;
@@ -551,7 +416,7 @@
         #000;
 }
 
-.cards {
+.mission-cards {
     display: flex;
     align-items: center;
     gap: 28.736px;
@@ -565,46 +430,46 @@
             rgba(24, 24, 24, 0.1) 96.88%);
 }
 
-.cards h2 {
-    font-size: 24.631px; /* Consider using a custom variable if this size is used frequently */
+.mission-cards h2 {
+    font-size: 24.631px; 
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
     /* 34.483px */
 }
 
-.cards p {
-    font-size: 16.421px; /* Consider using a custom variable if this size is used frequently */
+.mission-cards p {
+    font-size: 16.421px; 
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     /* 24.631px */
 }
 
-.cards .cat-bt {
+.mission-cards .cat-bt {
     width: 73.35px;
     border-radius: 12.225px;
     border: none;
     background: #f4f4f4;
     padding: 3px 7x;
     color: #2d2a2a;
-    font-size: 13.165px; /* Consider using a custom variable if this size is used frequently */
+    font-size: 13.165px; 
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
     /* 19.748px */
 }
 
-.cards button {
+.mission-cards button {
     background: none;
     border: none;
     color: #c2c2c2;
-    /* Text/Regular/Normal */
-    font-size: 16px; /* Consider using var(--fs-s) if appropriate */
+    
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    /* 24px */
+  
 }
 
 .wrapper {
@@ -632,11 +497,11 @@
 .item1 h2 {
     color: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: var(--fs-xxl); /* 71px */
+    font-size: var(--fs-xxl); 
     font-style: normal;
     font-weight: 800;
     line-height: 110%;
-    /* 78.1px */
+    
     letter-spacing: -2.13px;
     text-transform: uppercase;
 }
@@ -647,11 +512,11 @@
 
 .item1 p {
     color: #9bf00b;
-    font-size: var(--fs-s); /* 18px */
+    font-size: var(--fs-s); 
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    /* 27px */
+
 }
 
 .item2 {
@@ -836,6 +701,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 7rem 13rem;
 }
 
 .faq-section {
@@ -891,6 +757,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0s ease-out;
+    color: #d4d4d4;
 }
 
 .faq-active .faq-answer {
@@ -901,29 +768,6 @@
 /* Mobile view for About page */
 
 /* Banner */
-@media screen and (max-width: 767px) {
-    
-.banner{
-    margin-top: 1em;
-    height:15em;
-}
-
-    .image-text {
-        width: 100%;
-        font-size: var(--fs-s);
-        padding:0px ;
-    }
-
-    .image-text h3 {
-        font-size: var(--fs-l); 
-        line-height: 0px; 
-    }
-
-    .image-text p {
-        font-size: var(--fs-s);
-        font-weight: normal;
-    }
-}
 
 /* About Section */
 @media screen and (max-width: 767px) {
@@ -937,56 +781,45 @@
         padding: .1rem;
         gap: 24px;
     }
-
+    .aboutpage-title{
+        justify-content: center;
+    }
+    .aboutpage-logo{
+        width: 5em;
+        height: 3em;
+    }
     .About .aboutpage-contents {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .About .aboutpage-contents h2 {
-        font-size: var(--fs-xl); /* 36px */
+    .About .aboutpage-contents h1 {
+        font-size: var(--fs-l);
+        font-weight: 500; /* 36px */
     }
 
     .About .aboutpage-contents p {
-        font-size: var(--fs-s); /* 16px */
+        font-size: var(--fs-xs);
+        font-weight: 500; /* 16px */
         text-align: justify;
+        width: 100%;
     }
 
     .About .aboutpage-myvideo {
         width: 100%;
     }
 
-    .About .play-button {
-        display: flex;
-        bottom: 5%;
-        left: 5%;
-        padding: 1rem;
-        width: auto;
-        height: 3rem;
-        align-items: center;
-    }
-
-    .About .play-button .icon-bg {
-        width: 1rem;
-        height: 1rem;
-    }
-
-    .About .play-button .icon-bg img {
-        width: 50%;
-        padding: 0rem;
-    }
-
-    .duration {
-        padding: 0px;
-    }
-
-    .About .play-button .duration p,
-    .About .play-button .duration time {
-        font-size: 0.5rem;
-    }
+ 
 }
 
 /* Vision Section */
 @media screen and (max-width: 767px) {
+    
+.content-center{
+    padding: 0em;
+}
     .vision {
         padding: 48px 24px;
     }
@@ -1021,11 +854,11 @@
     }
 
     .vision .content .aboutcard h3 {
-        font-size: 1.2rem;
+        font-size: var(--fs-m)
     }
 
     .vision .content .aboutcard p {
-        font-size: 0.9rem;
+        font-size: var(--fs-xs);
     }
 }
 
@@ -1060,26 +893,26 @@
         gap: 0px;
     }
 
-    .mission .content .card,
-    .coreSection .content .card {
+    .mission .content .mission-card,
+    .coreSection .content .mission-card {
         padding: .3rem;
         margin: .4rem;
     }
 
-    .mission .content .card h2,
-    .coreSection .content .card h2 {
+    .mission .content .mission-card h2,
+    .coreSection .content .mission-card h2 {
         font-size: var(--fs-m); /* 1rem */
         color: white;
     }
 
-    .mission .content .card h3,
-    .coreSection .content .card h3 {
-        font-size: 1.2rem;
+    .mission .content .mission-card h3,
+    .coreSection .content .mission-card h3 {
+        font-size: var(--fs-m);
     }
 
-    .mission .content .card p,
-    .coreSection .content .card p {
-        font-size: 0.9rem;
+    .mission .content .mission-card p,
+    .coreSection .content .mission-card p {
+        font-size: var(--fs-xs);
         color: rgb(255, 255, 255);
     }
 .coreSection .content-grid{
@@ -1122,7 +955,9 @@
     line-height: 120%;
     text-align: justify;
 }
-
+#sec-6{
+    height: 100%;
+}
     #sec-news {
         padding: 24px;
         display: none;
@@ -1138,7 +973,7 @@
     }
 
     .faq-title {
-        font-size: var(--fs-xl); /* 3rem */
+        font-size: var(--fs-l); /* 3rem */
         margin: 1rem 0;
     }
 
@@ -1147,18 +982,18 @@
     }
 
     .faq-card {
-        padding: .4rem;
-        margin-bottom: 1rem;
+        padding: .1rem;
     }
 
     .faq-question h3 {
-        font-size: 1.2rem;
+        font-size: var(--fs-s);
     }
 
     .faq-answer p {
-        font-size: 0.7rem;
+        font-size: var(--fs-xs);
         font-weight: 500;
-        line-height: 130%;
+        line-height: 180%;
+        
     }
 }
 
@@ -1172,27 +1007,7 @@
         display: none;
     }
 
-    .banner {
-        margin-top: 4rem;
-    }
-
-    .banner img {
-        height: auto;
-    }
-
-    .image-text {
-        width: 80%;
-    }
-
-    .image-text h3 {
-        font-size: var(--fs-xl); /* 3rem */
-        line-height: var(--fs-xl); /* 4rem */
-    }
-
-    .image-text p {
-        font-size: var(--fs-m); /* 1rem */
-        font-weight: normal;
-    }
+   
 
     .About {
         height: auto;
@@ -1222,30 +1037,7 @@
         width: 100%;
     }
 
-    .About .play-button {
-        display: flex;
-        bottom: 5%;
-        left: 5%;
-        padding: 1rem;
-        width: auto;
-        height: 3rem;
-        align-items: center;
-    }
-
-    .About .play-button .icon-bg {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .About .play-button .icon-bg img {
-        width: 50%;
-        padding: 0rem;
-    }
-
-    .About .play-button .duration p,
-    .About .play-button .duration time {
-        font-size: 0.75rem;
-    }
+   
 
     .vision {
         padding: 3rem 1.5rem;
@@ -1322,26 +1114,26 @@
         align-items: center;
     }
 
-    .mission .content .card,
-    .coreSection .content .card {
+    .mission .content .mission-card,
+    .coreSection .content .mission-card {
         padding: 1rem;
         margin: 1rem;
         width: 70%;
     }
 
-    .mission .content .card h2,
-    .coreSection .content .card h2 {
+    .mission .content .mission-card h2,
+    .coreSection .content .mission-card h2 {
         font-size: 1.5rem;
         color: white;
     }
 
-    .mission .content .card h3,
-    .coreSection .content .card h3 {
+    .mission .content .mission-card h3,
+    .coreSection .content .mission-card h3 {
         font-size: var(--fs-l); /* 2rem */
     }
 
-    .mission .content .card p,
-    .coreSection .content .card p {
+    .mission .content .mission-card p,
+    .coreSection .content .mission-card p {
         font-size: var(--fs-s); /* 1rem */
         color: rgb(255, 255, 255);
     }

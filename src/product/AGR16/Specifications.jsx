@@ -18,7 +18,7 @@ const Specifications = () => {
         </div>
         <div className="spec-item">
           <img className="spec-img" src={speedIcon} alt="Speed Icon" />
-          <span>Speed: 8m/s</span>
+          <span>Speed: 6m/s</span>
         </div>
         <div className="spec-item" data-aos="fade-right">
           <img className="spec-img" src={payloadIcon} alt="Payload Icon" />
@@ -26,7 +26,7 @@ const Specifications = () => {
         </div>
         <div className="spec-item" data-aos="fade-left">
           <img className="spec-img" src={flightIcon} alt="Flight Time Icon" />
-          <span>Flight Time: 15 min</span>
+          <span>Flight Time: 14.2 min</span>
         </div>
         <div className="spec-item">
           <img className="spec-img" src={rangeIcon} alt="Range Icon" />

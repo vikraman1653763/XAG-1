@@ -4,12 +4,49 @@
   font-weight: 300;
 }
 
+.no-Jobs{
+    text-align: center;
+    color: #d4d4d4;
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7rem 13rem;
+  }
+  .noJobText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height:auto;
+  }
+  
+  .noJobText h2{
+    font-size: var(--fs-xl);
+    text-transform: uppercase;
+    font-weight: 500;
+    background: -webkit-linear-gradient(#4e4e4e, #ffffff, #000000); 
+  background: linear-gradient(#000000, #ffffff, #000000);
+  -webkit-background-clip: text; 
+  -moz-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  }
+  .noJobText p{
+    color: #d4d4d4;
+  }
+  .no-Jobs img{
+    width: 30vw;
+  }
+
 /* career.css */
 .career-section {
     display: flex;
     padding: 20px;
     background-color: #000000;
-    height: 100vh;
+    height: auto;
     overflow-y: auto;
     scrollbar-width: thin;
     margin:0rem 2rem 0rem 2rem;
@@ -28,7 +65,7 @@
     -webkit-backdrop-filter: blur( 9px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    color: #fff;
+    color: #d4d4d4;
 }
 
 .filter-section h4 {
@@ -72,7 +109,7 @@
     -webkit-backdrop-filter: blur( 9px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    color: #fff;
+    color: #d4d4d4;
     width: 70%;
 }
 .job-card .require{
@@ -272,16 +309,36 @@
 
 .no-jobs h3 {
     text-align: center;
-    color: white;
+    color: #d4d4d4;
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
 }
 .checkbox-wrapper span{
-    color: white;
+    color: #d4d4d4;
     font-weight: normal !important;
     font-size:var(--fs-s);
 }
 
 /* Mobile View */
 @media screen and (max-width: 767px) {
+
+    
+
+        .no-Jobs{
+        padding: 2em;
+        height: 30vh;
+        }
+        .noJobText h2{
+        font-size: var(--fs-m);
+        }
+        .noJobText p{
+            font-size: var(--fs-xs);
+        }
+
     .career-section {
         flex-direction: column;
         padding: 1px;
@@ -299,7 +356,7 @@
         z-index: 1;
     }
     .checkbox-wrapper span{
-        color: white;
+        color: #d4d4d4;
         font-weight: normal !important;
         font-size:var(--fs-xs);
     }
@@ -371,4 +428,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+.no-Jobs{
+    padding: 3rem 7rem;
+  }
 }

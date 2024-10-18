@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import batterysvg from '/assets/battsvg.svg';
+
 const data1 = [
   "Ensuring optimal performance",
   "Unique BMS supports",
@@ -18,14 +19,23 @@ const data2 = [
   "Additional safety features",
 ];
 
-// Function to duplicate data points
-const duplicateData = (data, count) => {
-  let result = [];
-  for (let i = 0; i < count; i++) {
-    result = result.concat(data);
-  }
-  return result;
-};
+function RenderForMobile() {
+  return (
+    <section className="battery-spec-container">
+      <h2 className='battery-spec-title'>Advanced Battery Features</h2>
+      <img src={batterysvg} className='battery-spec-image'/>
+     
+      <div className='battery-spec-box'>
+        <section className='battery-points'>
+          {data1.map((pt, index) => <p key={index}>{pt}</p>)}
+        </section>
+        <section className='battery-points'>
+          {data2.map((pt, index) => <p key={index}>{pt}</p>)}
+        </section>
+      </div>
+    </section>
+  );
+}
 
 function BatterySpec() {
   const [offsetY, setOffsetY] = useState(0);
@@ -33,7 +43,7 @@ function BatterySpec() {
   const containerRef = useRef(null);
 
   const handleScroll = () => {
-    if (inView && window.innerWidth>=768) {
+    if (inView && window.innerWidth >= 768) {
       setOffsetY(window.scrollY);
     }
   };
@@ -43,10 +53,7 @@ function BatterySpec() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      {
-        root: null,
-        threshold: 0.2
-      }
+      { root: null, threshold: 0.2 }
     );
 
     if (containerRef.current) {
@@ -62,21 +69,22 @@ function BatterySpec() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [inView]);
 
+  const duplicatedData1 = data1.flatMap(d => Array(4).fill(d)); // Efficiently duplicate data inline
+  const duplicatedData2 = data2.flatMap(d => Array(3).fill(d));
 
-  const duplicatedData1 = duplicateData(data1, 4); 
-  const duplicatedData2 = duplicateData(data2, 3);
+  if (window.innerWidth < 768) {
+    return <RenderForMobile />;
+  }
 
   return (
     <section className="battery-spec-container">
-       <h2 className='battery-spec-title'>Advanced Battery</h2>
-       <img src={batterysvg} className='battery-spec-image'/>
-       <h2 className='battery-spec-title t2 '>Features</h2>
-       <div className='battery-spec-box' ref={containerRef}>
+      <h2 className='battery-spec-title'>Advanced Battery</h2>
+      <img src={batterysvg} className='battery-spec-image'/>
+      <h2 className='battery-spec-title t2'>Features</h2>
+      <div className='battery-spec-box' ref={containerRef}>
         <section className='battery-points btpt1'>
           {duplicatedData1.map((pt, index) => (
             <p

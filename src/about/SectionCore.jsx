@@ -11,8 +11,6 @@ function SectionCore() {
             duration:700,
             mirror:true,
             easing:"ease-in-out",
-   
-
         })
     },[])
   return (
@@ -21,7 +19,7 @@ function SectionCore() {
          <div className="head">
             <h2 className="heading"> Our</h2>
             <div className="misson-texteffect">
-              <h2 data-aos="fade-down">Core Value</h2>
+              <h2 data-aos="fade-up">Core Value</h2>
             </div>
         </div>
 

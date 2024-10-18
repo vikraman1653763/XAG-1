@@ -1,11 +1,8 @@
 // AGR16.jsx
 import React, { useEffect, useRef } from 'react';
-import { useInView } from 'react-intersection-observer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../style/agr16.css';
-import Header from './header.jsx';
-import GifContainer from './GifContainer.jsx';
 import Description from './Description.jsx';
 import Specifications from './Specifications.jsx';
 import DroneTypes from './DroneTypes.jsx';
@@ -29,7 +26,6 @@ const AGR16 = () => {
     
       <main>
         <Section11/>
-        <GifContainer />
         <Description />
         <Specifications />
         <Fc/>

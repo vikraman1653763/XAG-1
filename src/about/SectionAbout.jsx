@@ -8,7 +8,6 @@ const SectionAbout = () => {
     AOS.init({
       duration: 500,
       mirror: true,
-      easing:"ease-in-out-back"
     });
   },[])
 
@@ -16,11 +15,11 @@ const SectionAbout = () => {
     <section className="About">
       <div className="aboutpage-container">
         <div className="aboutpage-contents">
-          <div className="aboutpage-title" data-aos="slide-left"  >
-            <h2 data-aos="slide-right" data-aos-delay='100' >ABOUT</h2>
-            <img className="aboutpage-logo" src="/assets/logo.webp" alt="logo" />
+          <div className="aboutpage-title"  >
+            <h1 data-aos="fade-up" >ABOUT</h1>
+            <img data-aos="fade-up"  className="aboutpage-logo" src="/assets/logo.webp" alt="logo" />
           </div>
-          <p data-aos="slide-right">
+          <p data-aos="fade-up" data-aos-delay='200'>
             We specialize in manufacturing advanced agricultural drones, providing ground control systems (GCS) services, and developing enterprising flight controllers. Our innovative technology empowers farmers to increase yields and promote sustainable agriculture. At Xagrotor Tek, we are dedicated to revolutionizing farming practices through innovation and technology. Join us in shaping the future of agriculture for a more efficient and sustainable world.
           </p>
         </div>
